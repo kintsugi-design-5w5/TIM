@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .hero{
     width: 100vw;
     height: 100vh;
@@ -12,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: var(--couleur-fond);
+    //background-color: var(--couleur-fond);
     color: black;
     position: fixed;
     top: 0;
@@ -28,7 +31,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.7s ease;
+    z-index: 10;
 }
 
 .burger{
@@ -38,15 +42,30 @@
     justify-content: space-around;
     width: 2em;
     height: 2em;
-    z-index: 10;
+    overflow: hidden;
+    z-index: 100;
 }
 
 .burger div{
     width: 100%;
     height: 10%;
     background-color: black;
-    transition: all 0.3s;
+    border-radius: 50px;
+    //transition: all 0.7s;
 }
+
+#burger:checked~.burger div:nth-of-type(1){
+    animation: ligne-burger 0.2s ease alternate;
+}
+
+#burger:checked~.burger div:nth-of-type(2){
+    animation: ligne-burger 0.2s 0.1s ease alternate;
+}
+
+#burger:checked~.burger div:nth-of-type(3){
+    animation: ligne-burger 0.2s 0.2s ease alternate;
+}
+
 #burger{
     display: none;
 }
@@ -57,7 +76,7 @@
 
 .logo{
     position: relative;
-    z-index: 10;
+    z-index: 100;
 }
 
 /*********** FEED **************/
@@ -75,10 +94,10 @@
 .feed .img-projet{
     width: 25rem;
     height: 100%;
-    object-fit: cover;
     background-color: var(--couleur-fond);
     animation: apparition 1s linear forwards;
     animation-timeline: view();
+    z-index: -1;
 }
 
 .feed .infos{
@@ -96,13 +115,13 @@
     background-color: skyblue;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: -2;
 }
 .feed:nth-of-type(3){
     background-color: yellow;
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: -1;
 }
 
 //Animation du scroll
@@ -124,6 +143,14 @@
     }
 }
 
+@keyframes ligne-burger{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
 /*@keyframes feed-block{
     from{
         position: static;
