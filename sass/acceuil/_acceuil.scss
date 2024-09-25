@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     overflow-x: hidden;
     background-color: var(--gris-fonce);
@@ -7,7 +10,7 @@ body{
         overflow-x: hidden;
     }
 }
-.hero{
+#hero{
     width: 100vw;
     height: 100vh;
     background-color: var(--couleur-fond);
@@ -17,6 +20,8 @@ body{
 }
 
 .barre-navigation{
+    position: absolute;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,8 +121,7 @@ body{
 }
 
 .logo{
-    position: relative;
-    z-index: 100;
+    text-decoration: none;
 }
 
 /*********** FEED **************/
@@ -151,8 +155,14 @@ body{
     animation-timeline: view();
 }
 
+.feed:nth-of-type(4) .infos{
+    align-items: flex-start;
+    font-size: clamp(1rem, 4vw, 5rem);
+
+}
+
 .feed .img-projet{
-    width: 25em;
+    width: 25rem;
     height: 100%;
     background-color: var(--couleur-fond);
     animation: apparition-gauche 1s ease forwards;
@@ -166,15 +176,18 @@ body{
     justify-content: flex-start;
     align-items: flex-end;
     height: 100%;
+    width: 70%;
     flex-grow: 1;
 }
 
 .feed .infos p{
-    flex-grow: 1;
     font-size: clamp(0.5rem, 2vw, 5rem);
+    line-break: loose;
+    width: 100%;
 }
 
 .feed .infos h1{
+    margin: 0;
     text-align: right;
     width: 80%;
     height: 100%;
