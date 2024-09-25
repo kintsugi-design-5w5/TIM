@@ -53,6 +53,7 @@ body{
     font-weight: bold;
     color: white;
     cursor: pointer;
+    font-size: clamp(0.5rem, 10vw, 5rem);
 }
 .flou{
     width: 100vw;
@@ -63,6 +64,7 @@ body{
     backdrop-filter: blur(0px) brightness(100%);
     transition: backdrop-filter 0.7s ease;
     pointer-events: none;
+    z-index: 5;
 }
 .burger{
     position: relative;
@@ -117,13 +119,16 @@ body{
 /*********** FEED **************/
 
 .feed{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 10rem;
+    padding: 10rem 5rem;
     height: 100vh;
     width: 100vw;
+    background-color: var(--gris-fonce);
+    z-index: -2;
 }
 
 .feed .img-projet{
@@ -146,32 +151,57 @@ body{
     flex-grow: 1;
 }
 
-.feed:nth-of-type(2){
-    background-color: skyblue;
-    position: sticky;
-    top: 0;
-    z-index: -2;
-}
-.feed:nth-of-type(3){
-    background-color: yellow;
-    position: sticky;
-    top: 0;
-    z-index: -1;
+.feed .charte-rond{
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    background-color: var(--couleur-fond);
+    margin: 1rem 0;
+    animation: apparition-charte 1s ease forwards;
+    animation-timeline: view();
 }
 
-.parra {
-    width: 25vw;
-    height: 25vh;
-    position: absolute;
-    top: 50vh;
-    background-color: red;
+.charte-rond, .img-projet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.parra:nth-of-type(1){
-    background-color: blue;
-    z-index: 4;
+.axes-cours{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
+.axes-cours div{
+    background-color: var(--couleur-fond);
+    color: white;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feed-projet{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--couleur-fond);
+}
+
+.info-projet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*********** FOOTER *************/
 //Animation du scroll
 @keyframes apparition{
     0%{
@@ -197,6 +227,17 @@ body{
     }
     to{
         transform: translateX(100%);
+    }
+}
+
+@keyframes apparition-charte{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    40%{
+        opacity: 1;
+        transform: scale(1);
     }
 }
 /*@keyframes feed-block{
