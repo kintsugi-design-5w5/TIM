@@ -31,7 +31,9 @@ Sprint 4 - Apporter toutes les modifications manquantes au WordPress et SCSS pou
 ### Charge de travail :
 
 Individuel : 10h - 1 semaine
+
 Individuel : 30h - sprint
+
 Équipe : 150h - sprint
 
 ### Liens supplémentaires :
