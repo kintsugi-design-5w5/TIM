@@ -18,13 +18,22 @@
   --gris-fonce: #4b4b4b;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   background-color: var(--gris-fonce);
   color: white;
 }
+@media screen and (max-width: 756px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 
-.hero {
+#hero {
   width: 100vw;
   height: 100vh;
   background-color: var(--couleur-fond);
@@ -34,6 +43,8 @@ body {
 }
 
 .barre-navigation {
+  position: absolute;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +67,11 @@ body {
   right: 0;
   transition: transform 0.7s ease;
   z-index: 10;
+}
+@media screen and (max-width: 756px) {
+  .menu {
+    width: 100vw;
+  }
 }
 
 .menu ul {
@@ -93,6 +109,7 @@ body {
 }
 
 .burger {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -138,8 +155,7 @@ body {
 }
 
 .logo {
-  position: relative;
-  z-index: 100;
+  text-decoration: none;
 }
 
 /*********** FEED **************/
@@ -148,19 +164,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 10rem 5rem;
+  gap: 5rem;
+  padding: 10rem 10rem;
   height: 100vh;
   width: 100vw;
   background-color: var(--gris-fonce);
   z-index: -2;
 }
 
+.feed:nth-of-type(1) .infos {
+  align-items: flex-start;
+  font-size: clamp(1rem, 4vw, 5rem);
+}
+
+.feed:nth-of-type(odd) {
+  justify-content: flex-start;
+}
+
+.feed:nth-of-type(3) {
+  flex-direction: row-reverse;
+}
+
+.feed:nth-of-type(3) .img-projet {
+  animation: apparition-droite 1s ease forwards;
+  animation-timeline: view();
+}
+
+.feed:nth-of-type(4) .infos {
+  align-items: flex-start;
+  font-size: clamp(1rem, 4vw, 5rem);
+}
+
+.feed:nth-of-type(5) {
+  padding: 10rem 3rem;
+}
+
 .feed .img-projet {
-  width: 25rem;
+  width: 40vw;
   height: 100%;
   background-color: var(--couleur-fond);
-  animation: apparition 1s linear forwards;
+  animation: apparition-gauche 1s ease forwards;
   animation-timeline: view();
   z-index: -1;
 }
@@ -169,16 +212,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-end;
   height: 100%;
-}
-
-.feed .infos p {
+  width: 70%;
   flex-grow: 1;
 }
 
+.feed .infos p {
+  font-size: clamp(0.5rem, 2vw, 5rem);
+  line-break: loose;
+  width: 100%;
+}
+
+.feed .infos h1 {
+  margin: 0;
+  text-align: right;
+  width: 80%;
+  height: 100%;
+  font-size: clamp(2rem, 4vw, 10rem);
+}
+
 .feed .charte-rond {
-  height: 20vw;
-  width: 20vw;
+  height: 30vw;
+  width: 30vw;
   border-radius: 50%;
   background-color: var(--couleur-fond);
   margin: 1rem 0;
@@ -198,16 +254,43 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+  gap: 2rem;
+}
+@media screen and (max-width: 756px) {
+  .axes-cours {
+    flex-wrap: wrap;
+    gap: 10%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .axes-cours {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+  }
 }
 
 .axes-cours div {
   background-color: var(--couleur-fond);
   color: white;
-  height: 100%;
-  flex-grow: 1;
+  height: 60vh;
+  flex: 1 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 756px) {
+  .axes-cours div {
+    flex: 1 0 40%;
+    height: 19vh;
+  }
+}
+@media screen and (max-width: 430px) {
+  .axes-cours div {
+    flex: 1 0 0;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .feed-projet {
@@ -222,12 +305,20 @@ body {
 .info-projet {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+}
+
+.info-projet .img-parralax {
+  width: 25rem;
+  height: 25rem;
+  background-color: var(--gris-fonce);
 }
 
 /*********** FOOTER *************/
-@keyframes apparition {
+/*********** Adaptabilite **************/
+@keyframes apparition-gauche {
   0% {
     opacity: 0;
     transform: translateX(-100%);
@@ -236,7 +327,13 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
-  100% {
+}
+@keyframes apparition-droite {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  30% {
     opacity: 1;
     transform: translateX(0);
   }
@@ -266,4 +363,19 @@ body {
     to{
         position: fixed;
     }
-}*//*# sourceMappingURL=style.css.map */
+}*/
+footer {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  padding: 10rem 2rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
