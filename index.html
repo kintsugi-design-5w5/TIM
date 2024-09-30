@@ -1,85 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/style.css">
-    <link rel="stylesheet" href="sass/normalize.css">
-    <title>Haha</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="barre-navigation">
-                <div class="logo">Square</div>
-                <input type="checkbox" name="burger-box" id="burger">
-                <div class="menu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="sass/style.css" />
+        <link rel="stylesheet" href="sass/normalize.css" />
+        <title>Haha</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="barre-navigation">
+                    <div class="logo">Square</div>
+                    <input type="checkbox" name="burger-box" id="burger" />
+                    <div class="menu">
+                        <ul>
+                            <li>Accueil</li>
+                            <li>Cours</li>
+                            <li>Projets</li>
+                            <li>Avenir</li>
+                        </ul>
+                    </div>
+                    <label for="burger">
+                        <div class="burger">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </label>
+                    <div class="flou"></div>
+                </div>
+            </nav>
+            <div class="hero">
+                <h1>Creativité + Programmation = TIM</h1>
+            </div>
+        </header>
+        <main>
+            <section class="feed">
+                <div class="img-projet">Img</div>
+                <div class="infos">
+                    <h1>Titre</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit's</p>
+                </div>
+            </section>
+            <section class="feed">
+                <div class="charte-rond">Charte</div>
+            </section>
+            <section class="feed">
+                <div class="img-projet">Img</div>
+                <div class="infos">
+                    <h1>Titre</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit's</p>
+                </div>
+            </section>
+            <section class="feed">
+                <div class="axes-cours">
+                    <div>Jeux video</div>
+                    <div>3D</div>
+                    <div>Design</div>
+                    <div>Animation</div>
+                    <div>Img</div>
+                    <div>Img</div>
+                </div>
+            </section>
+            <section class="feed-projet">Vidéo</section>
+            <section class="feed-projet">
+                <div class="info-projet">
+                    <div>Nom Projet</div>
+                    <div class="img-parralax"></div>
+                    <div>Categorie</div>
+                </div>
+            </section>
+            <section class="feed-projet">
+                <div class="info-projet">
+                    <div class="img-parralax"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-sections">
+                <div class="footer-bloc">
+                    <h1>Adresse</h1>
+                    <a href="#"> 3800 R. Sherbrooke E, Montréal, QC H1X 2A2</a>
+                </div>
+                <div class="footer-bloc">
+                    <h1>Navigation</h1>
                     <ul>
                         <li>Accueil</li>
                         <li>Cours</li>
                         <li>Projets</li>
                         <li>Avenir</li>
                     </ul>
-                </div>  
-                <label for="burger">
-                    <div class="burger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </label>  
-                <div class="flou">
+                </div>
+                <div class="footer-bloc">
+                    <h1>Liens</h1>
+                    <ul>
+                        <li><a href="#">Maisonneuve</a></li>
+                        <li><a href="#">CÉTIM</a></li>
+                        <li><a href="#">Calendrier scolaire</a></li>
+                        <li><a href="#">Galerie de jeux</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bloc">
+                    <a href="#"><img src="" alt="" /></a>
                 </div>
             </div>
-        </nav>
-        <div class="hero">
-            <h1>Creativité + Programmation = TIM</h1>
-        </div>
-    </header>
-    <main>
-        <section class="feed">
-            <div class="img-projet">Img</div>
-            <div class="infos">
-                <h1>Titre</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit's</p>
+            <div class="footer-sociaux">
+                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
+                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
+                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
+                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
             </div>
-        </section>
-        <section class="feed">
-            <div class="charte-rond">Charte</div>
-        </section>
-        <section class="feed">
-            <div class="img-projet">Img</div>
-            <div class="infos">
-                <h1>Titre</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit's</p>
-            </div>
-        </section>
-        <section class="feed">
-            <div class="axes-cours">
-                <div>Jeux video</div>
-                <div>3D</div>
-                <div>Design</div>
-                <div>Animation</div>
-                <div>Img</div>
-                <div>Img</div>
-            </div>
-        </section>
-        <section class="feed-projet">Vidéo</section>
-        <section class="feed-projet">
-            <div class="info-projet">
-                <div>Nom Projet</div>
-                <div class="img-parralax"></div>
-                <div>Categorie</div>
-            </div>
-        </section>
-        <section class="feed-projet">
-            <div class="info-projet">
-                <div class="img-parralax"></div>
-            </div>
-        </section>
-    </main>
-    <footer></footer>
-</body>
-<script src="js/menu-burger.js"></script>
-<script src="js/barre-navigation-scroll.js"></script>
+        </footer>
+    </body>
+    <script src="js/menu-burger.js"></script>
+    <script src="js/barre-navigation-scroll.js"></script>
 </html>
