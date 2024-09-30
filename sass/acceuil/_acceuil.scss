@@ -44,6 +44,10 @@ body{
     right: 0;
     transition: transform 0.7s ease;
     z-index: 10;
+
+    @media screen and (max-width: 756px){
+        width: 100vw;
+    }
 }
 
 .menu ul{
@@ -76,6 +80,7 @@ body{
     z-index: 5;
 }
 .burger{
+    cursor: pointer;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -132,7 +137,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    padding: 10rem 5rem;
+    padding: 10rem 10rem;
     height: 100vh;
     width: 100vw;
     background-color: var(--gris-fonce);
@@ -161,8 +166,12 @@ body{
 
 }
 
+.feed:nth-of-type(5){
+    padding: 10rem 5rem;
+}
+
 .feed .img-projet{
-    width: 25rem;
+    width: 40vw;
     height: 100%;
     background-color: var(--couleur-fond);
     animation: apparition-gauche 1s ease forwards;
@@ -217,6 +226,10 @@ body{
     height: 100%;
     width: 100%;
     gap: 2rem;
+
+    @media screen and (max-width: 756px){
+        flex-direction: column;
+    }
 }
 
 .axes-cours div{
@@ -253,6 +266,8 @@ body{
 }
 
 /*********** FOOTER *************/
+
+/*********** Adaptabilite **************/
 //Animation du scroll
 @keyframes apparition-gauche{
     0%{
