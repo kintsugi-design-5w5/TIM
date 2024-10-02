@@ -1,9 +1,9 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-:root{
+:root {
     --couleur-fond: #007bff;
     --couleur-texte: #6c757d;
     --couleur-accent: #28a745;
@@ -12,7 +12,7 @@
     --noir-fonce: #242424;
     --noir: #000000;
 
-    --blanc: #ffffff;
+    --blanc: #e7e7e7;
     --blanc-pale: #eeeeee;
     --blanc-fonce: #cccccc;
 
@@ -21,27 +21,26 @@
     --gris-fonce: #4b4b4b;
 }
 
+$couleur-fond: var(--couleur-fond);
 
-$couleur-fond: --couleur-fond;
+$couleur-texte: var(--couleur-texte);
 
-$couleur-texte: --couleur-texte;
+$couleur-accent: var(--couleur-accent);
 
-$couleur-accent: --couleur-accent;
+$noir-pale: var(--noir-pale);
 
-$noir-pale: --noir-pale;
+$noir-fonce: var(--noir-fonce);
 
-$noir-fonce: --noir-fonce;
+$noir: var(--noir);
 
-$noir: --noir;
+$blanc: var(--blanc);
 
-$blanc: --blanc;
+$blanc-pale: var(--blanc-pale);
 
-$blanc-pale: --blanc-pale;
+$blanc-fonce: var(--blanc-fonce);
 
-$blanc-fonce: --blanc-fonce;
+$gris: var(--gris);
 
-$gris: --gris;
+$gris-pale: var(--gris-pale);
 
-$gris-pale: --gris-pale;
-
-$gris-fonce: --gris-fonce;
+$gris-fonce: var(--gris-fonce);

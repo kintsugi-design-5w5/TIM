@@ -38,6 +38,7 @@ Individuel : 30h - sprint
 
 ### Liens supplémentaires :
 
+-   Lien vers la GitHub Page : [GitHub Page](https://kintsugi-design-5w5.github.io/TIM/)
 -   Lien vers le dépôt Github : [Dépôt GitHub](https://github.com/kintsugi-design-5w5/TIM)
 -   Lien vers le Github Project : [Projet GitHub](https://github.com/orgs/kintsugi-design-5w5/projects/1)
 -   Lien vers le backlog GoogleSheet : [Google sheet](https://docs.google.com/spreadsheets/d/1I3-XLNHhBte0TZOc5cQbXzM9ZsGxMTRsRGayoXEZaSg/edit?usp=sharing)

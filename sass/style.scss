@@ -1,7 +1,45 @@
-@import "variable.scss";
-@import "acceuil/acceuil";
+/*
+Theme Name: 
+Theme URI: https://referenced.ca
+Author: Kintsugi
+Author URI: https://wordpress.org/
+Description: Thème de base développer dans le cadre du cours 5w5
+Version: 1.0
+
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tim
+Ce thème a été développé dans le cadre du cours 5w5
+*/
+
+// https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+
+/* ////////////////////////////////////////////////////////// */
+/*                       Variables css                        */
+/* ////////////////////////////////////////////////////////// */
+@import "variable";
+
+/* ////////////////////////////////////////////////////////// */
+/*                      Règles de base                        */
+/* ////////////////////////////////////////////////////////// */
+@import "h";
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des sections                     */
+/* ////////////////////////////////////////////////////////// */
+@import "accueil/accueil";
 @import "cours/cours";
-@import "Etudiant/Etudiant";
-@import "Profs/Profs";
+@import "etudiant/etudiant";
+@import "profs/profs";
 @import "projets/projets";
-@import "Stage/stage";
+@import "stage/stage";
+@import "footer";
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des effets                       */
+/* ////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles des composants                     */
+/* ////////////////////////////////////////////////////////// */
