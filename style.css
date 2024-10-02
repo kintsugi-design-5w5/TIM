@@ -177,8 +177,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  backdrop-filter: blur(0px) brightness(100%);
+  -webkit-backdrop-filter: blur(0px) brightness(100%);
+          backdrop-filter: blur(0px) brightness(100%);
+  transition: -webkit-backdrop-filter 0.7s ease;
   transition: backdrop-filter 0.7s ease;
+  transition: backdrop-filter 0.7s ease, -webkit-backdrop-filter 0.7s ease;
   pointer-events: none;
   z-index: 5;
 }
@@ -225,7 +228,8 @@ body {
 }
 
 #burger:checked ~ .flou {
-  backdrop-filter: blur(5px) brightness(50%);
+  -webkit-backdrop-filter: blur(5px) brightness(50%);
+          backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
@@ -256,25 +260,35 @@ body {
   }
 }
 
-@media screen and (max-width: 756px) {
-  .feed:nth-of-type(1) {
-    flex-direction: column;
-  }
+.presentation {
+  flex-direction: column;
+}
+.presentation-info {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  margin: 5rem 0;
+}
+.presentation-info .img-projet {
+  animation: apparition-droite 1s ease forwards;
+  animation-timeline: view();
 }
 
-.feed:nth-of-type(1) .infos {
+.presentation-info + .presentation-info .infos {
   align-items: flex-start;
 }
-
-.feed:nth-of-type(3) {
-  flex-direction: row-reverse;
+.presentation-info + .presentation-info .img-projet {
+  animation: apparition-gauche 1s ease forwards;
+  animation-timeline: view();
 }
 
-@media screen and (max-width: 756px) {
-  .feed:nth-of-type(3),
-  .feed:nth-of-type(4) {
-    flex-direction: column-reverse;
-  }
+.presentation-info + .presentation-info .infos h1 {
+  text-align: left;
 }
 
 .feed:nth-of-type(3) .img-projet {
@@ -300,11 +314,9 @@ body {
   height: 100vh;
 }
 .feed .img-projet {
-  width: 50rem;
-  height: 100%;
+  width: 100%;
+  height: 50vh;
   background-color: var(--couleur-fond);
-  animation: apparition-gauche 1s ease forwards;
-  animation-timeline: view();
   z-index: -1;
 }
 @media screen and (max-width: 756px) {
@@ -589,6 +601,11 @@ footer a {
   background-color: var(--gris-fonce);
   border: none;
   outline: none;
+}
+
+.recherche__input::-moz-placeholder {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .recherche__input::placeholder {
