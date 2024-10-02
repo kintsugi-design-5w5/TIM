@@ -1,24 +1,24 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 :root {
-  --couleur-fond: #007bff;
-  --couleur-texte: #6c757d;
-  --couleur-accent: #28a745;
+    --couleur-fond: #007bff;
+    --couleur-texte: #6c757d;
+    --couleur-accent: #28a745;
 
-  --noir-pale: #292929;
-  --noir-fonce: #242424;
-  --noir: #000000;
+    --noir-pale: #292929;
+    --noir-fonce: #242424;
+    --noir: #000000;
 
-  --blanc: #e7e7e7;
-  --blanc-pale: #eeeeee;
-  --blanc-fonce: #cccccc;
+    --blanc: #e7e7e7;
+    --blanc-pale: #eeeeee;
+    --blanc-fonce: #cccccc;
 
-  --gris: #808080;
-  --gris-pale: #a1a1a1;
-  --gris-fonce: #4b4b4b;
+    --gris: #808080;
+    --gris-pale: #a1a1a1;
+    --gris-fonce: #4b4b4b;
 }
 
 $couleur-fond: var(--couleur-fond);
