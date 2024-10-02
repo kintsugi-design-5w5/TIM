@@ -1,3 +1,21 @@
+@charset "UTF-8";
+/*
+Theme Name: 
+Theme URI: https://referenced.ca
+Author: Kintsugi
+Author URI: https://wordpress.org/
+Description: Thème de base développer dans le cadre du cours 5w5
+Version: 1.0
+
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tim
+Ce thème a été développé dans le cadre du cours 5w5
+*/
+/* ////////////////////////////////////////////////////////// */
+/*                       Variables css                        */
+/* ////////////////////////////////////////////////////////// */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +28,7 @@
   --noir-pale: #292929;
   --noir-fonce: #242424;
   --noir: #000000;
-  --blanc: #ffffff;
+  --blanc: #e7e7e7;
   --blanc-pale: #eeeeee;
   --blanc-fonce: #cccccc;
   --gris: #808080;
@@ -18,6 +36,55 @@
   --gris-fonce: #4b4b4b;
 }
 
+/* ////////////////////////////////////////////////////////// */
+/*                      Règles de base                        */
+/* ////////////////////////////////////////////////////////// */
+h1 {
+  font-size: clamp(2rem, 4vw, 10rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 3rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+a {
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--blanc);
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des sections                     */
+/* ////////////////////////////////////////////////////////// */
 html {
   scroll-behavior: smooth;
 }
@@ -414,10 +481,9 @@ body {
     }
 }*/
 footer {
-  height: 100vh;
   width: 100vw;
-  background-color: black;
-  padding: 2rem 2rem;
+  background-color: var(--noir);
+  padding: 2rem 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -430,7 +496,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 3rem;
 }
 @media screen and (max-width: 430px) {
   .footer-sections {
@@ -443,7 +510,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .footer-sociaux img {
@@ -454,46 +520,61 @@ footer {
 
 .footer-bloc {
   display: flex;
+  margin: 0 2vw;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  width: 30%;
+  width: 15%;
   height: 100%;
 }
-.footer-bloc ul, .footer-bloc a {
+.footer-bloc h2 {
+  margin: 0;
+  margin-bottom: 2vw;
+}
+.footer-bloc ul {
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   list-style: none;
-  flex-grow: 1;
-  font-size: clamp(1rem, 3vw, 2rem);
-  text-decoration: none;
+  flex: 1 1 auto;
+}
+.footer-bloc img {
+  width: 100%;
+  height: auto;
 }
 @media screen and (max-width: 430px) {
   .footer-bloc {
     width: 100%;
     margin: 1rem 0;
   }
-  .footer-bloc ul, .footer-bloc a {
-    padding: 0;
+  .footer-bloc h2 {
+    margin-bottom: 3vw;
+  }
+  .footer-bloc img {
+    width: 40%;
+    margin-bottom: 2rem;
   }
 }
 
-#footer a {
-  color: white;
+.footer-droits {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--blanc);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.footer-droits p {
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  color: var(--blanc);
+}
+
+footer a {
+  color: var(--blanc);
   text-decoration: none;
-}
-
-h1 {
-  font-size: clamp(2rem, 4vw, 10rem);
-}
-
-h2 {
-  font-size: clamp(1.5rem, 4vw, 5rem);
-}
-
-p {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(0.75rem, 2.25vw, 1.75rem);
 }
 
 .recherche {
@@ -512,4 +593,11 @@ p {
 .recherche__input::placeholder {
   color: white;
   font-size: 1.5rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des effets                       */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles des composants                     */
+/* ////////////////////////////////////////////////////////// *//*# sourceMappingURL=style.css.map */

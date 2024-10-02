@@ -12,7 +12,7 @@
   --noir-fonce: #242424;
   --noir: #000000;
 
-  --blanc: #ffffff;
+  --blanc: #e7e7e7;
   --blanc-pale: #eeeeee;
   --blanc-fonce: #cccccc;
 
@@ -21,26 +21,26 @@
   --gris-fonce: #4b4b4b;
 }
 
-$couleur-fond: --couleur-fond;
+$couleur-fond: var(--couleur-fond);
 
-$couleur-texte: --couleur-texte;
+$couleur-texte: var(--couleur-texte);
 
-$couleur-accent: --couleur-accent;
+$couleur-accent: var(--couleur-accent);
 
-$noir-pale: --noir-pale;
+$noir-pale: var(--noir-pale);
 
-$noir-fonce: --noir-fonce;
+$noir-fonce: var(--noir-fonce);
 
-$noir: --noir;
+$noir: var(--noir);
 
-$blanc: --blanc;
+$blanc: var(--blanc);
 
-$blanc-pale: --blanc-pale;
+$blanc-pale: var(--blanc-pale);
 
-$blanc-fonce: --blanc-fonce;
+$blanc-fonce: var(--blanc-fonce);
 
-$gris: --gris;
+$gris: var(--gris);
 
-$gris-pale: --gris-pale;
+$gris-pale: var(--gris-pale);
 
-$gris-fonce: --gris-fonce;
+$gris-fonce: var(--gris-fonce);
