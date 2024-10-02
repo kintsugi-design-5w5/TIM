@@ -578,6 +578,24 @@ footer a {
   font-size: clamp(0.75rem, 2.25vw, 1.75rem);
 }
 
+.recherche {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border-bottom: 2px solid white;
+}
+
+.recherche__input {
+  background-color: var(--gris-fonce);
+  border: none;
+  outline: none;
+}
+
+.recherche__input::placeholder {
+  color: white;
+  font-size: 1.5rem;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
 /* ////////////////////////////////////////////////////////// */
