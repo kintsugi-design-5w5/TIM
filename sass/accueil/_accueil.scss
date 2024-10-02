@@ -1,16 +1,16 @@
-html{
+html {
     scroll-behavior: smooth;
 }
-body{
+body {
     overflow-x: hidden;
     background-color: var(--gris-fonce);
     color: white;
 
-    @media screen and (max-width: 756px){
+    @media screen and (max-width: 756px) {
         overflow-x: hidden;
     }
 }
-#hero{
+#hero {
     width: 100vw;
     height: 100vh;
     background-color: var(--couleur-fond);
@@ -18,14 +18,15 @@ body{
     align-items: center;
     justify-content: center;
 
-    h1{
+    h1 {
         text-align: center;
         padding: 0 5rem;
     }
 }
 
-.barre-navigation{
+.barre-navigation {
     position: absolute;
+    height: 10vh;
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -34,12 +35,19 @@ body{
     //background-color: var(--couleur-fond);
     color: black;
     position: fixed;
+    transform: translateY(0);
     top: 0;
     left: 0;
     width: 100%;
+    transition: transform 0.3s ease;
+
+    img {
+        width: 50px;
+        height: auto;
+    }
 }
 /********** Menu Nav *************/
-.menu{
+.menu {
     width: 40vw;
     height: 100vh;
     background-color: red;
@@ -50,12 +58,12 @@ body{
     transition: transform 0.7s ease;
     z-index: 10;
 
-    @media screen and (max-width: 756px){
+    @media screen and (max-width: 756px) {
         width: 100vw;
     }
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,14 +74,14 @@ body{
     padding: 0px;
 }
 
-.menu ul li{
+.menu ul li {
     font-size: 6rem;
     font-weight: bold;
     color: white;
     cursor: pointer;
     font-size: clamp(0.5rem, 10vw, 5rem);
 }
-.flou{
+.flou {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -84,7 +92,7 @@ body{
     pointer-events: none;
     z-index: 5;
 }
-.burger{
+.burger {
     cursor: pointer;
     position: relative;
     display: flex;
@@ -96,7 +104,7 @@ body{
     z-index: 100;
 }
 
-.burger div{
+.burger div {
     width: 100%;
     height: 10%;
     background-color: black;
@@ -104,46 +112,47 @@ body{
     //transition: all 0.7s;
 }
 
-#burger:checked > .burger div:nth-of-type(1){
+#burger:checked > .burger div:nth-of-type(1) {
     animation: ligne-burger 0.2s ease alternate;
 }
 
-#burger:checked > .burger div:nth-of-type(2){
+#burger:checked > .burger div:nth-of-type(2) {
     animation: ligne-burger 0.2s 0.1s ease alternate;
 }
 
-#burger:checked > .burger div:nth-of-type(3){
+#burger:checked > .burger div:nth-of-type(3) {
     animation: ligne-burger 0.2s 0.2s ease alternate;
 }
 
-#burger{
+#burger {
     display: none;
     position: relative;
     z-index: 10;
 }
 
-#burger:checked+.menu{
+#burger:checked + .menu {
     transform: translateX(0);
 }
 
-#burger:checked~.flou{
+#burger:checked ~ .flou {
     backdrop-filter: blur(5px) brightness(50%);
 }
 
-.logo{
+.logo {
     text-decoration: none;
 }
 
 /*********** FEED **************/
 
-.feed{
+.feed {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    padding: 10rem 10rem;
-    height: 100vh;
+    padding: 0rem 10rem;
+    margin: 10rem 0rem;
+    //height: 100vh;
     width: 100vw;
     background-color: var(--gris-fonce);
     z-index: -2;
@@ -157,54 +166,57 @@ body{
     }
 }
 
-.feed:nth-of-type(1){
-    @media screen and (max-width: 756px){
+.feed:nth-of-type(1) {
+    @media screen and (max-width: 756px) {
         flex-direction: column;
     }
 }
-.feed:nth-of-type(1) .infos{
+.feed:nth-of-type(1) .infos {
     align-items: flex-start;
 }
 // .feed:nth-of-type(odd){
 //     justify-content: flex-start;
 // }
-.feed:nth-of-type(3){
+.feed:nth-of-type(3) {
     flex-direction: row-reverse;
-
 }
 
-.feed:nth-of-type(3), .feed:nth-of-type(4){
-    @media screen and (max-width: 756px){
+.feed:nth-of-type(3),
+.feed:nth-of-type(4) {
+    @media screen and (max-width: 756px) {
         flex-direction: column-reverse;
     }
 }
 
-.feed:nth-of-type(3) .img-projet{
+.feed:nth-of-type(3) .img-projet {
     animation: apparition-droite 1s ease forwards;
     animation-timeline: view();
 }
 
-.feed:nth-of-type(4) .infos{
+.feed:nth-of-type(4) .infos {
     align-items: flex-start;
     font-size: clamp(1rem, 4vw, 5rem);
 }
 
-.feed:nth-of-type(3) .infos, .feed:nth-of-type(4) .infos{
-    @media screen and (max-width: 756px){
+.feed:nth-of-type(3) .infos,
+.feed:nth-of-type(4) .infos {
+    @media screen and (max-width: 756px) {
         align-items: center;
         justify-content: flex-end;
     }
 }
 
-.feed:nth-of-type(5){
-    padding: 10rem 3rem;
+.axes {
+    //padding: 10rem 3rem;
+    padding: 0 3rem;
+    height: 100vh;
 
     @media screen and (max-width: 430px) {
-        padding: 10rem 0;
+        //padding: 10rem 0;
     }
 }
 
-.feed .img-projet{
+.feed .img-projet {
     width: 50rem;
     height: 100%;
     background-color: var(--couleur-fond);
@@ -212,13 +224,13 @@ body{
     animation-timeline: view();
     z-index: -1;
 
-    @media screen and (max-width: 756px){
+    @media screen and (max-width: 756px) {
         width: 100%;
         height: 50vh;
     }
 }
 
-.feed .infos{
+.feed .infos {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -228,23 +240,23 @@ body{
     flex-grow: 1;
 }
 
-.feed .infos p{
+.feed .infos p {
     // font-size: clamp(0.5rem, 2vw, 5rem);
     line-break: loose;
     width: 100%;
 }
 
-.feed .infos h1{
+.feed .infos h1 {
     margin: 0;
     text-align: right;
     width: 80%;
 
-    @media screen and (max-width: 756px){
+    @media screen and (max-width: 756px) {
         text-align: center;
     }
 }
 
-.feed .charte-rond{
+.feed .charte-rond {
     height: 30vw;
     width: 30vw;
     min-width: 300px;
@@ -256,44 +268,43 @@ body{
     animation-timeline: view();
 }
 
-.charte-rond, .img-projet{
+.charte-rond,
+.img-projet {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.axes-cours{
+.axes-cours {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
     gap: 2rem;
 
-    @media screen and (max-width: 756px){
-        flex-wrap: wrap;
-        gap: 10%;
-    }
-    
     @media screen and (max-width: 430px) {
         flex-direction: column;
-        gap: 2rem;
+        gap: 2%;
         justify-content: space-between;
     }
 }
 
-.axes-cours div{
+.axes-cours div {
     background-color: var(--couleur-fond);
     color: white;
-    height: 100%;
-    flex: 1 0 0;
+    height: 45%;
+    // flex: 1 0 0;
+    flex: 1 0 30%;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    @media screen and (max-width: 756px){
+    @media screen and (max-width: 756px) {
         flex: 1 0 40%;
-        height: 19vh;
+        height: 30%;
+        max-width: none;
     }
 
     @media screen and (max-width: 430px) {
@@ -303,7 +314,7 @@ body{
     }
 }
 
-.feed-projet{
+.feed-projet {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -312,73 +323,72 @@ body{
     background-color: var(--couleur-fond);
 }
 
-.info-projet{
+.info-projet {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
 
-    @media screen and (max-width: 756px){
+    @media screen and (max-width: 756px) {
         flex-direction: column;
         gap: 5rem;
     }
 }
 
-.info-projet .img-parralax{
+.info-projet .img-parralax {
     width: 25rem;
     height: 25rem;
     background-color: var(--gris-fonce);
 
-    @media screen and (max-width: 430px){
+    @media screen and (max-width: 430px) {
         width: 15rem;
-        height: 15rem;        
+        height: 15rem;
     }
 }
 
-
 //Animation du scroll
-@keyframes apparition-gauche{
-    0%{
+@keyframes apparition-gauche {
+    0% {
         opacity: 0;
         transform: translateX(-100%);
         //transform: scale(0);
     }
-    30%{
+    30% {
         opacity: 1;
         transform: translateX(0);
         //transform: scale(1);
     }
 }
 
-@keyframes apparition-droite{
-    0%{
+@keyframes apparition-droite {
+    0% {
         opacity: 0;
         transform: translateX(100%);
         //transform: scale(0);
     }
-    30%{
+    30% {
         opacity: 1;
         transform: translateX(0);
         //transform: scale(1);
     }
 }
 
-@keyframes ligne-burger{
-    from{
+@keyframes ligne-burger {
+    from {
         transform: translateX(0);
     }
-    to{
+    to {
         transform: translateX(100%);
     }
 }
 
-@keyframes apparition-charte{
-    0%{
+@keyframes apparition-charte {
+    0% {
         opacity: 0;
         transform: scale(0);
     }
-    40%{
+    40% {
         opacity: 1;
         transform: scale(1);
     }
