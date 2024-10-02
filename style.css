@@ -103,11 +103,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-backdrop-filter: blur(0px) brightness(100%);
-          backdrop-filter: blur(0px) brightness(100%);
-  transition: -webkit-backdrop-filter 0.7s ease;
+  backdrop-filter: blur(0px) brightness(100%);
   transition: backdrop-filter 0.7s ease;
-  transition: backdrop-filter 0.7s ease, -webkit-backdrop-filter 0.7s ease;
   pointer-events: none;
   z-index: 5;
 }
@@ -154,8 +151,7 @@ body {
 }
 
 #burger:checked ~ .flou {
-  -webkit-backdrop-filter: blur(5px) brightness(50%);
-          backdrop-filter: blur(5px) brightness(50%);
+  backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
@@ -498,4 +494,22 @@ h2 {
 
 p {
   font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.recherche {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border-bottom: 2px solid white;
+}
+
+.recherche__input {
+  background-color: var(--gris-fonce);
+  border: none;
+  outline: none;
+}
+
+.recherche__input::placeholder {
+  color: white;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
