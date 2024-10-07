@@ -24,6 +24,7 @@ Ce thème a été développé dans le cadre du cours 5w5
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 @import "h";
+@import "general";
 
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des sections                     */
@@ -35,6 +36,7 @@ Ce thème a été développé dans le cadre du cours 5w5
 @import "projets/projets";
 @import "stage/stage";
 @import "footer";
+@import "composants/recherche";
 
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
