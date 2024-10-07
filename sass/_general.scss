@@ -1,3 +1,51 @@
 main {
     pointer-events: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    background-color: var(--gris-fonce);
+    color: white;
+
+    @media screen and (max-width: 756px) {
+        overflow-x: hidden;
+    }
+}
+#hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--couleur-fond);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        padding: 0 5rem;
+    }
+}
+.barre-navigation {
+    position: absolute;
+    height: 10vh;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    //background-color: var(--couleur-fond);
+    color: black;
+    position: fixed;
+    transform: translateY(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+
+    img {
+        width: 50px;
+        height: auto;
+    }
+}

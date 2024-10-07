@@ -86,9 +86,6 @@ main {
   pointer-events: none;
 }
 
-/* ////////////////////////////////////////////////////////// */
-/*                    Règles des sections                     */
-/* ////////////////////////////////////////////////////////// */
 html {
   scroll-behavior: smooth;
 }
@@ -181,11 +178,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-backdrop-filter: blur(0px) brightness(100%);
-          backdrop-filter: blur(0px) brightness(100%);
-  transition: -webkit-backdrop-filter 0.7s ease;
+  backdrop-filter: blur(0px) brightness(100%);
   transition: backdrop-filter 0.7s ease;
-  transition: backdrop-filter 0.7s ease, -webkit-backdrop-filter 0.7s ease;
   pointer-events: none;
   z-index: 5;
 }
@@ -232,14 +226,16 @@ body {
 }
 
 #burger:checked ~ .flou {
-  -webkit-backdrop-filter: blur(5px) brightness(50%);
-          backdrop-filter: blur(5px) brightness(50%);
+  backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
   text-decoration: none;
 }
 
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des sections                     */
+/* ////////////////////////////////////////////////////////// */
 /*********** FEED **************/
 .feed {
   position: relative;
@@ -267,6 +263,16 @@ body {
 .presentation {
   flex-direction: column;
 }
+.presentation-tim {
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (max-width: 756px) {
+  .presentation-tim {
+    flex-direction: column;
+  }
+}
+
 .presentation-info {
   display: flex;
   flex-direction: row-reverse;
@@ -648,11 +654,6 @@ footer a {
   background-color: var(--gris-fonce);
   border: none;
   outline: none;
-}
-
-.recherche__input::-moz-placeholder {
-  color: white;
-  font-size: 1.5rem;
 }
 
 .recherche__input::placeholder {
