@@ -22,7 +22,7 @@ Créer un nouveau site web pour le département TIM de Maisonneuve pour présent
 
 Sprint 1 - Atteindre un prototype du site simple en HTML/SCSS et finaliser les maquettes et les systèmes de design pour commencer à monter au prochain sprint
 
-Sprint 2 - Développer une maquette HTML/SCSS beaucoup plus développée avec la majorité des pages développées et une direction artistique bien définie et un début de Wordpress
+Sprint 2 - Développer une maquette HTML/SCSS beaucoup plus développée avec la majorité des pages développées et une direction artistique bien définie et un début de Wordpress. Égalemment améliorer la maquette et le système de design en prenant en compte les commentaires reçus lors des tests utilisateurs
 
 Sprint 3 - Completer la transition vers Wordpress et développer toutes les bases de données et les filtres, tout en continuant d'améliorer l'apparence du site
 

@@ -6,6 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    max-width: 1200px;
     overflow-x: hidden;
     background-color: var(--gris-fonce);
     color: white;
@@ -17,7 +18,9 @@ body {
 #hero {
     width: 100vw;
     height: 100vh;
-    background-color: var(--couleur-fond);
+    //background-color: var(--couleur-fond);
+    background-image: url("images/image.png");
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,4 +51,25 @@ body {
         width: 50px;
         height: auto;
     }
+}
+
+/****** Scrollbar ******/
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $noir-fonce;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $couleur;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
