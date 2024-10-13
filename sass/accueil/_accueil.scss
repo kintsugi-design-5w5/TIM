@@ -10,7 +10,7 @@
     margin: 10rem 0rem;
     //height: 100vh;
     width: 100vw;
-    background-color: var(--gris-fonce);
+    background-color: $noir;
     z-index: -2;
 
     @media screen and (max-width: 756px) {
@@ -57,7 +57,7 @@
     text-align: right;
     margin: 5rem 0;
 
-    .img-projet {
+    & .img-projet {
         //image du projet
         animation: apparition-droite 1s ease forwards;
         animation-timeline: view();
@@ -70,7 +70,7 @@
     }
 }
 
-.presentation-info + .presentation-info {
+.presentation .presentation-info + .presentation-info {
     //2e image + texte
     & .infos h1 {
         text-align: left;
@@ -96,6 +96,8 @@
     height: 100%;
     width: 70%;
     flex-grow: 1;
+    align-items: flex-start;
+    font-size: clamp(1rem, 4vw, 5rem);
 }
 
 .feed .presentation-info .infos h1 {
@@ -107,16 +109,6 @@
     @media screen and (max-width: 756px) {
         text-align: center;
     }
-}
-
-.feed:nth-of-type(3) .img-projet {
-    animation: apparition-droite 1s ease forwards;
-    animation-timeline: view();
-}
-
-.feed:nth-of-type(4) .infos {
-    align-items: flex-start;
-    font-size: clamp(1rem, 4vw, 5rem);
 }
 
 /*********** AXES **************/
@@ -131,9 +123,10 @@
 }
 
 .feed .img-projet {
+    //image du feed
     width: 100%;
     height: 50vh;
-    background-color: var(--couleur-fond);
+    background-color: $couleur;
     z-index: -1;
 
     @media screen and (max-width: 756px) {
@@ -143,12 +136,13 @@
 }
 
 .feed .charte-rond {
+    //charte graphique
     height: 30vw;
     width: 30vw;
     min-width: 300px;
     min-height: 300px;
     border-radius: 50%;
-    background-color: var(--couleur-fond);
+    background-color: $couleur;
     margin: 1rem 0;
     animation: apparition-charte 1s ease forwards;
     animation-timeline: view();
@@ -156,19 +150,50 @@
 
 .charte-rond,
 .img-projet {
+    //image de charte
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .axes-cours {
+    //conteneur des axes
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
     gap: 2rem;
+
+    & div {
+        background-color: var(--couleur-fond);
+        color: white;
+        height: 50%;
+        flex: 1 0 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("images/image.png");
+        filter: grayscale(100%);
+        transition: filter 0.5s;
+
+        &:focus {
+            filter: grayscale(0%);
+        }
+
+        @media screen and (max-width: 756px) {
+            flex: 1 0 40%;
+            height: 30%;
+            max-width: none;
+        }
+
+        @media screen and (max-width: 430px) {
+            flex: 1 0 0;
+            width: 100%;
+            margin: 0;
+        }
+    }
 
     @media screen and (max-width: 430px) {
         flex-direction: column;
@@ -177,28 +202,11 @@
     }
 }
 
-.axes-cours div {
-    background-color: var(--couleur-fond);
-    color: white;
-    height: 45%;
-    // flex: 1 0 0;
-    flex: 1 0 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media screen and (max-width: 756px) {
-        flex: 1 0 40%;
-        height: 30%;
-        max-width: none;
-    }
-
-    @media screen and (max-width: 430px) {
-        flex: 1 0 0;
-        width: 100%;
-        margin: 0;
-    }
-}
+/*
+.axes-cours div:hover {
+    filter: grayscale(0%);
+    background-color: red;
+}*/
 
 .feed-projet {
     width: 100vw;
@@ -206,7 +214,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--couleur-fond);
+    background-color: $couleur;
 }
 
 .info-projet {
@@ -225,7 +233,7 @@
 .info-projet .img-parralax {
     width: 25rem;
     height: 25rem;
-    background-color: var(--gris-fonce);
+    background-color: $noir;
 
     @media screen and (max-width: 430px) {
         width: 15rem;

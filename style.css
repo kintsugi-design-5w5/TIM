@@ -78,12 +78,12 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a,
+li {
   color: var(--blanc);
-}
-
-main {
-  pointer-events: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
 }
 
 html {
@@ -93,8 +93,8 @@ html {
 body {
   max-width: 1200px;
   overflow-x: hidden;
-  background-color: var(--gris-fonce);
-  color: white;
+  background-color: var(--noir);
+  color: var(--blanc);
 }
 @media screen and (max-width: 756px) {
   body {
@@ -106,6 +106,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url("images/image.png");
+  background-position: 50% 50%;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -124,7 +125,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  color: black;
+  color: var(--noir);
   position: fixed;
   transform: translateY(0);
   top: 0;
@@ -159,10 +160,17 @@ body {
 }
 
 /********** Menu Nav *************/
+.noscroll {
+  position: fixed;
+  top: var(--st, 0);
+  inline-size: 100%;
+  overflow-y: scroll;
+}
+
 .menu {
   width: 40vw;
   height: 100vh;
-  background-color: red;
+  background-color: var(--couleur);
   transform: translateX(100%);
   position: absolute;
   top: 0;
@@ -190,7 +198,7 @@ body {
 .menu ul li {
   font-size: 6rem;
   font-weight: bold;
-  color: white;
+  color: var(--blanc);
   cursor: pointer;
   font-size: clamp(0.5rem, 10vw, 5rem);
 }
@@ -201,10 +209,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  backdrop-filter: blur(0px) brightness(100%);
-  transition: backdrop-filter 0.7s ease;
   pointer-events: none;
   z-index: 5;
+  backdrop-filter: blur(0px) brightness(100%);
+  transition: backdrop-filter 0.7s ease;
 }
 
 .burger {
@@ -222,20 +230,8 @@ body {
 .burger div {
   width: 100%;
   height: 10%;
-  background-color: black;
+  background-color: var(--blanc);
   border-radius: 50px;
-}
-
-#burger:checked > .burger div:nth-of-type(1) {
-  animation: ligne-burger 0.2s ease alternate;
-}
-
-#burger:checked > .burger div:nth-of-type(2) {
-  animation: ligne-burger 0.2s 0.1s ease alternate;
-}
-
-#burger:checked > .burger div:nth-of-type(3) {
-  animation: ligne-burger 0.2s 0.2s ease alternate;
 }
 
 #burger {
@@ -249,6 +245,7 @@ body {
 }
 
 #burger:checked ~ .flou {
+  pointer-events: all;
   backdrop-filter: blur(5px) brightness(50%);
 }
 
@@ -269,7 +266,7 @@ body {
   padding: 0rem 10rem;
   margin: 10rem 0rem;
   width: 100vw;
-  background-color: var(--gris-fonce);
+  background-color: var(--noir);
   z-index: -2;
 }
 @media screen and (max-width: 756px) {
@@ -325,18 +322,18 @@ body {
   }
 }
 
-.presentation-info + .presentation-info .infos h1 {
+.presentation .presentation-info + .presentation-info .infos h1 {
   text-align: left;
 }
-.presentation-info + .presentation-info .infos {
+.presentation .presentation-info + .presentation-info .infos {
   align-items: flex-start;
 }
-.presentation-info + .presentation-info .img-projet {
+.presentation .presentation-info + .presentation-info .img-projet {
   animation: apparition-gauche 1s ease forwards;
   animation-timeline: view();
 }
 @media screen and (max-width: 756px) {
-  .presentation-info + .presentation-info {
+  .presentation .presentation-info + .presentation-info {
     flex-direction: column;
   }
 }
@@ -349,6 +346,8 @@ body {
   height: 100%;
   width: 70%;
   flex-grow: 1;
+  align-items: flex-start;
+  font-size: clamp(1rem, 4vw, 5rem);
 }
 
 .feed .presentation-info .infos h1 {
@@ -362,16 +361,6 @@ body {
   }
 }
 
-.feed:nth-of-type(3) .img-projet {
-  animation: apparition-droite 1s ease forwards;
-  animation-timeline: view();
-}
-
-.feed:nth-of-type(4) .infos {
-  align-items: flex-start;
-  font-size: clamp(1rem, 4vw, 5rem);
-}
-
 /*********** AXES **************/
 .axes {
   padding: 0 3rem;
@@ -380,7 +369,7 @@ body {
 .feed .img-projet {
   width: 100%;
   height: 50vh;
-  background-color: var(--couleur-fond);
+  background-color: var(--couleur);
   z-index: -1;
 }
 @media screen and (max-width: 756px) {
@@ -396,7 +385,7 @@ body {
   min-width: 300px;
   min-height: 300px;
   border-radius: 50%;
-  background-color: var(--couleur-fond);
+  background-color: var(--couleur);
   margin: 1rem 0;
   animation: apparition-charte 1s ease forwards;
   animation-timeline: view();
@@ -411,29 +400,27 @@ body {
 
 .axes-cours {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
   gap: 2rem;
 }
-@media screen and (max-width: 430px) {
-  .axes-cours {
-    flex-direction: column;
-    gap: 2%;
-    justify-content: space-between;
-  }
-}
-
 .axes-cours div {
   background-color: var(--couleur-fond);
   color: white;
-  height: 45%;
+  height: 50%;
   flex: 1 0 30%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("images/image.png");
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+.axes-cours div:focus {
+  filter: grayscale(0%);
 }
 @media screen and (max-width: 756px) {
   .axes-cours div {
@@ -449,14 +436,26 @@ body {
     margin: 0;
   }
 }
+@media screen and (max-width: 430px) {
+  .axes-cours {
+    flex-direction: column;
+    gap: 2%;
+    justify-content: space-between;
+  }
+}
 
+/*
+.axes-cours div:hover {
+    filter: grayscale(0%);
+    background-color: red;
+}*/
 .feed-projet {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--couleur-fond);
+  background-color: var(--couleur);
 }
 
 .info-projet {
@@ -476,7 +475,7 @@ body {
 .info-projet .img-parralax {
   width: 25rem;
   height: 25rem;
-  background-color: var(--gris-fonce);
+  background-color: var(--noir);
 }
 @media screen and (max-width: 430px) {
   .info-projet .img-parralax {

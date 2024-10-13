@@ -1,15 +1,17 @@
 main {
-    pointer-events: none;
+    //pointer-events: none;
 }
 
 html {
+    //pointer-events: none;
     scroll-behavior: smooth;
 }
 body {
+    //pointer-events: none;
     max-width: 1200px;
     overflow-x: hidden;
-    background-color: var(--gris-fonce);
-    color: white;
+    background-color: $noir;
+    color: $blanc;
 
     @media screen and (max-width: 756px) {
         overflow-x: hidden;
@@ -20,6 +22,7 @@ body {
     height: 100vh;
     //background-color: var(--couleur-fond);
     background-image: url("images/image.png");
+    background-position: 50% 50%;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -39,7 +42,7 @@ body {
     align-items: center;
     padding: 1rem;
     //background-color: var(--couleur-fond);
-    color: black;
+    color: $noir;
     position: fixed;
     transform: translateY(0);
     top: 0;

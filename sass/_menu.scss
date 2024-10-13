@@ -1,8 +1,16 @@
 /********** Menu Nav *************/
+
+.noscroll {
+    position: fixed;
+    top: var(--st, 0);
+    inline-size: 100%;
+    overflow-y: scroll;
+}
+
 .menu {
     width: 40vw;
     height: 100vh;
-    background-color: red;
+    background-color: $couleur;
     transform: translateX(100%);
     position: absolute;
     top: 0;
@@ -29,7 +37,7 @@
 .menu ul li {
     font-size: 6rem;
     font-weight: bold;
-    color: white;
+    color: $blanc;
     cursor: pointer;
     font-size: clamp(0.5rem, 10vw, 5rem);
 }
@@ -39,10 +47,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    backdrop-filter: blur(0px) brightness(100%);
-    transition: backdrop-filter 0.7s ease;
     pointer-events: none;
     z-index: 5;
+    backdrop-filter: blur(0px) brightness(100%);
+    transition: backdrop-filter 0.7s ease;
 }
 .burger {
     cursor: pointer;
@@ -59,21 +67,9 @@
 .burger div {
     width: 100%;
     height: 10%;
-    background-color: black;
+    background-color: $blanc;
     border-radius: 50px;
     //transition: all 0.7s;
-}
-
-#burger:checked > .burger div:nth-of-type(1) {
-    animation: ligne-burger 0.2s ease alternate;
-}
-
-#burger:checked > .burger div:nth-of-type(2) {
-    animation: ligne-burger 0.2s 0.1s ease alternate;
-}
-
-#burger:checked > .burger div:nth-of-type(3) {
-    animation: ligne-burger 0.2s 0.2s ease alternate;
 }
 
 #burger {
@@ -87,6 +83,7 @@
 }
 
 #burger:checked ~ .flou {
+    pointer-events: all;
     backdrop-filter: blur(5px) brightness(50%);
 }
 
