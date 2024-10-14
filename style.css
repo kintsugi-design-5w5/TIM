@@ -530,7 +530,7 @@ div {
   text-align: end;
 }
 
-div:not(.cours_timeline):after {
+.cercle:not(.cours_timeline):after {
   content: "";
   display: inline-block;
   vertical-align: middle;

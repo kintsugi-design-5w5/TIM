@@ -35,7 +35,7 @@ div {
   // line-height: 3rem; Espacement entre les éléments
 }
 
-div:not(.cours_timeline):after {
+.cercle:not(.cours_timeline):after {
   //Placer un cercle après les div sauf pour la div avec classe cours-timeline
   content: "";
   display: inline-block;
