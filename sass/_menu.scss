@@ -7,6 +7,28 @@
     overflow-y: scroll;
 }
 
+.barre-navigation {
+    position: absolute;
+    height: 10vh;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    //background-color: var(--couleur-fond);
+    color: $noir;
+    position: fixed;
+    transform: translateY(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+
+    img {
+        width: 6rem;
+        height: auto;
+    }
+}
 .menu {
     width: 40vw;
     height: 100vh;

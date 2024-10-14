@@ -60,3 +60,7 @@ function MontrerCacherMenu() {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour éviter les valeurs négatives sur mobile
 }
+let main = document.querySelector("main");
+main.addEventListener("click", function () {
+    console.log("click");
+});
