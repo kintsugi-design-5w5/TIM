@@ -597,18 +597,51 @@ section {
 }
 
 .section__projet {
-  background-color: aqua;
+  background-color: blue;
 }
 
 .info__projet {
   display: flex;
   justify-content: space-around;
+  min-height: 40vh;
+}
+
+.btn-retour {
+  position: absolute;
 }
 
 .titre__projet {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.description__projet {
+  width: 50vw;
+}
+
+.logiciel-projet {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.logiciels {
+  width: 5vw;
+  height: auto;
+}
+
+.images-projets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 5rem;
+  gap: 3rem;
+}
+
+.screenshots-projet {
+  width: 40vw;
+  height: auto;
 }
 
 footer {
