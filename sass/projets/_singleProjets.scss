@@ -1,0 +1,28 @@
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.entete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__projet {
+  background-color: aqua;
+}
+
+.info__projet {
+  display: flex;
+  justify-content: space-around;
+}
+
+.titre__projet {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.description__projet {
+}
