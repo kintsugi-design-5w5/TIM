@@ -604,10 +604,12 @@ section {
   display: flex;
   justify-content: space-around;
   min-height: 40vh;
+  padding-top: 3rem;
 }
 
 .btn-retour {
-  position: absolute;
+  text-align: left;
+  font-size: 1.2rem;
 }
 
 .titre__projet {
@@ -618,16 +620,32 @@ section {
 
 .description__projet {
   width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.entete-description__projet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.texte-description {
+  margin-top: 40px;
+  line-height: 2rem;
+  text-align: start;
 }
 
 .logiciel-projet {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .logiciels {
-  width: 5vw;
+  width: 3vw;
   height: auto;
 }
 
