@@ -36,14 +36,14 @@ div {
 }
 
 .cercle:not(.cours_timeline):after {
-  //Placer un cercle après les div sauf pour la div avec classe cours-timeline
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  background-color: #3498db;
-  border-radius: 50%;
-  color: white;
+    //Placer un cercle après les div sauf pour la div avec classe cours-timeline
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    color: white;
 }
