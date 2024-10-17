@@ -1,0 +1,49 @@
+/*
+Theme Name: TIM2.0
+Theme URI: https://referenced.ca
+Author: Kintsugi
+Author URI: https://wordpress.org/
+Description: Refonte du site du département TIM du Collège de Maisonneuve
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: TIM2.0
+Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
+*/
+
+// https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+
+/* ////////////////////////////////////////////////////////// */
+/*                       Variables css                        */
+/* ////////////////////////////////////////////////////////// */
+@import "variable";
+
+/* ////////////////////////////////////////////////////////// */
+/*                      Règles de base                        */
+/* ////////////////////////////////////////////////////////// */
+@import "h";
+@import "general";
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des sections                     */
+/* ////////////////////////////////////////////////////////// */
+@import "accueil/accueil";
+@import "cours/cours";
+@import "etudiant/etudiant";
+@import "profs/profs";
+@import "projets/projets";
+@import "stage/stage";
+@import "footer";
+@import "composants/recherche";
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des effets                       */
+/* ////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles des composants                     */
+/* ////////////////////////////////////////////////////////// */
