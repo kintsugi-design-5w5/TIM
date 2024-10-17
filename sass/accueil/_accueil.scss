@@ -322,12 +322,13 @@ body {
 .axes-cours div {
     background-color: var(--couleur-fond);
     color: white;
-    height: 45%;
+    height: 50%;
     // flex: 1 0 0;
     flex: 1 0 30%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 
     @media screen and (max-width: 756px) {
         flex: 1 0 40%;
@@ -342,6 +343,10 @@ body {
     }
 }
 
+.axes-cours div:hover {
+    transform: scale(1.1);
+    background-color: var(--couleur-fond);
+}
 .feed-projet {
     width: 100vw;
     height: 100vh;

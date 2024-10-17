@@ -1,8 +1,3 @@
-body {
-  display: flex;
-  justify-content: space-between;
-}
-// Recherche du système de design 1
 .recherche {
   display: flex;
   justify-content: space-between;
@@ -21,22 +16,5 @@ body {
   font-size: 1.5rem;
 }
 
-// Recherche système de design 2
-
-.recherche2 {
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  border: 2px solid #ffff;
-}
-
-.recherche__input2 {
-  background-color: var(--gris-fonce);
-  border: none;
-  outline: none;
-}
-
-.recherche__input2::placeholder {
-  color: #ffff;
-  font-size: 1.5rem;
+.recherche__input .recherch__img {
 }
