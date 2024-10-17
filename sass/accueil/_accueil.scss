@@ -206,36 +206,113 @@
     background-color: red;
 }*/
 
+#projet1 {
+    background-image: url("images/GenestVincent_3D.png");
+    & .projet-paint {
+        top: 0;
+    }
+}
+#projet2 {
+    background-image: url("images/CarriereNicolas_3D.jpg");
+    & .projet-paint {
+        top: -100vh;
+    }
+}
+#projet3 {
+    background-image: url("images/GenestVincent_3D.png");
+    & .projet-paint {
+        top: -200vh;
+    }
+}
+
 .feed-projet {
     width: 100vw;
     height: 100vh;
+    background-color: $couleur;
+    position: sticky;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $couleur;
+    contain: paint;
 }
+.feed-projet::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 75%);
+    pointer-events: none; /* Permet de cliquer à travers l'after */
 
+    @media screen and (max-width: 430px) {
+        background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 100%);
+    }
+}
+.projet-paint {
+    height: 300vh;
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+}
 .info-projet {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+
+    & > .titre-projet {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 756px) {
+            text-align: left;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 20rem;
+            //gap: 5rem;
+        }
+        &:last-of-type {
+            @media screen and (max-width: 756px) {
+                align-items: flex-start;
+            }
+        }
+    }
 
     @media screen and (max-width: 756px) {
         flex-direction: column;
-        gap: 5rem;
+        //gap: 5rem;
     }
 }
 
 .info-projet .img-parralax {
+    flex: 1;
     width: 25rem;
     height: 25rem;
     background-color: $noir;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 756px) {
+        flex: 3;
+    }
 
     @media screen and (max-width: 430px) {
-        width: 15rem;
-        height: 15rem;
+        width: 20rem;
+        height: 20rem;
     }
 }
 
