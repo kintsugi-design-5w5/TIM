@@ -1,0 +1,114 @@
+/********** Menu Nav *************/
+
+.noscroll {
+    position: fixed;
+    top: var(--st, 0);
+    inline-size: 100%;
+    overflow-y: scroll;
+}
+
+.barre-navigation {
+    position: absolute;
+    height: 10vh;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    //background-color: var(--couleur-fond);
+    color: $noir;
+    position: fixed;
+    transform: translateY(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+
+    img {
+        width: 6rem;
+        height: auto;
+    }
+}
+.menu {
+    width: 40vw;
+    height: 100vh;
+    background-color: $couleur;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 0.7s ease;
+    z-index: 10;
+
+    @media screen and (max-width: 756px) {
+        width: 100vw;
+    }
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+    list-style: none;
+    padding: 0px;
+}
+
+.menu ul li {
+    font-size: 6rem;
+    font-weight: bold;
+    color: $blanc;
+    cursor: pointer;
+    font-size: clamp(0.5rem, 10vw, 5rem);
+}
+.flou {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 5;
+    backdrop-filter: blur(0px) brightness(100%);
+    transition: backdrop-filter 0.7s ease;
+}
+.burger {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.burger div {
+    width: 100%;
+    height: 10%;
+    background-color: $blanc;
+    border-radius: 50px;
+    //transition: all 0.7s;
+}
+
+#burger {
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+#burger:checked + .menu {
+    transform: translateX(0);
+}
+
+#burger:checked ~ .flou {
+    pointer-events: all;
+    backdrop-filter: blur(5px) brightness(50%);
+}
+
+.logo {
+    text-decoration: none;
+}

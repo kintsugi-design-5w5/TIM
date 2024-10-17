@@ -1,3 +1,61 @@
 main {
-    pointer-events: none;
+    //pointer-events: none;
+}
+html {
+    //pointer-events: none;
+    scroll-behavior: smooth;
+}
+body {
+    //pointer-events: none;
+    overflow-x: hidden;
+    background-color: $noir;
+    color: $blanc;
+
+    @media screen and (max-width: 756px) {
+        overflow-x: hidden;
+    }
+}
+#hero {
+    width: 100vw;
+    height: 100vh;
+    //background-color: var(--couleur-fond);
+    background-image: url("images/image.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        text-align: center;
+        padding: 0 5rem;
+    }
+}
+
+section {
+    padding: 5rem 12rem;
+}
+footer {
+    padding: 0 10rem;
+}
+
+/****** Scrollbar ******/
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $noir-fonce;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $couleur;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

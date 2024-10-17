@@ -1,8 +1,51 @@
+let burger = document.querySelector("#burger");
+let flou = document.querySelector(".flou");
+let body = document.querySelector("body");
+let html = document.querySelector("html");
+
+let scroll;
+
+burger.addEventListener("click", ClickBurger);
+flou.addEventListener("click", FermeBurger);
+
+function ClickBurger() {
+    if (burger.checked) {
+        body.style.setProperty("--st", -document.documentElement.scrollTop + "px");
+        scroll = document.documentElement.scrollTop;
+        body.classList.add("noscroll");
+
+        //body.style.overflowY = "hidden";
+        body.style.position = "fixed";
+        body.style.overflowY = "scroll";
+    } else {
+        FermeBurger();
+    }
+}
+
+function FermeBurger() {
+    quitteMenu = true;
+    body.style.position = "static";
+    body.style.overflowY = "auto";
+    html.style.scrollBehavior = "auto";
+    burger.checked = false;
+    window.scrollTo(0, scroll);
+    html.style.scrollBehavior = "smooth";
+}
+
 let lastScrollTop = 0;
 const menu = document.querySelector(".barre-navigation");
 let isScrollingDown = false; // Pour vérifier si l'utilisateur défile toujours vers le bas
+let quitteMenu = false;
 
 window.addEventListener("scroll", function () {
+    if (!quitteMenu) {
+        MontrerCacherMenu();
+    } else {
+        quitteMenu = false;
+    }
+});
+
+function MontrerCacherMenu() {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop && currentScroll > 100) {
@@ -16,39 +59,8 @@ window.addEventListener("scroll", function () {
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour éviter les valeurs négatives sur mobile
+}
+let main = document.querySelector("main");
+main.addEventListener("click", function () {
+    console.log("click");
 });
-
-// let page = document.querySelector("body");
-
-// //objet nessessaire au fonctionnement du menu
-// let menu = document.querySelector(".barre-navigation");
-
-// /*Détection du scoll pour l'aparition et la disparition du menu*/
-// let oldScrollY = window.scrollY;
-
-// let scrollID = window.addEventListener("scroll", apparitionDisparitionDuMenu);
-
-// //fonction pour faire apparaitre le menu si sur ordinateur
-// function apparitionDisparitionDuMenu() {
-//     {
-//         if (window.scrollY > oldScrollY) {
-//             menu.style.transform = "translateY(-100%) translateX(0%)";
-//         } else {
-//             menu.style.transform = "translateY(0%) translateX(0%)";
-//         }
-//         oldScrollY = window.scrollY;
-//     }
-// }
-
-// //fonction pour faire apparaitre le menu
-// function ouvrirLeMenu() {
-//     menu.style.transform = "translateX(0%)";
-//     page.style.overflowY = "hidden";
-//     // console.log("d")
-// }
-// //fonction pour faire disparaitre le menu
-// function fermerLeMenu() {
-//     menu.style.transform = "translateX(100%)";
-//     boutonBurger.style.pointerEvents = "auto";
-//     page.style.overflowY = "auto";
-// }
