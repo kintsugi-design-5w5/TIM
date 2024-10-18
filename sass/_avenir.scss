@@ -59,7 +59,7 @@
 .conteneur-mask{
     width: 30vw;
     height: 30vw;
-    border: solid 1rem var(--couleur);
+    border: solid 2px var(--couleur);
     border-radius: 50%;
     box-shadow: 0px 0px 20px var(--couleur);
     margin: 0;
@@ -70,8 +70,8 @@
 
     &:hover{
         .mask-avenir{
-            z-index: 2;
-            clip-path: circle(500% at 50% 50%);
+            z-index: 4;
+            clip-path: circle(350% at 50% 50%);
         }
     }
 }
@@ -90,11 +90,3 @@
     }
 }*/
 
-@keyframes expansion-mask{
-    0%{
-        clip-path: circle(50% at 50% 50%);
-    }
-    100%{
-        clip-path: circle(500% at 50% 50%);
-    }
-}
