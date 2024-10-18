@@ -16,10 +16,10 @@
                     <input type="checkbox" name="burger-box" id="burger" />
                     <div class="menu">
                         <ul>
-                            <li>Accueil</li>
+                            <li><a href="<?php echo get_template_directory_uri() . '/avenir.php'; ?>">Accueil</a></li>
                             <li>Cours</li>
                             <li>Projets</li>
-                            <li>Avenir</li>
+                            <li><a href="avenir.php">Avenir</a></li>
                         </ul>
                     </div>
                     <label for="burger">

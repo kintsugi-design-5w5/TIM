@@ -1,5 +1,5 @@
 /*
-Theme Name: TIM2.0
+Theme Name: TIM
 Theme URI: https://referenced.ca
 Author: Kintsugi
 Author URI: https://wordpress.org/
@@ -11,7 +11,7 @@ Tested up to: 5.4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: TIM2.0
+Text Domain: TIM
 Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 */
 
@@ -40,6 +40,7 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 @import "stage/stage";
 @import "footer";
 @import "composants/recherche";
+@import "avenir"
 
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
