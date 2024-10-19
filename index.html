@@ -12,6 +12,15 @@
         <title>TIM</title>
     </head>
     <body>
+        <!-- Curseur personnalisé -->
+        <div class="cliquable cache" data-icone="images/LogoTim.png">Recherche</div>
+        <div class="cliquable cache" data-icone="chemin/vers/click.png">Cliquer</div>
+        <div class="cliquable cache" data-icone="chemin/vers/secure.png">Sécurisé</div>
+
+        <div id="curseur-personnalise">
+            <img id="icone-curseur" class="cache" alt="Icône de curseur">
+        </div>
+
         <header>
             <nav>
                 <div class="barre-navigation">
@@ -26,7 +35,7 @@
                         </ul>
                     </div>
                     <label for="burger">
-                        <div class="burger">
+                        <div class="burger cliquable" data-icone="images/LogoTim.png">
                             <div></div>
                             <div></div>
                             <div></div>
@@ -84,7 +93,7 @@
                         <div class="titre-projet">
                             <h1>Anachonique</h1>
                         </div>
-                        <div class="img-parralax" id="projet1"></div>
+                        <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet1"></div>
                         <div class="titre-projet">
                             <h1>3D</h1>
                         </div>
@@ -97,7 +106,7 @@
                         <div class="titre-projet">
                             <h1>Nicolas</h1>
                         </div>
-                        <div class="img-parralax" id="projet2"></div>
+                        <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet2"></div>
                         <div class="titre-projet">
                             <h1>3D</h1>
                         <div></div>
@@ -110,7 +119,7 @@
                         <div class="titre-projet">
                             <h1>Nom Projet</h1>
                         </div>
-                        <div class="img-parralax" id="projet3"></div>
+                        <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet3"></div>
                         <div class="titre-projet">
                             <h1>Web</h1>
                         </div>
@@ -157,6 +166,6 @@
             </div>
         </footer>
     </body>
-    <script src="js/menu-burger.js"></script>
+    <script src="js/curseur.js"></script>
     <script src="js/barre-navigation-scroll.js"></script>
 </html>

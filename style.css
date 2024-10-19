@@ -18,29 +18,34 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 /* ////////////////////////////////////////////////////////// */
 /*                       Variables css                        */
 /* ////////////////////////////////////////////////////////// */
+/********** VARIABLES CSS *************/
+/* Styles de base pour tous les éléments */
 * {
-  box-sizing: border-box;
-  margin: 0;
+  box-sizing: border-box; /* Modifie la façon dont la taille des éléments est calculée */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
+/* Déclaration des variables CSS dans la racine */
 :root {
-  --couleur: #007bff;
-  --couleur-pale: #57a8ff;
-  --couleur-fonce: #004997;
-  --noir: #1c1c1c;
-  --noir-pale: #292929;
-  --noir-fonce: #242424;
-  --blanc: #ebebeb;
-  --blanc-pale: #eeeeee;
-  --blanc-fonce: #cccccc;
-  --gris: #808080;
-  --gris-pale: #a1a1a1;
-  --gris-fonce: #4b4b4b;
+  --couleur: #007bff; /* Couleur principale */
+  --couleur-pale: #57a8ff; /* Couleur pâle */
+  --couleur-fonce: #004997; /* Couleur foncée */
+  --noir: #1c1c1c; /* Couleur noire */
+  --noir-pale: #292929; /* Noir pâle */
+  --noir-fonce: #242424; /* Noir foncé */
+  --blanc: #ebebeb; /* Couleur blanche */
+  --blanc-pale: #eeeeee; /* Blanc pâle */
+  --blanc-fonce: #cccccc; /* Blanc foncé */
+  --gris: #808080; /* Couleur grise */
+  --gris-pale: #a1a1a1; /* Gris pâle */
+  --gris-fonce: #4b4b4b; /* Gris foncé */
 }
 
+/* Assignation des variables SCSS pour un usage dans les styles */
 /* ////////////////////////////////////////////////////////// */
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
+/*********** STYLES TYPOGRAPHIQUES **************/
 h1 {
   font-size: clamp(2rem, 4vw, 10rem);
 }
@@ -74,6 +79,7 @@ a {
   text-decoration: none;
 }
 
+/*********** COULEUR ET POLICE **************/
 h1,
 h2,
 h3,
@@ -86,6 +92,11 @@ li {
   color: var(--blanc);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+}
+
+/*********** STYLES GÉNÉRAUX **************/
+* {
+  cursor: none;
 }
 
 html {
@@ -103,6 +114,7 @@ body {
   }
 }
 
+/*********** HERO ET SECTION ET FOOTER **************/
 #hero {
   width: 100vw;
   height: 100vh;
@@ -126,30 +138,67 @@ footer {
   padding: 0 10rem;
 }
 
-/****** Scrollbar ******/
-/* width */
+/*********** CURSEUR PERSONNALISÉ **************/
+.cliquable {
+  cursor: none;
+}
+
+#curseur-personnalise {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--couleur);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, background-color 0.15s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+#icone-curseur {
+  width: 50%;
+  height: auto;
+  max-width: 80%;
+  filter: brightness(0) invert(1);
+}
+
+.cache {
+  display: none;
+}
+
+#curseur-personnalise.effet-survol {
+  width: 60px;
+  height: 60px;
+}
+
+#curseur-personnalise.noir {
+  background-color: black;
+}
+
+/*********** SCROLLBAR **************/
+/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: black;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--couleur);
-  border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-/********** Menu Nav *************/
+/********** MENU NAV *************/
 .noscroll {
+  /* Styles généraux pour l'élément empêchant le défilement */
   position: fixed;
   top: var(--st, 0);
   inline-size: 100%;
@@ -157,6 +206,7 @@ footer {
 }
 
 .barre-navigation {
+  /* Barre de navigation principale */
   position: absolute;
   height: 10vh;
   z-index: 10;
@@ -178,6 +228,7 @@ footer {
 }
 
 .menu {
+  /* Menu latéral */
   width: 40vw;
   height: 100vh;
   background-color: var(--couleur);
@@ -190,11 +241,12 @@ footer {
 }
 @media screen and (max-width: 756px) {
   .menu {
-    width: 100vw;
+    width: 100vw; /* Ajustement pour les écrans plus petits */
   }
 }
 
 .menu ul {
+  /* Styles pour la liste de menu */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,14 +258,15 @@ footer {
 }
 
 .menu ul li {
+  /* Éléments de la liste de menu */
   font-size: 6rem;
   font-weight: bold;
   color: var(--blanc);
-  cursor: pointer;
-  font-size: clamp(0.5rem, 10vw, 5rem);
+  font-size: clamp(0.5rem, 10vw, 5rem); /* Taille responsive */
 }
 
 .flou {
+  /* Flou d'arrière-plan */
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -226,7 +279,7 @@ footer {
 }
 
 .burger {
-  cursor: pointer;
+  /* Styles pour le bouton burger */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -238,6 +291,7 @@ footer {
 }
 
 .burger div {
+  /* Barres du bouton burger */
   width: 100%;
   height: 10%;
   background-color: var(--blanc);
@@ -245,21 +299,25 @@ footer {
 }
 
 #burger {
+  /* Styles pour le checkbox burger */
   display: none;
   position: relative;
   z-index: 10;
 }
 
 #burger:checked + .menu {
+  /* Animation du menu lors de l'ouverture */
   transform: translateX(0);
 }
 
 #burger:checked ~ .flou {
+  /* Effet de flou lors de l'ouverture du menu */
   pointer-events: all;
   backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
+  /* Styles pour le logo */
   text-decoration: none;
 }
 
@@ -296,7 +354,9 @@ footer {
 /*********** PRESENTATION **************/
 .presentation {
   flex-direction: column;
+  z-index: 1;
 }
+
 .presentation-tim {
   display: flex;
   gap: 2rem;
@@ -354,7 +414,6 @@ footer {
   height: 100%;
   width: 70%;
   flex-grow: 1;
-  align-items: flex-start;
   font-size: clamp(1rem, 4vw, 5rem);
 }
 
@@ -373,7 +432,9 @@ footer {
 .axes {
   padding-bottom: 12rem;
   height: 120vh;
+  z-index: 1;
 }
+
 .feed .img-projet {
   width: 100%;
   height: 50vh;
@@ -382,7 +443,6 @@ footer {
 }
 @media screen and (max-width: 756px) {
   .feed .img-projet {
-    width: 100%;
     height: 50vh;
   }
 }
@@ -427,9 +487,6 @@ footer {
   filter: grayscale(100%);
   transition: filter 0.5s;
 }
-.axes-cours div:focus {
-  filter: grayscale(0%);
-}
 @media screen and (max-width: 756px) {
   .axes-cours div {
     flex: 1 0 40%;
@@ -452,11 +509,16 @@ footer {
   }
 }
 
-/*
+.axes-cours div {
+  position: relative;
+  z-index: 10;
+}
+
 .axes-cours div:hover {
-    filter: grayscale(0%);
-    background-color: red;
-}*/
+  filter: grayscale(0%);
+  background-color: red;
+}
+
 #projet1 {
   background-image: url("images/GenestVincent_3D.png");
 }
@@ -501,7 +563,7 @@ footer {
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, var(--noir), rgba(0, 0, 0, 0) 75%);
-  pointer-events: none; /* Permet de cliquer à travers l'after */
+  pointer-events: none;
 }
 @media screen and (max-width: 430px) {
   .feed-projet::after {
@@ -553,6 +615,7 @@ footer {
   }
 }
 
+/*********** IMAGE PARALLAX **************/
 .info-projet .img-parralax {
   flex: 1;
   width: 25rem;
@@ -574,6 +637,7 @@ footer {
   }
 }
 
+/*********** ANIMATIONS **************/
 @keyframes apparition-gauche {
   0% {
     opacity: 0;
@@ -612,14 +676,6 @@ footer {
     transform: scale(1);
   }
 }
-/*@keyframes feed-block{
-    from{
-        position: static;
-    }
-    to{
-        position: fixed;
-    }
-}*/
 /*Style page cours*/
 /*Styles généraux de la page*/
 .entete_cours {
@@ -807,6 +863,7 @@ section {
   height: auto;
 }
 
+/*********** FOOTER **************/
 footer {
   width: 100vw;
   background-color: var(--noir);
