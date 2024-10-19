@@ -834,6 +834,30 @@ section {
   font-weight: 500;
 }
 
+.liste-emplois {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.liste-emplois > div {
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+  padding-right: 3rem;
+}
+
+.description-emplois {
+  padding-top: 2rem;
+}
+
+.section-universites > div {
+  padding-bottom: 2rem;
+}
+
+.section-universites > div > h2 {
+  font-weight: bold;
+}
+
 footer {
   width: 100vw;
   background-color: var(--noir);

@@ -27,3 +27,31 @@
 .types-stage > div > h2 {
     font-weight: 500;
 }
+
+//********************* Emplois ********************//
+
+.liste-emplois {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.liste-emplois > div {
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-right: 3rem;
+}
+
+.description-emplois {
+    padding-top: 2rem;
+}
+
+//********************* Universités **********************//
+
+.section-universites > div {
+    padding-bottom: 2rem;
+}
+
+.section-universites > div > h2 {
+    font-weight: bold;
+}
