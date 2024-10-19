@@ -820,8 +820,10 @@ section {
   font-weight: bold;
 }
 
-.types-stage {
-  display: flex;
+@media screen and (min-width: 756px) {
+  .types-stage {
+    display: flex;
+  }
 }
 
 .types-stage > div {
@@ -835,9 +837,13 @@ section {
 }
 
 .liste-emplois {
-  display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 756px) {
+  .liste-emplois {
+    display: flex;
+  }
 }
 
 .liste-emplois > div {

@@ -15,7 +15,9 @@
 // Sections Types de stages
 
 .types-stage {
-    display: flex;
+    @media screen and (min-width: 756px) {
+        display: flex;
+    }
 }
 
 .types-stage > div {
@@ -31,9 +33,11 @@
 //********************* Emplois ********************//
 
 .liste-emplois {
-    display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
+    @media screen and (min-width: 756px) {
+        display: flex;
+    }
 }
 
 .liste-emplois > div {
