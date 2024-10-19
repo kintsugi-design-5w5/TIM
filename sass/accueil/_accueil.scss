@@ -246,12 +246,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 75%); // Dégradé sombre
+    background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 100%); // Dégradé sombre
     pointer-events: none; // Permet de cliquer à travers l'after
-
-    @media screen and (max-width: 430px) {
-        background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 100%); // Ajustement pour petits écrans
-    }
 }
 
 .projet-paint {

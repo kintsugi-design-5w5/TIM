@@ -175,7 +175,39 @@ footer {
 }
 
 #curseur-personnalise.noir {
-  background-color: black;
+  background-color: var(--noir);
+}
+
+/*********** BOUTONS **************/
+.mon-bouton {
+  padding: 0.1rem 3rem;
+  position: relative; /* Nécessaire pour positionner l'after */
+  overflow: hidden; /* Masque tout débordement */
+  display: inline-block; /* Pour s'assurer que les dimensions sont respectées */
+}
+
+.mon-bouton::after {
+  content: var(--after-content); /* Utilise la variable CSS pour le contenu */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-15%); /* Position initiale en bas */
+  color: var(--noir);
+  font-family: "Playfair Display", serif;
+  transition: transform 0.3s ease; /* Transition douce */
+}
+
+.mon-bouton .texte {
+  display: block; /* Permet au texte de prendre de la place */
+  transition: transform 0.3s ease; /* Transition pour le texte principal */
+}
+
+.mon-bouton:hover .texte {
+  transform: translateY(-100%); /* Déplace le texte vers le haut pour le masquer */
+}
+
+.mon-bouton:hover::after {
+  opacity: 1; /* Rendre visible au survol */
+  transform: translateX(-50%) translateY(-110%); /* Remonte le texte à sa position */
 }
 
 /*********** SCROLLBAR **************/
@@ -562,13 +594,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, var(--noir), rgba(0, 0, 0, 0) 75%);
+  background: linear-gradient(to top, var(--noir), rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
-}
-@media screen and (max-width: 430px) {
-  .feed-projet::after {
-    background: linear-gradient(to top, var(--noir), rgba(0, 0, 0, 0) 100%);
-  }
 }
 
 .projet-paint {
