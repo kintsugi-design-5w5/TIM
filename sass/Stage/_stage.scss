@@ -1,12 +1,29 @@
 .sous-section {
-    background-color: var(--blanc-pale);
+    justify-content: center;
+    align-items: center;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-bottom: 3rem;
+    padding-top: 5rem;
 }
 
-.text-noir > h1 {
-    color: black;
+.sous-section > div > h2 {
     font-weight: bold;
+    //font-size: 4rem;
 }
 
-.text-noir > h2, .text-noir > h3,.text-noir > h4, .text-noir > p, .text-noir > ul > li {
-    color: black;
+// Sections Types de stages
+
+.types-stage {
+    display: flex;
+}
+
+.types-stage > div {
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-right: 3rem;
+}
+
+.types-stage > div > h2 {
+    font-weight: 500;
 }
