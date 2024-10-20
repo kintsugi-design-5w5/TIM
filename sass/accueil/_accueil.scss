@@ -64,10 +64,11 @@
         flex-direction: column-reverse; // Colonnes sur petits écrans
         align-items: center;
         justify-content: flex-end;
+        margin: 0;
     }
 }
 
-.presentation .presentation-info + .presentation-info {
+.presentation-info + .presentation-info {
     // Deuxième image et texte
     & .infos h1 {
         text-align: left; // Alignement à gauche
@@ -95,6 +96,10 @@
     width: 70%;
     flex-grow: 1;
     font-size: clamp(1rem, 4vw, 5rem); // Taille de police responsive
+
+    @media screen and (max-width: 756px) {
+        width: 100%;
+    }
 }
 
 .feed .presentation-info .infos h1 {

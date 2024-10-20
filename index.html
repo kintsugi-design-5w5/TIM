@@ -37,11 +37,22 @@
                         </ul>
                     </div>
                     <label for="burger">
-                        <div class="burger cliquable" data-icone="images/LogoTim.png">
+                        <!-- <div class="burger cliquable" data-icone="images/LogoTim.png">
                             <div></div>
                             <div></div>
                             <div></div>
-                        </div>
+                        </div> -->
+                        <svg class="burger burgerTourne" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                            <path
+                                  class="ligne top"
+                                  d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                            <path
+                                  class="ligne middle"
+                                  d="m 70,50 h -40" />
+                            <path
+                                  class="ligne bottom"
+                                  d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                          </svg>
                     </label>
                     <div class="flou"></div>
                 </div>

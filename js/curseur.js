@@ -3,6 +3,21 @@
 const curseur = document.getElementById("curseur-personnalise");
 const icone = document.getElementById("icone-curseur");
 
+// Fonction pour masquer ou afficher le curseur en fonction de la largeur de la fenêtre
+function gererCurseurMobile() {
+    if (window.innerWidth < 756) {
+        curseur.style.display = "none"; // Masque le curseur si en dessous de 756px
+    } else {
+        curseur.style.display = "fixed"; // Affiche le curseur si au-dessus de 756px
+    }
+}
+
+// Appel initial lors du chargement de la page
+gererCurseurMobile();
+
+// Écouteur d'événements pour détecter les changements de taille de la fenêtre
+window.addEventListener("resize", gererCurseurMobile);
+
 // Met à jour la position du curseur personnalisé en fonction de la souris
 document.addEventListener("mousemove", (e) => {
     curseur.style.top = `${e.clientY}px`; // Position verticale
