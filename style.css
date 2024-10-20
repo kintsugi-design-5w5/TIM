@@ -630,6 +630,7 @@ section {
   justify-content: space-around;
   min-height: 40vh;
   padding-top: 3rem;
+  gap: 3rem;
 }
 
 .btn-retour {
@@ -683,12 +684,13 @@ section {
 }
 
 .screenshots-projet {
-  width: 40vw;
+  width: 30vw;
   height: auto;
 }
 
 /*Fenêtre popup*/
 .popup {
+  position: relative;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -700,6 +702,12 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.popup .btn_x {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 .contenu-popup {
@@ -717,6 +725,10 @@ section {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+
+.reseaux-sociaux__popup li {
+  list-style-type: none;
 }
 
 .reseaux-sociaux__popup li a img {
