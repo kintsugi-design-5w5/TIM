@@ -9,14 +9,6 @@
     width: 100vw;
     background-color: $noir;
     z-index: -2;
-
-    @media screen and (max-width: 756px) {
-        padding: 5rem 2rem; // Espacement pour les petits écrans
-    }
-
-    @media screen and (max-width: 430px) {
-        padding: 2rem 1rem; // Espacement pour très petits écrans
-    }
 }
 
 .feed img {
@@ -102,7 +94,7 @@
     }
 }
 
-.feed .presentation-info .infos h1 {
+.presentation-info .infos h1 {
     // Titre du feed
     margin: 0;
     text-align: right;

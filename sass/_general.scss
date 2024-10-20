@@ -50,7 +50,8 @@ html body #grain {
 
 section {
     // Styles pour les sections
-    padding: 5rem 12rem;
+    //padding: 5rem 12rem;
+    padding: 5rem 12vw;
 }
 
 footer {
@@ -106,7 +107,8 @@ footer {
 
 /*********** BOUTONS **************/
 .mon-bouton {
-    padding: 0.1rem 3rem;
+    padding: 0rem 3rem;
+    line-height: 100%;
     position: relative; /* Nécessaire pour positionner l'after */
     overflow: hidden; /* Masque tout débordement */
     display: inline-block; /* Pour s'assurer que les dimensions sont respectées */
@@ -116,7 +118,7 @@ footer {
     content: var(--after-content); /* Utilise la variable CSS pour le contenu */
     position: absolute;
     left: 50%;
-    transform: translateX(-50%) translateY(-15%); /* Position initiale en bas */
+    transform: translateX(-50%) translateY(-10%); /* Position initiale en bas */
     color: $noir;
     font-family: "Playfair Display", serif;
     transition: transform 0.3s ease; /* Transition douce */

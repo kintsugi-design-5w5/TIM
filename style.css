@@ -71,7 +71,7 @@ h6 {
 }
 
 p {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(0.75rem, 3vw, 1.8rem);
 }
 
 a {
@@ -140,7 +140,7 @@ html body #grain {
 }
 
 section {
-  padding: 5rem 12rem;
+  padding: 5rem 12vw;
 }
 
 footer {
@@ -189,7 +189,8 @@ footer {
 
 /*********** BOUTONS **************/
 .mon-bouton {
-  padding: 0.1rem 3rem;
+  padding: 0rem 3rem;
+  line-height: 100%;
   position: relative; /* Nécessaire pour positionner l'after */
   overflow: hidden; /* Masque tout débordement */
   display: inline-block; /* Pour s'assurer que les dimensions sont respectées */
@@ -199,7 +200,7 @@ footer {
   content: var(--after-content); /* Utilise la variable CSS pour le contenu */
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) translateY(-15%); /* Position initiale en bas */
+  transform: translateX(-50%) translateY(-10%); /* Position initiale en bas */
   color: var(--noir);
   font-family: "Playfair Display", serif;
   transition: transform 0.3s ease; /* Transition douce */
@@ -249,12 +250,11 @@ footer {
 .barre-navigation {
   /* Barre de navigation principale */
   position: absolute;
-  height: 10vh;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding-left: 1rem;
   color: var(--noir);
   position: fixed;
   transform: translateY(0);
@@ -264,20 +264,24 @@ footer {
   transition: transform 0.3s ease;
 }
 .barre-navigation img {
-  width: 6rem;
+  width: 7vw;
   height: auto;
+}
+@media screen and (max-width: 756px) {
+  .barre-navigation img {
+    width: 15vw;
+  }
 }
 
 .menu {
   /* Menu latéral */
-  width: 40vw;
   height: 100vh;
   background-color: var(--couleur);
   transform: translateX(100%);
   position: absolute;
   top: 0;
   right: 0;
-  transition: transform 0.7s ease;
+  transition: transform 0.7s cubic-bezier(0.8, -0.02, 0.38, 1);
   z-index: 10;
 }
 @media screen and (max-width: 756px) {
@@ -291,19 +295,30 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
-  gap: 2rem;
   list-style: none;
-  padding: 0px;
+  padding: 35% 2rem 0 2rem;
+}
+@media screen and (max-width: 756px) {
+  .menu ul {
+    padding: 0 2rem;
+  }
 }
 
 .menu ul li {
   /* Éléments de la liste de menu */
-  font-size: 6rem;
   font-weight: bold;
   color: var(--blanc);
   font-size: clamp(0.5rem, 10vw, 5rem); /* Taille responsive */
+}
+.menu ul li a {
+  font-size: 6rem;
+}
+@media screen and (max-width: 756px) {
+  .menu ul li a {
+    font-size: 5rem;
+  }
 }
 
 .flou {
@@ -317,14 +332,6 @@ footer {
   z-index: 5;
   backdrop-filter: blur(0px) brightness(100%);
   transition: backdrop-filter 0.7s ease;
-}
-
-.burger {
-  /* Styles pour le bouton burger */
-}
-
-.burger div {
-  /* Barres du bouton burger */
 }
 
 #burger {
@@ -353,12 +360,18 @@ footer {
 .burger {
   z-index: 100;
   position: relative;
+  width: 7vw;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media screen and (max-width: 756px) {
+  .burger {
+    width: 15vw;
+  }
 }
 
 .burgerTourne.active {
@@ -406,16 +419,6 @@ footer {
   width: 100vw;
   background-color: var(--noir);
   z-index: -2;
-}
-@media screen and (max-width: 756px) {
-  .feed {
-    padding: 5rem 2rem;
-  }
-}
-@media screen and (max-width: 430px) {
-  .feed {
-    padding: 2rem 1rem;
-  }
 }
 
 .feed img {
@@ -495,13 +498,13 @@ footer {
   }
 }
 
-.feed .presentation-info .infos h1 {
+.presentation-info .infos h1 {
   margin: 0;
   text-align: right;
   width: 100%;
 }
 @media screen and (max-width: 756px) {
-  .feed .presentation-info .infos h1 {
+  .presentation-info .infos h1 {
     text-align: center;
   }
 }
