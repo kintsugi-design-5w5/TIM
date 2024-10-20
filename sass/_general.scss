@@ -20,6 +20,15 @@ body {
     }
 }
 
+html body #grain {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
 /*********** HERO ET SECTION ET FOOTER **************/
 #hero {
     // Styles pour la section hero
