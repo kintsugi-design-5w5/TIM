@@ -1,50 +1,41 @@
 /*********** FEED **************/
 .feed {
-    //conteneur du feed
+    // Conteneur principal du feed
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    //height: 100vh;
     width: 100vw;
     background-color: $noir;
     z-index: -2;
-
-    @media screen and (max-width: 756px) {
-        padding: 5rem 2rem;
-    }
-
-    @media screen and (max-width: 430px) {
-        padding: 2rem 1rem;
-    }
 }
 
 .feed img {
-    //image du feed
+    // Image à l'intérieur du feed
     width: 100%;
     height: 100%;
 }
 
 /*********** PRESENTATION **************/
 .presentation {
-    //1ere section du feed
+    // Première section du feed
     flex-direction: column;
-    @media screen and (max-width: 756px) {
-    }
+    z-index: 1;
 }
 
 .presentation-tim {
-    //info du TIM
+    // Informations sur le TIM
     display: flex;
     gap: 2rem;
+
     @media screen and (max-width: 756px) {
-        flex-direction: column;
+        flex-direction: column; // Colonnes sur petits écrans
     }
 }
 
 .presentation-info {
-    //2 images + textes
+    // Conteneur pour 2 images et textes
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -56,37 +47,39 @@
     margin: 5rem 0;
 
     & .img-projet {
-        //image du projet
+        // Image du projet avec animation
         animation: apparition-droite 1s ease forwards;
         animation-timeline: view();
     }
 
     @media screen and (max-width: 756px) {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; // Colonnes sur petits écrans
         align-items: center;
         justify-content: flex-end;
+        margin: 0;
     }
 }
 
-.presentation .presentation-info + .presentation-info {
-    //2e image + texte
+.presentation-info + .presentation-info {
+    // Deuxième image et texte
     & .infos h1 {
-        text-align: left;
+        text-align: left; // Alignement à gauche
     }
     & .infos {
-        align-items: flex-start;
+        align-items: flex-start; // Alignement du texte
     }
     & .img-projet {
-        animation: apparition-gauche 1s ease forwards;
+        animation: apparition-gauche 1s ease forwards; // Animation de l'image
         animation-timeline: view();
     }
+
     @media screen and (max-width: 756px) {
-        flex-direction: column;
+        flex-direction: column; // Colonnes sur petits écrans
     }
 }
 
 .feed .infos {
-    //conteneur du texte du feed
+    // Conteneur pour le texte du feed
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -94,68 +87,66 @@
     height: 100%;
     width: 70%;
     flex-grow: 1;
-    align-items: flex-start;
-    font-size: clamp(1rem, 4vw, 5rem);
+    font-size: clamp(1rem, 4vw, 5rem); // Taille de police responsive
+
+    @media screen and (max-width: 756px) {
+        width: 100%;
+    }
 }
 
-.feed .presentation-info .infos h1 {
-    //titre du feed
+.presentation-info .infos h1 {
+    // Titre du feed
     margin: 0;
     text-align: right;
     width: 100%;
 
     @media screen and (max-width: 756px) {
-        text-align: center;
+        text-align: center; // Centrer le titre sur petits écrans
     }
 }
 
 /*********** AXES **************/
 .axes {
-    //padding: 10rem 3rem;
-    padding-bottom: 12rem;
-    height: 120vh;
-
-    @media screen and (max-width: 430px) {
-        //padding: 10rem 0;
-    }
+    padding-bottom: 12rem; // Espacement en bas
+    height: 120vh; // Hauteur de la section
+    z-index: 1;
 }
 
 .feed .img-projet {
-    //image du feed
+    // Image principale du feed
     width: 100%;
     height: 50vh;
     background-color: $couleur;
     z-index: -1;
 
     @media screen and (max-width: 756px) {
-        width: 100%;
-        height: 50vh;
+        height: 50vh; // Hauteur sur petits écrans
     }
 }
 
 .feed .charte-rond {
-    //charte graphique
+    // Charte graphique sous forme de rond
     height: 30vw;
     width: 30vw;
     min-width: 300px;
     min-height: 300px;
-    border-radius: 50%;
+    border-radius: 50%; // Arrondir les coins
     background-color: $couleur;
     margin: 1rem 0;
-    animation: apparition-charte 1s ease forwards;
+    animation: apparition-charte 1s ease forwards; // Animation d'apparition
     animation-timeline: view();
 }
 
 .charte-rond,
 .img-projet {
-    //image de charte
+    // Alignement des images
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .axes-cours {
-    //conteneur des axes
+    // Conteneur pour les axes
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -165,101 +156,106 @@
     gap: 2rem;
 
     & div {
+        // Styles pour les divs à l'intérieur des axes
         background-color: var(--couleur-fond);
         color: white;
         height: 50%;
-        flex: 1 0 30%;
+        flex: 1 0 30%; // Flexibilité des divs
         display: flex;
         align-items: center;
         justify-content: center;
         background-image: url("images/image.png");
-        filter: grayscale(100%);
-        transition: filter 0.5s;
-
-        &:focus {
-            filter: grayscale(0%);
-        }
+        filter: grayscale(100%); // Effet de gris
+        transition: filter 0.5s; // Transition pour hover
 
         @media screen and (max-width: 756px) {
-            flex: 1 0 40%;
+            flex: 1 0 40%; // Ajustement pour petits écrans
             height: 30%;
             max-width: none;
         }
 
         @media screen and (max-width: 430px) {
-            flex: 1 0 0;
+            flex: 1 0 0; // Flexibilité totale sur très petits écrans
             width: 100%;
-            margin: 0;
+            margin: 0; // Supprimer les marges
         }
     }
 
     @media screen and (max-width: 430px) {
-        flex-direction: column;
-        gap: 2%;
-        justify-content: space-between;
+        flex-direction: column; // Orientation verticale sur très petits écrans
+        gap: 2%; // Espacement entre les divs
+        justify-content: space-between; // Espacement uniforme
     }
 }
 
-/*
+.axes-cours div {
+    position: relative; // Position relative pour le z-index
+    z-index: 10; // Ordre d'affichage
+}
+
 .axes-cours div:hover {
-    filter: grayscale(0%);
-    background-color: red;
-}*/
+    filter: grayscale(0%); // Effet au survol
+    background-color: red; // Changer la couleur de fond
+}
 
 #projet1 {
-    background-image: url("images/GenestVincent_3D.png");
+    background-image: url("images/GenestVincent_3D.png"); // Image du projet 1
     & .projet-paint {
-        top: 0;
+        top: 0; // Position du paint
     }
 }
+
 #projet2 {
-    background-image: url("images/CarriereNicolas_3D.jpg");
+    background-image: url("images/CarriereNicolas_3D.jpg"); // Image du projet 2
     & .projet-paint {
-        top: -100vh;
+        top: -100vh; // Position du paint
     }
 }
+
 #projet3 {
-    background-image: url("images/GenestVincent_3D.png");
+    background-image: url("images/GenestVincent_3D.png"); // Image du projet 3
     & .projet-paint {
-        top: -200vh;
+        top: -200vh; // Position du paint
     }
 }
 
 .feed-projet {
+    // Section projet du feed
     width: 100vw;
     height: 100vh;
     background-color: $couleur;
-    position: sticky;
-    top: 0;
+    position: sticky; // Reste visible lors du défilement
+    top: 0; // Position du haut
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    contain: paint;
+    contain: paint; // Contenu peint
 }
+
 .feed-projet::after {
+    // Effet de dégradé sur le projet
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 75%);
-    pointer-events: none; /* Permet de cliquer à travers l'after */
-
-    @media screen and (max-width: 430px) {
-        background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 100%);
-    }
+    background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 100%); // Dégradé sombre
+    pointer-events: none; // Permet de cliquer à travers l'after
 }
+
 .projet-paint {
-    height: 300vh;
+    // Peinture pour le projet
+    height: 300vh; // Hauteur de la peinture
     position: absolute;
-    z-index: 20;
+    z-index: 20; // Ordre d'affichage
     left: 0;
     right: 0;
 }
+
 .info-projet {
     position: sticky;
     top: 0;
@@ -282,8 +278,8 @@
             justify-content: flex-start;
             align-items: flex-end;
             width: 20rem;
-            //gap: 5rem;
         }
+
         &:last-of-type {
             @media screen and (max-width: 756px) {
                 align-items: flex-start;
@@ -293,10 +289,10 @@
 
     @media screen and (max-width: 756px) {
         flex-direction: column;
-        //gap: 5rem;
     }
 }
 
+/*********** IMAGE PARALLAX **************/
 .info-projet .img-parralax {
     flex: 1;
     width: 25rem;
@@ -316,17 +312,15 @@
     }
 }
 
-//Animation du scroll
+/*********** ANIMATIONS **************/
 @keyframes apparition-gauche {
     0% {
         opacity: 0;
         transform: translateX(-100%);
-        //transform: scale(0);
     }
     30% {
         opacity: 1;
         transform: translateX(0);
-        //transform: scale(1);
     }
 }
 
@@ -334,12 +328,10 @@
     0% {
         opacity: 0;
         transform: translateX(100%);
-        //transform: scale(0);
     }
     30% {
         opacity: 1;
         transform: translateX(0);
-        //transform: scale(1);
     }
 }
 
@@ -362,11 +354,3 @@
         transform: scale(1);
     }
 }
-/*@keyframes feed-block{
-    from{
-        position: static;
-    }
-    to{
-        position: fixed;
-    }
-}*/

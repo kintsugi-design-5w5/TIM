@@ -1,46 +1,40 @@
+/********** VARIABLES CSS *************/
+
+/* Styles de base pour tous les éléments */
 * {
-    box-sizing: border-box;
-    margin: 0;
+    box-sizing: border-box; /* Modifie la façon dont la taille des éléments est calculée */
+    margin: 0; /* Supprime les marges par défaut */
 }
 
+/* Déclaration des variables CSS dans la racine */
 :root {
-    --couleur: #007bff;
-    --couleur-pale: #57a8ff;
-    --couleur-fonce: #004997;
+    --couleur: #007bff; /* Couleur principale */
+    --couleur-pale: #57a8ff; /* Couleur pâle */
+    --couleur-fonce: #004997; /* Couleur foncée */
 
-    --noir: #1c1c1c;
-    --noir-pale: #292929;
-    --noir-fonce: #242424;
+    --noir: #1c1c1c; /* Couleur noire */
+    --noir-pale: #292929; /* Noir pâle */
+    --noir-fonce: #242424; /* Noir foncé */
 
-    --blanc: #ebebeb;
-    --blanc-pale: #eeeeee;
-    --blanc-fonce: #cccccc;
+    --blanc: #ebebeb; /* Couleur blanche */
+    --blanc-pale: #eeeeee; /* Blanc pâle */
+    --blanc-fonce: #cccccc; /* Blanc foncé */
 
-    --gris: #808080;
-    --gris-pale: #a1a1a1;
-    --gris-fonce: #4b4b4b;
+    --gris: #808080; /* Couleur grise */
+    --gris-pale: #a1a1a1; /* Gris pâle */
+    --gris-fonce: #4b4b4b; /* Gris foncé */
 }
 
+/* Assignation des variables SCSS pour un usage dans les styles */
 $couleur: var(--couleur);
-
 $couleur-pale: var(--couleur-pale);
-
 $couleur-fonce: var(--couleur-fonce);
-
 $noir-pale: var(--noir-pale);
-
 $noir-fonce: var(--noir-fonce);
-
 $noir: var(--noir);
-
 $blanc: var(--blanc);
-
 $blanc-pale: var(--blanc-pale);
-
 $blanc-fonce: var(--blanc-fonce);
-
 $gris: var(--gris);
-
 $gris-pale: var(--gris-pale);
-
 $gris-fonce: var(--gris-fonce);

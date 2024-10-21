@@ -1,6 +1,7 @@
-/********** Menu Nav *************/
+/********** MENU NAV *************/
 
 .noscroll {
+    /* Styles généraux pour l'élément empêchant le défilement */
     position: fixed;
     top: var(--st, 0);
     inline-size: 100%;
@@ -8,14 +9,14 @@
 }
 
 .barre-navigation {
+    /* Barre de navigation principale */
     position: absolute;
-    height: 10vh;
     z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    //background-color: var(--couleur-fond);
+    //padding: 2rem 2rem;
+    padding-left: 1rem;
     color: $noir;
     position: fixed;
     transform: translateY(0);
@@ -25,45 +26,64 @@
     transition: transform 0.3s ease;
 
     img {
-        width: 6rem;
+        width: 7vw;
         height: auto;
+
+        @media screen and (max-width: 756px) {
+            width: 15vw;
+        }
     }
 }
+
 .menu {
-    width: 40vw;
+    /* Menu latéral */
     height: 100vh;
     background-color: $couleur;
     transform: translateX(100%);
     position: absolute;
     top: 0;
     right: 0;
-    transition: transform 0.7s ease;
+    transition: transform 0.7s cubic-bezier(0.8, -0.02, 0.38, 1);
     z-index: 10;
 
     @media screen and (max-width: 756px) {
-        width: 100vw;
+        width: 100vw; /* Ajustement pour les écrans plus petits */
     }
 }
 
 .menu ul {
+    /* Styles pour la liste de menu */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
-    gap: 2rem;
+    //gap: 2rem;
     list-style: none;
-    padding: 0px;
+    padding: 35% 2rem 0 2rem;
+
+    @media screen and (max-width: 756px) {
+        padding: 0 2rem;
+    }
 }
 
 .menu ul li {
-    font-size: 6rem;
+    /* Éléments de la liste de menu */
     font-weight: bold;
     color: $blanc;
-    cursor: pointer;
-    font-size: clamp(0.5rem, 10vw, 5rem);
+    font-size: clamp(0.5rem, 10vw, 5rem); /* Taille responsive */
+
+    & a {
+        font-size: 6rem;
+
+        @media screen and (max-width: 756px) {
+            font-size: 5rem;
+        }
+    }
 }
+
 .flou {
+    /* Flou d'arrière-plan */
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -74,41 +94,68 @@
     backdrop-filter: blur(0px) brightness(100%);
     transition: backdrop-filter 0.7s ease;
 }
-.burger {
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 2em;
-    height: 2em;
-    overflow: hidden;
-    z-index: 100;
-}
-
-.burger div {
-    width: 100%;
-    height: 10%;
-    background-color: $blanc;
-    border-radius: 50px;
-    //transition: all 0.7s;
-}
 
 #burger {
+    /* Styles pour le checkbox burger */
     display: none;
     position: relative;
     z-index: 10;
 }
 
 #burger:checked + .menu {
+    /* Animation du menu lors de l'ouverture */
     transform: translateX(0);
 }
 
 #burger:checked ~ .flou {
+    /* Effet de flou lors de l'ouverture du menu */
     pointer-events: all;
     backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
+    /* Styles pour le logo */
     text-decoration: none;
+}
+
+.burger {
+    z-index: 100;
+    position: relative;
+    width: 7vw;
+
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @media screen and (max-width: 756px) {
+        width: 15vw;
+    }
+}
+.burgerTourne.active {
+    transform: rotate(45deg);
+}
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+.ligne {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: $blanc;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+}
+.burger .top {
+    stroke-dasharray: 40 121;
+}
+.burger .bottom {
+    stroke-dasharray: 40 121;
+}
+.burger.active .top {
+    stroke-dashoffset: -68px;
+}
+.burger.active .bottom {
+    stroke-dashoffset: -68px;
 }

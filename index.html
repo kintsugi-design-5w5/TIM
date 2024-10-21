@@ -9,9 +9,20 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <title>TIM</title>
     </head>
     <body>
+        <!-- Curseur personnalisé -->
+        <div class="cliquable cache" data-icone="images/LogoTim.png">Recherche</div>
+        <div class="cliquable cache" data-icone="chemin/vers/click.png">Cliquer</div>
+        <div class="cliquable cache" data-icone="chemin/vers/secure.png">Sécurisé</div>
+
+        <div id="curseur-personnalise">
+            <img id="icone-curseur" class="cache" alt="Icône de curseur">
+        </div>
+
+        <div id="grain"></div>
         <header>
             <nav>
                 <div class="barre-navigation">
@@ -19,18 +30,29 @@
                     <input type="checkbox" name="burger-box" id="burger" />
                     <div class="menu">
                         <ul>
-                            <li>Accueil</li>
-                            <li>Cours</li>
-                            <li>Projets</li>
-                            <li>Avenir</li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Accueil</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Cours</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Projets</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Avenir</a></li>
                         </ul>
                     </div>
                     <label for="burger">
-                        <div class="burger">
+                        <!-- <div class="burger cliquable" data-icone="images/LogoTim.png">
                             <div></div>
                             <div></div>
                             <div></div>
-                        </div>
+                        </div> -->
+                        <svg class="burger burgerTourne cliquable" data-icone="images/LogoTim.png" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                            <path
+                                  class="ligne top"
+                                  d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                            <path
+                                  class="ligne middle"
+                                  d="m 70,50 h -40" />
+                            <path
+                                  class="ligne bottom"
+                                  d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                          </svg>
                     </label>
                     <div class="flou"></div>
                 </div>
@@ -84,7 +106,7 @@
                         <div class="titre-projet">
                             <h1>Anachonique</h1>
                         </div>
-                        <div class="img-parralax" id="projet1"></div>
+                        <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet1"></div>
                         <div class="titre-projet">
                             <h1>3D</h1>
                         </div>
@@ -97,7 +119,7 @@
                         <div class="titre-projet">
                             <h1>Nicolas</h1>
                         </div>
-                        <div class="img-parralax" id="projet2"></div>
+                        <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet2"></div>
                         <div class="titre-projet">
                             <h1>3D</h1>
                         <div></div>
@@ -110,7 +132,7 @@
                         <div class="titre-projet">
                             <h1>Nom Projet</h1>
                         </div>
-                        <div class="img-parralax" id="projet3"></div>
+                        <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet3"></div>
                         <div class="titre-projet">
                             <h1>Web</h1>
                         </div>
@@ -157,6 +179,9 @@
             </div>
         </footer>
     </body>
-    <script src="js/menu-burger.js"></script>
+    <script src="js/curseur.js"></script>
+    <script src="js/boutons.js"></script>
     <script src="js/barre-navigation-scroll.js"></script>
+    <script src="js/grained.min.js"></script>
+    <script src="js/grain.js"></script>
 </html>
