@@ -19,6 +19,7 @@ for(let i = 0; i < lesConteneurMask.length; i++){
 for(let i = 0; i < lesConteneurMask.length; i++){
     lesConteneurMask[i].addEventListener("mouseout", function(){
         let leMask = lesConteneurMask[i].children[0].nextSibling;
+        lesConteneurMask[i].style.pointerEvents = "none";
         setTimeout(function(){
             for(let i = 0; i < lesConteneurMask.length; i++){
                 lesConteneurMask[i].style.pointerEvents = "auto";
@@ -26,5 +27,11 @@ for(let i = 0; i < lesConteneurMask.length; i++){
             }
             leMask.style.zIndex = 1;
         }, 500);
+    });
+}
+
+for(let i = 0; i < lesConteneurMask.length; i++){
+    lesConteneurMask[i].addEventListener("click", function(){
+        window.location.href = lesConteneurMask[i].children[0].href;
     });
 }

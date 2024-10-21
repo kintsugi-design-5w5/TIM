@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .lesmasks-avenir{
@@ -17,14 +18,16 @@
 
 .feed-avenir img{
     width: 100vw;
-    height: auto;
+    height: 100vh;
+    min-width: 1200px;
+
     position: absolute;
     top: 0vh;
     left: 0vw;
     //z-index: 3;
 }
 
-.feed-avenir p{
+.feed-avenir a{
     position: absolute;
     z-index: 3;
     pointer-events: none;
@@ -72,6 +75,15 @@
         .mask-avenir{
             z-index: 4;
             clip-path: circle(350% at 50% 50%);
+        }
+    }
+
+    @media screen and (max-width: 756px) {
+        &:hover{
+            .mask-avenir{
+                z-index: 4;
+                clip-path: circle(500% at 50% 50%);
+            }
         }
     }
 }

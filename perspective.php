@@ -36,21 +36,9 @@
             </div>
         </nav>
         <div id="hero">
-            <h1>Creativité + Programmation = TIM</h1>
+            <h1>Perpective</h1>
         </div>
     </header>
-    <main>
-        <div class="feed-avenir">
-            <div class="lesmasks-avenir">
-                <!-- <div class="conteneur-hover-mask"><div class="conteneur-mask"><p>Perspective</p><div class="mask-avenir"><img src="images/image.png" alt="tour-effeil"></div></div></div>
-                <div class="conteneur-hover-mask"><div class="conteneur-mask"><p href="">Perspective</p><div class="mask-avenir"><img src="images/touEffeilNuit.jpg" alt="tour-effeil-nuit"></div></div></div>
-                <div class="conteneur-hover-mask"><div class="conteneur-mask"><p href="">Perspective</p><div class="mask-avenir"><img src="images/images2.jpg" alt="tour-effeil"></div></div></div> -->
-                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><img src="images/image.png" alt="tour-effeil"></div></div>
-                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><img src="images/touEffeilNuit.jpg" alt="tour-effeil-nuit"></div></div>
-                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><img src="images/images2.jpg" alt="tour-effeil"></div></div>
-            </div>
-        </div>
-    </main>
 </body>
 <script src="js/barre-navigation-scroll.js"></script>
 <script src="js/cercle-avenir.js"></script>
