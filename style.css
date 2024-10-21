@@ -644,6 +644,11 @@ section {
   justify-content: flex-end;
 }
 
+.auteur_info:hover {
+  color: var(--couleur-pale);
+  cursor: pointer;
+}
+
 .description__projet {
   width: 50vw;
   display: flex;
