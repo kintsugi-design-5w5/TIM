@@ -27,16 +27,14 @@
                 </div>
             </div>
             <div class="footer-sociaux">
-                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
-                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
-                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
-                <a href="#"><img src="images/LogoTim.png" alt="" /></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" alt="" /></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" alt="" /></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" alt="" /></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" alt="" /></a>
             </div>
             <div class="footer-droits">
                 <p>© 2024 Tous droits réservés</p>
             </div>
         </footer>
-    </body>
-    <script src="js/menu-burger.js"></script>
-    <script src="js/barre-navigation-scroll.js"></script>
-</html>
+
+<?php wp_footer() ?>
