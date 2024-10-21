@@ -11,13 +11,13 @@ section {
 
 .section__projet {
   background-color: blue;
+  padding: 0;
 }
 
 .info__projet {
   display: flex;
   justify-content: space-around;
   min-height: 40vh;
-  padding-top: 3rem;
   gap: 3rem;
 }
 
