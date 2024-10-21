@@ -31,10 +31,10 @@
                     <input type="checkbox" name="burger-box" id="burger" />
                     <div class="menu">
                         <ul>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Accueil</a></li>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Cours</a></li>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Projets</a></li>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="">Avenir</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="index.php">Accueil</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="cours.php">Cours</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="projets.php">Projets</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="avenir.php">Avenir</a></li>
                         </ul>
                     </div>
                     <label for="burger">

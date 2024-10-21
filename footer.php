@@ -36,5 +36,12 @@
                 <p>© 2024 Tous droits réservés</p>
             </div>
         </footer>
+    </body>
+
+    <script src="<?php echo get_template_directory_uri() . '/js/boutons.js';?>"></script>
+    <script src="<?php echo get_template_directory_uri() . '/js/curseur.js';?>"></script>
+    <script src="<?php echo get_template_directory_uri() . '/js/barre-navigation-scroll.js';?>"></script>
+    <script src="<?php echo get_template_directory_uri() . '/js/grained.min.js';?>"></script>
+    <script src="<?php echo get_template_directory_uri() . '/js/grain.js';?>"></script>
 
 <?php wp_footer() ?>

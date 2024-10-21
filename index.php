@@ -85,12 +85,6 @@
 </main>
 <?php get_footer();?>
 
-</body>
-    <script src="<?php echo get_template_directory_uri() . '/js/curseur.js';?>"></script>
-    <script src="<?php echo get_template_directory_uri() . '/js/boutons.js';?>"></script>
-    <script src="<?php echo get_template_directory_uri() . '/js/barre-navigation-scroll.js';?>"></script>
-    <script src="<?php echo get_template_directory_uri() . '/js/grained.min.js';?>"></script>
-    <script src="<?php echo get_template_directory_uri() . '/js/grain.js';?>"></script>
     <!-- <script src="js/curseur.js"></script>
     <script src="js/boutons.js"></script>
     <script src="js/barre-navigation-scroll.js"></script>
