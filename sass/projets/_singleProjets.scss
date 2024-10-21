@@ -11,7 +11,7 @@ section {
 
 .section__projet {
   background-color: blue;
-  padding: 0;
+  padding: 2rem 0rem;
 }
 
 .info__projet {
@@ -73,12 +73,32 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 5rem;
-  gap: 3rem;
+  padding: 5rem 1rem 0rem;
+  gap: 1rem;
 }
 .screenshots-projet {
-  width: 30vw;
+  width: 45vw;
   height: auto;
+}
+
+.ligne1,
+.ligne3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ligne2,
+.ligne4,
+.ligne5 {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.imgGrandEspace {
+  object-fit: cover;
 }
 
 /*Fenêtre popup*/
