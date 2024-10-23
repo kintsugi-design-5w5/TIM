@@ -27,14 +27,14 @@
         <header>
             <nav>
                 <div class="barre-navigation">
-                    <a class="logo" href="#hero"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" alt="logo du TIM" /></a>
+                    <a class="logo" href=""><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" alt="logo du TIM" /></a>
                     <input type="checkbox" name="burger-box" id="burger" />
                     <div class="menu">
                         <ul>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="<?php echo get_template_directory_uri() . '/index.php';?>">Accueil</a></li>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="<?php echo get_template_directory_uri() . '/cours.php';?>">Cours</a></li>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="<?php echo get_template_directory_uri() . '/projets.php';?>">Projets</a></li>
-                            <li> <a class="mon-bouton cliquable" data-icone="images/LogoTim.png" href="<?php echo get_template_directory_uri() . '/avenir.php';?>">Avenir</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" href="index">Accueil</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" href="category/cours">Cours</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" href="<?php echo get_template_directory_uri() . '/projets.php';?>">Projets</a></li>
+                            <li> <a class="mon-bouton cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" href="avenir">Avenir</a></li>
                         </ul>
                     </div>
                     <label for="burger">
@@ -43,7 +43,7 @@
                             <div></div>
                             <div></div>
                         </div> -->
-                        <svg class="burger burgerTourne cliquable" data-icone="images/LogoTim.png" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                        <svg class="burger burgerTourne cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
                             <path
                                   class="ligne top"
                                   d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />

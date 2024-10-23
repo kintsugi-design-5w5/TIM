@@ -1,5 +1,5 @@
 /*********** FOOTER **************/
-footer {
+.pied {
     // Styles généraux du footer
     width: 100vw;
     background-color: $noir;
@@ -127,7 +127,7 @@ footer {
     }
 }
 
-footer a {
+.pied a {
     // Styles pour les liens dans le footer
     color: $blanc;
     text-decoration: none;
