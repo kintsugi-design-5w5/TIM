@@ -753,7 +753,6 @@ footer {
   }
 }
 /*Style page cours*/
-/*Styles généraux de la page*/
 .entete_cours {
   background-color: red;
   display: flex;
@@ -762,12 +761,25 @@ footer {
 }
 
 .body-cours {
-  background-color: blue;
+  padding: 2rem;
 }
 
 /*Section des cours*/
 .cours_timeline {
   position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.cours_timeline::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  background-color: var(--gris-fonce);
+  border: 1px solid var(--couleur);
+  top: 0;
+  bottom: 0;
+  left: 0.5rem;
 }
 
 ul {
@@ -775,12 +787,17 @@ ul {
   padding-left: 0;
 }
 
+.session {
+  position: relative;
+  z-index: 1;
+}
+
 .cercle {
-  text-align: end;
+  text-align: start;
   line-height: 3rem;
 }
 
-.cercle:not(.cours_timeline):after {
+.cercle:not(.cours_timeline)::before {
   content: "";
   display: inline-block;
   vertical-align: middle;

@@ -1,14 +1,4 @@
 /*Style page cours*/
-/*Styles généraux de la page*/
-body {
-  //display: flex;
-  //flex-direction: column;
-}
-
-section {
-  // min-height: 100vh;
-  //width: 100%;
-}
 
 .entete_cours {
   background-color: red;
@@ -18,24 +8,42 @@ section {
 }
 
 .body-cours {
-  background-color: blue;
+  padding: 2rem;
 }
 
 /*Section des cours*/
 .cours_timeline {
   position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.cours_timeline::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  background-color: $gris-fonce;
+  border: 1px solid $couleur;
+  top: 0;
+  bottom: 0;
+  left: 0.5rem;
 }
 ul {
   list-style: none;
   padding-left: 0; //Enlever la marge par défaut à gauche
 }
 
+.session {
+  position: relative;
+  z-index: 1;
+}
+
 .cercle {
-  text-align: end; //Mettre le texte aligné à droite
+  text-align: start; //Mettre le texte aligné à gauche
   line-height: 3rem; //Espacement entre les éléments
 }
 
-.cercle:not(.cours_timeline):after {
+.cercle:not(.cours_timeline)::before {
   //Placer un cercle après les div sauf pour la div avec classe cours-timeline
   content: "";
   display: inline-block;
