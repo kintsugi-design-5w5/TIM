@@ -220,11 +220,8 @@ footer {
   left: 0;
   pointer-events: none;
   z-index: 5;
-  -webkit-backdrop-filter: blur(0px) brightness(100%);
-          backdrop-filter: blur(0px) brightness(100%);
-  transition: -webkit-backdrop-filter 0.7s ease;
+  backdrop-filter: blur(0px) brightness(100%);
   transition: backdrop-filter 0.7s ease;
-  transition: backdrop-filter 0.7s ease, -webkit-backdrop-filter 0.7s ease;
 }
 
 .burger {
@@ -258,8 +255,7 @@ footer {
 
 #burger:checked ~ .flou {
   pointer-events: all;
-  -webkit-backdrop-filter: blur(5px) brightness(50%);
-          backdrop-filter: blur(5px) brightness(50%);
+  backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
@@ -857,11 +853,6 @@ footer a {
   outline: none;
 }
 
-.recherche__input::-moz-placeholder {
-  color: white;
-  font-size: 1.5rem;
-}
-
 .recherche__input::placeholder {
   color: white;
   font-size: 1.5rem;
@@ -878,11 +869,6 @@ footer a {
   background-color: var(--gris-fonce);
   border: none;
   outline: none;
-}
-
-.recherche__input2::-moz-placeholder {
-  color: white;
-  font-size: 1.5rem;
 }
 
 .recherche__input2::placeholder {
@@ -907,14 +893,38 @@ footer a {
   align-items: center;
   position: relative;
 }
+@media screen and (max-width: 756px) {
+  .lesmasks-avenir {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 430px) {
+  .lesmasks-avenir {
+    flex-direction: column;
+  }
+}
 
-.feed-avenir img {
+.images-avenir {
   width: 100vw;
   height: 100vh;
-  min-width: 1200px;
   position: absolute;
   top: 0vh;
   left: 0vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#img-avenir-droite {
+  background-image: url(images/image.png);
+}
+
+#img-avenir-milieu {
+  background-image: url(images/touEffeilNuit.jpg);
+}
+
+#img-avenir-gauche {
+  background-image: url(images/images2.jpg);
 }
 
 .feed-avenir a {
@@ -927,23 +937,16 @@ footer a {
   z-index: 1;
   width: 100%;
   height: 100%;
-  border: solid 1rem var(--couleur);
   border-radius: 50%;
-  box-shadow: 0px 0px 20px var(--couleur);
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
-  transition: -webkit-clip-path 0.5s ease;
+  clip-path: circle(50% at 50% 50%);
   transition: clip-path 0.5s ease;
-  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
   pointer-events: none;
 }
 
 .conteneur-mask {
   width: 30vw;
   height: 30vw;
-  border: solid 2px var(--couleur);
   border-radius: 50%;
-  box-shadow: 0px 0px 20px var(--couleur);
   margin: 0;
   display: flex;
   align-items: center;
@@ -952,14 +955,20 @@ footer a {
 }
 .conteneur-mask:hover .mask-avenir {
   z-index: 4;
-  -webkit-clip-path: circle(350% at 50% 50%);
-          clip-path: circle(350% at 50% 50%);
+  clip-path: circle(350% at 50% 50%);
 }
 @media screen and (max-width: 756px) {
   .conteneur-mask:hover .mask-avenir {
     z-index: 4;
-    -webkit-clip-path: circle(500% at 50% 50%);
-            clip-path: circle(500% at 50% 50%);
+    clip-path: circle(500% at 50% 50%);
+  }
+}
+@media screen and (max-width: 430px) {
+  .conteneur-mask {
+    width: 55vw;
+    height: 55vw;
+    min-width: 200px;
+    min-height: 200px;
   }
 }
 
@@ -975,4 +984,28 @@ footer a {
             clip-path: circle(100% at 50% 50%);
         }
     }
-}*//*# sourceMappingURL=style.css.map */
+}*/
+.avenir-sections {
+  width: 100vw;
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-clip: text;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(images/image.png);
+}
+.avenir-sections:hover h1 {
+  font-size: 90pt;
+}
+
+.avenir-sections h1 {
+  display: flex;
+  align-items: center;
+  color: transparent;
+  font-weight: 900;
+  font-size: clamp(0.5rem, 18vw, 20vw);
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

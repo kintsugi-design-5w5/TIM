@@ -42,14 +42,16 @@
     <main>
         <div class="feed-avenir">
             <div class="lesmasks-avenir">
-                <!-- <div class="conteneur-hover-mask"><div class="conteneur-mask"><p>Perspective</p><div class="mask-avenir"><img src="images/image.png" alt="tour-effeil"></div></div></div>
-                <div class="conteneur-hover-mask"><div class="conteneur-mask"><p href="">Perspective</p><div class="mask-avenir"><img src="images/touEffeilNuit.jpg" alt="tour-effeil-nuit"></div></div></div>
-                <div class="conteneur-hover-mask"><div class="conteneur-mask"><p href="">Perspective</p><div class="mask-avenir"><img src="images/images2.jpg" alt="tour-effeil"></div></div></div> -->
-                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><img src="images/image.png" alt="tour-effeil"></div></div>
-                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><img src="images/touEffeilNuit.jpg" alt="tour-effeil-nuit"></div></div>
-                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><img src="images/images2.jpg" alt="tour-effeil"></div></div>
+                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><div class="images-avenir" id="img-avenir-droite"></div></div></div>
+                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><div class="images-avenir" id="img-avenir-milieu"></div></div></div>
+                <div class="conteneur-mask"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Perspective</a><div class="mask-avenir"><div class="images-avenir" id="img-avenir-gauche"></div></div></div>
             </div>
         </div>
+
+        <div class="avenir-sections"><h1>Universites</h1></div>
+        <div class="avenir-sections"><h1>BlahBlah</h1></div>
+        <div class="avenir-sections"><h1>BlahBlah</h1></div>
+
     </main>
 </body>
 <script src="js/barre-navigation-scroll.js"></script>
