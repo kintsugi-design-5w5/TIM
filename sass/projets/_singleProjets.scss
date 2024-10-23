@@ -72,20 +72,24 @@ section {
 .images-projets {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 5rem 1rem 0rem;
+  padding: 5rem 2rem 0rem;
   gap: 1rem;
 }
 .screenshots-projet {
-  width: 45vw;
   height: auto;
 }
 
 .ligne1,
 .ligne3 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
+  width: 100%;
+}
+
+.ligne1 .screenshots-projet,
+.ligne3 .screenshots-projet {
+  width: 47.5vw;
 }
 
 .ligne2,
@@ -93,11 +97,13 @@ section {
 .ligne5 {
   display: flex;
   justify-content: center;
-  width: 100vw;
-  object-fit: cover;
+  width: 100%;
 }
 
-.imgGrandEspace {
+.ligne2 .screenshots-projet,
+.ligne4 .screenshots-projet,
+.ligne5 .screenshots-projet {
+  width: 100%;
   object-fit: cover;
 }
 
