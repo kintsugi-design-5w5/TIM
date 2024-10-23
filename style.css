@@ -765,21 +765,26 @@ footer {
 }
 
 /*Section des cours*/
-.cours_timeline {
+.cours {
   position: relative;
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
-.cours_timeline::after {
-  content: "";
+.conteneur-timeline {
   position: absolute;
-  width: 10px;
-  background-color: var(--gris-fonce);
-  border: 1px solid var(--couleur);
-  top: 0;
-  bottom: 0;
-  left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  height: 100%;
+}
+
+.timeline {
+  position: absolute;
+  width: 7px;
+  height: 1400px;
+  margin: 0 auto;
+  background-color: var(--gris-pale);
+  border: 2px solid var(--couleur);
+  z-index: -1;
 }
 
 ul {
@@ -797,7 +802,7 @@ ul {
   line-height: 3rem;
 }
 
-.cercle:not(.cours_timeline)::before {
+.cercle::before {
   content: "";
   display: inline-block;
   vertical-align: middle;

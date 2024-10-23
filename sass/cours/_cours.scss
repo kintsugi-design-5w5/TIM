@@ -12,22 +12,38 @@
 }
 
 /*Section des cours*/
-.cours_timeline {
+.cours {
   position: relative;
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
-.cours_timeline::after {
-  content: "";
+.conteneur-timeline {
   position: absolute;
-  width: 10px;
-  background-color: $gris-fonce;
-  border: 1px solid $couleur;
-  top: 0;
-  bottom: 0;
-  left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  height: 100%;
 }
+
+.timeline {
+  position: absolute;
+  width: 7px;
+  height: 1400px;
+  margin: 0 auto;
+  background-color: $gris-pale;
+  border: 2px solid $couleur;
+  z-index: -1;
+}
+
+// .timeline::after {
+//   content: "";
+//   position: absolute;
+//   width: 10px;
+//   background-color: $gris-fonce;
+//   border: 1px solid $couleur;
+//   top: 0;
+//   bottom: 0;
+//   left: 0.5rem;
+// }
 ul {
   list-style: none;
   padding-left: 0; //Enlever la marge par défaut à gauche
@@ -43,7 +59,7 @@ ul {
   line-height: 3rem; //Espacement entre les éléments
 }
 
-.cercle:not(.cours_timeline)::before {
+.cercle::before {
   //Placer un cercle après les div sauf pour la div avec classe cours-timeline
   content: "";
   display: inline-block;
