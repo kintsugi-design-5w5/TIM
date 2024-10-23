@@ -809,7 +809,8 @@ ul {
   margin-right: 10px;
   width: 20px;
   height: 20px;
-  background-color: #3498db;
+  background-color: var(--gris-fonce);
+  border: 1px solid var(--couleur);
   border-radius: 50%;
   color: white;
 }
