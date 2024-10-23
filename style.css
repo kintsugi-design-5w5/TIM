@@ -850,12 +850,22 @@ section {
   background-color: blue;
   padding: 2rem 0rem;
 }
+@media screen and (max-width: 756px) {
+  .section__projet {
+    padding: 2rem 3rem;
+  }
+}
 
 .info__projet {
   display: flex;
   justify-content: space-around;
   min-height: 40vh;
   gap: 3rem;
+}
+@media screen and (max-width: 550px) {
+  .info__projet {
+    flex-direction: column;
+  }
 }
 
 .btn-retour {
@@ -881,17 +891,33 @@ section {
   flex-direction: column;
   align-items: flex-start;
 }
+@media screen and (max-width: 756px) {
+  .description__projet {
+    align-items: flex-end;
+    width: 100%;
+  }
+}
 
 .entete-description__projet {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+@media screen and (max-width: 756px) {
+  .entete-description__projet {
+    align-items: flex-end;
+  }
+}
 
 .texte-description {
   margin-top: 40px;
   line-height: 2rem;
   text-align: start;
+}
+@media screen and (max-width: 756px) {
+  .texte-description {
+    text-align: end;
+  }
 }
 
 .logiciel-projet {
@@ -924,10 +950,23 @@ section {
   gap: 1rem;
   width: 100%;
 }
+@media screen and (max-width: 450px) {
+  .ligne1,
+  .ligne3 {
+    align-items: center;
+    flex-direction: column;
+  }
+}
 
 .ligne1 .screenshots-projet,
 .ligne3 .screenshots-projet {
   width: 47.5vw;
+}
+@media screen and (max-width: 450px) {
+  .ligne1 .screenshots-projet,
+  .ligne3 .screenshots-projet {
+    width: 100vw;
+  }
 }
 
 .ligne2,
@@ -943,6 +982,20 @@ section {
 .ligne5 .screenshots-projet {
   width: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 450px) and (max-width: 550px) {
+  .ligne2 .screenshots-projet,
+  .ligne4 .screenshots-projet,
+  .ligne5 .screenshots-projet {
+    padding: 0rem 0.5rem;
+  }
+}
+@media screen and (max-width: 756px) {
+  .ligne2 .screenshots-projet,
+  .ligne4 .screenshots-projet,
+  .ligne5 .screenshots-projet {
+    width: 100vw;
+  }
 }
 
 /*Fenêtre popup*/
@@ -963,19 +1016,26 @@ section {
 
 .popup .btn_x {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
 }
 
 .contenu-popup {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40%;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
 .contenu-popup h1 {
   font-size: 10rem;
+  text-align: center;
+}
+@media screen and (max-width: 756px) {
+  .contenu-popup h1 {
+    font-size: 5rem;
+  }
 }
 
 .reseaux-sociaux__popup {

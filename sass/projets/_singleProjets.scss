@@ -12,6 +12,9 @@ section {
 .section__projet {
   background-color: blue;
   padding: 2rem 0rem;
+  @media screen and (max-width: 756px) {
+    padding: 2rem 3rem;
+  }
 }
 
 .info__projet {
@@ -19,6 +22,9 @@ section {
   justify-content: space-around;
   min-height: 40vh;
   gap: 3rem;
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
 }
 
 .btn-retour {
@@ -43,18 +49,28 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media screen and (max-width: 756px) {
+    align-items: flex-end;
+    width: 100%;
+  }
 }
 
 .entete-description__projet {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media screen and (max-width: 756px) {
+    align-items: flex-end;
+  }
 }
 
 .texte-description {
   margin-top: 40px;
   line-height: 2rem;
   text-align: start;
+  @media screen and (max-width: 756px) {
+    text-align: end;
+  }
 }
 
 .logiciel-projet {
@@ -85,11 +101,18 @@ section {
   justify-content: center;
   gap: 1rem;
   width: 100%;
+  @media screen and (max-width: 450px) {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .ligne1 .screenshots-projet,
 .ligne3 .screenshots-projet {
   width: 47.5vw;
+  @media screen and (max-width: 450px) {
+    width: 100vw;
+  }
 }
 
 .ligne2,
@@ -105,6 +128,14 @@ section {
 .ligne5 .screenshots-projet {
   width: 100%;
   object-fit: cover;
+  @media screen and (min-width: 450px) and (max-width: 550px) {
+    // width: 100%;
+    // height: auto;
+    padding: 0rem 0.5rem;
+  }
+  @media screen and (max-width: 756px) {
+    width: 100vw;
+  }
 }
 
 /*Fenêtre popup*/
@@ -126,19 +157,24 @@ section {
 
 .popup .btn_x {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
 }
 
 .contenu-popup {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40%; //la hauteur du contenu sur la page
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
 .contenu-popup h1 {
   font-size: 10rem;
+  text-align: center;
+  @media screen and (max-width: 756px) {
+    font-size: 5rem;
+  }
 }
 
 .reseaux-sociaux__popup {
