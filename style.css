@@ -998,14 +998,19 @@ section {
 .sous-section {
   justify-content: center;
   align-items: center;
-  padding-left: 7rem;
-  padding-right: 7rem;
-  padding-bottom: 3rem;
-  padding-top: 5rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
 }
 
 .sous-section > div > h2 {
   font-weight: bold;
+}
+
+.liste-emplois > div > ul > li, .section-universites > div > ul > li {
+  font-size: 25px;
+  padding: 2.5rem;
 }
 
 @media screen and (min-width: 756px) {
@@ -1015,9 +1020,12 @@ section {
 }
 
 .types-stage > div {
+  padding-top: 4rem;
+}
+
+.types-stage > div > p {
   padding-bottom: 1rem;
   padding-top: 4rem;
-  padding-right: 3rem;
 }
 
 .types-stage > div > h2 {
@@ -1037,15 +1045,14 @@ section {
 .liste-emplois > div {
   padding-bottom: 1rem;
   padding-top: 4rem;
-  padding-right: 3rem;
 }
 
 .description-emplois {
   padding-top: 2rem;
 }
 
-.section-universites > div {
-  padding-bottom: 2rem;
+.section-universites > div > p {
+  padding-bottom: 4rem;
 }
 
 .section-universites > div > h2 {
