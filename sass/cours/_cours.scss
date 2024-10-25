@@ -1,37 +1,29 @@
 /*Style page cours*/
-
-.entete_cours {
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .body-cours {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 /*Section des cours*/
 .cours {
-  position: relative;
+    position: relative;
 }
 
 .conteneur-timeline {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 20px;
-  height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 100%;
 }
 
 .timeline {
-  position: absolute;
-  width: 7px;
-  height: 1400px;
-  margin: 0 auto;
-  background-color: $gris-pale;
-  border: 2px solid $couleur;
-  z-index: -1;
+    position: absolute;
+    width: 7px;
+    height: 1400px;
+    margin: 0 auto;
+    background-color: $gris-pale;
+    border: 2px solid $couleur;
+    z-index: -1;
 }
 
 // .timeline::after {
@@ -45,30 +37,30 @@
 //   left: 0.5rem;
 // }
 ul {
-  list-style: none;
-  padding-left: 0; //Enlever la marge par défaut à gauche
+    list-style: none;
+    padding-left: 0; //Enlever la marge par défaut à gauche
 }
 
 .session {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .cercle {
-  text-align: start; //Mettre le texte aligné à gauche
-  line-height: 3rem; //Espacement entre les éléments
+    text-align: start; //Mettre le texte aligné à gauche
+    line-height: 3rem; //Espacement entre les éléments
 }
 
 .cercle::before {
-  //Placer un cercle après les div sauf pour la div avec classe cours-timeline
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  background-color: $gris-fonce;
-  border: 1px solid $couleur;
-  border-radius: 50%;
-  color: white;
+    //Placer un cercle après les div sauf pour la div avec classe cours-timeline
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: $gris-fonce;
+    border: 1px solid $couleur;
+    border-radius: 50%;
+    color: white;
 }

@@ -753,13 +753,6 @@ footer {
   }
 }
 /*Style page cours*/
-.entete_cours {
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .body-cours {
   padding: 2rem;
 }

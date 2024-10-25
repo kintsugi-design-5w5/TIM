@@ -3,9 +3,9 @@
 ?>
 
 <main>
-  <section class="entete_cours">
-    <h1>Cours</h1>
-  </section>
+<div id="hero">
+        <h1>Cours</h1>
+    </div>
   <section class="body-cours">
     <div>
     <?php

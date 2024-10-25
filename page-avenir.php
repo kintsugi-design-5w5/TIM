@@ -11,7 +11,7 @@
         </div> -->
         <div id="hero"></div>
         <div class="avenir-sections"><a href="<?php echo home_url('/emplois'); ?>"><h1>Emplois</h1></a></div>
-        <div class="avenir-sections"><a href="<?php echo home_url('/universités'); ?>"><h1>Universités</h1></a></div>
+        <div class="avenir-sections"><a href="<?php echo home_url('/universites'); ?>"><h1>Universités</h1></a></div>
         <div class="avenir-sections"><a href="<?php echo home_url('/stages'); ?>"><h1>Stages</h1></a></div>
     </main>
 <?php get_footer();?>
