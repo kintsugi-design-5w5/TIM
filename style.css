@@ -761,19 +761,11 @@ footer {
 }
 
 .body-cours {
-<<<<<<< HEAD
-  background-color: blue;
-}
-
-/*Section des cours*/
-.cours_timeline {
-=======
   padding: 2rem;
 }
 
 /*Section des cours*/
 .cours {
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
   position: relative;
 }
 
@@ -798,12 +790,6 @@ footer {
 ul {
   list-style: none;
   padding-left: 0;
-<<<<<<< HEAD
-}
-
-.cercle {
-  text-align: end;
-=======
 }
 
 .session {
@@ -813,7 +799,6 @@ ul {
 
 .cercle {
   text-align: start;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
   line-height: 3rem;
 }
 
@@ -824,12 +809,8 @@ ul {
   margin-right: 10px;
   width: 20px;
   height: 20px;
-<<<<<<< HEAD
-  background-color: #3498db;
-=======
   background-color: var(--gris-fonce);
   border: 1px solid var(--couleur);
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
   border-radius: 50%;
   color: white;
 }
@@ -903,14 +884,11 @@ section {
   justify-content: space-around;
   min-height: 40vh;
   gap: 3rem;
-<<<<<<< HEAD
-=======
 }
 @media screen and (max-width: 550px) {
   .info__projet {
     flex-direction: column;
   }
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .btn-retour {
@@ -935,43 +913,34 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-<<<<<<< HEAD
-=======
 }
 @media screen and (max-width: 756px) {
   .description__projet {
     align-items: flex-end;
     width: 100%;
   }
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .entete-description__projet {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-<<<<<<< HEAD
-=======
 }
 @media screen and (max-width: 756px) {
   .entete-description__projet {
     align-items: flex-end;
   }
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .texte-description {
   margin-top: 40px;
   line-height: 2rem;
   text-align: start;
-<<<<<<< HEAD
-=======
 }
 @media screen and (max-width: 756px) {
   .texte-description {
     text-align: end;
   }
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .logiciel-projet {
@@ -1070,38 +1039,26 @@ section {
 
 .popup .btn_x {
   position: absolute;
-<<<<<<< HEAD
-  top: 5px;
-  right: 5px;
-=======
   top: 15px;
   right: 15px;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .contenu-popup {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-<<<<<<< HEAD
-  height: 40%;
-=======
   flex-wrap: wrap;
   gap: 3rem;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .contenu-popup h1 {
   font-size: 10rem;
-<<<<<<< HEAD
-=======
   text-align: center;
 }
 @media screen and (max-width: 756px) {
   .contenu-popup h1 {
     font-size: 5rem;
   }
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .reseaux-sociaux__popup {
@@ -1130,29 +1087,19 @@ section {
 .sous-section {
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   padding-left: 12rem;
   padding-right: 12rem;
   padding-bottom: 2rem;
   padding-top: 3rem;
-=======
-  padding-left: 7rem;
-  padding-right: 7rem;
-  padding-bottom: 3rem;
-  padding-top: 5rem;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .sous-section > div > h2 {
   font-weight: bold;
-<<<<<<< HEAD
 }
 
 .liste-emplois > div > ul > li, .section-universites > div > ul > li {
   font-size: 25px;
   padding: 2.5rem;
-=======
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 @media screen and (min-width: 756px) {
@@ -1168,10 +1115,6 @@ section {
 .types-stage > div > p {
   padding-bottom: 1rem;
   padding-top: 4rem;
-<<<<<<< HEAD
-=======
-  padding-right: 3rem;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .types-stage > div > h2 {
@@ -1191,23 +1134,14 @@ section {
 .liste-emplois > div {
   padding-bottom: 1rem;
   padding-top: 4rem;
-<<<<<<< HEAD
-=======
-  padding-right: 3rem;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .description-emplois {
   padding-top: 2rem;
 }
 
-<<<<<<< HEAD
 .section-universites > div > p {
   padding-bottom: 4rem;
-=======
-.section-universites > div {
-  padding-bottom: 2rem;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .section-universites > div > h2 {
@@ -1215,11 +1149,7 @@ section {
 }
 
 /*********** FOOTER **************/
-<<<<<<< HEAD
 .pied {
-=======
-footer {
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
   width: 100vw;
   background-color: var(--noir);
   padding: 2rem 5vw;
@@ -1229,11 +1159,7 @@ footer {
   justify-content: space-evenly;
 }
 @media screen and (max-width: 430px) {
-<<<<<<< HEAD
   .pied {
-=======
-  footer {
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
     padding: 2rem 10vw;
   }
 }
@@ -1333,11 +1259,7 @@ footer {
   color: var(--blanc);
 }
 
-<<<<<<< HEAD
 .pied a {
-=======
-footer a {
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
   color: var(--blanc);
   text-decoration: none;
   font-size: clamp(0.75rem, 2.25vw, 1.75rem);
@@ -1377,8 +1299,6 @@ footer a {
 .recherche__input2::placeholder {
   color: white;
   font-size: 1.5rem;
-<<<<<<< HEAD
-=======
 }
 
 .charte-design {
@@ -1401,7 +1321,6 @@ footer a {
 
 .graphique h2 {
   text-align: center;
->>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
 .feed-avenir {
@@ -1536,4 +1455,11 @@ footer a {
   font-weight: 900;
   font-size: clamp(0.5rem, 18vw, 20vw);
   margin: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des effets                       */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles des composants                     */
+/* ////////////////////////////////////////////////////////// *//*# sourceMappingURL=style.css.map */

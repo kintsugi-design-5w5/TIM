@@ -49,7 +49,7 @@
                 <div class="titre-projet">
                     <h1>Anachonique</h1>
                 </div>
-                <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet1"></div>
+                <div class="img-parralax cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" id="projet1"></div>
                 <div class="titre-projet">
                     <h1>3D</h1>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="titre-projet">
                     <h1>Nicolas</h1>
                 </div>
-                <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet2"></div>
+                <div class="img-parralax cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" id="projet2"></div>
                 <div class="titre-projet">
                     <h1>3D</h1>
                 <div></div>
@@ -75,7 +75,7 @@
                 <div class="titre-projet">
                     <h1>Nom Projet</h1>
                 </div>
-                <div class="img-parralax cliquable" data-icone="images/LogoTim.png" id="projet3"></div>
+                <div class="img-parralax cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" id="projet3"></div>
                 <div class="titre-projet">
                     <h1>Web</h1>
                 </div>
