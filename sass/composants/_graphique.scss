@@ -1,0 +1,20 @@
+.charte-design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.graphique {
+  border: 2px solid #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphique h2 {
+  text-align: center;
+}
