@@ -1,66 +1,76 @@
 /*Style page cours*/
 .body-cours {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 /*Section des cours*/
-.cours {
-    position: relative;
-}
 
 .conteneur-timeline {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 20px;
-    height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  height: 100%;
 }
 
 .timeline {
-    position: absolute;
-    width: 7px;
-    height: 1400px;
-    margin: 0 auto;
-    background-color: $gris-pale;
-    border: 2px solid $couleur;
-    z-index: -1;
+  position: absolute;
+  width: 7px;
+  height: 2000px;
+  margin: 0 auto;
+  background-color: $gris-pale;
+  border: 2px solid $couleur;
 }
 
-// .timeline::after {
-//   content: "";
-//   position: absolute;
-//   width: 10px;
-//   background-color: $gris-fonce;
-//   border: 1px solid $couleur;
-//   top: 0;
-//   bottom: 0;
-//   left: 0.5rem;
-// }
+/*Barre de progression pour la timeline des cours*/
+.barre-progression {
+  width: 100%;
+  height: 100%; //Changement de la hauteur au scroll en JavaScript
+  background-color: $couleur;
+  transition: height 0.25s ease;
+}
+
 ul {
-    list-style: none;
-    padding-left: 0; //Enlever la marge par défaut à gauche
+  list-style: none;
+  padding-left: 0; //Enlever la marge par défaut à gauche
 }
 
 .session {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .cercle {
-    text-align: start; //Mettre le texte aligné à gauche
-    line-height: 3rem; //Espacement entre les éléments
+  text-align: start; //Mettre le texte aligné à gauche
+  line-height: 3rem; //Espacement entre les éléments
 }
 
-.cercle::before {
-    //Placer un cercle après les div sauf pour la div avec classe cours-timeline
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: $gris-fonce;
-    border: 1px solid $couleur;
-    border-radius: 50%;
-    color: white;
+.cercle.grand::before {
+  //Placer un cercle avant les h1 des sessions
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: $gris-fonce;
+  border: 1px solid $couleur;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+}
+
+.cercle.petit::before {
+  //Placer un cercle avant les h5 des cours
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: $gris-fonce;
+  border: 1px solid $couleur;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
 }

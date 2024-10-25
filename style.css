@@ -758,12 +758,8 @@ footer {
 }
 
 /*Section des cours*/
-.cours {
-  position: relative;
-}
-
 .conteneur-timeline {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   width: 20px;
@@ -773,11 +769,18 @@ footer {
 .timeline {
   position: absolute;
   width: 7px;
-  height: 1400px;
+  height: 2000px;
   margin: 0 auto;
   background-color: var(--gris-pale);
   border: 2px solid var(--couleur);
-  z-index: -1;
+}
+
+/*Barre de progression pour la timeline des cours*/
+.barre-progression {
+  width: 100%;
+  height: 100%;
+  background-color: var(--couleur);
+  transition: height 0.25s ease;
 }
 
 ul {
@@ -795,7 +798,21 @@ ul {
   line-height: 3rem;
 }
 
-.cercle::before {
+.cercle.grand::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--gris-fonce);
+  border: 1px solid var(--couleur);
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+}
+
+.cercle.petit::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -806,6 +823,7 @@ ul {
   border: 1px solid var(--couleur);
   border-radius: 50%;
   color: white;
+  text-align: center;
 }
 
 .projets-apercus {
