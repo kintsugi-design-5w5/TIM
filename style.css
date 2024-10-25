@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: TIM2.0
+Theme Name: TIM
 Theme URI: https://referenced.ca
 Author: Kintsugi
 Author URI: https://wordpress.org/
@@ -12,7 +12,7 @@ Tested up to: 5.4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: TIM2.0
+Text Domain: TIM
 Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 */
 /* ////////////////////////////////////////////////////////// */
@@ -1404,9 +1404,136 @@ footer a {
 >>>>>>> 90fbfd15c7a12784bda4cecb150995ae02836681
 }
 
-/* ////////////////////////////////////////////////////////// */
-/*                    Règles des effets                       */
-/* ////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////// */
-/*                  Règles des composants                     */
-/* ////////////////////////////////////////////////////////// *//*# sourceMappingURL=style.css.map */
+.feed-avenir {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lesmasks-avenir {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 756px) {
+  .lesmasks-avenir {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 430px) {
+  .lesmasks-avenir {
+    flex-direction: column;
+  }
+}
+
+.images-avenir {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#img-avenir-droite {
+  background-image: url(images/image.png);
+}
+
+#img-avenir-milieu {
+  background-image: url(images/touEffeilNuit.jpg);
+}
+
+#img-avenir-gauche {
+  background-image: url(images/images2.jpg);
+}
+
+.feed-avenir a {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.mask-avenir {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+  transition: clip-path 0.5s ease;
+  pointer-events: none;
+}
+
+.conteneur-mask {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+}
+.conteneur-mask:hover .mask-avenir {
+  z-index: 4;
+  clip-path: circle(350% at 50% 50%);
+}
+@media screen and (max-width: 756px) {
+  .conteneur-mask:hover .mask-avenir {
+    z-index: 4;
+    clip-path: circle(500% at 50% 50%);
+  }
+}
+@media screen and (max-width: 430px) {
+  .conteneur-mask {
+    width: 55vw;
+    height: 55vw;
+    min-width: 200px;
+    min-height: 200px;
+  }
+}
+
+/*.conteneur-hover-mask{
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+
+    &:hover{
+        .mask-avenir{
+            z-index: 4;
+            clip-path: circle(100% at 50% 50%);
+        }
+    }
+}*/
+.avenir-sections {
+  width: 100vw;
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-clip: text;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(images/image.png);
+}
+.avenir-sections:hover h1 {
+  font-size: 90pt;
+}
+
+.avenir-sections h1 {
+  display: flex;
+  align-items: center;
+  color: transparent;
+  font-weight: 900;
+  font-size: clamp(0.5rem, 18vw, 20vw);
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */
