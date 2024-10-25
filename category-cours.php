@@ -1,132 +1,76 @@
 <?php
     get_header();
 ?>
+
 <main>
   <section class="entete_cours">
     <h1>Cours</h1>
   </section>
   <section class="body-cours">
     <div>
-
     <?php
-    if (have_posts()) {
-      while (have_posts()) {
-        the_post();
-        the_title();
-        the_content();
-      }
+    // Initialisation des sessions
+    $sessions = array(
+        '1' => array(),
+        '2' => array(),
+        '3' => array(),
+        '4' => array(),
+        '5' => array(),
+        '6' => array()
+    );
+
+    // Requête WordPress pour récupérer les articles avec la catégorie 'cours'
+    $args = array(
+        'category_name' => 'cours', // Nom de la catégorie (slug exact)
+        'posts_per_page' => -1 // Récupérer tous les articles de la catégorie 'cours'
+    );
+
+    $query = new WP_Query($args);
+
+    // Si des articles sont trouvés
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+
+            // Obtenir le titre de l'article
+            $title = get_the_title();
+
+            // Retirer les 7 premiers et les 6 derniers caractères
+            $clean_title = substr($title, 7, -6);
+
+            // Vérifier si le 4e caractère du titre est un chiffre
+            if (isset($title[4]) && is_numeric($title[4])) {
+                $session_num = $title[4]; // Le 4e caractère
+                if (isset($sessions[$session_num])) {
+                    $sessions[$session_num][] = $clean_title; // Ajouter le titre nettoyé à la session
+                }
+            }
+        }
+        wp_reset_postdata(); // Réinitialiser les données de post
+    } else {
+        echo "Aucun cours trouvé.";
     }
     ?>
     </div>
+
+    <!-- Générer dynamiquement les sessions -->
     <div class="cours_timeline">
       <ul>
+        <?php foreach ($sessions as $session_num => $cours_list): ?>
         <li class="session">
-          <div class="cercle grand">Session 1</div>
-          <ul class="cours" id="session-1">
+          <div class="cercle grand">Session <?php echo $session_num; ?></div>
+          <ul class="cours" id="session-<?php echo $session_num; ?>">
+            <?php foreach ($cours_list as $cours): ?>
             <li>
-              <div class="cercle petit">Web</div>
+              <div class="cercle petit"><?php echo esc_html($cours); ?></div>
             </li>
-            <li>
-              <div class="cercle petit">Imagerie matricielle</div>
-            </li>
-            <li>
-              <div class="cercle petit">Jeu</div>
-            </li>
-            <li>
-              <div class="cercle petit">Création vidéo</div>
-            </li>
+            <?php endforeach; ?>
           </ul>
         </li>
-        <li class="session">
-          <div class="cercle grand">Session 2</div>
-          <ul class="cours" id="session-2">
-            <li>
-              <div class="cercle petit">Web</div>
-            </li>
-            <li>
-              <div class="cercle petit">Jeu</div>
-            </li>
-            <li>
-              <div class="cercle petit">Effets spéciaux et animation</div>
-            </li>
-            <li>
-              <div class="cercle petit">Imagerie vectorielle</div>
-            </li>
-          </ul>
-        </li>
-        <li class="session">
-          <div class="cercle grand">Session 3</div>
-          <ul class="cours" id="session-3">
-            <li>
-              <div class="cercle petit">Web</div>
-            </li>
-            <li>
-              <div class="cercle petit">Jeu</div>
-            </li>
-            <li>
-              <div class="cercle petit">Design d'interactivité</div>
-            </li>
-            <li>
-              <div class="cercle petit">Imagerie 3D</div>
-            </li>
-          </ul>
-        </li>
-        <li class="session">
-          <div class="cercle grand">Session 4</div>
-          <ul class="cours" id="session-4">
-            <li>
-              <div class="cercle petit">WEb</div>
-            </li>
-            <li>
-              <div class="cercle petit">Jeu</div>
-            </li>
-            <li>
-              <div class="cercle petit">Animation 3D</div>
-            </li>
-            <li>
-              <div class="cercle petit">Gestion de projet</div>
-            </li>
-          </ul>
-        </li>
-        <li class="session">
-          <div class="cercle grand">Session 5</div>
-          <ul class="cours" id="session-5">
-            <li>
-              <div class="cercle petit">Web</div>
-            </li>
-            <li>
-              <div class="cercle petit">
-                Communication et dynamique d'une équipe de travail
-              </div>
-            </li>
-            <li>
-              <div class="cercle petit">Expétimentation en jeu</div>
-            </li>
-            <li>
-              <div class="cercle petit">Technologie d'émergeance</div>
-            </li>
-            <li>
-              <div class="cercle petit">
-                Méthode de recherche et préparation au marché du travail
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="session">
-          <div class="cercle grand">Session 6</div>
-          <ul class="cours" id="session-6">
-            <li>
-              <div class="cercle petit">Projet de recherche</div>
-            </li>
-            <li>
-              <div class="cercle petit">Stage</div>
-            </li>
-          </ul>
-        </li>
+        <?php endforeach; ?>
       </ul>
     </div>
   </section>
 </main>
 
-<?php get_footer();?>
-</html>
+<?php get_footer(); ?>

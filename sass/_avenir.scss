@@ -1,5 +1,4 @@
-
-.feed-avenir{
+.feed-avenir {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -8,7 +7,7 @@
     overflow: hidden;
 }
 
-.lesmasks-avenir{
+.lesmasks-avenir {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,14 +17,13 @@
     @media screen and (max-width: 756px) {
         flex-direction: row;
     }
-    
+
     @media screen and (max-width: 430px) {
         flex-direction: column;
     }
-
 }
 
-.images-avenir{
+.images-avenir {
     width: 100vw;
     height: 100vh;
 
@@ -36,22 +34,22 @@
     background-size: cover;
     background-position: center;
 }
-#img-avenir-droite{
+#img-avenir-droite {
     background-image: url(images/image.png);
 }
-#img-avenir-milieu{
+#img-avenir-milieu {
     background-image: url(images/touEffeilNuit.jpg);
 }
-#img-avenir-gauche{
+#img-avenir-gauche {
     background-image: url(images/images2.jpg);
 }
-.feed-avenir a{
+.feed-avenir a {
     position: absolute;
     z-index: 3;
     pointer-events: none;
 }
 
-.mask-avenir{
+.mask-avenir {
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -77,7 +75,7 @@
 //     transform-origin: center;
 // }
 
-.conteneur-mask{
+.conteneur-mask {
     width: 30vw;
     height: 30vw;
     // border: solid 2px var(--couleur);
@@ -89,16 +87,16 @@
     justify-content: center;
     transform-origin: center;
 
-    &:hover{
-        .mask-avenir{
+    &:hover {
+        .mask-avenir {
             z-index: 4;
             clip-path: circle(350% at 50% 50%);
         }
     }
 
     @media screen and (max-width: 756px) {
-        &:hover{
-            .mask-avenir{
+        &:hover {
+            .mask-avenir {
                 z-index: 4;
                 clip-path: circle(500% at 50% 50%);
             }
@@ -127,7 +125,7 @@
         }
     }
 }*/
-.avenir-sections{
+.avenir-sections {
     width: 100vw;
     height: 33vh;
     display: flex;
@@ -138,9 +136,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(images/image.png);
-    &:hover{
-        h1{
-            font-size: 90pt;
+
+    & h1 {
+        text-align: center;
+        //transform-origin: center;
+        transition: font-size 0.5s ease;
+    }
+    &:hover {
+        h1 {
+            // transform: scale(0.5, 0.5);
+            font-size: 2000vw;
+            //font-family: "Playfair Display", serif;
         }
     }
 }
@@ -154,6 +160,6 @@
     // background-repeat: no-repeat;
     color: transparent;
     font-weight: 900;
-    font-size: clamp(0.5rem, 18vw, 20vw);
+    font-size: clamp(0.5rem, 18vw, 17vw);
     margin: 0;
 }

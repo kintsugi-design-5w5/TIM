@@ -10,9 +10,7 @@
             <div class="img-projet"><img src="<?php echo get_template_directory_uri() . '/images/image.png';?>" alt="" /></div>
             <div class="infos">
                 <p>
-                    La Technique d’Intégration Multimédia (TIM) est l’endroit idéal offrant la possibilité aux étudiants de savoir les
-                    nouvelles technologies de l’industrie comme : la programmation des jeux, du montage vidéo, de la modélisation et animation
-                    3D, de la création de sites web, de l’expérimentation en réalité virtuelle (VR), etc.
+                La technique d'intégration multimédia (TIM) du Collège de Maisonneuve forme des spécialistes en conception, développement et intégration de contenus numériques interactifs. Les diplômés maîtrisent la création d’expériences utilisateur engageantes sur des plateformes variées, incluant sites web, jeux vidéo et autres plateformes numériques. Le programme encourage une approche interdisciplinaire, où créativité et logique se rencontrent pour répondre aux besoins d’un marché en constante évolution.
                 </p>
             </div>
         </div>
