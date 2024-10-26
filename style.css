@@ -1167,6 +1167,79 @@ ul {
   margin: 0;
 }
 
+.sous-section {
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 756px) {
+  .sous-section > div > h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .sous-section > div > h1 {
+    font-size: 3rem;
+  }
+}
+
+.sous-section > div > h2 {
+  font-weight: bold;
+}
+
+.sous-section > div > div > div > h3 {
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 756px) {
+  .sous-section > div > div > div > h3 {
+    padding-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 756px) {
+  .sous-section > div > div > div > h3 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 756px) {
+  .types-stage {
+    display: flex;
+  }
+}
+
+.types-stage > div {
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+  justify-content: space-between;
+}
+
+.types-stage > div > h2 {
+  font-weight: 500;
+  padding-top: 2rem;
+}
+
+.types-stage > div > p {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 430px) {
+  .types-stage > div > p {
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 756px) {
+  .types-stage > div > p {
+    padding-top: 4rem;
+  }
+}
+
+.types-stage > div:first-child {
+  padding-bottom: 2rem;
+}
+
+.types-stage > div:last-child {
+  padding-bottom: 2rem;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
 /* ////////////////////////////////////////////////////////// */

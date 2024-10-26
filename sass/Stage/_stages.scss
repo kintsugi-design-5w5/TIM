@@ -1,0 +1,69 @@
+.sous-section {
+    justify-content: center;
+    align-items: center;
+}
+
+.sous-section > div > h1 {
+    @media screen and (max-width: 756px) {
+        font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: 430px) {
+        font-size: 3rem;
+    }
+}
+
+.sous-section > div > h2 {
+    font-weight: bold;
+    //font-size: 4rem;
+}
+
+.sous-section > div > div > div > h3 {
+    padding-bottom: 3rem;
+    @media screen and (min-width: 756px) {
+        padding-bottom: 1.5rem;
+    }
+
+    @media screen and (min-width: 756px) {
+        padding-bottom: 1rem;
+    }
+}
+
+// Sections Types de stages
+
+.types-stage {
+    @media screen and (min-width: 756px) {
+        display: flex;
+    }
+}
+
+.types-stage > div {
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    justify-content: space-between;
+}
+
+.types-stage > div > h2 {
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+.types-stage > div > p {
+    padding-top: 1rem;
+
+    @media screen and (min-width: 430px) {
+        padding-top: 1rem;
+    }
+
+    @media screen and (min-width: 756px) {
+        padding-top: 4rem;
+    }
+}
+
+.types-stage > div:first-child {
+    padding-bottom: 2rem;
+}
+
+.types-stage > div:last-child {
+    padding-bottom: 2rem;
+}
