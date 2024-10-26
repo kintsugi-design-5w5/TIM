@@ -67,3 +67,61 @@
 .types-stage > div:last-child {
     padding-bottom: 2rem;
 }
+
+//********************* Emplois ********************//
+
+.liste-emplois {
+    justify-content: center;
+    padding-top: 1rem;
+    @media screen and (min-width: 756px) {
+        display: flex;
+        padding-top: 0.5rem;
+    }
+}
+
+.liste-emplois > div {
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 756px) {
+        padding-top: 0.5rem;
+    }
+
+    @media screen and (max-width: 430px) {
+        padding-top: 1rem;
+    }
+}
+
+.description-emplois {
+    padding-top: 2rem;
+
+    @media screen and (max-width: 430px) {
+        padding-top: 1rem;
+    }
+
+    @media screen and (max-width: 756px) {
+        padding-top: 0.5rem;
+    }
+}
+
+// Liste
+
+.liste-emplois > div > ul > li {
+    font-size: 18px;
+    padding-top: 1rem;
+
+    //Format Tablette
+    @media screen and (min-width: 430px) {
+        font-size: 20px;
+        padding-top: 2rem;
+    }
+    
+    //Format Ordi
+    @media screen and (min-width: 756px) {
+        font-size: 30px;
+        padding-top: 2rem;
+    }
+
+    
+}
