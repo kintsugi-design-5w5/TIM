@@ -1240,6 +1240,64 @@ ul {
   padding-bottom: 2rem;
 }
 
+.liste-emplois {
+  justify-content: center;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 756px) {
+  .liste-emplois {
+    display: flex;
+    padding-top: 0.5rem;
+  }
+}
+
+.liste-emplois > div {
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+  justify-content: space-between;
+}
+@media screen and (max-width: 756px) {
+  .liste-emplois > div {
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .liste-emplois > div {
+    padding-top: 1rem;
+  }
+}
+
+.description-emplois {
+  padding-top: 2rem;
+}
+@media screen and (max-width: 430px) {
+  .description-emplois {
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 756px) {
+  .description-emplois {
+    padding-top: 0.5rem;
+  }
+}
+
+.liste-emplois > div > ul > li {
+  font-size: 18px;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 430px) {
+  .liste-emplois > div > ul > li {
+    font-size: 20px;
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 756px) {
+  .liste-emplois > div > ul > li {
+    font-size: 30px;
+    padding-top: 2rem;
+  }
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
 /* ////////////////////////////////////////////////////////// */
