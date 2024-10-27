@@ -35,6 +35,10 @@ ul {
   padding-left: 0; //Enlever la marge par défaut à gauche
 }
 
+.cours {
+  display: none; //les cours par défaut ne s'affichent pas
+}
+
 .session {
   position: relative;
   z-index: 1;

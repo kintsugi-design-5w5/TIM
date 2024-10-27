@@ -61,11 +61,13 @@
     <ul>
       <?php foreach ($sessions as $session_num => $cours_list): ?>
         <li class="session">
-          <h1 class="cercle grand" data-session="<?php echo $session_num; ?>">Session <?php echo $session_num; ?></h1>
-          <ul id="session-<?php echo $session_num; ?>">
+          <h1 class="cercle grand session-btn" data-session="<?php echo $session_num; ?>">Session
+            <?php echo $session_num; ?>
+          </h1>
+          <ul class="cours" id="session-<?php echo $session_num; ?>">
             <?php foreach ($cours_list as $cours): ?>
               <li>
-                <h5 class="cours cercle petit"><?php echo esc_html($cours); ?></h5>
+                <h5 class="cercle petit"><?php echo esc_html($cours); ?></h5>
               </li>
             <?php endforeach; ?>
           </ul>
@@ -77,5 +79,7 @@
 </main>
 <!-- Script Javascript pour gérer la progression de la time;ine -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/barre-progression-cours.js"></script>
+<!-- Script Javascript pour gérer l'affichage des cours -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/cours-visible.js"></script>
 
 <?php get_footer(); ?>

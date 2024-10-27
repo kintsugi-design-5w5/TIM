@@ -788,6 +788,10 @@ ul {
   padding-left: 0;
 }
 
+.cours {
+  display: none;
+}
+
 .session {
   position: relative;
   z-index: 1;
