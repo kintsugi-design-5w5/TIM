@@ -61,11 +61,11 @@
     <ul>
       <?php foreach ($sessions as $session_num => $cours_list): ?>
         <li class="session">
-          <h1 class="cercle grand">Session <?php echo $session_num; ?></h1>
-          <ul class="cours" id="session-<?php echo $session_num; ?>">
+          <h1 class="cercle grand" data-session="<?php echo $session_num; ?>">Session <?php echo $session_num; ?></h1>
+          <ul id="session-<?php echo $session_num; ?>">
             <?php foreach ($cours_list as $cours): ?>
               <li>
-                <h5 class="cercle petit"><?php echo esc_html($cours); ?></h5>
+                <h5 class="cours cercle petit"><?php echo esc_html($cours); ?></h5>
               </li>
             <?php endforeach; ?>
           </ul>
