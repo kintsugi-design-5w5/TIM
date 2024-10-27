@@ -16,10 +16,13 @@
 .timeline {
   position: absolute;
   width: 7px;
-  height: 1880px;
+  min-height: 550px;
   margin: 0 auto;
   background-color: $gris-pale;
   border: 2px solid $couleur;
+  @media screen and (max-width: 756px) {
+    min-height: 450px;
+  }
 }
 
 /*Barre de progression pour la timeline des cours*/
