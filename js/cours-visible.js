@@ -30,23 +30,13 @@ function AjusterHauteurTimeline() {
   let sessionsOuvertes = document.querySelectorAll(
     ".cours[style='display: block;']"
   );
-
+  //La hauteur de la timeline par défaut
+  let hauteurTimeline = 550;
   //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
-  if (sessionsOuvertes > 0) {
-    let hauteurInitiale = 550;
-    let hauteurSession;
-    //Obtenir la hauteur de chaque session ouverte
-    sessionsOuvertes.forEach((session) => {
-      hauteurSession = hauteurInitiale + session.offSetHeight;
-      //Ajout de la hauteur de la session à la hauteur initiale
-      hauteurTotale = hauteurInitiale + hauteurSession;
-      console.log(hauteurTotale);
-    });
-
-    //Remplacer la hauteur initiale (par défaut) de la timeline par celle avec le contenu ouvert
-    timeline.style.minHeight = `${hauteurTotale}px`;
-  } else {
-    //Par défaut la timeline (avec les sessions fermées) à une certaine hauteur
-    timeline.style.minHeight = "550px";
-  }
+  //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
+  sessionsOuvertes.forEach((session) => {
+    hauteurTimeline += session.offsetHeight;
+  });
+  //Remplacer la hauteur obtenue dans le style de la timeline
+  timeline.style.minHeight = `${hauteurTimeline}px`;
 }
