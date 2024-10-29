@@ -15,8 +15,9 @@
 
 .timeline {
   position: absolute;
+  top: 1.5rem;
   width: 7px;
-  min-height: 550px;
+  min-height: 530px;
   margin: 0 auto;
   background-color: $gris-pale;
   border: 2px solid $couleur;

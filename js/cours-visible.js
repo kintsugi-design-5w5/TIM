@@ -31,12 +31,17 @@ function AjusterHauteurTimeline() {
     ".cours[style='display: block;']"
   );
   //La hauteur de la timeline par défaut
-  let hauteurTimeline = 550;
+  let hauteurTimeline = 530;
+
   //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
   //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
   sessionsOuvertes.forEach((session) => {
-    hauteurTimeline += session.offsetHeight;
+    hauteurTimeline += session.offsetHeight + 40;
   });
+
   //Remplacer la hauteur obtenue dans le style de la timeline
   timeline.style.minHeight = `${hauteurTimeline}px`;
+
+  // Appeler la mise à jour de la barre de progression
+  mettreAJourBarreProgression();
 }
