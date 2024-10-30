@@ -1,4 +1,8 @@
 <?php
+add_theme_support( 'menus' );
+add_theme_support( 'custom-logo' );
+add_theme_support( 'post-thumbnails' );
+
 
 function afficher_projets_dans_boucle($query) {
     // Vérifie si c’est le site public et si c’est la requête principale
