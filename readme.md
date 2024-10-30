@@ -18,6 +18,18 @@ Créer un nouveau site web pour le département TIM de Maisonneuve pour présent
 
 À venir
 
+### Description du site :
+
+Avancement du sprint - L'avancement de la programmation a été substanciel. Outre les tests utilisateurs, toute notre concentration a pu se porter vers la programmation, donc on a pu entammer toutes les pages, on est donc passé de l'accueil commencé à 8 pages amorcées. On a aussi durant ce sprint passé au php local, ce qui a été long mais qui est uniformisé sur toutes les pages. On a aussi réussi finalement à mettre en place notre serveur distant WHC, donc toute l'équipe y a accès et le thème y est à jour. Outre le php, on a ajouté quelques scripts JS, notamment pour gérer le scroll de manière agréable, ouvrir le menu et faire un effet de grain sur le site. On a revu aussi un peu notre structure SASS, en essayant de réduire les styles spécifiques, notamment avec la feuille général.
+
+### Tâches non terminées :
+- Implémentation de l'accueil
+- Adaptabilité des pages
+- Pages single-projet (inaccessibles)
+- Page cours et effet de scroll sur la barre de temps
+- CSS des pages avenir 
+
+
 ### Objectifs du projet :
 
 Sprint 1 - Atteindre un prototype du site simple en HTML/SCSS et finaliser les maquettes et les systèmes de design pour commencer à monter au prochain sprint

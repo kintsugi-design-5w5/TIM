@@ -1,0 +1,177 @@
+.sous-section {
+    justify-content: center;
+    align-items: center;
+}
+
+.sous-section > div > h1 {
+    @media screen and (max-width: 756px) {
+        font-size: 2.3rem;
+    }
+
+    @media screen and (max-width: 430px) {
+        font-size: 2.5rem;
+    }
+}
+
+.sous-section > div > h2 {
+    font-weight: bold;
+    //font-size: 4rem;
+}
+
+.sous-section > div > div > div > h3 {
+    padding-bottom: 3rem;
+    @media screen and (min-width: 756px) {
+        padding-bottom: 1.5rem;
+    }
+
+    @media screen and (min-width: 756px) {
+        padding-bottom: 1rem;
+    }
+}
+
+// Sections Types de stages
+
+.types-stage {
+    @media screen and (min-width: 756px) {
+        display: flex;
+    }
+}
+
+.types-stage > div {
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    justify-content: space-between;
+}
+
+.types-stage > div > h2 {
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+.types-stage > div > p {
+    padding-top: 1rem;
+
+    @media screen and (min-width: 430px) {
+        padding-top: 1rem;
+    }
+
+    @media screen and (min-width: 756px) {
+        padding-top: 4rem;
+    }
+}
+
+.types-stage > div:first-child {
+    padding-bottom: 2rem;
+}
+
+.types-stage > div:last-child {
+    padding-bottom: 2rem;
+}
+
+//********************* Emplois ********************//
+
+.liste-emplois {
+    justify-content: center;
+    padding-top: 1rem;
+    @media screen and (min-width: 756px) {
+        display: flex;
+        padding-top: 0.5rem;
+    }
+}
+
+.liste-emplois > div {
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 756px) {
+        padding-top: 0.5rem;
+    }
+
+    @media screen and (max-width: 430px) {
+        padding-top: 1rem;
+    }
+}
+
+.description-emplois {
+    padding-top: 2rem;
+
+    @media screen and (max-width: 430px) {
+        padding-top: 1rem;
+    }
+
+    @media screen and (max-width: 756px) {
+        padding-top: 0.5rem;
+    }
+}
+
+// Liste
+
+.liste-emplois > div > ul > li {
+    font-size: 18px;
+    padding-top: 1rem;
+
+    //Format Tablette
+    @media screen and (min-width: 430px) {
+        font-size: 20px;
+        padding-top: 2rem;
+    }
+    
+    //Format Ordi
+    @media screen and (min-width: 756px) {
+        font-size: 30px;
+        padding-top: 2rem;
+    }
+
+    
+}
+
+//********************* Universités **********************//
+
+.section-universites > div {
+    padding-bottom: 2rem;
+}
+
+.section-universites > div > h2 {
+    font-weight: bold;
+}
+
+.section-universites > div > p {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    font-size: 18px;
+
+    @media screen and (min-width: 756px) {
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+        font-size: 25px;
+    }
+}
+
+.section-universites > div > ul {
+    padding-top: 3rem;
+
+    @media screen and (min-width: 756px) {
+        padding-top: 5rem;
+    }
+}
+
+.section-universites > div > ul > li {
+    font-size: 21px;
+    font-weight: 300;
+    padding-bottom: 2rem;
+
+    //Format Tablette
+    @media screen and (min-width: 430px) {
+        font-size: 25px;
+        font-weight: 300;
+        padding-bottom: 3rem;
+    }
+
+    //Format Ordi
+    @media screen and (min-width: 756px) {
+        font-size: 28px;
+        font-weight: 300;
+        padding-bottom: 4.5rem;
+    }
+}

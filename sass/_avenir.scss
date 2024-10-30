@@ -43,10 +43,10 @@
 #img-avenir-gauche {
     background-image: url(images/images2.jpg);
 }
-.feed-avenir a {
+.feed-avenir h3 {
     position: absolute;
     z-index: 3;
-    pointer-events: none;
+    //pointer-events: none;
 }
 
 .mask-avenir {

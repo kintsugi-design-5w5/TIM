@@ -1,6 +1,8 @@
 /********** GESTION DU MENU BURGER *************/
 
 let burger = document.querySelector("#burger");
+let burgerIcon = document.querySelector(".burger");
+
 let flou = document.querySelector(".flou");
 let body = document.querySelector("body");
 let html = document.querySelector("html");
@@ -17,27 +19,27 @@ function ClickBurger() {
         body.style.setProperty("--st", -document.documentElement.scrollTop + "px");
         scroll = document.documentElement.scrollTop;
         body.classList.add("noscroll");
-
-        body.style.position = "fixed"; // Fixe le corps lors de l'ouverture du menu
+        body.style.position = "fixed";
         body.style.overflowY = "scroll";
+        curseur.classList.add("noir");
 
-        curseur.classList.add("noir"); // Ajoute la classe pour le curseur noir
+        burgerIcon.classList.add("active"); // Ajoute la classe active pour le burger en "X"
     } else {
-        FermeBurger(); // Ferme le menu si le burger est décoché
+        FermeBurger();
     }
 }
 
-// Fonction pour fermer le menu
 function FermeBurger() {
-    quitteMenu = true; // Indique que le menu se ferme
+    quitteMenu = true;
     body.style.position = "static";
-    body.style.overflowY = "auto"; // Permet le défilement
+    body.style.overflowY = "auto";
     html.style.scrollBehavior = "auto";
     burger.checked = false;
-    window.scrollTo(0, scroll); // Ramène à la position de défilement d'origine
+    window.scrollTo(0, scroll);
     html.style.scrollBehavior = "smooth";
+    curseur.classList.remove("noir");
 
-    curseur.classList.remove("noir"); // Retire la classe pour revenir à la couleur d'origine
+    burgerIcon.classList.remove("active"); // Retire la classe active pour le burger
 }
 
 /********** GESTION DU DÉFILEMENT *************/
