@@ -27,7 +27,6 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 /* ////////////////////////////////////////////////////////// */
 @import "h";
 @import "general";
-@import "menu";
 
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des sections                     */
@@ -50,3 +49,6 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 /* ////////////////////////////////////////////////////////// */
 /*                  Règles des composants                     */
 /* ////////////////////////////////////////////////////////// */
+@import "composants/specialisation";
+@import "composants/projets-acceuil";
+@import "composants/menu";
