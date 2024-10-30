@@ -141,6 +141,8 @@ html body #grain {
 
 section {
   padding: 5rem 12vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 footer {
