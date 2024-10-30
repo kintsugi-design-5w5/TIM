@@ -1110,10 +1110,9 @@ ul {
   background-image: url(images/images2.jpg);
 }
 
-.feed-avenir a {
+.feed-avenir h3 {
   position: absolute;
   z-index: 3;
-  pointer-events: none;
 }
 
 .mask-avenir {
@@ -1195,6 +1194,187 @@ ul {
   font-weight: 900;
   font-size: clamp(0.5rem, 18vw, 17vw);
   margin: 0;
+}
+
+.sous-section {
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 756px) {
+  .sous-section > div > h1 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .sous-section > div > h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.sous-section > div > h2 {
+  font-weight: bold;
+}
+
+.sous-section > div > div > div > h3 {
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 756px) {
+  .sous-section > div > div > div > h3 {
+    padding-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 756px) {
+  .sous-section > div > div > div > h3 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 756px) {
+  .types-stage {
+    display: flex;
+  }
+}
+
+.types-stage > div {
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+  justify-content: space-between;
+}
+
+.types-stage > div > h2 {
+  font-weight: 500;
+  padding-top: 2rem;
+}
+
+.types-stage > div > p {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 430px) {
+  .types-stage > div > p {
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 756px) {
+  .types-stage > div > p {
+    padding-top: 4rem;
+  }
+}
+
+.types-stage > div:first-child {
+  padding-bottom: 2rem;
+}
+
+.types-stage > div:last-child {
+  padding-bottom: 2rem;
+}
+
+.liste-emplois {
+  justify-content: center;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 756px) {
+  .liste-emplois {
+    display: flex;
+    padding-top: 0.5rem;
+  }
+}
+
+.liste-emplois > div {
+  padding-bottom: 1rem;
+  padding-top: 4rem;
+  justify-content: space-between;
+}
+@media screen and (max-width: 756px) {
+  .liste-emplois > div {
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .liste-emplois > div {
+    padding-top: 1rem;
+  }
+}
+
+.description-emplois {
+  padding-top: 2rem;
+}
+@media screen and (max-width: 430px) {
+  .description-emplois {
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 756px) {
+  .description-emplois {
+    padding-top: 0.5rem;
+  }
+}
+
+.liste-emplois > div > ul > li {
+  font-size: 18px;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 430px) {
+  .liste-emplois > div > ul > li {
+    font-size: 20px;
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 756px) {
+  .liste-emplois > div > ul > li {
+    font-size: 30px;
+    padding-top: 2rem;
+  }
+}
+
+.section-universites > div {
+  padding-bottom: 2rem;
+}
+
+.section-universites > div > h2 {
+  font-weight: bold;
+}
+
+.section-universites > div > p {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  font-size: 18px;
+}
+@media screen and (min-width: 756px) {
+  .section-universites > div > p {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    font-size: 25px;
+  }
+}
+
+.section-universites > div > ul {
+  padding-top: 3rem;
+}
+@media screen and (min-width: 756px) {
+  .section-universites > div > ul {
+    padding-top: 5rem;
+  }
+}
+
+.section-universites > div > ul > li {
+  font-size: 21px;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 430px) {
+  .section-universites > div > ul > li {
+    font-size: 25px;
+    font-weight: 300;
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 756px) {
+  .section-universites > div > ul > li {
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 4.5rem;
+  }
 }
 
 /* ////////////////////////////////////////////////////////// */
