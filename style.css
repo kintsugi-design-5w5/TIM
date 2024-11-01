@@ -32,7 +32,7 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
   --couleur-fonce: #004997; /* Couleur foncée */
   --noir: #1c1c1c; /* Couleur noire */
   --noir-pale: #292929; /* Noir pâle */
-  --noir-fonce: #242424; /* Noir foncé */
+  --noir-fonce: #101010; /* Noir foncé */
   --blanc: #ebebeb; /* Couleur blanche */
   --blanc-pale: #eeeeee; /* Blanc pâle */
   --blanc-fonce: #cccccc; /* Blanc foncé */
@@ -124,21 +124,6 @@ html body #grain {
 }
 
 /*********** HERO ET SECTION ET FOOTER **************/
-#hero {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("images/image.png");
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#hero h1 {
-  text-align: center;
-  padding: 0 5rem;
-}
-
 section {
   padding: 5rem 12vw;
 }
@@ -406,6 +391,14 @@ footer {
   stroke-dashoffset: -68px;
 }
 
+.annule-marge {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des sections                     */
 /* ////////////////////////////////////////////////////////// */
@@ -597,7 +590,6 @@ footer {
 
 .axes-cours div:hover {
   filter: grayscale(0%);
-  background-color: red;
 }
 
 #projet1 {
@@ -643,7 +635,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, var(--noir), rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, var(--noir-fonce), rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -881,10 +873,192 @@ ul {
   align-self: flex-end;
 }
 
+section {
+  min-height: 100vh;
+}
+
+.section__projet {
+  padding: 2rem 2rem;
+}
+@media screen and (max-width: 756px) {
+  .section__projet {
+    padding: 2rem 3rem;
+  }
+}
+
+.info__projet {
+  justify-content: space-around;
+  gap: 3rem;
+}
+@media screen and (max-width: 550px) {
+  .info__projet {
+    flex-direction: column;
+  }
+}
+
+.btn-retour {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.titre__projet {
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.auteur_info:hover {
+  color: var(--couleur-pale);
+  cursor: pointer;
+}
+
+.description__projet {
+  width: 50vw;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (max-width: 756px) {
+  .description__projet {
+    align-items: flex-end;
+    width: 100%;
+  }
+}
+
+.entete-description__projet {
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (max-width: 756px) {
+  .entete-description__projet {
+    align-items: flex-end;
+  }
+}
+
+.texte-description {
+  margin-top: 40px;
+  line-height: 2rem;
+  text-align: start;
+}
+@media screen and (max-width: 756px) {
+  .texte-description {
+    text-align: end;
+  }
+}
+
+.logiciel-projet {
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.logiciels {
+  width: 3vw;
+  height: auto;
+}
+
+.screenshots-projet {
+  height: auto;
+}
+
+.images-projets {
+  display: grid;
+  grid-template-columns: 1fr; /* Par défaut, une seule colonne */
+  gap: 2rem; /* Espace entre les images */
+}
+
+.projet-image {
+  background-color: #ccc; /* Juste pour la démonstration */
+  height: 300px; /* Ajuste la hauteur de chaque projet */
+}
+
+/* Les projets 1, 4, 7, 10... prennent toute la largeur */
+.images-projets .projet-image:nth-child(3n+1) {
+  grid-column: span 2; /* Prend toute la largeur */
+}
+
+/* Les projets 2-3, 5-6, 8-9... prennent chacun 50% de la largeur */
+.images-projets .projet-image:nth-child(3n+2),
+.images-projets .projet-image:nth-child(3n+3) {
+  grid-column: span 1; /* Prend 50% de la largeur */
+}
+
+@media (min-width: 768px) {
+  .images-projets {
+    grid-template-columns: 1fr 1fr; /* Sur les grands écrans, deux colonnes */
+  }
+}
+/* Si la dernière rangée a un seul élément, qu'il prenne toute la largeur */
+.images-projets .projet-image:last-child:nth-child(odd) {
+  grid-column: span 2; /* Étendre si impaire */
+}
+
+/*Fenêtre popup*/
+.popup {
+  position: relative;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .btn_x {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.contenu-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contenu-popup h1 {
+  font-size: 10rem;
+  text-align: center;
+}
+@media screen and (max-width: 756px) {
+  .contenu-popup h1 {
+    font-size: 5rem;
+  }
+}
+
+.reseaux-sociaux__popup {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.reseaux-sociaux__popup li {
+  list-style-type: none;
+}
+
+.reseaux-sociaux__popup li a img {
+  width: 10vw;
+  height: auto;
+}
+
+.popup.disparition {
+  display: none;
+}
+
+.popup.apparition {
+  display: flex;
+}
+
 /*********** FOOTER **************/
 .pied {
   width: 100vw;
-  background-color: var(--noir);
+  background-color: var(--noir-fonce);
   padding: 2rem 5vw;
   display: flex;
   flex-direction: column;
@@ -996,64 +1170,6 @@ ul {
   color: var(--blanc);
   text-decoration: none;
   font-size: clamp(0.75rem, 2.25vw, 1.75rem);
-}
-
-.recherche {
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  border-bottom: 2px solid white;
-}
-
-.recherche__input {
-  background-color: var(--gris-fonce);
-  border: none;
-  outline: none;
-}
-
-.recherche__input::placeholder {
-  color: white;
-  font-size: 1.5rem;
-}
-
-.recherche2 {
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  border: 2px solid white;
-}
-
-.recherche__input2 {
-  background-color: var(--gris-fonce);
-  border: none;
-  outline: none;
-}
-
-.recherche__input2::placeholder {
-  color: white;
-  font-size: 1.5rem;
-}
-
-.charte-design {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-
-.graphique {
-  border: 2px solid #fff;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.graphique h2 {
-  text-align: center;
 }
 
 .feed-avenir {
@@ -1375,8 +1491,77 @@ ul {
 }
 
 /* ////////////////////////////////////////////////////////// */
-/*                    Règles des effets                       */
-/* ////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////// */
 /*                  Règles des composants                     */
-/* ////////////////////////////////////////////////////////// *//*# sourceMappingURL=style.css.map */
+/* ////////////////////////////////////////////////////////// */
+.recherche {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border-bottom: 2px solid white;
+}
+
+.recherche__input {
+  background-color: var(--gris-fonce);
+  border: none;
+  outline: none;
+}
+
+.recherche__input::placeholder {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.recherche2 {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border: 2px solid white;
+}
+
+.recherche__input2 {
+  background-color: var(--gris-fonce);
+  border: none;
+  outline: none;
+}
+
+.recherche__input2::placeholder {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.charte-design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.graphique {
+  border: 2px solid #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphique h2 {
+  text-align: center;
+}
+
+#hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/image.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero h1 {
+  text-align: center;
+  padding: 0 5rem;
+}/*# sourceMappingURL=style.css.map */

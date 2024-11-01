@@ -195,7 +195,6 @@
 
 .axes-cours div:hover {
     filter: grayscale(0%); // Effet au survol
-    background-color: red; // Changer la couleur de fond
 }
 
 #projet1 {
@@ -243,7 +242,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, $noir, rgba(0, 0, 0, 0) 100%); // Dégradé sombre
+    background: linear-gradient(to top, $noir-fonce, rgba(0, 0, 0, 0) 100%); // Dégradé sombre
     pointer-events: none; // Permet de cliquer à travers l'after
 }
 

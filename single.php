@@ -2,63 +2,14 @@
 get_header();
 ?>
 
-<main>
-    <section class="feed projets-apercus">
-        <div class="colonne-proj">
-
-        <?php
-        // Vérifier si le post est disponible
-        if (have_posts()) {
-            while (have_posts()) {
-                the_post(); // Boucle sur le post actuel
-                ?>
-                <div class="thumbnail-projet">
-                    <h2><?php the_title(); ?></h2>
-                    <div><?php the_content(); ?></div>
-
-                    <?php
-                    // Récupérer les IDs des images via ACF
-                    $image1_id = get_field('image_projet_1');
-                    $image2_id = get_field('image_projet_2');
-                    $image3_id = get_field('image_projet_3');
-
-                    // Afficher les images
-                    if ($image1_id) {
-                        $img1_url = wp_get_attachment_image_url($image1_id, 'large');
-                        echo '<img src="' . esc_url($img1_url) . '" alt="Image du Projet 1">';
-                    }
-
-                    if ($image2_id) {
-                        $img2_url = wp_get_attachment_image_url($image2_id, 'large');
-                        echo '<img src="' . esc_url($img2_url) . '" alt="Image du Projet 2">';
-                    }
-
-                    if ($image3_id) {
-                        $img3_url = wp_get_attachment_image_url($image3_id, 'large');
-                        echo '<img src="' . esc_url($img3_url) . '" alt="Image du Projet 3">';
-                    }
-                    ?>
-                </div>
-                <?php
-            }
-        } else {
-            echo '<p>Aucun projet trouvé.</p>';
-        }
-        ?>
-
-        </div>
-    </section>
-</main>
-
-<?php get_footer(); ?>
-
-    <!-- <main>
-      <section class="entete">
+    <main>
+      <section id="hero">
         <h1>Vidéo/images</h1>
       </section>
+
       <section class="section__projet">
-        <div class="info__projet">
-          <div class="titre__projet">
+        <div class="info__projet flex">
+          <div class="titre__projet flex">
             <div class="btn-retour">
               <img
                 src="https://s2.svgbox.net/hero-outline.svg?ic=arrow-left&color=000"
@@ -67,17 +18,17 @@ get_header();
               />
               <a href="#" class="texte-retour">Retour</a>
             </div>
-            <h1>Nom du projet</h1>
+            <h1 class="annule-marge">Nom du projet</h1>
             <h5 class="auteur_info">Auteur du projet</h5>
           </div>
-          <div class="description__projet">
-            <div class="entete-description__projet">
-              <h1>Description</h1>
-              <h3>Cours de web</h3>
-              <div class="logiciel-projet">
-                <img class="logiciels" src="images/LogoTim.png" alt="" />
-                <img class="logiciels" src="images/LogoTim.png" alt="" />
-                <img class="logiciels" src="images/LogoTim.png" alt="" />
+          <div class="description__projet flex">
+            <div class="entete-description__projet flex">
+              <h1 class="annule-marge">Description</h1>
+              <h4>Cours de web</h4>
+              <div class="logiciel-projet flex">
+                <img class="logiciels" src="<?php echo get_template_directory_uri() . '/images/image.png'; ?>" alt="" />
+                <img class="logiciels" src="<?php echo get_template_directory_uri() . '/images/image.png'; ?>" alt="" />
+                <img class="logiciels" src="<?php echo get_template_directory_uri() . '/images/image.png'; ?>" alt="" />
               </div>
             </div>
             <p class="texte-description">
@@ -88,8 +39,15 @@ get_header();
           </div>
         </div>
 
-        <div class="images-projets">
-          <div class="ligne1">
+        <div class="images-projets flex">
+          <div class="projet-image"> <!-- Image 1 --> </div>
+          <div class="projet-image"> <!-- Image 2 --> </div>
+          <div class="projet-image"> <!-- Image 3 --> </div>
+          <div class="projet-image"> <!-- Image 3 --> </div>
+          <div class="projet-image"> <!-- Image 3 --> </div>
+          <div class="projet-image"> <!-- Image 3 --> </div>
+
+          <!-- <div class="ligne1">
             <img class="screenshots-projet" src="images/image.png" alt="" />
             <img class="screenshots-projet" src="images/image.png" alt="" />
           </div>
@@ -117,10 +75,10 @@ get_header();
               src="images/image.png"
               alt=""
             />
-          </div>
+          </div>  -->
         </div>
       </section>
-    </main> -->
+    </main>
 
     <!-- Section popup réseaux sociaux -->
     <!-- <div class="popup">
@@ -144,8 +102,8 @@ get_header();
           </li>
         </ul>
       </div>
-    </div> -->
+    </div>
 
   <?php get_footer();?>
-  <script src="js/popup.js"></script>
+  <!-- <script src="js/popup.js"></script> -->
 </html>

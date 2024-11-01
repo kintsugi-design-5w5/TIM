@@ -1,202 +1,179 @@
 section {
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
-.entete {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    // min-width: 100vw;
 }
 
 .section__projet {
-  background-color: blue;
-  padding: 2rem 0rem;
-  @media screen and (max-width: 756px) {
-    padding: 2rem 3rem;
-  }
+    padding: 2rem 2rem;
+    @media screen and (max-width: 756px) {
+        padding: 2rem 3rem;
+    }
 }
 
 .info__projet {
-  display: flex;
-  justify-content: space-around;
-  min-height: 40vh;
-  gap: 3rem;
-  @media screen and (max-width: 550px) {
-    flex-direction: column;
-  }
+    justify-content: space-around;
+    gap: 3rem;
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+    }
 }
 
 .btn-retour {
-  text-align: left;
-  font-size: 1.2rem;
+    text-align: left;
+    font-size: 1.2rem;
 }
 
 .titre__projet {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 1rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
 .auteur_info:hover {
-  color: $couleur-pale;
-  cursor: pointer;
+    color: $couleur-pale;
+    cursor: pointer;
 }
 
 .description__projet {
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  @media screen and (max-width: 756px) {
-    align-items: flex-end;
-    width: 100%;
-  }
+    width: 50vw;
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (max-width: 756px) {
+        align-items: flex-end;
+        width: 100%;
+    }
 }
 
 .entete-description__projet {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  @media screen and (max-width: 756px) {
-    align-items: flex-end;
-  }
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (max-width: 756px) {
+        align-items: flex-end;
+    }
 }
 
 .texte-description {
-  margin-top: 40px;
-  line-height: 2rem;
-  text-align: start;
-  @media screen and (max-width: 756px) {
-    text-align: end;
-  }
+    margin-top: 40px;
+    line-height: 2rem;
+    text-align: start;
+    @media screen and (max-width: 756px) {
+        text-align: end;
+    }
 }
 
 .logiciel-projet {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .logiciels {
-  width: 3vw;
-  height: auto;
+    width: 3vw;
+    height: auto;
+}
+
+// .images-projets {
+//     flex-wrap: wrap;
+//     padding: 5rem 2rem 0rem;
+//     gap: 1rem;
+// }
+.screenshots-projet {
+    height: auto;
 }
 
 .images-projets {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5rem 2rem 0rem;
-  gap: 1rem;
-}
-.screenshots-projet {
-  height: auto;
+    display: grid;
+    grid-template-columns: 1fr; /* Par défaut, une seule colonne */
+    gap: 2rem; /* Espace entre les images */
 }
 
-.ligne1,
-.ligne3 {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  @media screen and (max-width: 450px) {
-    align-items: center;
-    flex-direction: column;
-  }
+.projet-image {
+    background-color: #ccc; /* Juste pour la démonstration */
+    height: 300px; /* Ajuste la hauteur de chaque projet */
 }
 
-.ligne1 .screenshots-projet,
-.ligne3 .screenshots-projet {
-  width: 47.5vw;
-  @media screen and (max-width: 450px) {
-    width: 100vw;
-  }
+/* Les projets 1, 4, 7, 10... prennent toute la largeur */
+.images-projets .projet-image:nth-child(3n + 1) {
+    grid-column: span 2; /* Prend toute la largeur */
 }
 
-.ligne2,
-.ligne4,
-.ligne5 {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+/* Les projets 2-3, 5-6, 8-9... prennent chacun 50% de la largeur */
+.images-projets .projet-image:nth-child(3n + 2),
+.images-projets .projet-image:nth-child(3n + 3) {
+    grid-column: span 1; /* Prend 50% de la largeur */
 }
 
-.ligne2 .screenshots-projet,
-.ligne4 .screenshots-projet,
-.ligne5 .screenshots-projet {
-  width: 100%;
-  object-fit: cover;
-  @media screen and (min-width: 450px) and (max-width: 550px) {
-    // width: 100%;
-    // height: auto;
-    padding: 0rem 0.5rem;
-  }
-  @media screen and (max-width: 756px) {
-    width: 100vw;
-  }
+@media (min-width: 768px) {
+    .images-projets {
+        grid-template-columns: 1fr 1fr; /* Sur les grands écrans, deux colonnes */
+    }
 }
+
+/* Si la dernière rangée a un seul élément, qu'il prenne toute la largeur */
+.images-projets .projet-image:last-child:nth-child(odd) {
+    grid-column: span 2; /* Étendre si impaire */
+}
+
 
 /*Fenêtre popup*/
 
 .popup {
-  position: relative;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none; //Par défaut
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; //Par défaut
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup .btn_x {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 .contenu-popup {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
 .contenu-popup h1 {
-  font-size: 10rem;
-  text-align: center;
-  @media screen and (max-width: 756px) {
-    font-size: 5rem;
-  }
+    font-size: 10rem;
+    text-align: center;
+    @media screen and (max-width: 756px) {
+        font-size: 5rem;
+    }
 }
 
 .reseaux-sociaux__popup {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 .reseaux-sociaux__popup li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 // Grandeur des logos des réseaux sociaux
 .reseaux-sociaux__popup li a img {
-  width: 10vw;
-  height: auto;
+    width: 10vw;
+    height: auto;
 }
 
 .popup.disparition {
-  display: none;
+    display: none;
 }
 
 .popup.apparition {
-  display: flex;
+    display: flex;
 }
