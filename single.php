@@ -65,6 +65,8 @@ get_header();
           </div>
         </div>
 
+        <?php the_content(); ?>
+
         <?php
         // Tableau pour stocker les images
         $images = [];
@@ -79,23 +81,20 @@ get_header();
             }
         }
         
-        // Vérifie s'il y a des images à afficher
         if (!empty($images)): ?>
-            <section class="images-projets annule-padding-cote">
-                <?php 
-                // Boucle pour afficher les images
-                foreach ($images as $image): ?>
-                    <div class="projet-image">
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    </div>
-                <?php endforeach; ?>
-            </section>
-        <?php else: ?>
-            <p>Aucune image disponible pour ce projet.</p>
-        <?php endif; ?>
-
-
-
+        <section class="images-projets annule-padding-cote galerie">
+            <?php 
+            // Boucle pour afficher les images
+            foreach ($images as $image): ?>
+                <div class="projet-image">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </div>
+            <?php endforeach; ?>
+        </section>
+    <?php else: ?>
+        <p>Aucune image disponible pour ce projet.</p>
+    <?php endif; ?>
+    
 
         
       </section>
