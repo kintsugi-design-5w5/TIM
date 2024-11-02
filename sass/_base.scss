@@ -1,7 +1,54 @@
+// Marge et padding
 .annule-marge {
     margin: 0;
 }
 
+.annule-padding {
+    padding: 0;
+}
+
+.annule-marge-cote {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.annule-padding-cote {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.annule-marge-hauteur {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.annule-padding-hauteur {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+// Flex
 .flex {
     display: flex;
+}
+
+// Couleurs
+.blanc {
+    color: $blanc;
+    stroke: $blanc;
+}
+
+.noir {
+    color: $noir;
+    stroke: $noir;
+}
+
+.gris {
+    color: $gris;
+    stroke: $gris;
+}
+
+.couleur {
+    color: $couleur;
+    stroke: $couleur;
 }

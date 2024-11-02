@@ -11,7 +11,7 @@ section {
 }
 
 .info__projet {
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 3rem;
     @media screen and (max-width: 550px) {
         flex-direction: column;
@@ -90,6 +90,12 @@ section {
 .projet-image {
     background-color: #ccc; /* Juste pour la démonstration */
     height: 300px; /* Ajuste la hauteur de chaque projet */
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 /* Les projets 1, 4, 7, 10... prennent toute la largeur */
@@ -110,10 +116,9 @@ section {
 }
 
 /* Si la dernière rangée a un seul élément, qu'il prenne toute la largeur */
-.images-projets .projet-image:last-child:nth-child(odd) {
-    grid-column: span 2; /* Étendre si impaire */
+.images-projets .projet-image:last-child:nth-child(3n + 2) {
+    grid-column: span 2; /* Prendre toute la largeur */
 }
-
 
 /*Fenêtre popup*/
 

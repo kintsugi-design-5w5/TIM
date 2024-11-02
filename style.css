@@ -395,8 +395,52 @@ footer {
   margin: 0;
 }
 
+.annule-padding {
+  padding: 0;
+}
+
+.annule-marge-cote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.annule-padding-cote {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.annule-marge-hauteur {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.annule-padding-hauteur {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .flex {
   display: flex;
+}
+
+.blanc {
+  color: var(--blanc);
+  stroke: var(--blanc);
+}
+
+.noir {
+  color: var(--noir);
+  stroke: var(--noir);
+}
+
+.gris {
+  color: var(--gris);
+  stroke: var(--gris);
+}
+
+.couleur {
+  color: var(--couleur);
+  stroke: var(--couleur);
 }
 
 /* ////////////////////////////////////////////////////////// */
@@ -593,23 +637,14 @@ footer {
 }
 
 #projet1 {
-  background-image: url("images/GenestVincent_3D.png");
-}
-#projet1 .projet-paint {
   top: 0;
 }
 
 #projet2 {
-  background-image: url("images/CarriereNicolas_3D.jpg");
-}
-#projet2 .projet-paint {
   top: -100vh;
 }
 
 #projet3 {
-  background-image: url("images/GenestVincent_3D.png");
-}
-#projet3 .projet-paint {
   top: -200vh;
 }
 
@@ -851,6 +886,8 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 .thumbnail-projet::after {
   content: "";
@@ -887,7 +924,7 @@ section {
 }
 
 .info__projet {
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 3rem;
 }
 @media screen and (max-width: 550px) {
@@ -970,6 +1007,11 @@ section {
   background-color: #ccc; /* Juste pour la démonstration */
   height: 300px; /* Ajuste la hauteur de chaque projet */
 }
+.projet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Les projets 1, 4, 7, 10... prennent toute la largeur */
 .images-projets .projet-image:nth-child(3n+1) {
@@ -988,8 +1030,8 @@ section {
   }
 }
 /* Si la dernière rangée a un seul élément, qu'il prenne toute la largeur */
-.images-projets .projet-image:last-child:nth-child(odd) {
-  grid-column: span 2; /* Étendre si impaire */
+.images-projets .projet-image:last-child:nth-child(3n+2) {
+  grid-column: span 2; /* Prendre toute la largeur */
 }
 
 /*Fenêtre popup*/

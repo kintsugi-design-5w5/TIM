@@ -198,24 +198,15 @@
 }
 
 #projet1 {
-    background-image: url("images/GenestVincent_3D.png"); // Image du projet 1
-    & .projet-paint {
-        top: 0; // Position du paint
-    }
+    top: 0; // Position du paint
 }
 
 #projet2 {
-    background-image: url("images/CarriereNicolas_3D.jpg"); // Image du projet 2
-    & .projet-paint {
-        top: -100vh; // Position du paint
-    }
+    top: -100vh; // Position du paint
 }
 
 #projet3 {
-    background-image: url("images/GenestVincent_3D.png"); // Image du projet 3
-    & .projet-paint {
-        top: -200vh; // Position du paint
-    }
+    top: -200vh; // Position du paint
 }
 
 .feed-projet {

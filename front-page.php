@@ -66,19 +66,22 @@
     <?php if ( have_posts() ) : ?>
     <?php $project_count = 1; // Compteur pour l'ID dynamique ?>
     <?php while ( have_posts() ) : the_post(); ?>
-        <section class="feed-projet" id="projet<?php echo $project_count; ?>">
-            <div class="projet-paint">
+        <section class="feed-projet" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
+            <div class="projet-paint" id="projet<?php echo $project_count; ?>">
                 <div class="info-projet">
                     <div class="titre-projet">
                         <h1><?php the_title(); ?></h1>
                     </div>
-                    <a href="<?php the_permalink(); ?>" class="img-parralax cliquable" 
-                    data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" 
-                    id="projet<?php echo $project_count; ?>">
+                    <a
+                        href="<?php the_permalink(); ?>"
+                        class="img-parralax cliquable" 
+                        data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" 
+                        style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
                     </a>
 
+
                     <div class="titre-projet">
-                        <h1><?php echo get_the_category_list(', '); ?></h1> <!-- Affiche les catégories du projet -->
+                        <h1><?= get_field('cours'); ?></h1> <!-- Affiche les catégories du projet -->
                     </div>
                 </div>
             </div>

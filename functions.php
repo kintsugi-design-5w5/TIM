@@ -27,6 +27,12 @@ function modifie_requete_principal( $query ) {
 add_action( 'pre_get_posts', 'modifie_requete_principal' );
      
 
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
+
 
 // function create_projets_post_type() {
 //     register_post_type('projets',
