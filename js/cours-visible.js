@@ -1,6 +1,8 @@
 //Récupérer variables pour rendre visible les cours
 let btnsSession = document.querySelectorAll(".session-btn");
 timeline = document.querySelector(".timeline");
+let btnCours = document.querySelectorAll(".cours-btn");
+let descriptionContainer = document.getElementById("description-cours");
 
 //Ajouter un écouteur d'événement sur le clic de chaque btnSession
 btnsSession.forEach((bouton) => {
@@ -45,3 +47,24 @@ function AjusterHauteurTimeline() {
   // Appeler la mise à jour de la barre de progression
   mettreAJourBarreProgression();
 }
+
+// Sélectionner tous les boutons de cours
+document.querySelectorAll(".cours-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let coursId = btn.getAttribute("data-cours-id");
+    let descriptionElement = document.getElementById(`description-${coursId}`);
+
+    // Afficher ou masquer la description
+    if (descriptionElement.style.display === "none") {
+      // Masquer toutes les autres descriptions
+      document
+        .querySelectorAll(".description-cours")
+        .forEach((desc) => (desc.style.display = "none"));
+
+      // Afficher la description de l'élément cliqué
+      descriptionElement.style.display = "block";
+    } else {
+      descriptionElement.style.display = "none";
+    }
+  });
+});

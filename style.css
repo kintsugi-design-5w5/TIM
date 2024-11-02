@@ -838,6 +838,10 @@ ul {
   text-align: center;
 }
 
+.description-cours {
+  display: none;
+}
+
 .projets-apercus {
   display: flex;
   align-items: flex-start;
