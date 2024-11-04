@@ -30,8 +30,6 @@ html body #grain {
 }
 
 /*********** HERO ET SECTION ET FOOTER **************/
-<<<<<<< HEAD
-=======
 #hero {
   // Styles pour la section hero
   width: 100vw;
@@ -49,8 +47,6 @@ html body #grain {
     padding: 0 5rem;
   }
 }
->>>>>>> ef7474f965d5e8ba3af292c5821bc3d74bbab943
-
 section {
   // Styles pour les sections
   //padding: 5rem 12rem;
@@ -113,19 +109,11 @@ footer {
 
 /*********** BOUTONS **************/
 .mon-bouton {
-<<<<<<< HEAD
-    padding: 0rem 4rem;
-    line-height: 100%;
-    position: relative; /* Nécessaire pour positionner l'after */
-    overflow: hidden; /* Masque tout débordement */
-    display: inline-block; /* Pour s'assurer que les dimensions sont respectées */
-=======
-  padding: 0rem 3rem;
+  padding: 0rem 4rem;
   line-height: 100%;
   position: relative; /* Nécessaire pour positionner l'after */
   overflow: hidden; /* Masque tout débordement */
   display: inline-block; /* Pour s'assurer que les dimensions sont respectées */
->>>>>>> ef7474f965d5e8ba3af292c5821bc3d74bbab943
 }
 
 .mon-bouton::after {

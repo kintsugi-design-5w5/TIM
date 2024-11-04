@@ -53,6 +53,10 @@ ul {
   line-height: 3rem; //Espacement entre les éléments
 }
 
+.cercle.petit {
+  line-height: 4rem;
+}
+
 .cercle.grand::before {
   //Placer un cercle avant les h1 des sessions
   content: "";
