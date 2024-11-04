@@ -12,10 +12,10 @@
         <div class="footer-bloc">
             <h2>Navigation</h2>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Cours</a></li>
-                <li><a href="#">Projets</a></li>
-                <li><a href="#">Avenir</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url(); ?>">Accueil</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
             </ul>
         </div>
         
@@ -23,10 +23,10 @@
         <div class="footer-bloc">
             <h2>Liens</h2>
             <ul>
-                <li><a href="#">Maisonneuve</a></li>
-                <li><a href="#">CÉTIM</a></li>
-                <li><a href="#">Calendrier scolaire</a></li>
-                <li><a href="#">Galerie de jeux</a></li>
+                <li><a href="https://www.cmaisonneuve.qc.ca/" target="blank">Maisonneuve</a></li>
+                <li><a href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/" target="blank">TIM</a></li>
+                <li><a href="https://sites.google.com/view/centre-aide-tim/accueil" target="blank">CÉTIM</a></li>
+                <li><a href="https://www.cmaisonneuve.qc.ca/accueil/calendrier-scolaire/" target="blank">Calendrier scolaire</a></li>
             </ul>
         </div>
         

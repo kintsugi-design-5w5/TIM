@@ -1,6 +1,8 @@
 //Récupérer variables pour rendre visible les cours
 let btnsSession = document.querySelectorAll(".session-btn");
 timeline = document.querySelector(".timeline");
+let btnCours = document.querySelectorAll(".cours-btn");
+let descriptionContainer = document.getElementById("description-cours");
 
 //Ajouter un écouteur d'événement sur le clic de chaque btnSession
 btnsSession.forEach((bouton) => {
@@ -30,23 +32,39 @@ function AjusterHauteurTimeline() {
   let sessionsOuvertes = document.querySelectorAll(
     ".cours[style='display: block;']"
   );
+  //La hauteur de la timeline par défaut
+  let hauteurTimeline = 530;
 
   //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
-  if (sessionsOuvertes > 0) {
-    let hauteurInitiale = 550;
-    let hauteurSession;
-    //Obtenir la hauteur de chaque session ouverte
-    sessionsOuvertes.forEach((session) => {
-      hauteurSession = hauteurInitiale + session.offSetHeight;
-      //Ajout de la hauteur de la session à la hauteur initiale
-      hauteurTotale = hauteurInitiale + hauteurSession;
-      console.log(hauteurTotale);
-    });
+  //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
+  sessionsOuvertes.forEach((session) => {
+    hauteurTimeline += session.offsetHeight + 40;
+  });
 
-    //Remplacer la hauteur initiale (par défaut) de la timeline par celle avec le contenu ouvert
-    timeline.style.minHeight = `${hauteurTotale}px`;
-  } else {
-    //Par défaut la timeline (avec les sessions fermées) à une certaine hauteur
-    timeline.style.minHeight = "550px";
-  }
+  //Remplacer la hauteur obtenue dans le style de la timeline
+  timeline.style.minHeight = `${hauteurTimeline}px`;
+
+  // Appeler la mise à jour de la barre de progression
+  mettreAJourBarreProgression();
 }
+
+// Sélectionner tous les boutons de cours
+document.querySelectorAll(".cours-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let coursId = btn.getAttribute("data-cours-id");
+    let descriptionElement = document.getElementById(`description-${coursId}`);
+
+    // Afficher ou masquer la description
+    if (descriptionElement.style.display === "none") {
+      // Masquer toutes les autres descriptions
+      document
+        .querySelectorAll(".description-cours")
+        .forEach((desc) => (desc.style.display = "none"));
+
+      // Afficher la description de l'élément cliqué
+      descriptionElement.style.display = "block";
+    } else {
+      descriptionElement.style.display = "none";
+    }
+  });
+});

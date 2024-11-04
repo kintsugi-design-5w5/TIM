@@ -7,6 +7,7 @@
   <section class="body-cours">
     <div>
       <?php
+    
       // Initialisation des sessions
       $sessions = array(
         '1' => array(),
@@ -32,6 +33,7 @@
 
           // Obtenir le titre de l'article
           $title = get_the_title();
+          $description = get_the_content();
 
           // Retirer les 7 premiers et les 6 derniers caractères
           $clean_title = substr($title, 7, -6);
@@ -40,7 +42,11 @@
           if (isset($title[4]) && is_numeric($title[4])) {
             $session_num = $title[4]; // Le 4e caractère
             if (isset($sessions[$session_num])) {
-              $sessions[$session_num][] = $clean_title; // Ajouter le titre nettoyé à la session
+              $sessions[$session_num][] = array(
+                'title' => $clean_title, //Ajout du titre nettoyé
+                'description' => $description, //Ajout de sa description
+                'id' => get_the_ID() // Ajout de l'ID pour chaque cours
+              );
             }
           }
         }
@@ -52,7 +58,6 @@
     </div>
 
     <!-- Générer dynamiquement les sessions -->
-    <!-- <div class="cours_timeline"> -->
     <div class="conteneur-timeline">
       <div class="timeline">
         <div class="barre-progression"></div>
@@ -67,7 +72,17 @@
           <ul class="cours" id="session-<?php echo $session_num; ?>">
             <?php foreach ($cours_list as $cours): ?>
               <li>
-                <h5 class="cercle petit"><?php echo esc_html($cours); ?></h5>
+                <!-- <h5 class="cercle petit cours-btn"><?php echo esc_html($cours); ?></h5> -->
+                <!-- <h5 class="cercle petit cours-btn" data-description="<?php echo esc_attr($cours['description']); ?>">
+                  <?php echo esc_html($cours['title']); ?>
+                </h5> -->
+                <h3 class="cercle petit cours-btn" data-cours-id="<?php echo $cours['id']; ?>">
+                  <?php echo esc_html($cours['title']); ?>
+                </h3>
+                <!-- Description masquée par défaut -->
+                <div class="description-cours" id="description-<?php echo $cours['id']; ?>" style="display: none;">
+                  <p><?php echo esc_html($cours['description']); ?></p>
+                </div>
               </li>
             <?php endforeach; ?>
           </ul>
@@ -75,6 +90,8 @@
       <?php endforeach; ?>
     </ul>
     <!-- </div> -->
+
+    <div id="description-cours"></div>
   </section>
 </main>
 <!-- Script Javascript pour gérer la progression de la time;ine -->

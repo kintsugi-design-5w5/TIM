@@ -138,6 +138,156 @@
     justify-content: center;
 }
 
+.axes-cours {
+    // Conteneur pour les axes
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    & div {
+        // Styles pour les divs à l'intérieur des axes
+        background-color: var(--couleur-fond);
+        color: white;
+        height: 50%;
+        flex: 1 0 30%; // Flexibilité des divs
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("images/image.png");
+        filter: grayscale(100%); // Effet de gris
+        transition: filter 0.5s; // Transition pour hover
+
+        @media screen and (max-width: 756px) {
+            flex: 1 0 40%; // Ajustement pour petits écrans
+            height: 30%;
+            max-width: none;
+        }
+
+        @media screen and (max-width: 430px) {
+            flex: 1 0 0; // Flexibilité totale sur très petits écrans
+            width: 100%;
+            margin: 0; // Supprimer les marges
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        flex-direction: column; // Orientation verticale sur très petits écrans
+        gap: 2%; // Espacement entre les divs
+        justify-content: space-between; // Espacement uniforme
+    }
+}
+
+.axes-cours div {
+    position: relative; // Position relative pour le z-index
+    z-index: 10; // Ordre d'affichage
+}
+
+.axes-cours div:hover {
+    filter: grayscale(0%); // Effet au survol
+}
+
+#projet1 {
+    top: 0; // Position du paint
+}
+
+#projet2 {
+    top: -100vh; // Position du paint
+}
+
+#projet3 {
+    top: -200vh; // Position du paint
+}
+
+.feed-projet {
+    // Section projet du feed
+    width: 100vw;
+    height: 100vh;
+    background-color: $couleur;
+    position: sticky; // Reste visible lors du défilement
+    top: 0; // Position du haut
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    contain: paint; // Contenu peint
+}
+
+.feed-projet::after {
+    // Effet de dégradé sur le projet
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, $noir-fonce, rgba(0, 0, 0, 0) 100%); // Dégradé sombre
+    pointer-events: none; // Permet de cliquer à travers l'after
+}
+
+.projet-paint {
+    // Peinture pour le projet
+    height: 300vh; // Hauteur de la peinture
+    position: absolute;
+    z-index: 20; // Ordre d'affichage
+    left: 0;
+    right: 0;
+}
+
+.info-projet {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    & > .titre-projet {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 756px) {
+            text-align: left;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 20rem;
+        }
+
+        &:last-of-type {
+            @media screen and (max-width: 756px) {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    @media screen and (max-width: 756px) {
+        flex-direction: column;
+    }
+}
+
+/*********** IMAGE PARALLAX **************/
+.info-projet .img-parralax {
+    flex: 1;
+    width: 25rem;
+    height: 25rem;
+    background-color: $noir;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 756px) {
+        flex: 3;
+    }
 
 
 /*********** ANIMATIONS **************/

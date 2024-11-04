@@ -62,48 +62,35 @@
     <!-- Section dédiée aux vidéos de projet -->
     <section class="feed-projet video">Vidéo</section>
 
-    <!-- Section pour chaque projet avec effet de parallaxe et éléments cliquables -->
-    <section class="feed-projet" id="projet1">
-        <div class="projet-paint">
-            <div class="info-projet">
-                <div class="titre-projet">
-                    <h1>Anachonique</h1>
-                </div>
-                <div class="img-parralax cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" id="projet1"></div>
-                <div class="titre-projet">
-                    <h1>3D</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Section dédiée aux 3 projets populaires -->
+    <?php if ( have_posts() ) : ?>
+    <?php $project_count = 1; // Compteur pour l'ID dynamique ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+        <section class="feed-projet" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
+            <div class="projet-paint" id="projet<?php echo $project_count; ?>">
+                <div class="info-projet">
+                    <div class="titre-projet">
+                        <h1><?php the_title(); ?></h1>
+                    </div>
+                    <a
+                        href="<?php the_permalink(); ?>"
+                        class="img-parralax cliquable" 
+                        data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" 
+                        style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
+                    </a>
 
-    <section class="feed-projet" id="projet2">
-        <div class="projet-paint">
-            <div class="info-projet">
-                <div class="titre-projet">
-                    <h1>Nicolas</h1>
-                </div>
-                <div class="img-parralax cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" id="projet2"></div>
-                <div class="titre-projet">
-                    <h1>3D</h1>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="feed-projet" id="projet3">
-        <div class="projet-paint">
-            <div class="info-projet">
-                <div class="titre-projet">
-                    <h1>Nom Projet</h1>
-                </div>
-                <div class="img-parralax cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" id="projet3"></div>
-                <div class="titre-projet">
-                    <h1>Web</h1>
+                    <div class="titre-projet">
+                        <h1><?= get_field('cours'); ?></h1> <!-- Affiche les catégories du projet -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <?php $project_count++; ?>
+    <?php endwhile; ?>
+    <?php else : ?>
+        <p>Aucun projet trouvé.</p>
+    <?php endif; ?>
 </main>
 <?php get_footer(); ?> <!-- Inclut le fichier de pied de page du thème -->
 
