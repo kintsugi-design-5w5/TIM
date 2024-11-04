@@ -28,7 +28,8 @@
                 <div class="barre-navigation">
                     <a class="logo" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png';?>" alt="logo du TIM" /></a>
                     <input type="checkbox" name="burger-box" id="burger" />
-                    <div class="menu">
+                    
+                    <div class="menu-principal-container">
                         <ul>
                             <li><a class="mon-bouton cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url(); ?>">Accueil</a></li>
                             <li><a class="mon-bouton cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
@@ -36,6 +37,8 @@
                             <li><a class="mon-bouton cliquable" data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
                         </ul>
                     </div>
+
+                    <?php //wp_nav_menu(['list_item_class'  => 'mon-bouton']); ?>
                     <label for="burger">
                         <!-- <div class="burger cliquable" data-icone="images/LogoTim.png">
                             <div></div>

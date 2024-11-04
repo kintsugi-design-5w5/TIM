@@ -35,7 +35,7 @@
     }
 }
 
-.menu {
+.menu-principal-container {
     /* Menu latéral */
     height: 100vh;
     background-color: $couleur;
@@ -51,7 +51,7 @@
     }
 }
 
-.menu ul {
+.menu-principal-container ul {
     /* Styles pour la liste de menu */
     display: flex;
     flex-direction: column;
@@ -67,12 +67,11 @@
     }
 }
 
-.menu ul li {
+.menu-principal-container ul li {
     /* Éléments de la liste de menu */
-    font-weight: bold;
     color: $blanc;
     font-size: clamp(0.5rem, 10vw, 5rem); /* Taille responsive */
-
+    height: 6rem;
     & a {
         font-size: 6rem;
 
@@ -102,7 +101,7 @@
     z-index: 10;
 }
 
-#burger:checked + .menu {
+#burger:checked + .menu-principal-container {
     /* Animation du menu lors de l'ouverture */
     transform: translateX(0);
 }

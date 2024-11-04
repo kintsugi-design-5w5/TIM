@@ -12,10 +12,10 @@
         <div class="footer-bloc">
             <h2>Navigation</h2>
             <ul>
-            <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url(); ?>">Accueil</a></li>
-            <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
-            <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
-            <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url(); ?>">Accueil</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
+                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
             </ul>
         </div>
         

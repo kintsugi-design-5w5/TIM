@@ -26,12 +26,22 @@ function modifie_requete_principal( $query ) {
 }
 add_action( 'pre_get_posts', 'modifie_requete_principal' );
      
-
+//Permet l'import de SVG
 function cc_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
   }
   add_filter('upload_mimes', 'cc_mime_types');
+
+
+  //Permet d'ajouter des classes au li du nav
+  function add_menu_list_item_class($classes, $item, $args) {
+    if (property_exists($args, 'list_item_class')) {
+        $classes[] = $args->list_item_class;
+    }
+    return $classes;
+  }
+  add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
 
 
 // function create_projets_post_type() {

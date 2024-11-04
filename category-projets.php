@@ -2,9 +2,12 @@
     get_header();
 ?>
 <main>
-    <section class="feed projets-apercus">
+        <?php echo do_shortcode('[boutons_filtre_categorie]');?>
+    <!-- <section class="feed projets-apercus">
         <div class="colonne-proj colonne-1">
             <?php
+
+
             // Requête pour récupérer les posts de la catégorie "Projets"
             $args = array(
                 'post_type' => 'post', // Utiliser 'post' pour les articles de blog
@@ -53,9 +56,9 @@
                     // Afficher uniquement les projets pairs dans la deuxième colonne
                     if ($counter % 2 == 1) { // Projets pairs
                         ?>
-                        <a  href="<?php the_permalink(); ?>" class="thumbnail-projet" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');">
-                            <h2><?php the_title(); ?></h2>
-                        </a>
+                            <a  href="<?php the_permalink(); ?>" class="thumbnail-projet" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');">
+                                <h2><?php the_title(); ?></h2>
+                            </a>
                         <?php
                     }
                     $counter++;
@@ -66,7 +69,7 @@
             wp_reset_postdata();
             ?>
         </div>
-    </section>
+    </section> -->
 </main>
 
 

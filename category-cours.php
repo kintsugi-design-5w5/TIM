@@ -7,6 +7,7 @@
   <section class="body-cours">
     <div>
       <?php
+    
       // Initialisation des sessions
       $sessions = array(
         '1' => array(),

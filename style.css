@@ -174,7 +174,7 @@ footer {
 
 /*********** BOUTONS **************/
 .mon-bouton {
-  padding: 0rem 3rem;
+  padding: 0rem 4rem;
   line-height: 100%;
   position: relative; /* Nécessaire pour positionner l'after */
   overflow: hidden; /* Masque tout débordement */
@@ -258,7 +258,7 @@ footer {
   }
 }
 
-.menu {
+.menu-principal-container {
   /* Menu latéral */
   height: 100vh;
   background-color: var(--couleur);
@@ -270,12 +270,12 @@ footer {
   z-index: 10;
 }
 @media screen and (max-width: 756px) {
-  .menu {
+  .menu-principal-container {
     width: 100vw; /* Ajustement pour les écrans plus petits */
   }
 }
 
-.menu ul {
+.menu-principal-container ul {
   /* Styles pour la liste de menu */
   display: flex;
   flex-direction: column;
@@ -286,22 +286,22 @@ footer {
   padding: 35% 2rem 0 2rem;
 }
 @media screen and (max-width: 756px) {
-  .menu ul {
+  .menu-principal-container ul {
     padding: 0 2rem;
   }
 }
 
-.menu ul li {
+.menu-principal-container ul li {
   /* Éléments de la liste de menu */
-  font-weight: bold;
   color: var(--blanc);
   font-size: clamp(0.5rem, 10vw, 5rem); /* Taille responsive */
+  height: 6rem;
 }
-.menu ul li a {
+.menu-principal-container ul li a {
   font-size: 6rem;
 }
 @media screen and (max-width: 756px) {
-  .menu ul li a {
+  .menu-principal-container ul li a {
     font-size: 5rem;
   }
 }
@@ -326,7 +326,7 @@ footer {
   z-index: 10;
 }
 
-#burger:checked + .menu {
+#burger:checked + .menu-principal-container {
   /* Animation du menu lors de l'ouverture */
   transform: translateX(0);
 }
