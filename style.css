@@ -147,7 +147,8 @@ footer {
   background-color: var(--couleur);
   pointer-events: none;
   z-index: 9999;
-  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, background-color 0.15s ease;
+  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease,
+    background-color 0.15s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,7 +200,9 @@ footer {
 }
 
 .mon-bouton:hover .texte {
-  transform: translateY(-100%); /* Déplace le texte vers le haut pour le masquer */
+  transform: translateY(
+    -100%
+  ); /* Déplace le texte vers le haut pour le masquer */
 }
 
 .mon-bouton:hover::after {
@@ -869,6 +872,10 @@ ul {
   display: none;
 }
 
+.description-cours p {
+  margin-left: 20px;
+}
+
 .projets-apercus {
   display: flex;
   align-items: flex-start;
@@ -1021,13 +1028,13 @@ section {
 }
 
 /* Les projets 1, 4, 7, 10... prennent toute la largeur */
-.images-projets .projet-image:nth-child(3n+1) {
+.images-projets .projet-image:nth-child(3n + 1) {
   grid-column: span 2; /* Prend toute la largeur */
 }
 
 /* Les projets 2-3, 5-6, 8-9... prennent chacun 50% de la largeur */
-.images-projets .projet-image:nth-child(3n+2),
-.images-projets .projet-image:nth-child(3n+3) {
+.images-projets .projet-image:nth-child(3n + 2),
+.images-projets .projet-image:nth-child(3n + 3) {
   grid-column: span 1; /* Prend 50% de la largeur */
 }
 
@@ -1037,7 +1044,7 @@ section {
   }
 }
 /* Si la dernière rangée a un seul élément, qu'il prenne toute la largeur */
-.images-projets .projet-image:last-child:nth-child(3n+2) {
+.images-projets .projet-image:last-child:nth-child(3n + 2) {
   grid-column: span 2; /* Prendre toute la largeur */
 }
 
@@ -1613,4 +1620,4 @@ section {
 #hero h1 {
   text-align: center;
   padding: 0 5rem;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

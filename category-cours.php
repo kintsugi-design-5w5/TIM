@@ -7,7 +7,7 @@
   <section class="body-cours">
     <div>
       <?php
-    
+
       // Initialisation des sessions
       $sessions = array(
         '1' => array(),
@@ -72,15 +72,11 @@
           <ul class="cours" id="session-<?php echo $session_num; ?>">
             <?php foreach ($cours_list as $cours): ?>
               <li>
-                <!-- <h5 class="cercle petit cours-btn"><?php echo esc_html($cours); ?></h5> -->
-                <!-- <h5 class="cercle petit cours-btn" data-description="<?php echo esc_attr($cours['description']); ?>">
-                  <?php echo esc_html($cours['title']); ?>
-                </h5> -->
                 <h3 class="cercle petit cours-btn" data-cours-id="<?php echo $cours['id']; ?>">
                   <?php echo esc_html($cours['title']); ?>
                 </h3>
                 <!-- Description masquée par défaut -->
-                <div class="description-cours" id="description-<?php echo $cours['id']; ?>" style="display: none;">
+                <div class="description-cours" id="description-<?php echo $cours['id']; ?>">
                   <p><?php echo esc_html($cours['description']); ?></p>
                 </div>
               </li>
@@ -89,12 +85,9 @@
         </li>
       <?php endforeach; ?>
     </ul>
-    <!-- </div> -->
-
-    <div id="description-cours"></div>
   </section>
 </main>
-<!-- Script Javascript pour gérer la progression de la time;ine -->
+<!-- Script Javascript pour gérer la progression de la timeline -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/barre-progression-cours.js"></script>
 <!-- Script Javascript pour gérer l'affichage des cours -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/cours-visible.js"></script>
