@@ -14,13 +14,29 @@
     justify-content: space-evenly;
     align-items: center;
     position: relative;
+    & a:nth-of-type(2) {
+        margin: 10% 0 0 0;
+    }
     @media screen and (max-width: 756px) {
-        flex-direction: row;
+        flex-direction: column;
+        & a:nth-of-type(1) {
+            margin: 10% 50% 0 0;
+        }
+        & a:nth-of-type(2) {
+            margin: 0 0 0 50%;
+        }
+        & a:nth-of-type(3) {
+            margin: 0 50% 10% 0;
+        }
     }
 
     @media screen and (max-width: 430px) {
         flex-direction: column;
+        & a:nth-of-type(1), a:nth-of-type(2), a:nth-of-type(3) {
+            margin: 0;
+        }
     }
+
 }
 
 .images-avenir {
@@ -46,13 +62,14 @@
 .feed-avenir h3 {
     position: absolute;
     z-index: 3;
-    //pointer-events: none;
+    pointer-events: none;
 }
 
 .mask-avenir {
     z-index: 1;
     width: 100%;
     height: 100%;
+    min-width: 100px;
     // border: solid 1rem var(--couleur);
     border-radius: 50%;
     // box-shadow: 0px 0px 20px var(--couleur);
@@ -61,19 +78,6 @@
     pointer-events: none;
 }
 
-// .conteneur-mask{
-//     width: 100%;
-//     height: 100%;
-//     border: solid 1rem var(--couleur);
-//     border-radius: 50%;
-//     box-shadow: 0px 0px 20px var(--couleur);
-//     margin: 0;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     position: absolute;
-//     transform-origin: center;
-// }
 
 .conteneur-mask {
     width: 30vw;
@@ -81,7 +85,7 @@
     // border: solid 2px var(--couleur);
     border-radius: 50%;
     // box-shadow: 0px 0px 20px var(--couleur);
-    margin: 0;
+    margin: 0 0 10% 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,14 +105,24 @@
                 clip-path: circle(500% at 50% 50%);
             }
         }
+        width: 50vw;
+        height: 50vw;
+        margin: 0 50% 0 0;
     }
 
     @media screen and (max-width: 430px) {
+        &:hover {
+            .mask-avenir {
+                z-index: 4;
+                clip-path: circle(1000% at 50% 50%);
+            }
+        }
         width: 55vw;
         height: 55vw;
 
         min-width: 200px;
         min-height: 200px;
+        margin: 0;
     }
 }
 
