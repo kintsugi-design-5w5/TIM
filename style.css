@@ -126,6 +126,8 @@ html body #grain {
 /*********** HERO ET SECTION ET FOOTER **************/
 section {
   padding: 5rem 12vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 footer {
@@ -781,7 +783,7 @@ footer {
 }
 /*Style page cours*/
 .body-cours {
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 7rem;
 }
 
 /*Section des cours*/
@@ -795,8 +797,9 @@ footer {
 
 .timeline {
   position: absolute;
+  top: 1.5rem;
   width: 7px;
-  min-height: 550px;
+  min-height: 530px;
   margin: 0 auto;
   background-color: var(--gris-pale);
   border: 2px solid var(--couleur);
@@ -860,6 +863,10 @@ ul {
   border-radius: 50%;
   color: white;
   text-align: center;
+}
+
+.description-cours {
+  display: none;
 }
 
 .projets-apercus {
