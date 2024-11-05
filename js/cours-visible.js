@@ -2,7 +2,6 @@
 let btnsSession = document.querySelectorAll(".session-btn");
 timeline = document.querySelector(".timeline");
 let btnCours = document.querySelectorAll(".cours-btn");
-let descriptionContainer = document.getElementById("description-cours");
 
 //Ajouter un écouteur d'événement sur le clic de chaque btnSession
 btnsSession.forEach((bouton) => {
@@ -22,31 +21,9 @@ btnsSession.forEach((bouton) => {
       coursActifs.style.display = "block"; // Afficher la session active
     }
     //Appeler la fonction dès l'ouverture de la page
-    AjusterHauteurTimeline();
+    ajusterHauteurTimeline();
   });
 });
-
-//Fonction pour ajuster la hauteur de la timeline selon les sessions ouvertes
-function AjusterHauteurTimeline() {
-  //Récupérer variable lors de l'ouverture d'une session
-  let sessionsOuvertes = document.querySelectorAll(
-    ".cours[style='display: block;']"
-  );
-  //La hauteur de la timeline par défaut
-  let hauteurTimeline = 530;
-
-  //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
-  //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
-  sessionsOuvertes.forEach((session) => {
-    hauteurTimeline += session.offsetHeight + 40;
-  });
-
-  //Remplacer la hauteur obtenue dans le style de la timeline
-  timeline.style.minHeight = `${hauteurTimeline}px`;
-
-  // Appeler la mise à jour de la barre de progression
-  mettreAJourBarreProgression();
-}
 
 // Sélectionner tous les boutons de cours
 document.querySelectorAll(".cours-btn").forEach((btn) => {
@@ -66,5 +43,37 @@ document.querySelectorAll(".cours-btn").forEach((btn) => {
     } else {
       descriptionElement.style.display = "none";
     }
+    ajusterHauteurTimeline();
   });
 });
+
+//Fonction pour ajuster la hauteur de la timeline selon les sessions ouvertes et les descriptions
+function ajusterHauteurTimeline() {
+  //Récupérer variable lors de l'ouverture des sessions
+  let sessionsOuvertes = document.querySelectorAll(
+    ".cours[style='display: block;']"
+  );
+  //Récupérer variable lors de l'ouverture des descriptions
+  let descriptionsVisibles = document.querySelectorAll(
+    ".description-cours[style='display:block']"
+  );
+
+  //La hauteur de la timeline par défaut (au chargement de la page)
+  let hauteurTimeline = 530;
+
+  //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
+  //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
+  sessionsOuvertes.forEach((session) => {
+    hauteurTimeline += session.offsetHeight + 40;
+  });
+
+  descriptionsVisibles.forEach((description) => {
+    hauteurTimeline += description.offsetHeight + 200;
+  });
+
+  //Remplacer la hauteur obtenue dans le style de la timeline
+  timeline.style.minHeight = `${hauteurTimeline}px`;
+
+  // Appeler la mise à jour de la barre de progression
+  mettreAJourBarreProgression();
+}
