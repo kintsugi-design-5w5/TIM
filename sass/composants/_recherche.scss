@@ -2,41 +2,58 @@ body {
     //display: flex;
     //justify-content: space-between;
 }
+
+.div-searchform {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+}	
+
 // Recherche du système de design 1
 .recherche {
-    display: flex;
     justify-content: space-between;
-    width: 200px;
-    border-bottom: 2px solid #ffff;
+    align-items: center;
+    width: 30vw;
+    height: 30%;
+    border-bottom: 2px solid $couleur;
+
+    @media screen and (max-width: 756px) {
+        width: 50vw;
+    }
+
+    @media screen and (max-width: 430px) {
+        width: 60vw;
+    }
 }
 
 .recherche__input {
-    background-color: var(--gris-fonce);
+    background-color: transparent;
+    color: white;
     border: none;
     outline: none;
+    height: 100%;
+    width: 80%;
 }
 
 .recherche__input::placeholder {
-    color: #ffff;
+    color: #ffffff71;
     font-size: 1.5rem;
 }
 
-// Recherche système de design 2
-
-.recherche2 {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    border: 2px solid #ffff;
+.recherche svg {
+    fill: $couleur;
+    width: 20px;
+    height: 20px;
 }
 
-.recherche__input2 {
-    background-color: var(--gris-fonce);
-    border: none;
-    outline: none;
+.recherche__button {
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-style: none;
+    height: 100%;
+    width: 20%;
+
 }
 
-.recherche__input2::placeholder {
-    color: #ffff;
-    font-size: 1.5rem;
-}
