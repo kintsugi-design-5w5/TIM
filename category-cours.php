@@ -72,7 +72,6 @@
             <?php echo $session_num; ?>
           </h1>
           <ul class="cours" id="session-<?php echo $session_num; ?>">
-            
           </ul>
         </li>
       <?php endforeach; ?>
