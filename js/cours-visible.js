@@ -1,7 +1,9 @@
 //Variables généraux pour la timeline et sa barre de progression
 let timeline = document.querySelector(".timeline");
 let barreProgression = document.querySelector(".barre-progression");
-let hauteurMax = timeline.offsetHeight;
+//La hauteur de la timeline par défaut (au chargement de la page)
+let hauteurTimeline = 530;
+let hauteurMaxBarreProgression = hauteurTimeline;
 
 // Variables de la page
 let hauteurFenetre = window.innerHeight; // Obtenir la hauteur de la fenêtre visible
@@ -61,6 +63,9 @@ document.querySelectorAll(".cours-btn").forEach((btn) => {
 
 //Fonction pour ajuster la hauteur de la timeline selon les sessions ouvertes et les descriptions
 function ajusterHauteurTimeline() {
+  //Rénitialisation de la hauteur de la timeline à chaque appel de la fonction
+  hauteurTimeline = 530;
+
   //Récupérer variable lors de l'ouverture des sessions
   let sessionsOuvertes = document.querySelectorAll(
     ".cours[style='display: block;']"
@@ -69,9 +74,6 @@ function ajusterHauteurTimeline() {
   let descriptionsVisibles = document.querySelectorAll(
     ".description-cours[style='display:block']"
   );
-
-  //La hauteur de la timeline par défaut (au chargement de la page)
-  let hauteurTimeline = 530;
 
   //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
   //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
@@ -82,6 +84,9 @@ function ajusterHauteurTimeline() {
   descriptionsVisibles.forEach((description) => {
     hauteurTimeline += description.offsetHeight + 200;
   });
+
+  //Mettre à jour la hauteurMaxBarreProgression en fonction de la timeline
+  hauteurMaxBarreProgression = hauteurTimeline;
 
   //Remplacer la hauteur obtenue dans le style de la timeline
   timeline.style.minHeight = `${hauteurTimeline}px`;
@@ -113,7 +118,9 @@ function mettreAJourBarreProgression() {
     );
 
     // Calculer la hauteur de la barre de progression en fonction du pourcentage de défilement
-    let nouvelleHauteur = pourcentageDefilement * hauteurMax;
+    let nouvelleHauteur = pourcentageDefilement * hauteurMaxBarreProgression;
+    console.log("Nouvelle hauteur :" + nouvelleHauteur);
+    console.log("Hauteur max :" + hauteurMaxBarreProgression);
 
     // Mettre à jour la hauteur de la ligne de progression
     barreProgression.style.height = `${nouvelleHauteur}px`;
