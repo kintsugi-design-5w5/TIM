@@ -124,6 +124,21 @@ html body #grain {
 }
 
 /*********** HERO ET SECTION ET FOOTER **************/
+#hero {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/image.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero h1 {
+  text-align: center;
+  padding: 0 5rem;
+}
+
 section {
   padding: 5rem 12vw;
   min-height: 100vh;
@@ -917,10 +932,6 @@ ul {
   align-self: flex-end;
 }
 
-section {
-  min-height: 100vh;
-}
-
 .section__projet {
   padding: 2rem 2rem;
 }
@@ -1012,7 +1023,7 @@ section {
 
 .projet-image {
   background-color: #ccc; /* Juste pour la démonstration */
-  height: 300px; /* Ajuste la hauteur de chaque projet */
+  height: 65vh; /* Ajuste la hauteur de chaque projet */
 }
 .projet-image img {
   width: 100%;
