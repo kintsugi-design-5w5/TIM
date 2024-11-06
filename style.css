@@ -1411,7 +1411,7 @@ ul {
 
 .types-stage > div {
   padding-bottom: 1rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
   justify-content: space-between;
 }
 
@@ -1430,7 +1430,7 @@ ul {
 }
 @media screen and (min-width: 756px) {
   .types-stage > div > p {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 }
 
@@ -1455,7 +1455,7 @@ ul {
 
 .liste-emplois > div {
   padding-bottom: 1rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   justify-content: space-between;
 }
 @media screen and (max-width: 756px) {
@@ -1479,7 +1479,7 @@ ul {
 }
 @media screen and (max-width: 756px) {
   .description-emplois {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
   }
 }
 
@@ -1490,13 +1490,13 @@ ul {
 @media screen and (min-width: 430px) {
   .liste-emplois > div > ul > li {
     font-size: 20px;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 756px) {
   .liste-emplois > div > ul > li {
     font-size: 30px;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
   }
 }
 
@@ -1511,13 +1511,13 @@ ul {
 .section-universites > div > p {
   padding-bottom: 2rem;
   padding-top: 1rem;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media screen and (min-width: 756px) {
   .section-universites > div > p {
     padding-bottom: 2rem;
     padding-top: 1rem;
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 

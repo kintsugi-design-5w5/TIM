@@ -39,7 +39,7 @@
 
 .types-stage > div {
     padding-bottom: 1rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     justify-content: space-between;
 }
 
@@ -56,7 +56,7 @@
     }
 
     @media screen and (min-width: 756px) {
-        padding-top: 4rem;
+        padding-top: 3rem;
     }
 }
 
@@ -81,7 +81,7 @@
 
 .liste-emplois > div {
     padding-bottom: 1rem;
-    padding-top: 4rem;
+    padding-top: 2rem;
     justify-content: space-between;
 
     @media screen and (max-width: 756px) {
@@ -101,7 +101,7 @@
     }
 
     @media screen and (max-width: 756px) {
-        padding-top: 0.5rem;
+        padding-top: 1rem;
     }
 }
 
@@ -114,13 +114,13 @@
     //Format Tablette
     @media screen and (min-width: 430px) {
         font-size: 20px;
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
     
     //Format Ordi
     @media screen and (min-width: 756px) {
         font-size: 30px;
-        padding-top: 2rem;
+        padding-top: 0.5rem;
     }
 
     
@@ -139,12 +139,12 @@
 .section-universites > div > p {
     padding-bottom: 2rem;
     padding-top: 1rem;
-    font-size: 18px;
+    font-size: 16px;
 
     @media screen and (min-width: 756px) {
         padding-bottom: 2rem;
         padding-top: 1rem;
-        font-size: 25px;
+        font-size: 18px;
     }
 }
 
