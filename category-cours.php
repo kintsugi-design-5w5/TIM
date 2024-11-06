@@ -88,7 +88,7 @@
   </section>
 </main>
 <!-- Script Javascript pour gérer la progression de la timeline -->
-<script src="<?php echo get_template_directory_uri(); ?>/js/barre-progression-cours.js"></script>
+<!-- <script src="<?php echo get_template_directory_uri(); ?>/js/barre-progression-cours.js"></script> -->
 <!-- Script Javascript pour gérer l'affichage des cours -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/cours-visible.js"></script>
 
