@@ -800,6 +800,11 @@ footer {
 .body-cours {
   padding: 2rem 2rem 2rem 7rem;
 }
+@media screen and (max-width: 756px) {
+  .body-cours {
+    padding: 2rem 2rem 2rem 4rem;
+  }
+}
 
 /*Section des cours*/
 .conteneur-timeline {

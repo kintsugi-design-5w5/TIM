@@ -119,8 +119,6 @@ function mettreAJourBarreProgression() {
 
     // Calculer la hauteur de la barre de progression en fonction du pourcentage de défilement
     let nouvelleHauteur = pourcentageDefilement * hauteurMaxBarreProgression;
-    console.log("Nouvelle hauteur :" + nouvelleHauteur);
-    console.log("Hauteur max :" + hauteurMaxBarreProgression);
 
     // Mettre à jour la hauteur de la ligne de progression
     barreProgression.style.height = `${nouvelleHauteur}px`;
