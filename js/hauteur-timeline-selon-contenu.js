@@ -2,8 +2,19 @@
 let timeline = document.querySelector(".timeline");
 let barreProgression = document.querySelector(".barre-progression");
 //La hauteur de la timeline par défaut (au chargement de la page)
-let hauteurTimeline = 530;
+let hauteurTimeline;
 let hauteurMaxBarreProgression = hauteurTimeline;
+
+//Détecter la hauteur par défaut de la timeline en fonction de la largeur de l'écran
+function definirHauteurTimeline() {
+  hauteurTimeline = window.innerWidth <= 768 ? 430 : 530; // Utilise 430px pour mobile, 530px pour bureau
+  hauteurMaxBarreProgression = hauteurTimeline;
+  ajusterHauteurTimeline();
+}
+
+// Appeler la fonction dès le chargement de la page et au redimensionnement
+window.addEventListener("load", definirHauteurTimeline);
+window.addEventListener("resize", definirHauteurTimeline);
 
 // Variables de la page
 let hauteurFenetre = window.innerHeight; // Obtenir la hauteur de la fenêtre visible
@@ -63,8 +74,14 @@ document.querySelectorAll(".cours-btn").forEach((btn) => {
 
 //Fonction pour ajuster la hauteur de la timeline selon les sessions ouvertes et les descriptions
 function ajusterHauteurTimeline() {
-  //Rénitialisation de la hauteur de la timeline à chaque appel de la fonction
-  hauteurTimeline = 530;
+  // Réinitialisation de la hauteur de la timeline à chaque appel de la fonction
+  hauteurTimeline = window.innerWidth <= 768 ? 450 : 530;
+
+  // Définir les valeurs d'incrémentation pour la hauteur pour mobile et bureau
+  //Ajout de la hauteur lorsque les sessions sont ouvertes
+  let ajoutHauteurSession = window.innerWidth <= 768 ? 5 : 40;
+  //Ajout de la hauteur lorsque la description est ouverte
+  let ajoutHauteurDescription = window.innerWidth <= 768 ? 80 : 200;
 
   //Récupérer variable lors de l'ouverture des sessions
   let sessionsOuvertes = document.querySelectorAll(
@@ -78,11 +95,11 @@ function ajusterHauteurTimeline() {
   //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
   //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
   sessionsOuvertes.forEach((session) => {
-    hauteurTimeline += session.offsetHeight + 40;
+    hauteurTimeline += session.offsetHeight + ajoutHauteurSession;
   });
 
   descriptionsVisibles.forEach((description) => {
-    hauteurTimeline += description.offsetHeight + 200;
+    hauteurTimeline += description.offsetHeight + ajoutHauteurDescription;
   });
 
   //Mettre à jour la hauteurMaxBarreProgression en fonction de la timeline
