@@ -945,6 +945,10 @@ ul {
   align-self: flex-end;
 }
 
+section {
+  min-height: 100vh;
+}
+
 .section__projet {
   padding: 2rem 2rem;
 }
@@ -1037,6 +1041,8 @@ ul {
 .projet-image {
   background-color: #ccc; /* Juste pour la démonstration */
   height: 65vh; /* Ajuste la hauteur de chaque projet */
+  background-color: #ccc; /* Juste pour la démonstration */
+  height: 300px; /* Ajuste la hauteur de chaque projet */
 }
 .projet-image img {
   width: 100%;
