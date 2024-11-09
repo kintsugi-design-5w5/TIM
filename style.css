@@ -124,21 +124,6 @@ html body #grain {
 }
 
 /*********** HERO ET SECTION ET FOOTER **************/
-#hero {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("images/image.png");
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#hero h1 {
-  text-align: center;
-  padding: 0 5rem;
-}
-
 section {
   padding: 5rem 12vw;
   min-height: 100vh;
@@ -949,6 +934,20 @@ section {
   min-height: 100vh;
 }
 
+main #hero {
+  background-image: none;
+}
+
+#hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pour s'assurer que la vidéo couvre toute la zone sans déformation */
+  z-index: -1; /* Pour placer la vidéo en arrière-plan */
+}
+
 .section__projet {
   padding: 2rem 2rem;
 }
@@ -1026,6 +1025,7 @@ section {
 .logiciels {
   width: 3vw;
   height: auto;
+  fill: var(--blanc);
 }
 
 .screenshots-projet {
@@ -1042,7 +1042,7 @@ section {
   background-color: #ccc; /* Juste pour la démonstration */
   height: 65vh; /* Ajuste la hauteur de chaque projet */
   background-color: #ccc; /* Juste pour la démonstration */
-  height: 300px; /* Ajuste la hauteur de chaque projet */
+  height: 500px; /* Ajuste la hauteur de chaque projet */
 }
 .projet-image img {
   width: 100%;
