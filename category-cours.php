@@ -6,6 +6,8 @@
   </div>
   <section class="body-cours">
     <div>
+      <?php echo do_shortcode('[boutons_filtre_categorie]'); ?>
+
       <?php
 
       // Initialisation des sessions
@@ -70,17 +72,6 @@
             <?php echo $session_num; ?>
           </h1>
           <ul class="cours" id="session-<?php echo $session_num; ?>">
-            <?php foreach ($cours_list as $cours): ?>
-              <li>
-                <h3 class="cercle petit cours-btn" data-cours-id="<?php echo $cours['id']; ?>">
-                  <?php echo esc_html($cours['title']); ?>
-                </h3>
-                <!-- Description masquée par défaut -->
-                <div class="description-cours" id="description-<?php echo $cours['id']; ?>">
-                  <p><?php echo esc_html($cours['description']); ?></p>
-                </div>
-              </li>
-            <?php endforeach; ?>
           </ul>
         </li>
       <?php endforeach; ?>

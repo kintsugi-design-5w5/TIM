@@ -65,7 +65,7 @@ get_header();
           </div>
         </div>
 
-        <?php the_content(); ?>
+        <?php echo do_shortcode('[carrousel]');?>
 
         <?php
         // Tableau pour stocker les images
