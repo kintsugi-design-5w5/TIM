@@ -9,8 +9,27 @@
   <body>
     <div class="charte-design">
       <div class="graphique">
-        <h2>35% design</h2>
+        <div class="cercle-arriere">
+          <div class="cercle-avant">
+            <div id="nombre-pourcentage"></div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160px"
+          height="160px"
+        >
+          <defs>
+            <linearGradient id="CouleurGradient">
+              <stop offset="0%" stop-color="#007bff" />
+              <stop offset="100%" stop-color="#004997" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
       </div>
     </div>
   </body>
+  <script src="js/graphique-animation.js"></script>
 </html>
