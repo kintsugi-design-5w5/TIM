@@ -118,13 +118,12 @@ get_header();
       
       if (!empty($images)): ?>
       <section class="images-projets annule-padding-cote galerie">
-          <?php 
-          // Boucle pour afficher les images
-          foreach ($images as $image): ?>
+          <?php foreach ($images as $image): ?>
               <div class="projet-image">
-                  <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                  <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
               </div>
           <?php endforeach; ?>
+
       </section>
     <?php else: ?>
         <p>Aucune image disponible pour ce projet.</p>

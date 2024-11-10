@@ -127,7 +127,6 @@ html body #grain {
 section {
   padding: 5rem 12vw;
   min-height: 100vh;
-  min-width: 100vw;
 }
 
 footer {
@@ -251,7 +250,7 @@ footer {
   transition: transform 0.3s ease;
 }
 .barre-navigation img {
-  width: 7vw;
+  width: 6rem;
   height: auto;
 }
 @media screen and (max-width: 756px) {
@@ -347,7 +346,7 @@ footer {
 .burger {
   z-index: 100;
   position: relative;
-  width: 7vw;
+  width: 6rem;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   -moz-user-select: none;
@@ -445,6 +444,10 @@ footer {
   stroke: var(--couleur);
 }
 
+.ombre-texte {
+  text-shadow: var(--noir) 3px 3px 10px;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des sections                     */
 /* ////////////////////////////////////////////////////////// */
@@ -495,6 +498,7 @@ footer {
 .presentation-info .img-projet {
   animation: apparition-droite 1s ease forwards;
   animation-timeline: view();
+  background-size: cover;
 }
 @media screen and (max-width: 756px) {
   .presentation-info {
@@ -507,6 +511,11 @@ footer {
 
 .presentation-info + .presentation-info .infos h1 {
   text-align: left;
+}
+@media screen and (max-width: 756px) {
+  .presentation-info + .presentation-info .infos h1 {
+    text-align: center;
+  }
 }
 .presentation-info + .presentation-info .infos {
   align-items: flex-start;
@@ -551,15 +560,27 @@ footer {
 /*********** AXES **************/
 .axes {
   padding-bottom: 12rem;
-  height: 120vh;
   z-index: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.axes h1 {
+  text-align: center;
+  margin: 0;
 }
 
 .feed .img-projet {
   width: 100%;
   height: 50vh;
+  overflow: hidden;
   background-color: var(--couleur);
   z-index: -1;
+}
+.feed .img-projet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garde les proportions sans déformation */
+  object-position: 50% 20%;
 }
 @media screen and (max-width: 756px) {
   .feed .img-projet {
@@ -591,31 +612,40 @@ footer {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.axes-cours div {
-  background-color: var(--couleur-fond);
-  color: white;
+.axes-cours .jeu-video {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
+}
+.axes-cours .autre {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
+}
+.axes-cours a {
+  color: var(--blanc);
   height: 50%;
   flex: 1 0 30%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url("images/image.png");
+  background-size: cover;
+  background-position: 0% 50%;
   filter: grayscale(100%);
   transition: filter 0.5s;
+  position: relative;
+  z-index: 10;
 }
 @media screen and (max-width: 756px) {
-  .axes-cours div {
+  .axes-cours a {
     flex: 1 0 40%;
     height: 30%;
     max-width: none;
   }
 }
 @media screen and (max-width: 430px) {
-  .axes-cours div {
+  .axes-cours a {
     flex: 1 0 0;
     width: 100%;
     margin: 0;
@@ -629,12 +659,7 @@ footer {
   }
 }
 
-.axes-cours div {
-  position: relative;
-  z-index: 10;
-}
-
-.axes-cours div:hover {
+.axes-cours a:hover {
   filter: grayscale(0%);
 }
 
@@ -909,6 +934,11 @@ ul {
   background-size: cover;
   background-position: center;
 }
+.thumbnail-projet h2 {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 .thumbnail-projet::after {
   content: "";
   width: 100%;
@@ -917,6 +947,10 @@ ul {
   position: absolute;
   z-index: 1;
   pointer-events: none;
+  transition: background-color 0.3s;
+}
+.thumbnail-projet:hover h2 {
+  opacity: 1;
 }
 .thumbnail-projet:hover::after {
   background-color: rgba(0, 0, 0, 0.5);
@@ -1035,7 +1069,7 @@ main #hero {
 .images-projets {
   display: grid;
   grid-template-columns: 1fr; /* Par défaut, une seule colonne */
-  gap: 2rem; /* Espace entre les images */
+  gap: 2rem 0; /* Espace entre les images */
 }
 
 .projet-image {
@@ -1064,6 +1098,7 @@ main #hero {
 @media (min-width: 768px) {
   .images-projets {
     grid-template-columns: 1fr 1fr; /* Sur les grands écrans, deux colonnes */
+    gap: 2rem; /* Espace entre les images */
   }
 }
 /* Si la dernière rangée a un seul élément, qu'il prenne toute la largeur */
@@ -1640,6 +1675,13 @@ main #hero {
   align-items: center;
   justify-content: center;
 }
+#hero .fondu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(rgba(28, 28, 28, 0), rgb(28, 28, 28));
+}
 #hero .titre {
   width: 85vw; /* Largeur de la section */
   display: flex;
@@ -1649,12 +1691,12 @@ main #hero {
 #hero h1 {
   text-align: center; /* Centrage du texte */
   padding: 0 2rem; /* Espacement autour du texte */
-  font-size: 6rem; /* Taille de base */
+  font-size: clamp(2.5rem, 8vw, 6rem);
   z-index: 1;
 }
 #hero span {
   font-family: "Playfair Display", sans-serif;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 #hero .hero-images {
   width: auto;
@@ -1668,44 +1710,44 @@ main #hero {
   filter: blur(5px);
   height: 5vw;
   width: 5vw;
-  top: 7.1vw;
-  left: 16.2vw;
+  top: 10.1%;
+  left: 16.2%;
 }
 #hero .image-2 {
   width: 17vw;
   height: 11vw;
-  top: 15.5vw;
-  left: 5.4vw;
+  top: 30.5%;
+  left: 5.4%;
 }
 #hero .image-3 {
   opacity: 0.5;
   filter: blur(3px);
   height: 8vw;
   width: 8vw;
-  top: 9.6vw;
-  left: 38.1vw;
+  top: 13.6%;
+  left: 38.1%;
 }
 #hero .image-4 {
   opacity: 0.6;
   width: 13vw;
   height: 13vw;
-  top: 6.5vw;
-  left: 66.3vw;
+  top: 18.5%;
+  left: 66.3%;
 }
 #hero .image-5 {
   opacity: 0.6;
   filter: blur(2px);
   height: 8vw;
   width: 8vw;
-  top: 35.2vw;
-  left: 21.3vw;
+  top: 69.2%;
+  left: 21.3%;
 }
 #hero .image-6 {
   z-index: 2;
   height: 10vw;
   width: 10vw;
-  top: 31.4vw;
-  left: 67.7vw;
+  top: 65.4%;
+  left: 67.7%;
   opacity: 0.8;
 }
 #hero .image-7 {
@@ -1713,7 +1755,7 @@ main #hero {
   opacity: 0.8;
   height: 10vw;
   width: 10vw;
-  top: 35.6vw;
-  left: 43.2vw;
+  top: 75.6%;
+  left: 43.2%;
   opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */

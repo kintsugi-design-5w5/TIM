@@ -19,4 +19,5 @@ $images = isset($args['images']) ? $args['images'] : []; // Tableau d'images sup
     <?php foreach ($images as $index => $img): ?>
         <img src="<?php echo esc_url($img); ?>" alt="Additional Image" class="hero-images image-<?php echo $index + 1; ?>">
     <?php endforeach; ?>
+    <div class="fondu"></div>
 </div>

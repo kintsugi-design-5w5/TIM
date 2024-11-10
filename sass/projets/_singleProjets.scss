@@ -97,7 +97,7 @@ main #hero {
 .images-projets {
     display: grid;
     grid-template-columns: 1fr; /* Par défaut, une seule colonne */
-    gap: 2rem; /* Espace entre les images */
+    gap: 2rem 0; /* Espace entre les images */
 }
 
 .projet-image {
@@ -127,6 +127,7 @@ main #hero {
 @media (min-width: 768px) {
     .images-projets {
         grid-template-columns: 1fr 1fr; /* Sur les grands écrans, deux colonnes */
+        gap: 2rem; /* Espace entre les images */
     }
 }
 

@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const wordCount = titre.textContent.split(/\s+/).length; // Compte le nombre de mots dans le titre
 
         if (wordCount === 1) {
-            titre.style.fontSize = "12rem"; // Si un seul mot, taille 12rem
+            titre.style.fontSize = "clamp(5rem, 12vw, 12rem)"; // Si un seul mot, taille 12rem
         } else {
-            titre.style.fontSize = "6rem"; // Si plus d'un mot, taille 7rem
+            titre.style.fontSize = " clamp(2.5rem, 8vw, 6rem)"; // Si plus d'un mot, taille 7rem
         }
     }
 });
