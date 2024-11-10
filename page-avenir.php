@@ -2,8 +2,20 @@
     get_header();
 ?>
  <main>
-     <div id="hero"></div>
-        <div class="feed-avenir">
+     <?php echo do_shortcode('
+       [hero title="Avenir"
+       video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero4.mp4"
+       images="
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image3.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png
+       "]
+       '); ?>
+         <div class="feed-avenir">
             <div class="lesmasks-avenir">
 
                 <a class="conteneur-mask" href="<?php echo home_url('/emplois'); ?>">

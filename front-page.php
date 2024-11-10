@@ -2,10 +2,19 @@
     get_header(); // Inclut le fichier d'en-tête du thème
 ?>
 <main>
-    <!-- Section principale avec un "hero" pour la première impression -->
-    <div id="hero">
-        <h1>Creativité + Programmation = TIM</h1>
-    </div>
+    <?php echo do_shortcode('
+       [hero title="Lorsque la <span>créativité</span> rencontre la programmation"
+       video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero1.mp4"
+       images="
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image3.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png
+       "]
+       '); ?>
 
     <!-- Section de présentation avec plusieurs blocs d'information -->
     <section class="feed presentation">

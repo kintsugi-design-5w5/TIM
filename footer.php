@@ -56,6 +56,7 @@
 <script src="<?php echo get_template_directory_uri() . '/js/boutons.js'; ?>"></script> <!-- Script pour la gestion des boutons -->
 <script src="<?php echo get_template_directory_uri() . '/js/curseur.js'; ?>"></script> <!-- Script pour le curseur personnalisé -->
 <script src="<?php echo get_template_directory_uri() . '/js/barre-navigation-scroll.js'; ?>"></script> <!-- Script pour l'animation de la barre de navigation au scroll -->
+<script src="<?php echo get_template_directory_uri() . '/js/hero.js'; ?>"></script> <!-- Script pour l'effet de grain (bibliothèque) -->
 <script src="<?php echo get_template_directory_uri() . '/js/grained.min.js'; ?>"></script> <!-- Script pour l'effet de grain (bibliothèque) -->
 <script src="<?php echo get_template_directory_uri() . '/js/grain.js'; ?>"></script> <!-- Script personnalisé pour gérer l'effet de grain -->
 

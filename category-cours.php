@@ -1,9 +1,19 @@
 <?php get_header(); ?>
 
 <main>
-  <div id="hero">
-    <h1>Cours</h1>
-  </div>
+<?php echo do_shortcode('
+       [hero title="Cours"
+       video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero2.mp4"
+       images="
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image3.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png
+       "]
+       '); ?>
   <section class="body-cours">
     <div>
       <?php echo do_shortcode('[boutons_filtre_categorie]'); ?>
@@ -71,17 +81,6 @@
             <?php echo $session_num; ?>
           </h1>
           <ul class="cours" id="session-<?php echo $session_num; ?>">
-            <?php foreach ($cours_list as $cours): ?>
-              <li>
-                <h3 class="cercle petit cours-btn" data-cours-id="<?php echo $cours['id']; ?>">
-                  <?php echo esc_html($cours['title']); ?>
-                </h3>
-                <!-- Description masquée par défaut -->
-                <div class="description-cours" id="description-<?php echo $cours['id']; ?>">
-                  <p><?php echo esc_html($cours['description']); ?></p>
-                </div>
-              </li>
-            <?php endforeach; ?>
           </ul>
         </li>
       <?php endforeach; ?>

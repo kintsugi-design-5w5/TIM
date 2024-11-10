@@ -1018,13 +1018,13 @@ main #hero {
 
 .logiciel-projet {
   justify-content: flex-end;
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
 }
 
 .logiciels {
-  width: 3vw;
-  height: auto;
+  width: auto;
+  height: 6vh;
   fill: var(--blanc);
 }
 
@@ -1640,7 +1640,80 @@ main #hero {
   align-items: center;
   justify-content: center;
 }
+#hero .titre {
+  width: 85vw; /* Largeur de la section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #hero h1 {
-  text-align: center;
-  padding: 0 5rem;
+  text-align: center; /* Centrage du texte */
+  padding: 0 2rem; /* Espacement autour du texte */
+  font-size: 6rem; /* Taille de base */
+  z-index: 1;
+}
+#hero span {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.9em;
+}
+#hero .hero-images {
+  width: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#hero .image-1 {
+  opacity: 0.3;
+  filter: blur(5px);
+  height: 5vw;
+  width: 5vw;
+  top: 7.1vw;
+  left: 16.2vw;
+}
+#hero .image-2 {
+  width: 17vw;
+  height: 11vw;
+  top: 15.5vw;
+  left: 5.4vw;
+}
+#hero .image-3 {
+  opacity: 0.5;
+  filter: blur(3px);
+  height: 8vw;
+  width: 8vw;
+  top: 9.6vw;
+  left: 38.1vw;
+}
+#hero .image-4 {
+  opacity: 0.6;
+  width: 13vw;
+  height: 13vw;
+  top: 6.5vw;
+  left: 66.3vw;
+}
+#hero .image-5 {
+  opacity: 0.6;
+  filter: blur(2px);
+  height: 8vw;
+  width: 8vw;
+  top: 35.2vw;
+  left: 21.3vw;
+}
+#hero .image-6 {
+  z-index: 2;
+  height: 10vw;
+  width: 10vw;
+  top: 31.4vw;
+  left: 67.7vw;
+  opacity: 0.8;
+}
+#hero .image-7 {
+  z-index: 2;
+  opacity: 0.8;
+  height: 10vw;
+  width: 10vw;
+  top: 35.6vw;
+  left: 43.2vw;
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */
