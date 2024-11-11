@@ -1687,7 +1687,7 @@ main #hero {
   color: var(--couleur);
 }
 
-svg {
+.svg-charte-progression {
   position: absolute;
   top: 0;
   left: 0;
