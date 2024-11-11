@@ -1662,7 +1662,7 @@ main #hero {
 }
 
 .cercle-arriere {
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px var(--couleur-fonce);
+  box-shadow: 6px 6px 10px -1px var(--couleur-fonce), -6px -6px 10px -1px var(--couleur-fonce);
   width: 160px;
   height: 160px;
   border-radius: 50%;

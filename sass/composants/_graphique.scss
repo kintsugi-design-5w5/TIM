@@ -16,7 +16,7 @@
 }
 
 .cercle-arriere {
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+  box-shadow: 6px 6px 10px -1px $couleur-fonce,
     -6px -6px 10px -1px $couleur-fonce;
   width: 160px;
   height: 160px;
