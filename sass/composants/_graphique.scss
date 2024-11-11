@@ -1,25 +1,35 @@
+.presentation-charte {
+  text-align: center;
+}
+
 .charte-design {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  gap: 3rem;
+  gap: 4rem;
+
+  @media screen and (max-width: 756px) {
+    flex-direction: column;
+  }
 }
 .graphique {
-  width: 160px;
-  height: 160px;
+  width: 300px;
+  height: 300px;
   position: relative;
+  animation: apparition-charte 1s ease forwards;
+  animation-timeline: view();
 }
 
-.graphique h3 {
+.graphique .info-graphique {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .cercle-arriere {
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+  box-shadow: 6px 6px 10px -1px $couleur-fonce,
     -6px -6px 10px -1px $couleur-fonce;
-  width: 160px;
-  height: 160px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -28,8 +38,8 @@
 }
 
 .cercle-avant {
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
     inset -4px -4px 6px -1px $couleur-fonce, -0.5px -0.5px 0px $couleur-fonce,
@@ -44,29 +54,23 @@
   color: $couleur;
 }
 
-svg {
+.svg-charte-progression {
   position: absolute;
   top: 0;
   left: 0;
   transform: rotate(-90deg);
+  width: 300px;
+  height: 300px;
 }
 
 circle {
   fill: none;
   stroke: url(#CouleurGradient);
-  stroke-width: 20px;
-  stroke-dasharray: 450;
-  stroke-dashoffset: 450;
-  // animation: anim 2s linear forwards;
+  // stroke-width: 20px;
+  // stroke-dasharray: 450;
+  // stroke-dashoffset: 450;
+  stroke-width: 40px;
+  stroke-dasharray: 810;
+  stroke-dashoffset: 810;
   transition: stroke-dashoffset 2s linear;
-}
-
-@keyframes anim {
-  100% {
-    stroke-dashoffset: 157.5;
-  }
-}
-
-.anim-start circle {
-  stroke-dashoffset: 157.5;
 }
