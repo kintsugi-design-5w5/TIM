@@ -23,6 +23,11 @@
     background-size: cover;
     background-position: center;
 
+    & h2 {
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
     &::after {
         content: "";
         width: 100%;
@@ -31,9 +36,13 @@
         position: absolute;
         z-index: 1;
         pointer-events: none;
+        transition: background-color 0.3s;
     }
 
     &:hover {
+        & h2 {
+            opacity: 1;
+        }
         &::after {
             background-color: rgba(0, 0, 0, 0.5);
         }

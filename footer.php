@@ -38,10 +38,10 @@
     
     <!-- Section pour les icônes de réseaux sociaux -->
     <div class="footer-sociaux">
-        <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" alt="Logo Facebook" /></a>
-        <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" alt="Logo Twitter" /></a>
-        <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" alt="Logo Instagram" /></a>
-        <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>" alt="Logo LinkedIn" /></a>
+        <a href="https://www.facebook.com/groups/170302146254?locale=fr_CA" target="_blank"><img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/facebook.svg" alt="Logo Facebook" /></a>
+        <a href="https://www.youtube.com/@TIMaisonneuve" target="_blank"><img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/youtube.svg" alt="Logo Twitter" /></a>
+        <a href="https://www.instagram.com/maisonneuvetim/" target="_blank"><img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/instagram.svg" alt="Logo Instagram" /></a>
+        <a href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/?locale=fr_FR" target="_blank"><img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/linkedin.svg" alt="Logo LinkedIn" /></a>
     </div>
     
     <!-- Section de droits d'auteur -->
@@ -56,6 +56,7 @@
 <script src="<?php echo get_template_directory_uri() . '/js/boutons.js'; ?>"></script> <!-- Script pour la gestion des boutons -->
 <script src="<?php echo get_template_directory_uri() . '/js/curseur.js'; ?>"></script> <!-- Script pour le curseur personnalisé -->
 <script src="<?php echo get_template_directory_uri() . '/js/barre-navigation-scroll.js'; ?>"></script> <!-- Script pour l'animation de la barre de navigation au scroll -->
+<script src="<?php echo get_template_directory_uri() . '/js/hero.js'; ?>"></script> <!-- Script pour l'effet de grain (bibliothèque) -->
 <script src="<?php echo get_template_directory_uri() . '/js/grained.min.js'; ?>"></script> <!-- Script pour l'effet de grain (bibliothèque) -->
 <script src="<?php echo get_template_directory_uri() . '/js/grain.js'; ?>"></script> <!-- Script personnalisé pour gérer l'effet de grain -->
 

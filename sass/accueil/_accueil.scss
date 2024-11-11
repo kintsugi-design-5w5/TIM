@@ -50,6 +50,7 @@
         // Image du projet avec animation
         animation: apparition-droite 1s ease forwards;
         animation-timeline: view();
+        background-size: cover;
     }
 
     @media screen and (max-width: 756px) {
@@ -64,6 +65,9 @@
     // Deuxième image et texte
     & .infos h1 {
         text-align: left; // Alignement à gauche
+        @media screen and (max-width: 756px) {
+            text-align: center; // Centrer le titre sur petits écrans
+        }
     }
     & .infos {
         align-items: flex-start; // Alignement du texte
@@ -108,19 +112,31 @@
 /*********** AXES **************/
 .axes {
     padding-bottom: 12rem; // Espacement en bas
-    height: 120vh; // Hauteur de la section
     z-index: 1;
+    flex-direction: column; // Colonnes
+    justify-content: flex-start;
+    & h1 {
+        text-align: center; // Centrer le titre
+        margin: 0;
+    }
 }
 
 .feed .img-projet {
-    // Image principale du feed
     width: 100%;
     height: 50vh;
+    overflow: hidden;
     background-color: $couleur;
     z-index: -1;
 
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Garde les proportions sans déformation */
+        object-position: 50% 20%;
+    }
+
     @media screen and (max-width: 756px) {
-        height: 50vh; // Hauteur sur petits écrans
+        height: 50vh;
     }
 }
 
@@ -151,22 +167,47 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     flex-wrap: wrap;
     gap: 2rem;
 
-    & div {
+    & .jeu-video {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
+    }
+
+    & .web {
+        // background-image: url("images/web.jpg");
+    }
+
+    & .troisd {
+        // background-image: url("images/design.jpg");
+    }
+
+    & .imagerie {
+    }
+
+    & .video {
+    }
+
+    & .autre {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
+    }
+
+    & a {
         // Styles pour les divs à l'intérieur des axes
-        background-color: var(--couleur-fond);
-        color: white;
+        color: $blanc;
         height: 50%;
         flex: 1 0 30%; // Flexibilité des divs
         display: flex;
         align-items: center;
         justify-content: center;
         background-image: url("images/image.png");
+        background-size: cover;
+        background-position: 0% 50%;
         filter: grayscale(100%); // Effet de gris
         transition: filter 0.5s; // Transition pour hover
+        position: relative; // Position relative pour le z-index
+        z-index: 10; // Ordre d'affichage
 
         @media screen and (max-width: 756px) {
             flex: 1 0 40%; // Ajustement pour petits écrans
@@ -188,12 +229,7 @@
     }
 }
 
-.axes-cours div {
-    position: relative; // Position relative pour le z-index
-    z-index: 10; // Ordre d'affichage
-}
-
-.axes-cours div:hover {
+.axes-cours a:hover {
     filter: grayscale(0%); // Effet au survol
 }
 

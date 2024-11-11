@@ -26,7 +26,7 @@
     transition: transform 0.3s ease;
 
     img {
-        width: 7vw;
+        width: 6rem;
         height: auto;
 
         @media screen and (max-width: 756px) {
@@ -120,7 +120,7 @@
 .burger {
     z-index: 100;
     position: relative;
-    width: 7vw;
+    width: 6rem;
 
     -webkit-tap-highlight-color: transparent;
     transition: transform 400ms;

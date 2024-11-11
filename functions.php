@@ -43,20 +43,28 @@ function cc_mime_types($mimes) {
   }
   add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
 
+// Fonction pour créer le shortcode [hero]
+function custom_hero_shortcode($atts) {
+  // Définir les attributs par défaut
+  $atts = shortcode_atts([
+      'title' => 'Bienvenue',              // Titre par défaut
+      'video_url' => '',                   // Vidéo
+      'images' => '',                      // Liste d'images, séparée par des virgules
+  ], $atts, 'hero');
 
-// function create_projets_post_type() {
-//     register_post_type('projets',
-//         array(
-//             'labels' => array(
-//                 'name' => __('Projets'),
-//                 'singular_name' => __('Projet')
-//             ),
-//             'public' => true,
-//             'has_archive' => true,
-//             'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
-//         )
-//     );
-// }
-// add_action('init', 'create_projets_post_type');
+  // Convertir la liste des images en tableau
+  $images = array_map('trim', explode(',', $atts['images']));
+  $images = array_filter($images, 'esc_url'); // Nettoyer chaque URL
 
-// add_action('pre_get_posts', 'afficher_projets_dans_boucle');
+  // Appel du fichier de composant hero.php et passage des variables via $args
+  ob_start();
+  get_template_part('hero', null, [
+      'title' => $atts['title'],
+      'video_url' => $atts['video_url'],
+      'images' => $images,
+  ]);
+  return ob_get_clean();
+}
+
+// Enregistrement du shortcode
+add_shortcode('hero', 'custom_hero_shortcode');

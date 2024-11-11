@@ -52,3 +52,7 @@
     color: $couleur;
     stroke: $couleur;
 }
+
+.ombre-texte{
+    text-shadow: $noir 3px 3px 10px;
+}
