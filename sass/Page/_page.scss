@@ -3,13 +3,18 @@
     align-items: center;
 }
 
+// Taille du H1
 .sous-section > div > h1 {
-    @media screen and (max-width: 756px) {
-        font-size: 2.3rem;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+
+    @media screen and (min-width: 430px) {
+        font-size: 3rem;
     }
 
-    @media screen and (max-width: 430px) {
-        font-size: 2.5rem;
+    @media screen and (min-width: 756px) {
+        font-size: 4.5rem;
     }
 }
 
@@ -20,12 +25,12 @@
 
 .sous-section > div > div > div > h3 {
     padding-bottom: 3rem;
-    @media screen and (min-width: 756px) {
-        padding-bottom: 1.5rem;
+    @media screen and (min-width: 430px) {
+        padding-bottom: 1rem;
     }
 
     @media screen and (min-width: 756px) {
-        padding-bottom: 1rem;
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -39,7 +44,7 @@
 
 .types-stage > div {
     padding-bottom: 1rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     justify-content: space-between;
 }
 
@@ -56,7 +61,7 @@
     }
 
     @media screen and (min-width: 756px) {
-        padding-top: 4rem;
+        padding-top: 3rem;
     }
 }
 
@@ -80,8 +85,8 @@
 }
 
 .liste-emplois > div {
-    padding-bottom: 1rem;
-    padding-top: 4rem;
+    //padding-bottom: 1rem;
+    padding-top: 1rem;
     justify-content: space-between;
 
     @media screen and (max-width: 756px) {
@@ -101,7 +106,7 @@
     }
 
     @media screen and (max-width: 756px) {
-        padding-top: 0.5rem;
+        padding-top: 1rem;
     }
 }
 
@@ -114,13 +119,13 @@
     //Format Tablette
     @media screen and (min-width: 430px) {
         font-size: 20px;
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
     
     //Format Ordi
     @media screen and (min-width: 756px) {
         font-size: 30px;
-        padding-top: 2rem;
+        padding-top: 0.5rem;
     }
 
     
@@ -139,12 +144,12 @@
 .section-universites > div > p {
     padding-bottom: 2rem;
     padding-top: 1rem;
-    font-size: 18px;
+    font-size: 16px;
 
     @media screen and (min-width: 756px) {
         padding-bottom: 2rem;
         padding-top: 1rem;
-        font-size: 25px;
+        font-size: 18px;
     }
 }
 

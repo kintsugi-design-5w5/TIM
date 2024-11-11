@@ -1428,14 +1428,19 @@ main #hero {
   align-items: center;
 }
 
-@media screen and (max-width: 756px) {
+.sous-section > div > h1 {
+  font-size: 2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+@media screen and (min-width: 430px) {
   .sous-section > div > h1 {
-    font-size: 2.3rem;
+    font-size: 3rem;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (min-width: 756px) {
   .sous-section > div > h1 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -1446,14 +1451,14 @@ main #hero {
 .sous-section > div > div > div > h3 {
   padding-bottom: 3rem;
 }
-@media screen and (min-width: 756px) {
+@media screen and (min-width: 430px) {
   .sous-section > div > div > div > h3 {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 }
 @media screen and (min-width: 756px) {
   .sous-section > div > div > div > h3 {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -1465,7 +1470,7 @@ main #hero {
 
 .types-stage > div {
   padding-bottom: 1rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
   justify-content: space-between;
 }
 
@@ -1484,7 +1489,7 @@ main #hero {
 }
 @media screen and (min-width: 756px) {
   .types-stage > div > p {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 }
 
@@ -1508,8 +1513,7 @@ main #hero {
 }
 
 .liste-emplois > div {
-  padding-bottom: 1rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
   justify-content: space-between;
 }
 @media screen and (max-width: 756px) {
@@ -1533,7 +1537,7 @@ main #hero {
 }
 @media screen and (max-width: 756px) {
   .description-emplois {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
   }
 }
 
@@ -1544,13 +1548,13 @@ main #hero {
 @media screen and (min-width: 430px) {
   .liste-emplois > div > ul > li {
     font-size: 20px;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 756px) {
   .liste-emplois > div > ul > li {
     font-size: 30px;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
   }
 }
 
@@ -1565,13 +1569,13 @@ main #hero {
 .section-universites > div > p {
   padding-bottom: 2rem;
   padding-top: 1rem;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media screen and (min-width: 756px) {
   .section-universites > div > p {
     padding-bottom: 2rem;
     padding-top: 1rem;
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 
