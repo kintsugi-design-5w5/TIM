@@ -3,11 +3,16 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  gap: 3rem;
 }
 .graphique {
   width: 160px;
   height: 160px;
   position: relative;
+}
+
+.graphique h3 {
+  text-align: center;
 }
 
 .cercle-arriere {
@@ -34,7 +39,7 @@
   align-items: center;
 }
 
-#nombre {
+.nombre-pourcentage {
   font-weight: 600;
   color: $couleur;
 }
@@ -52,11 +57,16 @@ circle {
   stroke-width: 20px;
   stroke-dasharray: 450;
   stroke-dashoffset: 450;
-  animation: anim 2s linear forwards;
+  // animation: anim 2s linear forwards;
+  transition: stroke-dashoffset 2s linear;
 }
 
 @keyframes anim {
   100% {
     stroke-dashoffset: 157.5;
   }
+}
+
+.anim-start circle {
+  stroke-dashoffset: 157.5;
 }
