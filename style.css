@@ -124,21 +124,6 @@ html body #grain {
 }
 
 /*********** HERO ET SECTION ET FOOTER **************/
-#hero {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("images/image.png");
-  background-position: 50% 50%;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#hero h1 {
-  text-align: center;
-  padding: 0 5rem;
-}
-
 section {
   padding: 5rem 12vw;
   min-height: 100vh;
@@ -190,7 +175,7 @@ footer {
 
 /*********** BOUTONS **************/
 .mon-bouton {
-  padding: 0rem 3rem;
+  padding: 0rem 4rem;
   line-height: 100%;
   position: relative; /* Nécessaire pour positionner l'after */
   overflow: hidden; /* Masque tout débordement */
@@ -239,177 +224,6 @@ footer {
   background: #555;
 }
 
-<<<<<<< HEAD
-/********** MENU NAV *************/
-.noscroll {
-  /* Styles généraux pour l'élément empêchant le défilement */
-  position: fixed;
-  top: var(--st, 0);
-  inline-size: 100%;
-  overflow-y: scroll;
-}
-
-.barre-navigation {
-  /* Barre de navigation principale */
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1rem;
-  color: var(--noir);
-  position: fixed;
-  transform: translateY(0);
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-.barre-navigation img {
-  width: 6rem;
-  height: auto;
-}
-@media screen and (max-width: 756px) {
-  .barre-navigation img {
-    width: 15vw;
-  }
-}
-
-.menu-principal-container {
-  /* Menu latéral */
-  height: 100vh;
-  background-color: var(--couleur);
-  transform: translateX(100%);
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: transform 0.7s cubic-bezier(0.8, -0.02, 0.38, 1);
-  z-index: 10;
-}
-@media screen and (max-width: 756px) {
-  .menu-principal-container {
-    width: 100vw; /* Ajustement pour les écrans plus petits */
-  }
-}
-
-.menu-principal-container ul {
-  /* Styles pour la liste de menu */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100%;
-  list-style: none;
-  padding: 35% 2rem 0 2rem;
-}
-@media screen and (max-width: 756px) {
-  .menu-principal-container ul {
-    padding: 0 2rem;
-  }
-}
-
-.menu-principal-container ul li {
-  /* Éléments de la liste de menu */
-  color: var(--blanc);
-  font-size: clamp(0.5rem, 10vw, 5rem); /* Taille responsive */
-  height: 6rem;
-}
-.menu-principal-container ul li a {
-  font-size: 6rem;
-}
-@media screen and (max-width: 756px) {
-  .menu-principal-container ul li a {
-    font-size: 5rem;
-  }
-}
-
-.flou {
-  /* Flou d'arrière-plan */
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 5;
-  backdrop-filter: blur(0px) brightness(100%);
-  transition: backdrop-filter 0.7s ease;
-}
-
-#burger {
-  /* Styles pour le checkbox burger */
-  display: none;
-  position: relative;
-  z-index: 10;
-}
-
-#burger:checked + .menu-principal-container {
-  /* Animation du menu lors de l'ouverture */
-  transform: translateX(0);
-}
-
-#burger:checked ~ .flou {
-  /* Effet de flou lors de l'ouverture du menu */
-  pointer-events: all;
-  backdrop-filter: blur(5px) brightness(50%);
-}
-
-.logo {
-  /* Styles pour le logo */
-  text-decoration: none;
-}
-
-.burger {
-  z-index: 100;
-  position: relative;
-  width: 6rem;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-@media screen and (max-width: 756px) {
-  .burger {
-    width: 15vw;
-  }
-}
-
-.burgerTourne.active {
-  transform: rotate(45deg);
-}
-
-.hamRotate180.active {
-  transform: rotate(180deg);
-}
-
-.ligne {
-  fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: var(--blanc);
-  stroke-width: 3.5;
-  stroke-linecap: round;
-}
-
-.burger .top {
-  stroke-dasharray: 40 121;
-}
-
-.burger .bottom {
-  stroke-dasharray: 40 121;
-}
-
-.burger.active .top {
-  stroke-dashoffset: -68px;
-}
-
-.burger.active .bottom {
-  stroke-dashoffset: -68px;
-}
-
-=======
->>>>>>> 4148e7ff6159136d7dad25c3092716403d93a34d
 .annule-marge {
   margin: 0;
 }
@@ -575,7 +389,6 @@ footer {
   }
 }
 
-<<<<<<< HEAD
 /*********** AXES **************/
 .axes {
   padding-bottom: 12rem;
@@ -588,8 +401,6 @@ footer {
   margin: 0;
 }
 
-=======
->>>>>>> 4148e7ff6159136d7dad25c3092716403d93a34d
 .feed .img-projet {
   width: 100%;
   height: 50vh;
@@ -979,10 +790,8 @@ ul {
   align-self: flex-end;
 }
 
-#hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+section {
+  min-height: 100vh;
 }
 
 main #hero {
@@ -1098,8 +907,7 @@ main #hero {
 .projet-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* Les projets 1, 4, 7, 10... prennent toute la largeur */
@@ -1382,11 +1190,8 @@ main #hero {
   height: 100%;
   min-width: 100px;
   border-radius: 50%;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
-  transition: -webkit-clip-path 0.5s ease;
+  clip-path: circle(50% at 50% 50%);
   transition: clip-path 0.5s ease;
-  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
   pointer-events: none;
 }
 
@@ -1402,8 +1207,7 @@ main #hero {
 }
 .conteneur-mask:hover .mask-avenir {
   z-index: 4;
-  -webkit-clip-path: circle(350% at 50% 50%);
-          clip-path: circle(350% at 50% 50%);
+  clip-path: circle(350% at 50% 50%);
 }
 @media screen and (max-width: 756px) {
   .conteneur-mask {
@@ -1413,8 +1217,7 @@ main #hero {
   }
   .conteneur-mask:hover .mask-avenir {
     z-index: 4;
-    -webkit-clip-path: circle(500% at 50% 50%);
-            clip-path: circle(500% at 50% 50%);
+    clip-path: circle(500% at 50% 50%);
   }
 }
 @media screen and (max-width: 430px) {
@@ -1427,8 +1230,7 @@ main #hero {
   }
   .conteneur-mask:hover .mask-avenir {
     z-index: 4;
-    -webkit-clip-path: circle(1000% at 50% 50%);
-            clip-path: circle(1000% at 50% 50%);
+    clip-path: circle(1000% at 50% 50%);
   }
 }
 
@@ -1451,8 +1253,7 @@ main #hero {
   display: flex;
   align-items: center;
   overflow: hidden;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1709,11 +1510,6 @@ main #hero {
   width: 80%;
 }
 
-.recherche__input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.4431372549);
-  font-size: 1.5rem;
-}
-
 .recherche__input::placeholder {
   color: rgba(255, 255, 255, 0.4431372549);
   font-size: 1.5rem;
@@ -1827,7 +1623,6 @@ circle {
   align-items: center;
 }
 #hero h1 {
-<<<<<<< HEAD
   text-align: center; /* Centrage du texte */
   padding: 0 2rem; /* Espacement autour du texte */
   font-size: clamp(2.5rem, 8vw, 6rem);
@@ -1897,9 +1692,6 @@ circle {
   top: 75.6%;
   left: 43.2%;
   opacity: 0.8;
-=======
-  text-align: center;
-  padding: 0 5rem;
 }
 
 /********** MENU NAV *************/
@@ -1928,7 +1720,7 @@ circle {
   transition: transform 0.3s ease;
 }
 .barre-navigation img {
-  width: 7vw;
+  width: 6rem;
   height: auto;
 }
 @media screen and (max-width: 756px) {
@@ -1995,11 +1787,8 @@ circle {
   left: 0;
   pointer-events: none;
   z-index: 5;
-  -webkit-backdrop-filter: blur(0px) brightness(100%);
-          backdrop-filter: blur(0px) brightness(100%);
-  transition: -webkit-backdrop-filter 0.7s ease;
+  backdrop-filter: blur(0px) brightness(100%);
   transition: backdrop-filter 0.7s ease;
-  transition: backdrop-filter 0.7s ease, -webkit-backdrop-filter 0.7s ease;
 }
 
 #burger {
@@ -2017,8 +1806,7 @@ circle {
 #burger:checked ~ .flou {
   /* Effet de flou lors de l'ouverture du menu */
   pointer-events: all;
-  -webkit-backdrop-filter: blur(5px) brightness(50%);
-          backdrop-filter: blur(5px) brightness(50%);
+  backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
@@ -2029,11 +1817,12 @@ circle {
 .burger {
   z-index: 100;
   position: relative;
-  width: 7vw;
+  width: 6rem;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   -moz-user-select: none;
   -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 @media screen and (max-width: 756px) {
@@ -2072,5 +1861,4 @@ circle {
 
 .burger.active .bottom {
   stroke-dashoffset: -68px;
->>>>>>> 4148e7ff6159136d7dad25c3092716403d93a34d
 }/*# sourceMappingURL=style.css.map */
