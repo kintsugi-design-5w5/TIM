@@ -2,27 +2,27 @@
 
 /* Styles de base pour tous les éléments */
 * {
-    box-sizing: border-box; /* Modifie la façon dont la taille des éléments est calculée */
-    margin: 0; /* Supprime les marges par défaut */
+  box-sizing: border-box; /* Modifie la façon dont la taille des éléments est calculée */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Déclaration des variables CSS dans la racine */
 :root {
-    --couleur: #007bff; /* Couleur principale */
-    --couleur-pale: #57a8ff; /* Couleur pâle */
-    --couleur-fonce: #004997; /* Couleur foncée */
+  --couleur: #007bff; /* Couleur principale */
+  --couleur-pale: #57a8ff; /* Couleur pâle */
+  --couleur-fonce: #004997; /* Couleur foncée */
 
-    --noir: #1c1c1c; /* Couleur noire */
-    --noir-pale: #292929; /* Noir pâle */
-    --noir-fonce: #101010; /* Noir foncé */
+  --noir: #1c1c1c; /* Couleur noire */
+  --noir-pale: #292929; /* Noir pâle */
+  --noir-fonce: #101010; /* Noir foncé */
 
-    --blanc: #ebebeb; /* Couleur blanche */
-    --blanc-pale: #eeeeee; /* Blanc pâle */
-    --blanc-fonce: #cccccc; /* Blanc foncé */
+  --blanc: #ebebeb; /* Couleur blanche */
+  --blanc-pale: #eeeeee; /* Blanc pâle */
+  --blanc-fonce: #cccccc; /* Blanc foncé */
 
-    --gris: #808080; /* Couleur grise */
-    --gris-pale: #a1a1a1; /* Gris pâle */
-    --gris-fonce: #4b4b4b; /* Gris foncé */
+  --gris: #808080; /* Couleur grise */
+  --gris-pale: #a1a1a1; /* Gris pâle */
+  --gris-fonce: #4b4b4b; /* Gris foncé */
 }
 
 /* Assignation des variables SCSS pour un usage dans les styles */

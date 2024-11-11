@@ -1651,22 +1651,69 @@ main #hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   height: 100vh;
+  gap: 3rem;
 }
 
 .graphique {
-  border: 2px solid #fff;
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.graphique h3 {
+  text-align: center;
+}
+
+.cercle-arriere {
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px var(--couleur-fonce);
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--couleur);
+}
+
+.cercle-avant {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px var(--couleur-fonce), -0.5px -0.5px 0px var(--couleur-fonce), 0.5px 0.5px 0px var(--couleur-pale), 0px 12px 10px -10px var(--couleur-fonce);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.graphique h2 {
-  text-align: center;
+.nombre-pourcentage {
+  font-weight: 600;
+  color: var(--couleur);
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke: url(#CouleurGradient);
+  stroke-width: 20px;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  transition: stroke-dashoffset 2s linear;
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 157.5;
+  }
+}
+.anim-start circle {
+  stroke-dashoffset: 157.5;
 }
 
 #hero {
