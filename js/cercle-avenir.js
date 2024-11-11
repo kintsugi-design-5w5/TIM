@@ -3,7 +3,7 @@ let lesConteneurMask = document.querySelectorAll(".conteneur-mask");
 
 for(let i = 0; i < lesConteneurMask.length; i++){
     lesConteneurMask[i].addEventListener("mouseover", function(){
-        let leMask = lesConteneurMask[i].children[0].nextSibling;
+        let leMask = lesConteneurMask[i].children[0].nextElementSibling;
         leMask.style.zIndex = 4;
 
         lesConteneurMask[i].children[0].style.zIndex = 5;
@@ -18,7 +18,7 @@ for(let i = 0; i < lesConteneurMask.length; i++){
 
 for(let i = 0; i < lesConteneurMask.length; i++){
     lesConteneurMask[i].addEventListener("mouseout", function(){
-        let leMask = lesConteneurMask[i].children[0].nextSibling;
+        let leMask = lesConteneurMask[i].children[0].nextElementSibling;
         lesConteneurMask[i].style.pointerEvents = "none";
         setTimeout(function(){
             for(let i = 0; i < lesConteneurMask.length; i++){
