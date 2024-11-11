@@ -27,7 +27,6 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 /* ////////////////////////////////////////////////////////// */
 @import "h";
 @import "general";
-@import "menu";
 @import "base";
 
 /* ////////////////////////////////////////////////////////// */
@@ -40,6 +39,7 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 @import "pied";
 @import "avenir";
 @import "page/page";
+@import "page/404";
 
 /* ////////////////////////////////////////////////////////// */
 /*                  Règles des composants                     */
@@ -47,3 +47,4 @@ Ce theme a ete devolopper dans le cadre du cours 5W5 Maisonneuve TIM
 @import "composants/recherche";
 @import "composants/graphique";
 @import "composants/hero";
+@import "composants/menu";

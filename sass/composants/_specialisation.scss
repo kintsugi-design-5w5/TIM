@@ -1,0 +1,59 @@
+
+/*********** AXES **************/
+.axes {
+    padding-bottom: 12rem; // Espacement en bas
+    height: 120vh; // Hauteur de la section
+    z-index: 1;
+}
+.axes-cours {
+    // Conteneur pour les axes
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    & div {
+        // Styles pour les divs à l'intérieur des axes
+        background-color: var(--couleur-fond);
+        color: white;
+        height: 50%;
+        flex: 1 0 30%; // Flexibilité des divs
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("images/image.png");
+        filter: grayscale(100%); // Effet de gris
+        transition: filter 0.5s; // Transition pour hover
+
+        @media screen and (max-width: 756px) {
+            flex: 1 0 40%; // Ajustement pour petits écrans
+            height: 30%;
+            max-width: none;
+        }
+
+        @media screen and (max-width: 430px) {
+            flex: 1 0 0; // Flexibilité totale sur très petits écrans
+            width: 100%;
+            margin: 0; // Supprimer les marges
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        flex-direction: column; // Orientation verticale sur très petits écrans
+        gap: 2%; // Espacement entre les divs
+        justify-content: space-between; // Espacement uniforme
+    }
+}
+
+.axes-cours div {
+    position: relative; // Position relative pour le z-index
+    z-index: 10; // Ordre d'affichage
+}
+
+.axes-cours div:hover {
+    filter: grayscale(0%); // Effet au survol
+    background-color: red; // Changer la couleur de fond
+}
