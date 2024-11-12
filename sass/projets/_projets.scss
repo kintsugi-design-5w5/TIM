@@ -22,11 +22,13 @@
     position: relative;
     background-size: cover;
     background-position: center;
+    padding: 1rem;
 
     & h2 {
         z-index: 2;
         opacity: 0;
         transition: opacity 0.3s;
+        text-align: center;
     }
     &::after {
         content: "";
@@ -53,4 +55,11 @@
 }
 .thumbnail-projet:nth-child(even) {
     align-self: flex-end;
+}
+
+@media screen and (max-width: 756px) {
+    .thumbnail-projet h2 {
+        opacity: 1;
+        text-shadow: $noir 3px 3px 2px;
+    }
 }

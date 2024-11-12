@@ -26,13 +26,12 @@ document.addEventListener("mousemove", (e) => {
 
 // Fonction pour ajouter les écouteurs d'événements sur les éléments avec `data-icone`
 function mettreAJourCurseur() {
-    console.log("Mise à jour du curseur");
     // Sélectionne tous les éléments avec un attribut "data-icone"
     document.querySelectorAll("[data-icone]").forEach((element) => {
         element.addEventListener("mouseenter", () => {
             const iconeClass = element.getAttribute("data-icone"); // Récupère la classe de l'icône
             icone.classList.remove("cache"); // Affiche l'icône
-            icone.innerHTML = `<i class="material-icons">${iconeClass}</i>`; // Change l'icône avec la classe récupérée
+            icone.innerHTML = `${iconeClass}`; // Change l'icône avec la classe récupérée
             curseur.classList.add("effet-survol"); // Ajout de la classe pour l'agrandissement du curseur
         });
 
@@ -44,8 +43,17 @@ function mettreAJourCurseur() {
     });
 }
 
+// Fonction pour rafraîchir l'icône du curseur en récupérant l'icône du data-icone
+function rafraichirIconeCurseur(element) {
+    // Récupère la valeur de l'attribut data-icone de l'élément
+    const iconeClass = element.getAttribute("data-icone");
+
+    // Vérifie si l'élément et l'icône existent
+    if (icone && iconeClass) {
+        icone.classList.remove("cache"); // S'assurer que l'icône est visible
+        icone.innerHTML = `${iconeClass}`; // Met à jour l'icône avec la classe récupérée
+    }
+}
+
 // Appel initial de la fonction pour les éléments déjà présents
 mettreAJourCurseur();
-
-// Expose cette fonction pour être appelée dans un autre script
-window.mettreAJourCurseur = mettreAJourCurseur;
