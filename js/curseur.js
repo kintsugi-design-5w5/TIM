@@ -1,14 +1,14 @@
 /********** GESTION DU CURSEUR PERSONNALISÉ *************/
 
 const curseur = document.getElementById("curseur-personnalise");
-const icone = document.getElementById("icone-curseur");
+const icone = document.getElementById("icone-curseur"); // Assure-toi que cet élément est un <i> ou <span> pour les icônes
 
 // Fonction pour masquer ou afficher le curseur en fonction de la largeur de la fenêtre
 function gererCurseurMobile() {
     if (window.innerWidth < 756) {
-        curseur.style.display = "none"; // Masque le curseur si en dessous de 756px
+        curseur.classList.add("cache"); // Masque le curseur si en dessous de 756px
     } else {
-        curseur.style.display = "fixed"; // Affiche le curseur si au-dessus de 756px
+        curseur.classList.remove("cache"); // Affiche le curseur si au-dessus de 756px
     }
 }
 
@@ -24,18 +24,28 @@ document.addEventListener("mousemove", (e) => {
     curseur.style.left = `${e.clientX}px`; // Position horizontale
 });
 
-// Ajoute des écouteurs d'événements pour les éléments cliquables
-document.querySelectorAll(".cliquable").forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-        const iconeSrc = element.getAttribute("data-icone"); // Récupère l'URL de l'image
-        icone.src = iconeSrc; // Modifie la source de l'image du curseur
-        curseur.classList.add("effet-survol"); // Ajout de la classe pour l'agrandissement
-        icone.classList.remove("cache"); // Affiche l'icône
-    });
+// Fonction pour ajouter les écouteurs d'événements sur les éléments avec `data-icone`
+function mettreAJourCurseur() {
+    console.log("Mise à jour du curseur");
+    // Sélectionne tous les éléments avec un attribut "data-icone"
+    document.querySelectorAll("[data-icone]").forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+            const iconeClass = element.getAttribute("data-icone"); // Récupère la classe de l'icône
+            icone.classList.remove("cache"); // Affiche l'icône
+            icone.innerHTML = `<i class="material-icons">${iconeClass}</i>`; // Change l'icône avec la classe récupérée
+            curseur.classList.add("effet-survol"); // Ajout de la classe pour l'agrandissement du curseur
+        });
 
-    element.addEventListener("mouseleave", () => {
-        curseur.classList.remove("effet-survol"); // Retrait de la classe quand on sort du survol
-        icone.classList.add("cache"); // Cache l'icône
-        icone.src = ""; // Réinitialise la source de l'image
+        element.addEventListener("mouseleave", () => {
+            curseur.classList.remove("effet-survol"); // Retrait de la classe d'agrandissement
+            icone.classList.add("cache"); // Cache l'icône
+            icone.innerHTML = ""; // Réinitialise l'icône
+        });
     });
-});
+}
+
+// Appel initial de la fonction pour les éléments déjà présents
+mettreAJourCurseur();
+
+// Expose cette fonction pour être appelée dans un autre script
+window.mettreAJourCurseur = mettreAJourCurseur;

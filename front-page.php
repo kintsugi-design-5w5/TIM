@@ -147,22 +147,22 @@ get_header(); // Inclut le fichier d'en-tête du thème
     <section class="feed axes">
         <h1>Spécifications</h1>
         <div class="axes-cours">
-            <a href="#" class="jeu-video">
+            <a data-icone="east" href="#" class="jeu-video">
                 <h3 class="ombre-texte">Jeux video</h3>
             </a>
-            <a href="#" class="troisd">
+            <a data-icone="east" href="#" class="troisd">
                 <h3 class="ombre-texte">3D</h3>
             </a>
-            <a href="#" class="web">
+            <a data-icone="east" href="#" class="web">
                 <h3 class="ombre-texte">Web</h3>
             </a>
-            <a href="#" class="imagerie">
+            <a data-icone="east" href="#" class="imagerie">
                 <h3 class="ombre-texte">Imagerie</h3>
             </a>
-            <a href="#" class="video">
+            <a data-icone="east" href="#" class="video">
                 <h3 class="ombre-texte">Vidéo</h3>
             </a>
-            <a href="#" class="autre">
+            <a data-icone="east" href="#" class="autre">
                 <h3 class="ombre-texte">Autre</h3>
             </a>
         </div>
@@ -183,7 +183,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
                             <h1><?php the_title(); ?></h1>
                         </div>
                         <a href="<?php the_permalink(); ?>" class="img-parralax cliquable"
-                            data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>"
+                            data-icone="visibility"
                             style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
                         </a>
 

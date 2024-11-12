@@ -12,13 +12,13 @@
         <div class="footer-bloc">
             <h2>Navigation</h2>
             <ul>
-                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>"
+                <li><a data-icone="north_east"
                         href="<?php echo home_url(); ?>">Accueil</a></li>
-                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>"
+                <li><a data-icone="north_east"
                         href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
-                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>"
+                <li><a data-icone="north_east"
                         href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
-                <li><a data-icone="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>"
+                <li><a data-icone="north_east"
                         href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
             </ul>
         </div>
@@ -27,32 +27,33 @@
         <div class="footer-bloc">
             <h2>Liens</h2>
             <ul>
-                <li><a href="https://www.cmaisonneuve.qc.ca/" target="blank">Maisonneuve</a></li>
-                <li><a href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/" target="blank">TIM</a>
+                <li><a data-icone="north_east" href="https://www.cmaisonneuve.qc.ca/" target="blank">Maisonneuve</a></li>
+                <li><a data-icone="north_east" href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/" target="blank">TIM</a>
                 </li>
-                <li><a href="https://sites.google.com/view/centre-aide-tim/accueil" target="blank">CÉTIM</a></li>
-                <li><a href="https://www.cmaisonneuve.qc.ca/accueil/calendrier-scolaire/" target="blank">Calendrier
+                <li><a data-icone="north_east" href="https://sites.google.com/view/centre-aide-tim/accueil" target="blank">CÉTIM</a></li>
+                <li><a data-icone="north_east" href="https://www.cmaisonneuve.qc.ca/accueil/calendrier-scolaire/" target="blank">Calendrier
                         scolaire</a></li>
             </ul>
         </div>
 
         <!-- Bloc avec un logo qui pourrait renvoyer vers la page d'accueil -->
         <div class="footer-bloc">
-            <a href="#"><img src="<?php echo get_template_directory_uri() . '/images/LogoTim.png'; ?>"
-                    alt="Logo TIM" /></a>
+            <a href="<?php echo home_url(); ?>">
+                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_Logo.webp'; ?>" alt="Logo TIM" />
+                </a>
         </div>
     </div>
 
     <!-- Section pour les icônes de réseaux sociaux -->
     <div class="footer-sociaux">
-        <a href="https://www.facebook.com/groups/170302146254?locale=fr_CA" target="_blank"><img
+        <a data-icone="north_east" href="https://www.facebook.com/groups/170302146254?locale=fr_CA" target="_blank"><img
                 src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/facebook.svg" alt="Logo Facebook" /></a>
-        <a href="https://www.youtube.com/@TIMaisonneuve" target="_blank"><img
+        <a data-icone="north_east" href="https://www.youtube.com/@TIMaisonneuve" target="_blank"><img
                 src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/youtube.svg" alt="Logo Twitter" /></a>
-        <a href="https://www.instagram.com/maisonneuvetim/" target="_blank"><img
+        <a data-icone="north_east" href="https://www.instagram.com/maisonneuvetim/" target="_blank"><img
                 src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/instagram.svg"
                 alt="Logo Instagram" /></a>
-        <a href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/?locale=fr_FR"
+        <a data-icone="north_east" href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/?locale=fr_FR"
             target="_blank"><img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/linkedin.svg"
                 alt="Logo LinkedIn" /></a>
     </div>

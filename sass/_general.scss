@@ -29,6 +29,12 @@ html body #grain {
     z-index: 9999;
 }
 
+/*********** ICONES **************/
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 0, "GRAD" 0, "opsz" NaN;
+    color: $blanc;
+}
+
 /*********** HERO ET SECTION ET FOOTER **************/
 section {
     // Styles pour les sections
@@ -71,11 +77,12 @@ footer {
     height: auto;
     max-width: 80%;
     filter: brightness(0) invert(1); // Inverse la couleur de l'image si nécessaire
+    text-align: center;
 }
 
 .cache {
     // Styles pour les éléments cachés
-    display: none;
+    display: none !important;
 }
 
 #curseur-personnalise.effet-survol {

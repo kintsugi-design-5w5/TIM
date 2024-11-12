@@ -17,14 +17,17 @@ document.addEventListener("scroll", function () {
 
         // Calcul du facteur de parallaxe en fonction de la taille de l'image
         const sizeFactor = Math.min(Math.max(imageHeight / maxHeight, 0.5), 1); // Normalisé entre 0.5 et 1
-        console.log(sizeFactor);
 
         // Le décalage de chaque image sera influencé par la position de défilement et la taille de l'image
         const speed = 0.2; // Ajuste la vitesse en fonction de l'index
         const offset = scrollPosition * speed * sizeFactor; // Applique la taille au décalage
 
         // Applique la position en décalage pour créer l'effet de parallaxe
-        image.style.transform = `translateY(${-offset}px)`; // Inverser pour faire "monter" l'image
+        if (window.innerWidth < 768) {
+            image.style.transform = `translateY(${-offset}px) scale(0.4) translateX(-50%)`;
+        } else {
+            image.style.transform = `translateY(${-offset}px)`;
+        }
     });
 });
 
