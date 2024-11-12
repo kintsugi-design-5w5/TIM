@@ -78,7 +78,8 @@
 <!-- Script pour l'effet de grain (bibliothèque) -->
 <script src="<?php echo get_template_directory_uri() . '/js/grain.js'; ?>"></script>
 <!-- Script personnalisé pour gérer l'effet de grain -->
-<script src="<?php echo get_template_directory_uri() . '/js/graphique-animation.js'; ?>"></script>
-<!-- Script pour animer les graphiques de la charte -->
 <script src="<?php echo get_template_directory_uri() . '/js/cercle-avenir.js'; ?>"></script>
+<!-- Script pour animer les graphiques de la charte -->
+<script src="<?php echo get_template_directory_uri() . '/js/graphique-animation.js'; ?>"></script>
+
 <?php wp_footer(); ?> <!-- Hook WordPress pour injecter les scripts supplémentaires nécessaires -->
