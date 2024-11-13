@@ -23,6 +23,13 @@ function definirHauteurTimeline() {
 window.addEventListener("load", definirHauteurTimeline);
 window.addEventListener("resize", definirHauteurTimeline);
 
+// Fonction pour fermer toutes les sessions avant d'appliquer un filtre
+function fermerToutesLesSessions() {
+  document.querySelectorAll(".cours").forEach((cours) => {
+    cours.style.display = "none";
+  });
+}
+
 // Variables de la page
 let hauteurFenetre = window.innerHeight; // Obtenir la hauteur de la fenêtre visible
 
