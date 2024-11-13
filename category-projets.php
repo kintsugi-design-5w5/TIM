@@ -15,7 +15,7 @@
        https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png
        "]
        '); ?>
-
+    <?php get_search_form(); ?>
     <?php echo do_shortcode('[boutons_filtre_categorie]');?>
 </main>
 

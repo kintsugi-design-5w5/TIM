@@ -2,6 +2,7 @@
     get_header();
 ?>
 <main>
+        <?php get_search_form(); ?>
         <?php echo do_shortcode('[boutons_filtre_categorie]');?>
     <!-- <section class="feed projets-apercus">
         <div class="colonne-proj colonne-1">
