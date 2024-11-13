@@ -5,9 +5,16 @@ let barreProgression = document.querySelector(".barre-progression");
 let hauteurTimeline;
 let hauteurMaxBarreProgression = hauteurTimeline;
 
-//Détecter la hauteur par défaut de la timeline en fonction de la largeur de l'écran
+// Détecter la hauteur par défaut de la timeline en fonction de la largeur de l'écran
 function definirHauteurTimeline() {
-  hauteurTimeline = window.innerWidth <= 768 ? 430 : 530; // Utilise 430px pour mobile, 530px pour bureau
+  if (window.innerWidth <= 768) {
+    hauteurTimeline = 430; // Mobile
+  } else if (window.innerWidth <= 1024) {
+    hauteurTimeline = 530; // Ordinateur portable
+  } else {
+    hauteurTimeline = 650; // Écran de bureau
+  }
+
   hauteurMaxBarreProgression = hauteurTimeline;
   ajusterHauteurTimeline();
 }
