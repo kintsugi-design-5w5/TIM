@@ -718,7 +718,6 @@ ul {
   background-color: var(--gris-fonce);
   border: 1px solid var(--couleur);
   border-radius: 50%;
-  color: white;
   text-align: center;
 }
 
@@ -732,7 +731,6 @@ ul {
   background-color: var(--gris-fonce);
   border: 1px solid var(--couleur);
   border-radius: 50%;
-  color: white;
   text-align: center;
 }
 
@@ -809,10 +807,6 @@ ul {
     text-shadow: var(--noir) 3px 3px 2px;
   }
 }
-section {
-  min-height: 100vh;
-}
-
 main #hero {
   background-image: none;
 }
