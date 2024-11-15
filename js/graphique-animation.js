@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             elementNombre.innerHTML = `${pourcentageActuel}%`;
             break;
           case "dollars":
-            elementNombre.innerHTML = `${pourcentageActuel.toFixed(2)}$`;
+            elementNombre.innerHTML = `${pourcentageActuel
+              .toFixed(2)
+              .replace(".", ",")}$`;
             break;
         }
       } else {
