@@ -657,24 +657,22 @@ footer {
     padding: 2rem 2rem 2rem 4rem;
   }
 }
+.body-cours ul {
+  position: relative;
+}
 
 /*Section des cours*/
 .conteneur-timeline {
   position: relative;
-  display: flex;
-  justify-content: center;
-  width: 20px;
-  height: 100%;
 }
 
 .timeline {
   position: absolute;
-  top: 1.5rem;
   width: 7px;
+  height: 99.2%;
   min-height: 530px;
   margin: 0 auto;
-  background-color: var(--gris-pale);
-  border: 2px solid var(--couleur);
+  background-color: var(--gris-fonce);
 }
 @media screen and (max-width: 756px) {
   .timeline {
@@ -706,38 +704,54 @@ ul {
 
 .cercle {
   text-align: start;
-  line-height: 3rem;
+  line-height: 2rem;
+  margin: 5rem 0;
+  margin-left: 2rem;
+}
+@media screen and (max-width: 756px) {
+  .cercle {
+    margin: 3rem 0;
+    margin-left: 2rem;
+  }
 }
 
-.cercle.petit {
-  line-height: 4rem;
+.cercle::before {
+  position: absolute;
+}
+
+.cercle.grand {
+  color: var(--couleur);
+  font-weight: bold;
+  margin-top: 7rem;
+}
+@media screen and (max-width: 756px) {
+  .cercle.grand {
+    margin-top: 5rem;
+  }
 }
 
 .cercle.grand::before {
   content: "";
   display: inline-block;
-  vertical-align: middle;
+  left: -0.6rem;
   margin-right: 10px;
   width: 25px;
   height: 25px;
   background-color: var(--gris-fonce);
-  border: 1px solid var(--couleur);
   border-radius: 50%;
-  color: white;
   text-align: center;
 }
 
 .cercle.petit::before {
   content: "";
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
+  left: -0.6rem;
+  margin-right: 12.5px;
+  margin-left: 2.5px;
   width: 20px;
   height: 20px;
   background-color: var(--gris-fonce);
-  border: 1px solid var(--couleur);
   border-radius: 50%;
-  color: white;
   text-align: center;
 }
 
@@ -1124,6 +1138,8 @@ main #hero {
   border-top: 1px solid var(--blanc);
   padding-top: 1rem;
   margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 .footer-droits p {
   font-size: clamp(0.5rem, 2vw, 1rem);

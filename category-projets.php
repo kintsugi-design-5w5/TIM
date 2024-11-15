@@ -6,13 +6,13 @@
        [hero title="Projets"
        video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero3.mp4"
        images="
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image3.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Epreuve_Finale_img7.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Carriere_Nicolas_SouffleCourt_img4.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/OrientExpress_img1.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Leger_Maelle_Checo_img1.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Triptyque_img9.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Ducharme_Vanier_Guillaume_animation3D_img1.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Xavier_Vehicule3D_img2.webp
        "]
        '); ?>
 

@@ -6,13 +6,13 @@
        [hero title="Avenir"
        video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero4.mp4"
        images="
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image3.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img2-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img4-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img3-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img1-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img5-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img6-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img7-scaled.webp
        "]
        '); ?>
          <div class="feed-avenir">

@@ -16,7 +16,7 @@ function definirHauteurTimeline() {
     }
 
     hauteurMaxBarreProgression = hauteurTimeline;
-    ajusterHauteurTimeline();
+    // ajusterHauteurTimeline();
 }
 
 // Appeler la fonction dès le chargement de la page et au redimensionnement
@@ -59,7 +59,7 @@ btnsSession.forEach((bouton) => {
             coursActifs.style.display = "block"; // Afficher la session active
         }
         //Appeler la fonction dès l'ouverture de la page
-        ajusterHauteurTimeline();
+        // ajusterHauteurTimeline();
         mettreAJourBarreProgression();
     });
 });
@@ -80,74 +80,68 @@ document.querySelectorAll(".cours-btn").forEach((btn) => {
         } else {
             descriptionElement.style.display = "none";
         }
-        ajusterHauteurTimeline();
+        // ajusterHauteurTimeline();
         mettreAJourBarreProgression();
     });
 });
 
 //Fonction pour ajuster la hauteur de la timeline selon les sessions ouvertes et les descriptions
-function ajusterHauteurTimeline() {
-    // Réinitialisation de la hauteur de la timeline à chaque appel de la fonction
-    hauteurTimeline = window.innerWidth <= 768 ? 450 : 530;
+// function ajusterHauteurTimeline() {
+//     // Réinitialisation de la hauteur de la timeline à chaque appel de la fonction
+//     hauteurTimeline = window.innerWidth <= 768 ? 450 : 530;
 
-    // Définir les valeurs d'incrémentation pour la hauteur pour mobile et bureau
-    //Ajout de la hauteur lorsque les sessions sont ouvertes
-    let ajoutHauteurSession = window.innerWidth <= 768 ? 5 : 40;
-    //Ajout de la hauteur lorsque la description est ouverte
-    let ajoutHauteurDescription = window.innerWidth <= 768 ? 80 : 200;
+//     // Définir les valeurs d'incrémentation pour la hauteur pour mobile et bureau
+//     //Ajout de la hauteur lorsque les sessions sont ouvertes
+//     let ajoutHauteurSession = window.innerWidth <= 768 ? 5 : 40;
+//     //Ajout de la hauteur lorsque la description est ouverte
+//     let ajoutHauteurDescription = window.innerWidth <= 768 ? 80 : 200;
 
-    //Récupérer variable lors de l'ouverture des sessions
-    let sessionsOuvertes = document.querySelectorAll(".cours[style='display: block;']");
-    //Récupérer variable lors de l'ouverture des descriptions
-    let descriptionsVisibles = document.querySelectorAll(".description-cours[style='display:block']");
+//     //Récupérer variable lors de l'ouverture des sessions
+//     let sessionsOuvertes = document.querySelectorAll(".cours[style='display: block;']");
+//     //Récupérer variable lors de l'ouverture des descriptions
+//     let descriptionsVisibles = document.querySelectorAll(".description-cours[style='display:block']");
 
-    //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
-    //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
-    sessionsOuvertes.forEach((session) => {
-        hauteurTimeline += session.offsetHeight + ajoutHauteurSession;
-    });
+//     //S'il y a plus d'une session ouverte on calcule la hauteur de la timeline
+//     //Ajout de la hauteur des sessions ouvertes à la hauteur de la timeline
+//     sessionsOuvertes.forEach((session) => {
+//         hauteurTimeline += session.offsetHeight + ajoutHauteurSession;
+//     });
 
-    descriptionsVisibles.forEach((description) => {
-        hauteurTimeline += description.offsetHeight + ajoutHauteurDescription;
-    });
+//     descriptionsVisibles.forEach((description) => {
+//         hauteurTimeline += description.offsetHeight + ajoutHauteurDescription;
+//     });
 
-    //Mettre à jour la hauteurMaxBarreProgression en fonction de la timeline
-    hauteurMaxBarreProgression = hauteurTimeline;
+//     //Mettre à jour la hauteurMaxBarreProgression en fonction de la timeline
+//     hauteurMaxBarreProgression = hauteurTimeline;
 
-    //Remplacer la hauteur obtenue dans le style de la timeline
-    timeline.style.minHeight = `${hauteurTimeline}px`;
+//     //Remplacer la hauteur obtenue dans le style de la timeline
+//     // timeline.style.minHeight = `${hauteurTimeline}px`;
 
-    // Appeler la mise à jour de la barre de progression
-    // mettreAJourBarreProgression();
-}
+//     // Appeler la mise à jour de la barre de progression
+//     // mettreAJourBarreProgression();
+// }
 
 // Fonction pour mettre à jour la barre de progression en fonction du scroll
 function mettreAJourBarreProgression() {
-    // Calculer la position de défilement par rapport au haut de la page
-    let positionDefilement = window.scrollY; // Mettre à jour ici pour avoir la position actuelle
+    // Obtenir la position de défilement et la hauteur de la fenêtre
+    let positionDefilement = window.scrollY;
+    let hauteurFenetre = window.innerHeight;
 
-    // Calculer la hauteur totale défilable du document
-    let hauteurDocument = document.body.scrollHeight; // Hauteur totale du document
-    let hauteurDefilable = hauteurDocument - hauteurFenetre; // Hauteur défilable, soit la section des cours
+    // Calculer la hauteur totale défilable
+    let hauteurDocument = document.body.scrollHeight;
+    let hauteurDefilable = hauteurDocument - hauteurFenetre;
 
-    // Début de la barre de progression après la section hero
-    let defilementTimeline = (hauteurSectionHero * hauteurFenetre) / 100;
+    // Calculer le pourcentage de défilement
+    let pourcentageDefilement = positionDefilement / hauteurDefilable;
 
-    // Vérifier si la position de défilement est au-delà de la section hero
-    if (positionDefilement > defilementTimeline) {
-        // Calculer le pourcentage de défilement dans la zone de la timeline
-        // Math.min limite le pourcentage de défilement à 1 (100%) maximum
-        let pourcentageDefilement = Math.min((positionDefilement - defilementTimeline) / (hauteurDefilable - defilementTimeline), 1);
+    // Limiter la valeur du pourcentage à un maximum de 1
+    pourcentageDefilement = Math.min(pourcentageDefilement, 1);
 
-        // Calculer la hauteur de la barre de progression en fonction du pourcentage de défilement
-        let nouvelleHauteur = pourcentageDefilement * hauteurMaxBarreProgression;
+    // Calculer la hauteur de la barre de progression pour qu'elle reste à 50% de la fenêtre
+    let nouvelleHauteur = (pourcentageDefilement * hauteurFenetre) / 2;
 
-        // Mettre à jour la hauteur de la ligne de progression
-        barreProgression.style.height = `${nouvelleHauteur}px`;
-    } else {
-        // Réinitialiser la hauteur de la barre de progression si le défilement est dans la section hero
-        barreProgression.style.height = "0px";
-    }
+    // Mettre à jour la hauteur de la barre de progression
+    barreProgression.style.height = `${nouvelleHauteur}px`;
 }
 
 // Ajouter un écouteur d'événement pour déclencher la fonction au scroll

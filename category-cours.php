@@ -5,13 +5,13 @@
        [hero title="Cours"
        video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero2.mp4"
        images="
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image3.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image1.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image2.png, 
-       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Achernar_image4.png
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/HeroCours_img2-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/HeroCours_img5.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/HeroCours_img3-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/HeroCours_img7-scaled.webp,
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/HeroCours_img1.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/HeroCours_img6-scaled.webp, 
+       https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/HeroCours_img4-scaled.webp
        "]
        '); ?>
   <section class="body-cours">
@@ -69,17 +69,17 @@
     </div>
 
     <!-- Générer dynamiquement les sessions -->
-    <div class="conteneur-timeline">
+    <ul>
       <div class="timeline">
         <div class="barre-progression"></div>
       </div>
-    </div>
-    <ul>
+      <!-- <div class="conteneur-timeline">
+      </div> -->
       <?php foreach ($sessions as $session_num => $cours_list): ?>
         <li class="session">
-          <h1 class="cercle grand session-btn" data-session="<?php echo $session_num; ?>">Session
+          <h3 class="cercle grand session-btn" data-session="<?php echo $session_num; ?>">Session
             <?php echo $session_num; ?>
-          </h1>
+          </h3>
           <ul class="cours" id="session-<?php echo $session_num; ?>">
           </ul>
         </li>

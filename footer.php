@@ -61,6 +61,7 @@
     <!-- Section de droits d'auteur -->
     <div class="footer-droits">
         <p>© 2024 Tous droits réservés</p>
+        <p>Site réalisé par Dylan Carle, Maëlle Léger, Minji Ardanuy-Jetté, Samuel Giroux, Vincent Genest</p>
     </div>
 </footer>
 
