@@ -24,7 +24,8 @@ function ClickBurger() {
         // body.style.overflowY = "scroll";
         body.style.overflowY = "hidden";
         curseur.classList.add("noir");
-        burgerIcon.setAttribute("data-icone", "east");
+        burgerIcon.setAttribute("data-icone", "close");
+        rafraichirIconeCurseur(burgerIcon);
         console.log(burger.attributes);
         burgerIcon.classList.add("active"); // Ajoute la classe active pour le burger en "X"
     } else {
@@ -44,6 +45,7 @@ function FermeBurger() {
     curseur.classList.remove("noir");
 
     burgerIcon.setAttribute("data-icone", "west");
+    rafraichirIconeCurseur(burgerIcon);
     burgerIcon.classList.remove("active"); // Retire la classe active pour le burger
 }
 
