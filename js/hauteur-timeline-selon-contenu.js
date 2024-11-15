@@ -89,21 +89,23 @@ btnsSession.forEach((bouton) => {
 
 // Ajouter un écouteur d'événement pour détecter tout clic sur la page
 document.addEventListener("click", () => {
-    if (localStorage.getItem("rest-cours") !== null && localStorage.getItem("rest") === "true") {
-        mettreAJourCercles();
-        gestionDescriptions();
-        localStorage.setItem("rest-cours", "false");
-    }
+    setTimeout(() => {
+        if (localStorage.getItem("rest-cours") !== null && localStorage.getItem("rest-cours") === "true") {
+            mettreAJourCercles();
+            gestionDescriptions();
+            localStorage.setItem("rest-cours", "false");
+        }
+    }, 100); // Délai de 1 seconde avant de vérifier le localStorage
 });
 
 // Fonction qui gère l'affichage ou la dissimulation des descriptions des cours
+// Fonction qui gère l'affichage ou la dissimulation des descriptions des cours
 function gestionDescriptions() {
-    console.log("bnfwibif");
+    console.log("Initialisation de la gestion des descriptions");
     document.querySelectorAll(".cours-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
             let coursId = btn.getAttribute("data-cours-id");
             let descriptionElement = document.getElementById(`description-cours-${coursId}`);
-            console.log(descriptionElement);
 
             // Afficher ou masquer la description
             if (descriptionElement.style.display === "none") {
@@ -119,6 +121,22 @@ function gestionDescriptions() {
             mettreAJourBarreProgression();
         });
     });
+
+    // Gestion des cercles
+    document.querySelectorAll(".cercle").forEach((cercle) => {
+        cercle.addEventListener("click", (event) => changerIconeCercle(event.target));
+    });
+}
+function changerIconeCercle(cercle) {
+    // Vérifier l'état actuel de l'icône
+    let icone = cercle.getAttribute("data-icone");
+    console.log("Changer l'icône pour", icone);
+    if (icone === "keyboard_arrow_down") {
+        cercle.setAttribute("data-icone", "keyboard_arrow_up"); // Mettre l'icône sur 'up'
+    } else {
+        cercle.setAttribute("data-icone", "keyboard_arrow_down"); // Mettre l'icône sur 'down'
+    }
+    rafraichirIconeCurseur(cercle);
 }
 
 // Appel initial de la fonction de gestion des descriptions
