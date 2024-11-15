@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-<?php echo do_shortcode('
+  <?php echo do_shortcode('
        [hero title="Cours"
        video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero2.mp4"
        images="
