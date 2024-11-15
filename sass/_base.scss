@@ -53,6 +53,11 @@
     stroke: $couleur;
 }
 
-.ombre-texte{
+.ombre-texte {
     text-shadow: $noir 3px 3px 10px;
+}
+
+.fonte-alt {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 0.9em;
 }

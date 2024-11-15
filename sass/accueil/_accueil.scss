@@ -61,6 +61,10 @@
     }
 }
 
+.presentation-charte {
+    height: auto;
+}
+
 .presentation-info + .presentation-info {
     // Deuxième image et texte
     & .infos h1 {
@@ -331,7 +335,6 @@
     @media screen and (max-width: 756px) {
         flex: 3;
     }
-
 }
 /*********** ANIMATIONS **************/
 @keyframes apparition-gauche {

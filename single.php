@@ -3,7 +3,7 @@ get_header();
 ?>
 
     <main>
-    <section id="hero">
+    <section id="hero" data-icone="volume_up">
       <?php
         // Récupérer l'URL de la vidéo depuis le champ ACF 'Video1'
         $video_data = get_field('video1'); // Assure-toi que 'video1' est le bon nom du champ
@@ -11,7 +11,7 @@ get_header();
 
         // Vérifier si une URL a été récupérée
         if ($video_url) {
-            echo '<video autoplay loop muted>';
+            echo '<video id="single_vid" autoplay loop muted>';
             echo '<source src="' . esc_url($video_url) . '" type="video/mp4">'; // Assure-toi que le type de la vidéo est correct
             echo 'Votre navigateur ne supporte pas la lecture de vidéos.';
             echo '</video>';
@@ -120,7 +120,7 @@ get_header();
       <section class="images-projets annule-padding-cote galerie">
           <?php foreach ($images as $image): ?>
               <div class="projet-image">
-                  <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                  <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
               </div>
           <?php endforeach; ?>
 
@@ -158,6 +158,8 @@ get_header();
       </div>
     </div>-->
 
-  <?php get_footer();?>
+    <?php get_footer();?>
+    <script src="<?php echo get_template_directory_uri() . '/js/single-video.js'; ?>"></script>
+
   <!-- <script src="js/popup.js"></script> -->
 </html>
