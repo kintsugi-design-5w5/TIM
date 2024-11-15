@@ -127,14 +127,14 @@ get_header(); // Inclut le fichier d'en-tête du thème
                     alt="Photo de la vie étudiante" />
             </div>
             <div class="infos">
-                <h1>Une vie étudiante dynamique</h1>
+                <h1>Une vie étudiante <span class="fonte-alt">dynamique</span></h1>
             </div>
         </div>
 
         <!-- Bloc d'information avec inversion de l'ordre des éléments pour la variété visuelle -->
         <div class="presentation-info">
             <div class="infos">
-                <h1>Une équipe de professeurs passionnés</h1>
+                <h1>Une équipe de professeurs <span class="fonte-alt">passionnés</span></h1>
             </div>
             <div class="img-projet">
                 <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/ProfesseursTIM_image1-scaled.jpg"
@@ -147,22 +147,22 @@ get_header(); // Inclut le fichier d'en-tête du thème
     <section class="feed axes">
         <h1>Spécifications</h1>
         <div class="axes-cours">
-            <a data-icone="east" href="#" class="jeu-video">
+            <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_7 jeu-video">
                 <h3 class="ombre-texte">Jeux video</h3>
             </a>
-            <a data-icone="east" href="#" class="troisd">
+            <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_4 troisd">
                 <h3 class="ombre-texte">3D</h3>
             </a>
-            <a data-icone="east" href="#" class="web">
+            <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_9 web">
                 <h3 class="ombre-texte">Web</h3>
             </a>
-            <a data-icone="east" href="#" class="imagerie">
+            <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_6 imagerie">
                 <h3 class="ombre-texte">Imagerie</h3>
             </a>
-            <a data-icone="east" href="#" class="video">
+            <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_8 video">
                 <h3 class="ombre-texte">Vidéo</h3>
             </a>
-            <a data-icone="east" href="#" class="autre">
+            <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_5 autre">
                 <h3 class="ombre-texte">Autre</h3>
             </a>
         </div>
@@ -231,6 +231,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
     <?php endif; ?>
 </main>
 <?php get_footer(); ?> <!-- Inclut le fichier de pied de page du thème -->
+<script src="<?php echo get_template_directory_uri() . '/js/appel-filtre.js'; ?>"></script>
 
 <!-- Inclusion des scripts JS pour des fonctionnalités supplémentaires (commentés pour l'instant) -->
 <!-- 

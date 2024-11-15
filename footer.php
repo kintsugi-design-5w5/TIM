@@ -12,13 +12,13 @@
         <div class="footer-bloc">
             <h2>Navigation</h2>
             <ul>
-                <li><a data-icone="north_east"
+                <li><a data-icone="east"
                         href="<?php echo home_url(); ?>">Accueil</a></li>
-                <li><a data-icone="north_east"
+                <li><a data-icone="east"
                         href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
-                <li><a data-icone="north_east"
+                <li><a data-icone="east"
                         href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
-                <li><a data-icone="north_east"
+                <li><a data-icone="east"
                         href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
             </ul>
         </div>

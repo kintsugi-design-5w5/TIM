@@ -25,6 +25,7 @@ window.addEventListener("resize", definirHauteurTimeline);
 
 // Fonction pour fermer toutes les sessions avant d'appliquer un filtre
 function fermerToutesLesSessions() {
+  console.log("wjpn;f;wn");
   document.querySelectorAll(".cours").forEach((cours) => {
     cours.style.display = "none";
   });
