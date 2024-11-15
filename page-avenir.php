@@ -19,21 +19,21 @@
             <div class="lesmasks-avenir">
 
                 <a class="conteneur-mask" href="<?php echo home_url('/emplois'); ?>">
-                    <h3>Emplois</h3>
+                    <h3 class="ombre-texte">Emplois</h3>
                     <div class="mask-avenir">
                         <div class="images-avenir" id="img-avenir-droite"></div>
                     </div>
                 </a>
 
                 <a class="conteneur-mask"  href="<?php echo home_url('/universites'); ?>">
-                    <h3>Universités</h3>
+                    <h3 class="ombre-texte">Universités</h3>
                     <div class="mask-avenir">
                         <div class="images-avenir" id="img-avenir-milieu"></div>
                     </div>
                 </a>
 
                 <a class="conteneur-mask" href="<?php echo home_url('/stages'); ?>">
-                    <h3>Stages</h3>
+                    <h3 class="ombre-texte">Stages</h3>
                     <div class="mask-avenir">
                         <div class="images-avenir" id="img-avenir-gauche"></div>
                     </div>

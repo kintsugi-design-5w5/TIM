@@ -831,8 +831,26 @@ main #hero {
 }
 
 .btn-retour {
+  height: 5vh;
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: left;
   font-size: 1.2rem;
+  gap: 0.5em;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 1em;
+  transition: background-color 0.2s ease;
+}
+.btn-retour:hover {
+  background-color: var(--couleur);
+}
+
+.texte-retour {
+  padding-top: 0.5em;
+  display: flex;
+  align-items: center;
 }
 
 .titre__projet {
@@ -1186,6 +1204,10 @@ main #hero {
   position: absolute;
   z-index: 3;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
 }
 
 .mask-avenir {
@@ -1217,6 +1239,10 @@ main #hero {
   z-index: 4;
   -webkit-clip-path: circle(350% at 50% 50%);
           clip-path: circle(350% at 50% 50%);
+}
+.conteneur-mask:hover h3 {
+  transform-origin: center;
+  transform: scale(1.5, 1.5);
 }
 @media screen and (max-width: 756px) {
   .conteneur-mask {
@@ -1294,8 +1320,6 @@ main #hero {
 
 .sous-section > div > h1 {
   font-size: 2rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
 }
 @media screen and (min-width: 430px) {
   .sous-section > div > h1 {
