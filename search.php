@@ -2,17 +2,20 @@
     get_header();
 ?>
 <main>
-        <?php echo do_shortcode('[boutons_filtre_categorie]');?>
-    <!-- <section class="feed projets-apercus">
+    <?php get_search_form(); ?>
+    <?php echo do_shortcode('[boutons_filtre_categorie]'); ?>
+    <section class="feed projets-apercus">
         <div class="colonne-proj colonne-1">
             <?php
+            // Récupérer les mots-clés de la recherche
+            $search_query = get_search_query(); 
 
-
-            // Requête pour récupérer les posts de la catégorie "Projets"
+            // Requête pour récupérer les posts de la catégorie "Projets" correspondant à la recherche
             $args = array(
                 'post_type' => 'post', // Utiliser 'post' pour les articles de blog
                 'posts_per_page' => -1, // Récupérer tous les articles
-                'category_name' => 'projets' // Remplacer 'projets' par le slug de ta catégorie
+                'category_name' => 'projets', // Remplacer 'projets' par le slug de ta catégorie
+                's' => $search_query // Ajouter le mot-clé de la recherche
             );
 
             $query = new WP_Query($args);
@@ -22,12 +25,14 @@
                 while ($query->have_posts()) {
                     $query->the_post();
                     $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large'); // Récupérer l'URL de la miniature
+                    $project_link = get_permalink(); // Récupérer le lien du projet
+                    $project_title = get_the_title(); // Récupérer le titre du projet
 
                     // Afficher uniquement les projets impairs dans la première colonne
                     if ($counter % 2 == 0) { // Projets impairs
                         ?>
-                        <a href="<?php the_permalink(); ?>" class="thumbnail-projet" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');">
-                            <h2><?php the_title(); ?></h2>
+                        <a data-icone="filter_list" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
+                            <h2><?php echo esc_html($project_title); ?></h2>
                         </a>
                         <?php
                     }
@@ -45,20 +50,22 @@
             // Réinitialiser le compteur pour la deuxième colonne
             $counter = 0; // Réinitialise le compteur pour les projets
 
-            // Requête pour récupérer à nouveau les posts de la catégorie "Projets"
+            // Requête pour récupérer à nouveau les posts de la catégorie "Projets" correspondant à la recherche
             $query->rewind_posts(); // Réinitialiser les résultats de la requête
 
             if ($query->have_posts()) {
                 while ($query->have_posts()) {
                     $query->the_post();
                     $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large'); // Récupérer l'URL de la miniature
+                    $project_link = get_permalink(); // Récupérer le lien du projet
+                    $project_title = get_the_title(); // Récupérer le titre du projet
 
                     // Afficher uniquement les projets pairs dans la deuxième colonne
                     if ($counter % 2 == 1) { // Projets pairs
                         ?>
-                            <a  href="<?php the_permalink(); ?>" class="thumbnail-projet" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');">
-                                <h2><?php the_title(); ?></h2>
-                            </a>
+                        <a data-icone="filter_list" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
+                            <h2><?php echo esc_html($project_title); ?></h2>
+                        </a>
                         <?php
                     }
                     $counter++;
@@ -69,36 +76,7 @@
             wp_reset_postdata();
             ?>
         </div>
-    </section> -->
-</main>
-
-
-
-<!-- <main>
-    <section class="feed projets-apercus">
-        <div class="colonne-proj">
-            <div class="thumbnail-projet">
-                <p>yo</p>
-            </div>
-            <div class="thumbnail-projet">
-                <p>yo</p>
-            </div>
-            <div class="thumbnail-projet">
-                <p>yo</p>
-            </div>
-        </div>
-        <div class="colonne-proj">
-            <div class="thumbnail-projet">
-                <p>yo</p>
-            </div>
-            <div class="thumbnail-projet">
-                <p>yo</p>
-            </div>
-            <div class="thumbnail-projet">
-                <p>yo</p>
-            </div>
-        </div>
     </section>
-</main> -->
+</main>
 <?php get_footer();?>
 </html>

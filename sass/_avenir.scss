@@ -20,13 +20,13 @@
     @media screen and (max-width: 756px) {
         flex-direction: column;
         & a:nth-of-type(1) {
-            margin: 10% 50% 0 0;
+            margin: 0% 40vw -15vh 0;
         }
         & a:nth-of-type(2) {
-            margin: 0 0 0 50%;
+            margin: 0 0 0 40vw;
         }
         & a:nth-of-type(3) {
-            margin: 0 50% 10% 0;
+            margin: -15vh 40vw 0% 0;
         }
     }
 
@@ -51,18 +51,22 @@
     background-position: center;
 }
 #img-avenir-droite {
-    background-image: url(images/image.png);
+    background-image: url(images/dehors.jpg);
 }
 #img-avenir-milieu {
-    background-image: url(images/touEffeilNuit.jpg);
+    background-image: url(images/3personnes.jpg);
 }
 #img-avenir-gauche {
-    background-image: url(images/images2.jpg);
+    background-image: url(images/main.jpg);
 }
 .feed-avenir h3 {
     position: absolute;
     z-index: 3;
     pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
 }
 
 .mask-avenir {
@@ -71,30 +75,34 @@
     height: 100%;
     min-width: 100px;
     // border: solid 1rem var(--couleur);
-    border-radius: 50%;
+    // border-radius: 50%;
     // box-shadow: 0px 0px 20px var(--couleur);
     clip-path: circle(50% at 50% 50%);
     transition: clip-path 0.5s ease;
     pointer-events: none;
 }
 
-
 .conteneur-mask {
     width: 30vw;
     height: 30vw;
-    // border: solid 2px var(--couleur);
     border-radius: 50%;
-    // box-shadow: 0px 0px 20px var(--couleur);
     margin: 0 0 10% 0;
     display: flex;
     align-items: center;
     justify-content: center;
     transform-origin: center;
+    border: 2px solid $couleur-fonce;
+    box-shadow: 0px 0px 50px $couleur-fonce;
+
 
     &:hover {
         .mask-avenir {
             z-index: 4;
             clip-path: circle(350% at 50% 50%);
+        }
+        h3{
+            transform-origin: center;
+            transform: scale(1.5, 1.5);
         }
     }
 
@@ -105,9 +113,9 @@
                 clip-path: circle(500% at 50% 50%);
             }
         }
-        width: 50vw;
-        height: 50vw;
-        margin: 0 50% 0 0;
+        width: 40vw;
+        height: 40vw;
+        //margin: 0 50% 0 0;
     }
 
     @media screen and (max-width: 430px) {
@@ -117,11 +125,11 @@
                 clip-path: circle(1000% at 50% 50%);
             }
         }
-        width: 55vw;
-        height: 55vw;
+        width: 50vw;
+        height: 50vw;
 
-        min-width: 200px;
-        min-height: 200px;
+        min-width: 150px;
+        min-height: 150px;
         margin: 0;
     }
 }
