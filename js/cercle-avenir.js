@@ -11,6 +11,15 @@ for(let i = 0; i < lesTextes.length; i++){
     lesOffsetTop.push(lesTextes[i].offsetTop);
 }
 
+window.addEventListener("resize", function(){
+    lesOffsetLeft = [];
+    lesOffsetTop = [];
+    for(let i = 0; i < lesTextes.length; i++){
+        lesOffsetLeft.push(lesTextes[i].offsetLeft);
+        lesOffsetTop.push(lesTextes[i].offsetTop);
+    }
+    console.log(lesOffsetLeft, lesOffsetTop);
+});
 console.log(lesOffsetLeft[0]);
 console.log(lesOffsetTop[0]);
 /**
@@ -23,7 +32,7 @@ for(let i = 0; i < lesConteneurMask.length; i++){
 
         let leTexte = lesConteneurMask[i].children[0]; // Récupère le texte
         leTexte.style.zIndex = 5; // Modifie le z-index du texte pour qu'il soit au-dessus des autres images
-        leTexte.style.transform = "translate("+ ((window.innerWidth / 2 - leTexte.offsetLeft) - leTexte.offsetWidth / 2) +"px,"+ (window.innerHeight / 2 - leTexte.offsetTop) +"px)"; // Déplace le texte
+        leTexte.style.transform = "translate("+ ((window.innerWidth / 2 - leTexte.offsetLeft) - leTexte.offsetWidth / 2) +"px,"+ (window.innerHeight / 2 - leTexte.offsetTop) +"px) scale(3)"; // Déplace le texte
         // Désactive les pointerEvents des autres conteneurs
         for(let j = 0; j < lesConteneurMask.length; j++){
             if(lesConteneurMask[j] != lesConteneurMask[i]){
@@ -42,7 +51,7 @@ for(let i = 0; i < lesConteneurMask.length; i++){
         lesConteneurMask[i].style.pointerEvents = "none"; // Désactive les pointerEvents du conteneur
 
         let leTexte = lesConteneurMask[i].children[0]; // Récupère le texte
-        leTexte.style.transform = "translate("+ ((window.innerWidth - lesOffsetLeft[i]) - leTexte.offsetWidth / 2) +"px,"+ (window.innerHeight - lesOffsetTop[i]) +"px)"; // Réinitialise la position
+        leTexte.style.transform = "translate("+ (lesOffsetLeft[i] - leTexte.offsetLeft) +"px,"+ (lesOffsetTop[i] - leTexte.offsetTop) +"px) scale(1)"; // Réinitialise la position
         console.log(lesOffsetLeft[i], lesOffsetTop[i]);
         
         // On attend 0.5s pour que la transition soit complétée
