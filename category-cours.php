@@ -69,7 +69,7 @@
     </div>
 
     <!-- Générer dynamiquement les sessions -->
-    <ul>
+    <ul id="conteneur-cours">
       <div class="timeline">
         <div class="barre-progression"></div>
       </div>
