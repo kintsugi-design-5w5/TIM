@@ -31,7 +31,7 @@
                     // Afficher uniquement les projets impairs dans la première colonne
                     if ($counter % 2 == 0) { // Projets impairs
                         ?>
-                        <a data-icone="filter_list" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
+                        <a data-icone="visibility" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
                             <h2><?php echo esc_html($project_title); ?></h2>
                         </a>
                         <?php
