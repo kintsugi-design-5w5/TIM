@@ -763,6 +763,10 @@ ul {
   display: none;
 }
 
+.description-cours.visible {
+  display: block;
+}
+
 .description-cours p {
   margin-left: 40px;
 }
