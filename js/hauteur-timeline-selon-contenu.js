@@ -28,7 +28,6 @@ document.addEventListener("scroll", mettreAJourBarreProgression);
 // Fonction pour vérifier la position des cercles par rapport à la fenêtre
 function mettreAJourCercles() {
     let hauteurFenetre = window.innerHeight; // Hauteur de la fenêtre
-    console.log("Mise à jour des cercles");
 
     cercles.forEach((cercle) => {
         // Obtenir la position du cercle par rapport à la page
@@ -135,7 +134,6 @@ function gestionDescriptions() {
 function changerIconeCercle(cercle) {
     // Vérifier l'état actuel de l'icône
     let icone = cercle.getAttribute("data-icone");
-    console.log("Changer l'icône pour", icone);
     if (icone === "keyboard_arrow_down") {
         cercle.setAttribute("data-icone", "keyboard_arrow_up"); // Mettre l'icône sur 'up'
     } else {
