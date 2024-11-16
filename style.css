@@ -467,6 +467,18 @@ footer {
 .axes-cours .jeu-video {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
 }
+.axes-cours .web {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
+}
+.axes-cours .troisd {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
+}
+.axes-cours .imagerie {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
+}
+.axes-cours .video {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
+}
 .axes-cours .autre {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
 }
