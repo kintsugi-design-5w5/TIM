@@ -28,6 +28,7 @@ document.addEventListener("scroll", mettreAJourBarreProgression);
 // Fonction pour vérifier la position des cercles par rapport à la fenêtre
 function mettreAJourCercles() {
     let hauteurFenetre = window.innerHeight; // Hauteur de la fenêtre
+    console.log("Mise à jour des cercles");
 
     cercles.forEach((cercle) => {
         // Obtenir la position du cercle par rapport à la page
@@ -89,9 +90,9 @@ btnsSession.forEach((bouton) => {
 
 // Ajouter un écouteur d'événement pour détecter tout clic sur la page
 document.addEventListener("click", () => {
+    mettreAJourCercles();
     setTimeout(() => {
         if (localStorage.getItem("rest-cours") !== null && localStorage.getItem("rest-cours") === "true") {
-            mettreAJourCercles();
             gestionDescriptions();
             localStorage.setItem("rest-cours", "false");
         }
@@ -99,22 +100,26 @@ document.addEventListener("click", () => {
 });
 
 // Fonction qui gère l'affichage ou la dissimulation des descriptions des cours
-// Fonction qui gère l'affichage ou la dissimulation des descriptions des cours
 function gestionDescriptions() {
-    console.log("Initialisation de la gestion des descriptions");
     document.querySelectorAll(".cours-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
             let coursId = btn.getAttribute("data-cours-id");
             let descriptionElement = document.getElementById(`description-cours-${coursId}`);
 
             // Afficher ou masquer la description
-            if (descriptionElement.style.display === "none") {
+            if (descriptionElement) {
                 // Masquer toutes les autres descriptions
-                document.querySelectorAll(".description-cours").forEach((desc) => (desc.style.display = "none"));
-                // Afficher la description de l'élément cliqué
-                descriptionElement.style.display = "block";
+                document.querySelectorAll(".description-cours").forEach((desc) => {
+                    // Retirer la classe "visible" de toutes les descriptions
+                    if (desc !== descriptionElement) {
+                        desc.classList.remove("visible");
+                    }
+                });
+
+                // Afficher ou masquer la description de l'élément cliqué
+                descriptionElement.classList.toggle("visible");
             } else {
-                descriptionElement.style.display = "none";
+                console.error("L'élément description n'existe pas pour l'ID spécifié.");
             }
 
             // Mettre à jour la barre de progression après chaque clic

@@ -681,7 +681,7 @@ footer {
 .timeline {
   position: absolute;
   width: 7px;
-  height: 99.2%;
+  height: 98.5%;
   min-height: 530px;
   margin: 0 auto;
   background-color: var(--gris-fonce);
@@ -698,6 +698,7 @@ footer {
   height: 0%;
   background-color: var(--couleur);
   transition: height 0.25s ease;
+  max-height: 100%;
 }
 
 ul {
@@ -773,6 +774,10 @@ ul {
 
 .description-cours {
   display: none;
+}
+
+.description-cours.visible {
+  display: block;
 }
 
 .description-cours p {
