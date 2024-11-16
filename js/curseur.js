@@ -22,10 +22,15 @@ window.addEventListener("resize", gererCurseurMobile);
 document.addEventListener("mousemove", (e) => {
     curseur.style.top = `${e.clientY}px`; // Position verticale
     curseur.style.left = `${e.clientX}px`; // Position horizontale
+    if (localStorage.getItem("rest") !== null && localStorage.getItem("rest") === "true") {
+        mettreAJourCurseur();
+        localStorage.setItem("rest", "false");
+    }
 });
 
 // Fonction pour ajouter les écouteurs d'événements sur les éléments avec `data-icone`
 function mettreAJourCurseur() {
+    console.log("Mise à jour du curseur");
     // Sélectionne tous les éléments avec un attribut "data-icone"
     document.querySelectorAll("[data-icone]").forEach((element) => {
         element.addEventListener("mouseenter", () => {
