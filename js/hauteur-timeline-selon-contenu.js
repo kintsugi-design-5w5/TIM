@@ -111,7 +111,7 @@ function gestionDescriptions() {
     btn.addEventListener("click", () => {
       let coursId = btn.getAttribute("data-cours-id");
       let descriptionElement = document.getElementById(
-        `description-${coursId}`
+        `description-cours-${coursId}`
       );
 
       console.log("Cours ID:", coursId);
@@ -121,7 +121,10 @@ function gestionDescriptions() {
       if (descriptionElement) {
         // Masquer toutes les autres descriptions
         document.querySelectorAll(".description-cours").forEach((desc) => {
-          desc.classList.remove("visible");
+          // Retirer la classe "visible" de toutes les descriptions
+          if (desc !== descriptionElement) {
+            desc.classList.remove("visible");
+          }
         });
 
         // Afficher ou masquer la description de l'élément cliqué
