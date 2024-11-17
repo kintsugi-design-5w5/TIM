@@ -17,4 +17,4 @@ hero.addEventListener("click", () => {
 });
 hero.addEventListener("mouseenter", () => {
     rafraichirIconeCurseur(hero);
-}
+});
