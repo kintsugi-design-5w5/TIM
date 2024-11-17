@@ -15,7 +15,9 @@
        https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Xavier_Vehicule3D_img2.webp
        "]
        '); ?>
-    <?php get_search_form(); ?>
+    <div class="div-searchform flex">
+        <?php get_search_form(); ?>
+    </div>
     <?php echo do_shortcode('[boutons_filtre_categorie]');?>
 </main>
 
