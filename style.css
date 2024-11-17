@@ -464,52 +464,111 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.axes-cours .jeu-video {
+.axes-cours .filtre-couleur .jeu-video {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
 }
-.axes-cours .web {
+.axes-cours .filtre-couleur .web {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
+  background-position: center;
 }
-.axes-cours .troisd {
+.axes-cours .filtre-couleur .troisd {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
+  background-position: center;
 }
-.axes-cours .imagerie {
+.axes-cours .filtre-couleur .imagerie {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
 }
-.axes-cours .video {
+.axes-cours .filtre-couleur .video {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
 }
-.axes-cours .autre {
+.axes-cours .filtre-couleur .autre {
   background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
 }
-.axes-cours a {
-  color: var(--blanc);
+.axes-cours .filtre-couleur {
   height: 50%;
   flex: 1 0 30%;
+  z-index: 1;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("images/image.png");
-  background-size: cover;
-  background-position: 0% 50%;
-  filter: grayscale(100%);
-  transition: filter 0.5s;
-  position: relative;
-  z-index: 10;
+  color: var(--blanc);
+}
+.axes-cours .filtre-couleur:hover::before {
+  opacity: 0;
+}
+.axes-cours .filtre-couleur:hover .boite_cours {
+  filter: grayscale(0);
+}
+.axes-cours .filtre-couleur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--couleur);
+  opacity: 1;
+  transition: opacity 0.5s;
+  mix-blend-mode: color;
+  z-index: 2;
+}
+.axes-cours .filtre-couleur h3 {
+  z-index: 3;
+}
+.axes-cours .filtre-couleur div:last-of-type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 3;
+}
+.axes-cours .filtre-couleur div:last-of-type a {
+  width: 4vw;
+  height: 4vw;
+  margin: 1vw;
+  background-color: var(--couleur);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.axes-cours .filtre-couleur div:last-of-type a:last-of-type {
+  margin-left: 0;
 }
 @media screen and (max-width: 756px) {
-  .axes-cours a {
+  .axes-cours .filtre-couleur div:last-of-type a {
+    width: 9vw;
+    height: 9vw;
+    margin: 3vw;
+  }
+  .axes-cours .filtre-couleur div:last-of-type a:last-of-type {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur {
     flex: 1 0 40%;
     height: 30%;
     max-width: none;
   }
 }
 @media screen and (max-width: 430px) {
-  .axes-cours a {
+  .axes-cours .filtre-couleur {
     flex: 1 0 0;
     width: 100%;
     margin: 0;
   }
+}
+.axes-cours .boite_cours {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 0% 50%;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
 }
 @media screen and (max-width: 430px) {
   .axes-cours {
@@ -517,10 +576,6 @@ footer {
     gap: 2%;
     justify-content: space-between;
   }
-}
-
-.axes-cours a:hover {
-  filter: grayscale(0%);
 }
 
 #projet1 {
@@ -535,10 +590,28 @@ footer {
   top: -200vh;
 }
 
+.proj-video {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--noir-fonce);
+  padding: 0;
+}
+.proj-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+  transition: transform 0.1s ease-out;
+  animation: apparition-vid 1s forwards;
+  animation-timeline: view(block 0% 0%);
+}
+
 .feed-projet {
   width: 100vw;
   height: 100vh;
-  background-color: var(--couleur);
   position: sticky;
   top: 0;
   background-position: center;
@@ -550,7 +623,7 @@ footer {
   contain: paint;
 }
 
-.feed-projet::after {
+.degrade-projets::after {
   content: "";
   position: absolute;
   top: 0;
@@ -660,6 +733,14 @@ footer {
     transform: scale(1);
   }
 }
+@keyframes apparition-vid {
+  0% {
+    transform: scale(0.5);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
 /*Style page cours*/
 .body-cours {
   padding: 2rem 2rem 2rem 7rem;
@@ -709,6 +790,16 @@ ul {
 .cours {
   display: none;
 }
+.cours > * {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+@media screen and (max-width: 756px) {
+  .cours > * {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 
 .session {
   position: relative;
@@ -718,12 +809,10 @@ ul {
 .cercle {
   text-align: start;
   line-height: 2rem;
-  margin: 5rem 0;
   margin-left: 2rem;
 }
 @media screen and (max-width: 756px) {
   .cercle {
-    margin: 3rem 0;
     margin-left: 2rem;
   }
 }
@@ -742,10 +831,13 @@ ul {
   color: var(--couleur);
   font-weight: bold;
   margin-top: 7rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 @media screen and (max-width: 756px) {
   .cercle.grand {
-    margin-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -772,8 +864,21 @@ ul {
   text-align: center;
 }
 
-.description-cours {
+.cours .description-cours {
   display: none;
+}
+.cours .description-cours .wp-block-column:first-of-type p {
+  margin-left: 4rem;
+}
+.cours .description-cours .wp-block-column {
+  flex-grow: 0;
+  flex-basis: auto;
+}
+.cours .description-cours .wp-block-column p {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 2rem;
+  font-size: clamp(0.5rem, 2vw, 1.3rem);
 }
 
 .description-cours.visible {
@@ -781,7 +886,14 @@ ul {
 }
 
 .description-cours p {
-  margin-left: 40px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 0.5rem;
+  font-size: clamp(0.8rem, 2.5vw, 1.3rem);
+}
+.description-cours p:last-of-type {
+  margin-top: 2rem;
+  font-size: clamp(0.9rem, 2.8vw, 1.5rem);
 }
 
 .projets-apercus {

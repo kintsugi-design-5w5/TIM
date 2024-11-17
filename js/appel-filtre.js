@@ -1,14 +1,56 @@
-let cours = document.querySelectorAll(".boite_cours");
+// let cours = document.querySelectorAll(".boite_cours");
 
-cours.forEach((cours) => {
-    cours.addEventListener("click", (e) => {
+// cours.forEach((cours) => {
+//     cours.addEventListener("click", (e) => {
+//         // Récupérer le numéro dans la classe `cat_*`
+//         const catClasse = [...cours.classList].find((cls) => cls.startsWith("cat_"));
+//         const catNumero = catClasse ? catClasse.replace("cat_", "") : null;
+
+//         if (catNumero) {
+//             // Stocker le numéro du cours dans le localStorage
+//             localStorage.setItem("cours", catNumero);
+//         }
+//     });
+// });
+// curseur.classList.add("noir");
+
+let btn_projets = document.querySelectorAll(".btn_proj");
+let btn_cours = document.querySelectorAll(".btn_cours");
+
+btn_projets.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
         // Récupérer le numéro dans la classe `cat_*`
-        const catClasse = [...cours.classList].find((cls) => cls.startsWith("cat_"));
-        const catNumero = catClasse ? catClasse.replace("cat_", "") : null;
+        const catProjets = [...btn.classList].find((cls) => cls.startsWith("cat_"));
+        const catNumero = catProjets ? catProjets.replace("cat_", "") : null;
 
         if (catNumero) {
             // Stocker le numéro du cours dans le localStorage
             localStorage.setItem("cours", catNumero);
         }
+    });
+    btn.addEventListener("mouseenter", () => {
+        curseur.classList.add("noir");
+    });
+    btn.addEventListener("mouseleave", () => {
+        curseur.classList.remove("noir");
+    });
+});
+
+btn_cours.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        // Récupérer le numéro dans la classe `cat_*`
+        const catCours = [...btn.classList].find((cls) => cls.startsWith("cat_"));
+        const catNumero = catCours ? catCours.replace("cat_", "") : null;
+
+        if (catNumero) {
+            // Stocker le numéro du cours dans le localStorage
+            localStorage.setItem("cours", catNumero);
+        }
+    });
+    btn.addEventListener("mouseenter", () => {
+        curseur.classList.add("noir");
+    });
+    btn.addEventListener("mouseleave", () => {
+        curseur.classList.remove("noir");
     });
 });

@@ -175,46 +175,96 @@
     flex-wrap: wrap;
     gap: 2rem;
 
-    & .jeu-video {
+    & .filtre-couleur .jeu-video {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
     }
 
-    & .web {
+    & .filtre-couleur .web {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
+        background-position: center;
     }
 
-    & .troisd {
+    & .filtre-couleur .troisd {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
+        background-position: center;
     }
 
-    & .imagerie {
+    & .filtre-couleur .imagerie {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
     }
 
-    & .video {
+    & .filtre-couleur .video {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
     }
 
-    & .autre {
+    & .filtre-couleur .autre {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
     }
 
-    & a {
-        // Styles pour les divs à l'intérieur des axes
-        color: $blanc;
+    & .filtre-couleur {
         height: 50%;
         flex: 1 0 30%; // Flexibilité des divs
+        z-index: 1; // Ordre d'affichage
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url("images/image.png");
-        background-size: cover;
-        background-position: 0% 50%;
-        filter: grayscale(100%); // Effet de gris
-        transition: filter 0.5s; // Transition pour hover
-        position: relative; // Position relative pour le z-index
-        z-index: 10; // Ordre d'affichage
+        color: $blanc;
 
+        &:hover::before {
+            // Effet de couleur sur hover
+            opacity: 0;
+        }
+        &:hover .boite_cours {
+            filter: grayscale(0); // Effet de couleur sur hover
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $couleur;
+            opacity: 1;
+            transition: opacity 0.5s;
+            mix-blend-mode: color; // Mélange de couleur
+            z-index: 2;
+        }
+        & h3 {
+            z-index: 3; // Ordre d'affichage
+        }
+
+        & div:last-of-type {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            z-index: 3;
+            & a {
+                width: 4vw;
+                height: 4vw;
+                margin: 1vw;
+                &:last-of-type {
+                    margin-left: 0;
+                }
+                background-color: $couleur;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media screen and (max-width: 756px) {
+                    width: 9vw;
+                    height: 9vw;
+                    margin: 3vw;
+                    &:last-of-type {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
         @media screen and (max-width: 756px) {
             flex: 1 0 40%; // Ajustement pour petits écrans
             height: 30%;
@@ -227,16 +277,23 @@
             margin: 0; // Supprimer les marges
         }
     }
+    & .boite_cours {
+        // Styles pour les divs à l'intérieur des axes
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 0% 50%;
+        filter: grayscale(100%); // Effet de gris
+        transition: filter 0.5s; // Transition pour hover
+        // position: relative; // Position relative pour le z-index
+    }
 
     @media screen and (max-width: 430px) {
         flex-direction: column; // Orientation verticale sur très petits écrans
         gap: 2%; // Espacement entre les divs
         justify-content: space-between; // Espacement uniforme
     }
-}
-
-.axes-cours a:hover {
-    filter: grayscale(0%); // Effet au survol
 }
 
 #projet1 {
@@ -251,11 +308,31 @@
     top: -200vh; // Position du paint
 }
 
+.proj-video {
+    position: relative;
+    height: 100vh; // Hauteur suffisante pour permettre le scroll
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: $noir-fonce;
+    padding: 0;
+
+    video {
+        // transform: scale(0.5); // Taille initiale de la vidéo à 50%
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 10;
+        transition: transform 0.1s ease-out;
+        animation: apparition-vid 1s forwards;
+        animation-timeline: view(block 0% 0%);
+    }
+}
+
 .feed-projet {
     // Section projet du feed
     width: 100vw;
     height: 100vh;
-    background-color: $couleur;
     position: sticky; // Reste visible lors du défilement
     top: 0; // Position du haut
     background-position: center;
@@ -267,7 +344,7 @@
     contain: paint; // Contenu peint
 }
 
-.feed-projet::after {
+.degrade-projets::after {
     // Effet de dégradé sur le projet
     content: "";
     position: absolute;
@@ -377,6 +454,14 @@
     }
     40% {
         opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes apparition-vid {
+    0% {
+        transform: scale(0.5);
+    }
+    40% {
         transform: scale(1);
     }
 }

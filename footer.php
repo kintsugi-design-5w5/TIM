@@ -5,7 +5,7 @@
         <!-- Bloc d'adresse avec un lien cliquable -->
         <div class="footer-bloc">
             <h2>Adresse</h2>
-            <a href="#">3800 R. Sherbrooke E, Montréal, QC H1X 2A2</a>
+            <a data-icone="north_east" href="https://maps.app.goo.gl/8mVJZDSjRYV73CVa6" target="_blank">3800 R. Sherbrooke E, Montréal, QC H1X 2A2</a>
         </div>
 
         <!-- Bloc de navigation avec une liste de liens vers les différentes sections du site -->
@@ -38,9 +38,9 @@
 
         <!-- Bloc avec un logo qui pourrait renvoyer vers la page d'accueil -->
         <div class="footer-bloc">
-            <a href="<?php echo home_url(); ?>">
+            <a data-icone="east" href="<?php echo home_url(); ?>">
                 <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_Logo.webp'; ?>" alt="Logo TIM" />
-                </a>
+            </a>
         </div>
     </div>
 
