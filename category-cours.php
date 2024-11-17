@@ -15,8 +15,8 @@
        "]
        '); ?>
   <section class="body-cours">
+    <?php echo do_shortcode('[boutons_filtre_categorie]'); ?>
     <div>
-      <?php echo do_shortcode('[boutons_filtre_categorie]'); ?>
       <?php
 
       // Initialisation des sessions
