@@ -6,7 +6,7 @@
         <?php get_search_form(); ?>
     </div>
 
-    <?php echo do_shortcode('[boutons_filtre_categorie]'); ?>
+    <?php //echo do_shortcode('[boutons_filtre_categorie]'); ?>
     <section class="feed projets-apercus">
         <div class="colonne-proj colonne-1">
             <?php

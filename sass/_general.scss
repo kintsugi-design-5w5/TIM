@@ -85,6 +85,11 @@ footer {
     display: none;
 }
 
+#curseur-personnalise.cache {
+    // Styles pour les éléments cachés
+    display: none;
+}
+
 #curseur-personnalise.effet-survol {
     // Styles pour le curseur au survol
     width: 60px;

@@ -13,7 +13,7 @@
         <title>TIM</title>
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body id="corps">
 
         <div id="curseur-personnalise">
             <span id="icone-curseur" class="material-symbols-outlined cache"></span>

@@ -171,6 +171,10 @@ footer {
   display: none;
 }
 
+#curseur-personnalise.cache {
+  display: none;
+}
+
 #curseur-personnalise.effet-survol {
   width: 60px;
   height: 60px;
@@ -427,10 +431,8 @@ footer {
 .feed .img-projet img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Garde les proportions sans déformation */
-  -o-object-position: 50% 20%;
-     object-position: 50% 20%;
+  object-fit: cover; /* Garde les proportions sans déformation */
+  object-position: 50% 20%;
 }
 @media screen and (max-width: 756px) {
   .feed .img-projet {
@@ -973,8 +975,7 @@ main #hero {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Pour s'assurer que la vidéo couvre toute la zone sans déformation */
+  object-fit: cover; /* Pour s'assurer que la vidéo couvre toute la zone sans déformation */
   z-index: -1; /* Pour placer la vidéo en arrière-plan */
 }
 
@@ -999,7 +1000,6 @@ main #hero {
 
 .btn-retour {
   height: 5vh;
-  width: -moz-fit-content;
   width: fit-content;
   text-align: left;
   font-size: 1.2rem;
@@ -1095,8 +1095,7 @@ main #hero {
 .projet-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* Les projets 1, 4, 7, 10... prennent toute la largeur */
@@ -1384,11 +1383,8 @@ main #hero {
   width: 100%;
   height: 100%;
   min-width: 100px;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
-  transition: -webkit-clip-path 0.5s ease;
+  clip-path: circle(50% at 50% 50%);
   transition: clip-path 0.5s ease;
-  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
   pointer-events: none;
 }
 
@@ -1406,8 +1402,7 @@ main #hero {
 }
 .conteneur-mask:hover .mask-avenir {
   z-index: 4;
-  -webkit-clip-path: circle(350% at 50% 50%);
-          clip-path: circle(350% at 50% 50%);
+  clip-path: circle(350% at 50% 50%);
 }
 .conteneur-mask:hover h3 {
   transform-origin: center;
@@ -1419,8 +1414,7 @@ main #hero {
   }
   .conteneur-mask:hover .mask-avenir {
     z-index: 4;
-    -webkit-clip-path: circle(500% at 50% 50%);
-            clip-path: circle(500% at 50% 50%);
+    clip-path: circle(500% at 50% 50%);
   }
 }
 @media screen and (max-width: 430px) {
@@ -1433,8 +1427,7 @@ main #hero {
   }
   .conteneur-mask:hover .mask-avenir {
     z-index: 4;
-    -webkit-clip-path: circle(1000% at 50% 50%);
-            clip-path: circle(1000% at 50% 50%);
+    clip-path: circle(1000% at 50% 50%);
   }
 }
 
@@ -1457,8 +1450,7 @@ main #hero {
   display: flex;
   align-items: center;
   overflow: hidden;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1712,11 +1704,6 @@ main #hero {
   width: 80%;
 }
 
-.recherche__input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.4431372549);
-  font-size: 1.5rem;
-}
-
 .recherche__input::placeholder {
   color: rgba(255, 255, 255, 0.4431372549);
   font-size: 1.5rem;
@@ -1843,8 +1830,7 @@ circle {
 }
 #hero .hero-images {
   width: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -2002,11 +1988,8 @@ circle {
   left: 0;
   pointer-events: none;
   z-index: 5;
-  -webkit-backdrop-filter: blur(0px) brightness(100%);
-          backdrop-filter: blur(0px) brightness(100%);
-  transition: -webkit-backdrop-filter 0.7s ease;
+  backdrop-filter: blur(0px) brightness(100%);
   transition: backdrop-filter 0.7s ease;
-  transition: backdrop-filter 0.7s ease, -webkit-backdrop-filter 0.7s ease;
 }
 
 #burger {
@@ -2024,8 +2007,7 @@ circle {
 #burger:checked ~ .flou {
   /* Effet de flou lors de l'ouverture du menu */
   pointer-events: all;
-  -webkit-backdrop-filter: blur(5px) brightness(50%);
-          backdrop-filter: blur(5px) brightness(50%);
+  backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
@@ -2041,6 +2023,7 @@ circle {
   transition: transform 400ms;
   -moz-user-select: none;
   -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 @media screen and (max-width: 756px) {
