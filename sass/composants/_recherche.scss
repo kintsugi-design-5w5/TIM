@@ -1,13 +1,9 @@
-body {
-    //display: flex;
-    //justify-content: space-between;
-}
 
 .div-searchform {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
 }	
 
 // Recherche du système de design 1
@@ -15,7 +11,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 30vw;
-    height: 30%;
+    height: 3em;
     border-bottom: 2px solid $couleur;
 
     @media screen and (max-width: 756px) {

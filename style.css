@@ -1549,14 +1549,14 @@ main #hero {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
 }
 
 .recherche {
   justify-content: space-between;
   align-items: center;
   width: 30vw;
-  height: 30%;
+  height: 3em;
   border-bottom: 2px solid var(--couleur);
 }
 @media screen and (max-width: 756px) {
