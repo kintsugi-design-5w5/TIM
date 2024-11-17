@@ -82,10 +82,4 @@
     </section>
 </main>
 <?php get_footer();?>
-
-    <!-- <script src="js/curseur.js"></script>
-    <script src="js/boutons.js"></script>
-    <script src="js/barre-navigation-scroll.js"></script>
-    <script src="js/grained.min.js"></script>
-    <script src="js/grain.js"></script> -->
 </html>

@@ -16,19 +16,24 @@ Créer un nouveau site web pour le département TIM de Maisonneuve pour présent
 
 ### Description du site :
 
-À venir
+Le site TIM Maisonneuve 2.0 recrée complètement le style, la navigation et l'expérience utilisateur du site. Le TIM est un programme unique, et le site web devait refléter cette singularité. Nous avons donc misé sur l'aspect artistique et animé du site. Le grain, les héros, le choix des couleurs, la typographie — tout a été pensé pour à la fois mettre en valeur le professionnalisme et l'aspect créatif du programme, tout en racontant visuellement la collaboration entre l'art et la logique.
+
+Sur le site, on retrouve uniquement l'information nécessaire : l'accueil, les cours, les projets et les informations concernant le futur des étudiants. Tout a été conçu pour simplifier l'utilisation. Le menu est universel, le curseur normalise les survols et la navigation est également présente dans le footer.
+
+Deux plugins ont été développés pour accompagner le site : un carrousel réinventé pour s'adapter aux nouvelles fonctionnalités (curseur) et un filtre qui fonctionne tant avec la page des cours que celle des projets.
+
+Ainsi, avec un style minimaliste mais percutant, le site réinvente les sites web de programmes traditionnels et promet une expérience utilisateur mémorable.
 
 ### Description du site :
 
-Avancement du sprint - L'avancement de la programmation a été substanciel. Outre les tests utilisateurs, toute notre concentration a pu se porter vers la programmation, donc on a pu entammer toutes les pages, on est donc passé de l'accueil commencé à 8 pages amorcées. On a aussi durant ce sprint passé au php local, ce qui a été long mais qui est uniformisé sur toutes les pages. On a aussi réussi finalement à mettre en place notre serveur distant WHC, donc toute l'équipe y a accès et le thème y est à jour. Outre le php, on a ajouté quelques scripts JS, notamment pour gérer le scroll de manière agréable, ouvrir le menu et faire un effet de grain sur le site. On a revu aussi un peu notre structure SASS, en essayant de réduire les styles spécifiques, notamment avec la feuille général.
+Avancement du sprint - Beaucoup de travail a été réalisé lors du sprint 3. L'ensemble des pages a été terminé, le système de ligne du temps des cours a été retravaillé et complété, ainsi que l'effet des pages Avenir. Les deux plugins ont été programmés et stylisés, et l'adaptabilité a été largement améliorée. De nombreux nouveaux éléments et effets ont été ajoutés à l'accueil, comme l'animation des images, la vidéo et les boutons menant vers les sections. Enfin, l'importation des médias a été commencée et complétée.
 
 ### Tâches non terminées :
-- Implémentation de l'accueil
-- Adaptabilité des pages
-- Pages single-projet (inaccessibles)
-- Page cours et effet de scroll sur la barre de temps
-- CSS des pages avenir 
 
+-   Stylisation des pages avenir
+-   Bug de js (exécute les plugin partout)
+-   Adaptabilité des graphiques
+-   Effets JS dans l'accueil
 
 ### Objectifs du projet :
 
