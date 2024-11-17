@@ -1,27 +1,40 @@
 <?php
-    get_header();
+get_header();
 ?>
 <main>
-    <div class="div-searchform flex">
+    <div class="div-searchform flex petite-marge-hauteur">
         <?php get_search_form(); ?>
     </div>
+    <h1 class="texte-centre annule-marge-bottom">Résultats de recherche pour : <br><?php echo get_search_query(); ?></h1>
 
     <?php //echo do_shortcode('[boutons_filtre_categorie]'); ?>
+
+    <?php
+    // Fonction pour afficher "Aucun résultat trouvé"
+    function no_result() {
+        echo '<p>Aucun article trouvé.</p>';
+    }
+
+    // Requête pour récupérer les posts de la catégorie "Projets" correspondant à la recherche
+    $search_query = get_search_query();
+    $args = array(
+        'post_type' => 'post', // Utiliser 'post' pour les articles de blog
+        'posts_per_page' => -1, // Récupérer tous les articles
+        'category_name' => 'projets', // Remplacer 'projets' par le slug de ta catégorie
+        's' => $search_query // Ajouter le mot-clé de la recherche
+    );
+
+    $query = new WP_Query($args);
+
+    // Vérification si des résultats existent
+    if (!$query->have_posts()) {
+        no_result();
+    }
+    ?>
+
     <section class="feed projets-apercus">
         <div class="colonne-proj colonne-1">
             <?php
-            // Récupérer les mots-clés de la recherche
-            $search_query = get_search_query(); 
-
-            // Requête pour récupérer les posts de la catégorie "Projets" correspondant à la recherche
-            $args = array(
-                'post_type' => 'post', // Utiliser 'post' pour les articles de blog
-                'posts_per_page' => -1, // Récupérer tous les articles
-                'category_name' => 'projets', // Remplacer 'projets' par le slug de ta catégorie
-                's' => $search_query // Ajouter le mot-clé de la recherche
-            );
-
-            $query = new WP_Query($args);
             $counter = 0; // Compteur pour les projets
 
             if ($query->have_posts()) {
@@ -41,17 +54,14 @@
                     }
                     $counter++;
                 }
-            } else {
-                echo '<p>Aucun article trouvé.</p>';
             }
-            wp_reset_postdata();
             ?>
         </div>
 
         <div class="colonne-proj colonne-2">
             <?php
             // Réinitialiser le compteur pour la deuxième colonne
-            $counter = 0; // Réinitialise le compteur pour les projets
+            $counter = 0;
 
             // Requête pour récupérer à nouveau les posts de la catégorie "Projets" correspondant à la recherche
             $query->rewind_posts(); // Réinitialiser les résultats de la requête
@@ -66,20 +76,19 @@
                     // Afficher uniquement les projets pairs dans la deuxième colonne
                     if ($counter % 2 == 1) { // Projets pairs
                         ?>
-                        <a data-icone="filter_list" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
+                        <a data-icone="visibility" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
                             <h2><?php echo esc_html($project_title); ?></h2>
                         </a>
                         <?php
                     }
                     $counter++;
                 }
-            } else {
-                echo '<p>Aucun article trouvé.</p>';
             }
-            wp_reset_postdata();
             ?>
         </div>
     </section>
+
+    <?php wp_reset_postdata(); ?>
 </main>
-<?php get_footer();?>
+<?php get_footer(); ?>
 </html>

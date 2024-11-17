@@ -22,11 +22,19 @@
     margin-bottom: 0;
 }
 
+.annule-marge-bottom {
+    margin-bottom: 0;
+}
+
 .annule-padding-hauteur {
     padding-top: 0;
     padding-bottom: 0;
 }
 
+.petite-marge-hauteur {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
 // Flex
 .flex {
     display: flex;
@@ -60,4 +68,7 @@
 .fonte-alt {
     font-family: "Playfair Display", sans-serif;
     font-size: 0.9em;
+}
+.texte-centre {
+    text-align: center;
 }

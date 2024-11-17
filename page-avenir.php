@@ -46,4 +46,6 @@
         <div class="avenir-sections"><a href="<?php echo home_url('/stages'); ?>"><h1>Stages</h1></a></div> -->
     </main>
 <?php get_footer();?>
+<script src="<?php echo get_template_directory_uri() . '/js/cercle-avenir.js'; ?>"></script>
+
 </html>

@@ -1,55 +1,64 @@
-
 .div-searchform {
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 30vh;
-}	
+    // width: 100%;
+    // margin: 0 12vw;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    // height: 30vh;
+}
 
-// Recherche du système de design 1
 .recherche {
     justify-content: space-between;
     align-items: center;
-    width: 30vw;
-    height: 3em;
+    width: 100%;
+    height: 1.5em;
     border-bottom: 2px solid $couleur;
-
-    @media screen and (max-width: 756px) {
-        width: 50vw;
-    }
-
-    @media screen and (max-width: 430px) {
-        width: 60vw;
-    }
+    // font-size: 4rem;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    transition: width 0.3s ease-in-out;
 }
 
 .recherche__input {
+    font-family: "Playfair Display", serif;
     background-color: transparent;
-    color: white;
+    color: $blanc;
     border: none;
     outline: none;
     height: 100%;
-    width: 80%;
+    width: auto;
+    // width: 30vw;
+    transition: width 0.5s ease-in-out;
+    max-width: 50vw;
+
+    // @media screen and (max-width: 756px) {
+    //     width: 50vw;
+    // }
+
+    // @media screen and (max-width: 430px) {
+    //     width: 60vw;
+    // }
+}
+
+.recherche__input:focus {
+    // width: 50vw; // Augmente la largeur de l'input au focus
 }
 
 .recherche__input::placeholder {
-    color: #ffffff71;
-    font-size: 1.5rem;
+    font-family: "Josefin Sans", serif;
+    color: $gris;
 }
 
-.recherche svg {
-    fill: $couleur;
-    width: 20px;
-    height: 20px;
+.recherche span {
+    color: $couleur;
+    font-size: clamp(1.5rem, 3vw, 4rem);
 }
 
 .recherche__button {
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     background-color: transparent;
     border-style: none;
     height: 100%;
-    width: 20%;
-
+    // width: 20%;
 }
-

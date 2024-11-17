@@ -34,7 +34,7 @@
     }
 }
 
-.presentation-info {
+body .feed .presentation-info {
     // Conteneur pour 2 images et textes
     display: flex;
     flex-direction: row-reverse;
@@ -46,13 +46,10 @@
     text-align: right;
     margin: 5rem 0;
 
-    & .img-projet {
-        // Image du projet avec animation
-        animation: apparition-droite 1s ease forwards;
-        animation-timeline: view();
-        background-size: cover;
+    & img {
+        width: 100%;
+        height: auto;
     }
-
     @media screen and (max-width: 756px) {
         flex-direction: column-reverse; // Colonnes sur petits écrans
         align-items: center;
@@ -128,14 +125,20 @@
 .feed .img-projet {
     width: 100%;
     height: 50vh;
-    overflow: hidden;
     background-color: $couleur;
     z-index: -1;
+    // Image du projet avec animation
+    animation: apparition-droite 1s ease forwards;
+    animation-timeline: view();
+    // background-size: cover;
+    overflow: hidden;
 
     img {
-        width: 100%;
+        // width: 100%;
+        // height: 100%;
         height: 100%;
-        object-fit: cover; /* Garde les proportions sans déformation */
+        width: auto;
+        // object-fit: cover; /* Garde les proportions sans déformation */
         object-position: 50% 20%;
     }
 

@@ -29,6 +29,29 @@ document.addEventListener("scroll", function () {
             image.style.transform = `translateY(${-offset}px)`;
         }
     });
+
+    const imgPresentation = document.querySelectorAll(".img-projet img");
+
+    imgPresentation.forEach((image) => {
+        const imageRect = image.getBoundingClientRect(); // Obtenir les coordonnées de l'image
+        const imageTop = imageRect.top; // Distance du haut de l'image au haut de la fenêtre
+        const imageBottom = imageRect.bottom; // Distance du bas de l'image au haut de la fenêtre
+        const windowHeight = window.innerHeight; // Hauteur de la fenêtre
+
+        // Calculer la progression basée sur le fait que l'image traverse l'écran
+        const start = windowHeight; // L'animation commence lorsque le haut de l'image touche le bas de la vue
+        const end = 0; // L'animation se termine lorsque le bas de l'image touche le haut de la vue
+
+        // La progression est calculée à partir du décalage entre le haut et le bas de l'image
+        let progress = (imageTop - start) / (end - start);
+        progress = Math.min(Math.max(progress, 0), 1); // S'assurer que la progression reste entre 0 et 1
+
+        // Appliquer l'effet de transformation
+        const scale = 1.5 - 0.5 * progress; // Passe de 1.5 à 1
+        const rotate = 3 - 3 * progress; // Passe de 3° à 0°
+
+        image.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
