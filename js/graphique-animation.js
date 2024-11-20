@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let elementNombre = graphique.querySelector(".nombre-pourcentage");
     let format = graphique.getAttribute("data-format");
     let pourcentageActuel = 0;
-    let dureeAnimation = 3000;
-    let offsetCible = 450 - (450 * pourcentageCible) / 100;
+    let dureeAnimation = 6000;
+    let offsetCible = 810 - (810 * pourcentageCible) / 100;
 
     // Applique la transition sur le dashoffset du cercle
     cercle.style.transition = `stroke-dashoffset ${dureeAnimation}ms linear`;

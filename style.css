@@ -1039,11 +1039,6 @@ main #hero {
   gap: 1rem;
 }
 
-.auteur_info:hover {
-  color: var(--couleur-pale);
-  cursor: pointer;
-}
-
 .description__projet {
   width: 50vw;
   flex-direction: column;
@@ -1798,7 +1793,6 @@ circle {
   stroke-width: 40px;
   stroke-dasharray: 810;
   stroke-dashoffset: 810;
-  transition: stroke-dashoffset 2s linear;
 }
 
 #hero {

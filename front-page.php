@@ -149,50 +149,62 @@ get_header(); // Inclut le fichier d'en-tête du thème
         <div class="axes-cours">
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Jeux video</h3>
-                <div  class="boite_cours jeu-video"> </div>
+                <div class="boite_cours jeu-video"> </div>
                 <div>
-                    <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>"> <span class="material-symbols-outlined">image</span></a>
-                    <a data-icone="east" class="btn_cours cat_7"href="<?php echo home_url('/category/cours'); ?>"> <span class="material-symbols-outlined">list</span></a>
+                    <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>">
+                        <span class="material-symbols-outlined">image</span></a>
+                    <a data-icone="east" class="btn_cours cat_7" href="<?php echo home_url('/category/cours'); ?>">
+                        <span class="material-symbols-outlined">list</span></a>
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">3D</h3>
                 <div class="boite_cours cat_4 troisd"></div>
                 <div>
-                    <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>"> <span class="material-symbols-outlined">image</span></a>
-                    <a data-icone="east" class="btn_cours cat_7"href="<?php echo home_url('/category/cours'); ?>"> <span class="material-symbols-outlined">list</span></a>
+                    <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>">
+                        <span class="material-symbols-outlined">image</span></a>
+                    <a data-icone="east" class="btn_cours cat_7" href="<?php echo home_url('/category/cours'); ?>">
+                        <span class="material-symbols-outlined">list</span></a>
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Web</h3>
                 <div class="boite_cours web"></div>
                 <div>
-                    <a data-icone="east" class="btn_proj cat_9" href="<?php echo home_url('/category/projets'); ?>"> <span class="material-symbols-outlined">image</span></a>
-                    <a data-icone="east" class="btn_cours cat_9"href="<?php echo home_url('/category/cours'); ?>"> <span class="material-symbols-outlined">list</span></a>
+                    <a data-icone="east" class="btn_proj cat_9" href="<?php echo home_url('/category/projets'); ?>">
+                        <span class="material-symbols-outlined">image</span></a>
+                    <a data-icone="east" class="btn_cours cat_9" href="<?php echo home_url('/category/cours'); ?>">
+                        <span class="material-symbols-outlined">list</span></a>
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Imagerie</h3>
                 <div class="boite_cours imagerie"></div>
                 <div>
-                    <a data-icone="east" class="btn_proj cat_6" href="<?php echo home_url('/category/projets'); ?>"> <span class="material-symbols-outlined">image</span></a>
-                    <a data-icone="east" class="btn_cours cat_6"href="<?php echo home_url('/category/cours'); ?>"> <span class="material-symbols-outlined">list</span></a>
+                    <a data-icone="east" class="btn_proj cat_6" href="<?php echo home_url('/category/projets'); ?>">
+                        <span class="material-symbols-outlined">image</span></a>
+                    <a data-icone="east" class="btn_cours cat_6" href="<?php echo home_url('/category/cours'); ?>">
+                        <span class="material-symbols-outlined">list</span></a>
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Vidéo</h3>
                 <div class="boite_cours video"></div>
                 <div>
-                    <a data-icone="east" class="btn_proj cat_8" href="<?php echo home_url('/category/projets'); ?>"> <span class="material-symbols-outlined">image</span></a>
-                    <a data-icone="east" class="btn_cours cat_8"href="<?php echo home_url('/category/cours'); ?>"> <span class="material-symbols-outlined">list</span></a>
+                    <a data-icone="east" class="btn_proj cat_8" href="<?php echo home_url('/category/projets'); ?>">
+                        <span class="material-symbols-outlined">image</span></a>
+                    <a data-icone="east" class="btn_cours cat_8" href="<?php echo home_url('/category/cours'); ?>">
+                        <span class="material-symbols-outlined">list</span></a>
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Autre</h3>
                 <div class="boite_cours autre"></div>
                 <div>
-                    <a data-icone="east" class="btn_proj cat_5" href="<?php echo home_url('/category/projets'); ?>"> <span class="material-symbols-outlined">image</span></a>
-                    <a data-icone="east" class="btn_cours cat_5"href="<?php echo home_url('/category/cours'); ?>"> <span class="material-symbols-outlined">list</span></a>
+                    <a data-icone="east" class="btn_proj cat_5" href="<?php echo home_url('/category/projets'); ?>">
+                        <span class="material-symbols-outlined">image</span></a>
+                    <a data-icone="east" class="btn_cours cat_5" href="<?php echo home_url('/category/cours'); ?>">
+                        <span class="material-symbols-outlined">list</span></a>
                 </div>
             </div>
 
@@ -231,10 +243,11 @@ get_header(); // Inclut le fichier d'en-tête du thème
 
     <!-- Section dédiée aux vidéos de projet -->
     <section class="proj-video">
-            <video autoplay loop muted playsinline>
-                <source src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_projets_accueil_vid1.webm" type="video/webm">
-                Votre navigateur ne supporte pas les vidéos HTML5.
-            </video>
+        <video autoplay loop muted playsinline>
+            <source src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_projets_accueil_vid1.webm"
+                type="video/webm">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
     </section>
 
 
@@ -243,14 +256,14 @@ get_header(); // Inclut le fichier d'en-tête du thème
         <?php $project_count = 1; // Compteur pour l'ID dynamique ?>
         <?php while (have_posts()):
             the_post(); ?>
-            <section class="feed-projet degrade-projets" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
+            <section class="feed-projet degrade-projets"
+                style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
                 <div class="projet-paint" id="projet<?php echo $project_count; ?>">
                     <div class="info-projet">
                         <div class="titre-projet">
                             <h1><?php the_title(); ?></h1>
                         </div>
-                        <a href="<?php the_permalink(); ?>" class="img-parralax cliquable"
-                            data-icone="visibility"
+                        <a href="<?php the_permalink(); ?>" class="img-parralax cliquable" data-icone="visibility"
                             style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url()); ?>');">
                         </a>
 
