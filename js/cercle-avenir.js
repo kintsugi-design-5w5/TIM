@@ -3,25 +3,27 @@ let lesConteneurMask = document.querySelectorAll(".conteneur-mask"); // Récupè
 
 let lesTextes = document.querySelectorAll(".conteneur-mask > h3"); // Récupère tous les éléments h2
 
-let lesOffsetLeft = [];
-let lesOffsetTop = [];
+let lesOffsetLeft = []; // Tableau pour stocker les offsetLeft des éléments h2
+let lesOffsetTop = []; // Tableau pour stocker les offsetTop des éléments h2
 
+// Remplissage des tableaux lesOffsetLeft et lesOffsetTop
 for(let i = 0; i < lesTextes.length; i++){
     lesOffsetLeft.push(lesTextes[i].offsetLeft);
     lesOffsetTop.push(lesTextes[i].offsetTop);
 }
 
+// Ecouteur d'événement pour le redimensionnement de la fenêtre
 window.addEventListener("resize", function(){
-    lesOffsetLeft = [];
-    lesOffsetTop = [];
+    lesOffsetLeft = [];  // Réinitialise le tableau lesOffsetLeft
+    lesOffsetTop = []; // Réinitialise le tableau lesOffsetTop
+
+    // Remplissage des tableaux lesOffsetLeft et lesOffsetTop
     for(let i = 0; i < lesTextes.length; i++){
         lesOffsetLeft.push(lesTextes[i].offsetLeft);
         lesOffsetTop.push(lesTextes[i].offsetTop);
     }
-    console.log(lesOffsetLeft, lesOffsetTop);
 });
-console.log(lesOffsetLeft[0]);
-console.log(lesOffsetTop[0]);
+
 /**
  * Pour chaque conteneur avec la classe "conteneur-mask", ajoute un écouteur d'événement pour le survol de la souris
  */

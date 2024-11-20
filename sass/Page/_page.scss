@@ -178,3 +178,25 @@
         padding-bottom: 4.5rem;
     }
 }
+
+.section-stages{
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.section-stages > div{
+    flex: 3;
+}
+.section-stages > figure{
+    flex: 2;
+}
+.img-stages figure{
+    width: 40vw;
+    height: auto;
+    margin: 1em;
+}
+
+.img-stages img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

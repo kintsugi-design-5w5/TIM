@@ -83,5 +83,7 @@
 <script src="<?php echo get_template_directory_uri() . '/js/cercle-avenir.js'; ?>"></script>
 <!-- Script pour animer les graphiques de la charte -->
 <script src="<?php echo get_template_directory_uri() . '/js/graphique-animation.js'; ?>"></script>
+<!-- Script pour la gestion du chargement de page -->
+<script src="<?php echo get_template_directory_uri() . '/js/chargement.js'; ?>"></script>
 
 <?php wp_footer(); ?> <!-- Hook WordPress pour injecter les scripts supplémentaires nécessaires -->

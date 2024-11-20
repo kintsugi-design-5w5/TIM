@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
     background-color: $noir;
     color: $blanc;
+    overflow-y: hidden;
 
     @media screen and (max-width: 756px) {
         overflow-x: hidden;
