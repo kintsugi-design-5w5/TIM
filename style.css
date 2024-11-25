@@ -1732,14 +1732,16 @@ main #hero {
   height: 100%;
 }
 
+/*Les textes sont tous alignés au centre pour toute la section des chartes graphiques*/
 .presentation-charte {
   text-align: center;
 }
 
+/*Les 4 graphiques sont placés en ligne ou en colonne selon desktop ou mobile*/
 .charte-design {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 4rem;
 }
 @media screen and (max-width: 756px) {
@@ -1750,12 +1752,12 @@ main #hero {
 
 .graphique {
   position: relative;
-  animation: apparition-charte 1s ease forwards;
+  animation: apparition-charte 1s ease forwards; /*Animtion des graphiques au scroll*/
   animation-timeline: view();
 }
 
 .graphique .info-graphique {
-  text-align: center;
+  text-align: center; /*Centrer le nombre du graphique*/
   margin-top: 2rem;
 }
 
