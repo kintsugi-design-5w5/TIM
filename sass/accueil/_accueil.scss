@@ -28,6 +28,7 @@
     // Informations sur le TIM
     display: flex;
     gap: 2rem;
+    max-width: 100%;
 
     @media screen and (max-width: 756px) {
         flex-direction: column; // Colonnes sur petits écrans
@@ -47,7 +48,13 @@ body .feed .presentation-info {
     margin: 5rem 0;
 
     & img {
-        width: 100%;
+        // width: 100%;
+        // height: auto;
+        @media screen and (max-width: 756px) {
+            width: auto;
+            height: 120%;
+        }
+        width: 120%;
         height: auto;
     }
     @media screen and (max-width: 756px) {
@@ -58,12 +65,26 @@ body .feed .presentation-info {
     }
 }
 
+.presentation-info:first-of-type .img-projet {
+    animation: apparition-droite 1s ease forwards; // Animation de l'image
+    animation-timeline: view();
+}
+
 .presentation-charte {
     height: auto;
 }
 
 .presentation-info + .presentation-info {
     // Deuxième image et texte
+    & img {
+        @media screen and (max-width: 756px) {
+            width: 120%;
+            height: auto;
+        }
+        width: auto;
+        height: 120%;
+        margin-top: 20%;
+    }
     & .infos h1 {
         text-align: left; // Alignement à gauche
         @media screen and (max-width: 756px) {
@@ -125,21 +146,24 @@ body .feed .presentation-info {
 .feed .img-projet {
     width: 100%;
     height: 50vh;
-    background-color: $couleur;
     z-index: -1;
     // Image du projet avec animation
-    animation: apparition-droite 1s ease forwards;
+    animation: apparition-gauche 1s ease forwards;
     animation-timeline: view();
     // background-size: cover;
     overflow: hidden;
 
     img {
+        display: block;
         // width: 100%;
         // height: 100%;
         height: 100%;
         width: auto;
+        // animation: effet-images 1s ease forwards;
+        // animation-timeline: view();
+        // transform: scale(5);
         // object-fit: cover; /* Garde les proportions sans déformation */
-        object-position: 50% 20%;
+        // object-position: 50% 20%;
     }
 
     @media screen and (max-width: 756px) {
@@ -213,6 +237,7 @@ body .feed .presentation-info {
         align-items: center;
         justify-content: center;
         color: $blanc;
+        filter: blur(0.8) contrast(0.8);
 
         &:hover::before {
             // Effet de couleur sur hover
@@ -234,8 +259,12 @@ body .feed .presentation-info {
             mix-blend-mode: color; // Mélange de couleur
             z-index: 2;
         }
+        &:hover div:last-of-type a {
+            background-color: hsla(0, 0%, 30%, 0.3);
+        }
         & h3 {
             z-index: 3; // Ordre d'affichage
+            font-size: 3.5rem; // Taille de police
         }
 
         & div:last-of-type {
@@ -244,19 +273,29 @@ body .feed .presentation-info {
             right: 0;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
             z-index: 3;
+            width: 100%;
             & a {
-                width: 4vw;
-                height: 4vw;
+                // width: 4vw;
+                // height: 4vw;
                 margin: 1vw;
-                &:last-of-type {
-                    margin-left: 0;
-                }
-                background-color: $couleur;
+                flex-grow: 1;
+                line-height: 4rem;
+                // background-color: hsla(0, 0%, 30%, 0.3);
+                background-color: rgb(0, 123, 255, 0.3);
+                transition: background-color 0.5s;
+                backdrop-filter: blur(10px);
+                // border-radius: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                &:hover {
+                    background-color: hsla(0, 0%, 50%, 0.5);
+                }
+                &:last-of-type {
+                    margin-left: 0;
+                }
 
                 @media screen and (max-width: 756px) {
                     width: 9vw;
@@ -424,7 +463,7 @@ body .feed .presentation-info {
         opacity: 0;
         transform: translateX(-100%);
     }
-    30% {
+    50% {
         opacity: 1;
         transform: translateX(0);
     }
@@ -435,9 +474,19 @@ body .feed .presentation-info {
         opacity: 0;
         transform: translateX(100%);
     }
-    30% {
+    50% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@keyframes effet-images {
+    0% {
+        transform: scale(5) rotate(5deg);
+        // width: 150%;
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+        // width: 120%;
     }
 }
 
@@ -464,7 +513,7 @@ body .feed .presentation-info {
     0% {
         transform: scale(0.5);
     }
-    40% {
+    50% {
         transform: scale(1);
     }
 }

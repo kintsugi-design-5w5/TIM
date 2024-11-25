@@ -120,7 +120,11 @@ html body #grain {
   right: 0;
   bottom: 0;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 3;
+}
+
+html body .ignore-grain {
+  z-index: 20;
 }
 
 /*********** ICONES **************/
@@ -145,6 +149,7 @@ footer {
 }
 
 #curseur-personnalise {
+  backdrop-filter: blur(5px);
   position: fixed;
   width: 20px;
   height: 20px;
@@ -180,8 +185,16 @@ footer {
   height: 60px;
 }
 
-#curseur-personnalise.noir {
-  background-color: var(--noir);
+body #curseur-personnalise.noir {
+  background-color: rgb(28, 28, 28); /* Couleur noire */
+}
+
+body #curseur-personnalise.noir.survol {
+  background-color: rgba(28, 28, 28, 0.5); /* Couleur noire */
+}
+
+#curseur-personnalise.survol {
+  background-color: rgba(0, 123, 255, 0.5); /* Couleur noire */
 }
 
 /*********** BOUTONS **************/
@@ -338,6 +351,7 @@ footer {
 .presentation-tim {
   display: flex;
   gap: 2rem;
+  max-width: 100%;
 }
 @media screen and (max-width: 756px) {
   .presentation-tim {
@@ -357,8 +371,14 @@ body .feed .presentation-info {
   margin: 5rem 0;
 }
 body .feed .presentation-info img {
-  width: 100%;
+  width: 120%;
   height: auto;
+}
+@media screen and (max-width: 756px) {
+  body .feed .presentation-info img {
+    width: auto;
+    height: 120%;
+  }
 }
 @media screen and (max-width: 756px) {
   body .feed .presentation-info {
@@ -369,10 +389,26 @@ body .feed .presentation-info img {
   }
 }
 
+.presentation-info:first-of-type .img-projet {
+  animation: apparition-droite 1s ease forwards;
+  animation-timeline: view();
+}
+
 .presentation-charte {
   height: auto;
 }
 
+.presentation-info + .presentation-info img {
+  width: auto;
+  height: 120%;
+  margin-top: 20%;
+}
+@media screen and (max-width: 756px) {
+  .presentation-info + .presentation-info img {
+    width: 120%;
+    height: auto;
+  }
+}
 .presentation-info + .presentation-info .infos h1 {
   text-align: left;
 }
@@ -436,16 +472,15 @@ body .feed .presentation-info img {
 .feed .img-projet {
   width: 100%;
   height: 50vh;
-  background-color: var(--couleur);
   z-index: -1;
-  animation: apparition-droite 1s ease forwards;
+  animation: apparition-gauche 1s ease forwards;
   animation-timeline: view();
   overflow: hidden;
 }
 .feed .img-projet img {
+  display: block;
   height: 100%;
   width: auto;
-  object-position: 50% 20%;
 }
 @media screen and (max-width: 756px) {
   .feed .img-projet {
@@ -510,6 +545,7 @@ body .feed .presentation-info img {
   align-items: center;
   justify-content: center;
   color: var(--blanc);
+  filter: blur(0.8) contrast(0.8);
 }
 .axes-cours .filtre-couleur:hover::before {
   opacity: 0;
@@ -530,8 +566,12 @@ body .feed .presentation-info img {
   mix-blend-mode: color;
   z-index: 2;
 }
+.axes-cours .filtre-couleur:hover div:last-of-type a {
+  background-color: hsla(0, 0%, 30%, 0.3);
+}
 .axes-cours .filtre-couleur h3 {
   z-index: 3;
+  font-size: 3.5rem;
 }
 .axes-cours .filtre-couleur div:last-of-type {
   position: absolute;
@@ -539,17 +579,23 @@ body .feed .presentation-info img {
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   z-index: 3;
+  width: 100%;
 }
 .axes-cours .filtre-couleur div:last-of-type a {
-  width: 4vw;
-  height: 4vw;
   margin: 1vw;
-  background-color: var(--couleur);
+  flex-grow: 1;
+  line-height: 4rem;
+  background-color: rgba(0, 123, 255, 0.3);
+  transition: background-color 0.5s;
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.axes-cours .filtre-couleur div:last-of-type a:hover {
+  background-color: hsla(0, 0%, 50%, 0.5);
 }
 .axes-cours .filtre-couleur div:last-of-type a:last-of-type {
   margin-left: 0;
@@ -717,7 +763,7 @@ body .feed .presentation-info img {
     opacity: 0;
     transform: translateX(-100%);
   }
-  30% {
+  50% {
     opacity: 1;
     transform: translateX(0);
   }
@@ -727,9 +773,17 @@ body .feed .presentation-info img {
     opacity: 0;
     transform: translateX(100%);
   }
-  30% {
+  50% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes effet-images {
+  0% {
+    transform: scale(5) rotate(5deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
   }
 }
 @keyframes ligne-burger {
@@ -754,18 +808,13 @@ body .feed .presentation-info img {
   0% {
     transform: scale(0.5);
   }
-  40% {
+  50% {
     transform: scale(1);
   }
 }
 /*Style page cours*/
 .body-cours {
-  padding: 2rem 2rem 2rem 7rem;
-}
-@media screen and (max-width: 756px) {
-  .body-cours {
-    padding: 2rem 2rem 2rem 4rem;
-  }
+  padding: 2rem;
 }
 .body-cours ul {
   position: relative;
@@ -774,6 +823,16 @@ body .feed .presentation-info img {
 /*Section des cours*/
 .conteneur-timeline {
   position: relative;
+}
+
+#conteneur-cours {
+  padding-left: 5rem;
+}
+@media screen and (max-width: 756px) {
+  #conteneur-cours {
+    padding-left: 2rem;
+    margin-bottom: 6rem;
+  }
 }
 
 .timeline {
@@ -1039,11 +1098,6 @@ main #hero {
   gap: 1rem;
 }
 
-.auteur_info:hover {
-  color: var(--couleur-pale);
-  cursor: pointer;
-}
-
 .description__projet {
   width: 50vw;
   flex-direction: column;
@@ -1085,7 +1139,7 @@ main #hero {
 
 .logiciels {
   width: auto;
-  height: 6vh;
+  height: 4vh;
   fill: var(--blanc);
 }
 
@@ -1131,69 +1185,6 @@ main #hero {
 /* Si la dernière rangée a un seul élément, qu'il prenne toute la largeur */
 .images-projets .projet-image:last-child:nth-child(3n+2) {
   grid-column: span 2; /* Prendre toute la largeur */
-}
-
-/*Fenêtre popup*/
-.popup {
-  position: relative;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup .btn_x {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.contenu-popup {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-.contenu-popup h1 {
-  font-size: 10rem;
-  text-align: center;
-}
-@media screen and (max-width: 756px) {
-  .contenu-popup h1 {
-    font-size: 5rem;
-  }
-}
-
-.reseaux-sociaux__popup {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-}
-
-.reseaux-sociaux__popup li {
-  list-style-type: none;
-}
-
-.reseaux-sociaux__popup li a img {
-  width: 10vw;
-  height: auto;
-}
-
-.popup.disparition {
-  display: none;
-}
-
-.popup.apparition {
-  display: flex;
 }
 
 /*********** FOOTER **************/
@@ -1926,6 +1917,7 @@ circle {
   left: 0;
   width: 100%;
   transition: transform 0.3s ease;
+  z-index: 100;
 }
 .barre-navigation img {
   width: 6rem;

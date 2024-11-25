@@ -1,8 +1,9 @@
 /*Style page cours*/
 .body-cours {
-    padding: 2rem 2rem 2rem 7rem;
+    // padding: 2rem 2rem 2rem 7rem;
+    padding: 2rem;
     @media screen and (max-width: 756px) {
-        padding: 2rem 2rem 2rem 4rem;
+        // padding: 2rem 2rem 2rem 4rem;
     }
     & ul {
         position: relative;
@@ -13,11 +14,14 @@
 
 .conteneur-timeline {
     position: relative;
-    // display: flex;
-    // justify-content: center;
-    // width: 20px;
 }
-
+#conteneur-cours {
+    padding-left: 5rem;
+    @media screen and (max-width: 756px) {
+        padding-left: 2rem;
+        margin-bottom: 6rem;
+    }
+}
 .timeline {
     // height: 100%;
     position: absolute;
