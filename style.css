@@ -1743,6 +1743,13 @@ main #hero {
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
+  /*Sur tablette, on met un flex-wrap pour une meileur transition vers le mobile*/
+  /*Sur mobile, présenter en colonne*/
+}
+@media screen and (min-width: 756px) and (max-width: 900px) {
+  .charte-design {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 756px) {
   .charte-design {
@@ -1776,7 +1783,8 @@ main #hero {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px var(--couleur-fonce), -0.5px -0.5px 0px var(--couleur-fonce), 0.5px 0.5px 0px var(--couleur-pale), 0px 12px 10px -10px var(--couleur-fonce);
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px var(--couleur-fonce), -0.5px -0.5px 0px var(--couleur-fonce), 0.5px 0.5px 0px var(--couleur-pale), 0px 12px 10px -10px var(--couleur-fonce); /*Mettre des ombres intérieures et extérieures 
+pour révéler les contours des graphiques*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1787,6 +1795,7 @@ main #hero {
   color: var(--couleur);
 }
 
+/*Les styles du svg pour l'animation avec Javascript*/
 .svg-charte-progression {
   position: absolute;
   top: 0;
@@ -1798,10 +1807,10 @@ main #hero {
 
 circle {
   fill: none;
-  stroke: url(#CouleurGradient);
-  stroke-width: 40px;
-  stroke-dasharray: 810;
-  stroke-dashoffset: 810;
+  stroke: url(#CouleurGradient); /*Couleur de dégradé du svg*/
+  stroke-width: 40px; /*L'épaisseur*/
+  stroke-dasharray: 810; /*Le nombre de divisions pour avoir le cercle complet*/
+  stroke-dashoffset: 810; /*Au début, le svg n'est pas visible*/
 }
 
 #hero {
