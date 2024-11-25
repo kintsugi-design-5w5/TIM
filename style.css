@@ -903,14 +903,22 @@ ul {
 }
 
 .description-cours p {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   margin-top: 0.5rem;
-  font-size: clamp(0.8rem, 2.5vw, 1.3rem);
 }
 .description-cours p:last-of-type {
   margin-top: 2rem;
   font-size: clamp(0.9rem, 2.8vw, 1.5rem);
+}
+
+.cours .description-cours .wp-block-column p {
+  font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+/*Aligner la pondération avec la description des cours*/
+.cours .description-cours .wp-block-column:first-of-type p {
+  margin-left: 2rem;
 }
 
 .projets-apercus {
