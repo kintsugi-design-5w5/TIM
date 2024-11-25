@@ -793,7 +793,7 @@ body .feed .presentation-info img {
 /*Barre de progression pour la timeline des cours*/
 .barre-progression {
   width: 100%;
-  height: 0%;
+  height: 0%; /*Changement de la hauteur au scroll en JavaScript*/
   background-color: var(--couleur);
   transition: height 0.25s ease;
   max-height: 100%;
@@ -801,11 +801,11 @@ body .feed .presentation-info img {
 
 ul {
   list-style: none;
-  padding-left: 0;
+  padding-left: 0; /*Enlever la marge par défaut à gauche*/
 }
 
 .cours {
-  display: none;
+  display: none; /*les cours par défaut ne s'affichent pas*/
 }
 .cours > * {
   margin-top: 5rem;
@@ -824,7 +824,7 @@ ul {
 }
 
 .cercle {
-  text-align: start;
+  text-align: start; /*Mettre le texte aligné à gauche*/
   line-height: 2rem;
   margin-left: 2rem;
 }
@@ -859,6 +859,7 @@ ul {
 }
 
 .cercle.grand::before {
+  /*Placer un cercle avant les h1 des sessions*/
   content: "";
   display: inline-block;
   margin-right: 10px;
@@ -870,6 +871,7 @@ ul {
 }
 
 .cercle.petit::before {
+  /*Placer un cercle avant les h5 des cours*/
   content: "";
   display: inline-block;
   margin-right: 12.5px;
@@ -898,6 +900,7 @@ ul {
   font-size: clamp(0.5rem, 2vw, 1.3rem);
 }
 
+/*Lors de l'ajout de la classe visible, afficher la description*/
 .description-cours.visible {
   display: block;
 }
@@ -910,10 +913,6 @@ ul {
 .description-cours p:last-of-type {
   margin-top: 2rem;
   font-size: clamp(0.9rem, 2.8vw, 1.5rem);
-}
-
-.cours .description-cours .wp-block-column p {
-  font-size: clamp(1rem, 3vw, 1.8rem);
 }
 
 /*Aligner la pondération avec la description des cours*/

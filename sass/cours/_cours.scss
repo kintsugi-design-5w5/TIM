@@ -13,21 +13,15 @@
 
 .conteneur-timeline {
   position: relative;
-  // display: flex;
-  // justify-content: center;
-  // width: 20px;
 }
 
 .timeline {
-  // height: 100%;
   position: absolute;
-  // top: 1.5rem;
   width: 7px;
   height: 98.5%;
   min-height: 530px;
   margin: 0 auto;
   background-color: $gris-fonce;
-  // border: 2px solid $couleur;
   @media screen and (max-width: 756px) {
     min-height: 450px;
   }
@@ -36,7 +30,7 @@
 /*Barre de progression pour la timeline des cours*/
 .barre-progression {
   width: 100%;
-  height: 0%; //Changement de la hauteur au scroll en JavaScript
+  height: 0%; /*Changement de la hauteur au scroll en JavaScript*/
   background-color: $couleur;
   transition: height 0.25s ease;
   max-height: 100%;
@@ -44,11 +38,11 @@
 
 ul {
   list-style: none;
-  padding-left: 0; //Enlever la marge par défaut à gauche
+  padding-left: 0; /*Enlever la marge par défaut à gauche*/
 }
 
 .cours {
-  display: none; //les cours par défaut ne s'affichent pas
+  display: none; /*les cours par défaut ne s'affichent pas*/
   & > * {
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -66,10 +60,7 @@ ul {
 }
 
 .cercle {
-  text-align: start; //Mettre le texte aligné à gauche
-  // line-height: 3rem; //Espacement entre les éléments
-  // width: 1rem;
-  // padding: 0 auto;
+  text-align: start; /*Mettre le texte aligné à gauche*/
   line-height: 2rem;
   margin-left: 2rem;
 
@@ -102,33 +93,27 @@ ul {
 }
 
 .cercle.grand::before {
-  //Placer un cercle avant les h1 des sessions
+  /*Placer un cercle avant les h1 des sessions*/
   content: "";
   display: inline-block;
-  // vertical-align: middle;
   margin-right: 10px;
   width: 25px;
   height: 25px;
   background-color: $gris-fonce;
-  // border: 1px solid $couleur;
   border-radius: 50%;
-  // color: white;
   text-align: center;
 }
 
 .cercle.petit::before {
-  //Placer un cercle avant les h5 des cours
+  /*Placer un cercle avant les h5 des cours*/
   content: "";
   display: inline-block;
-  // vertical-align: middle;
   margin-right: 12.5px;
   margin-left: 2.5px;
   width: 20px;
   height: 20px;
   background-color: $gris-fonce;
-  // border: 1px solid $couleur;
   border-radius: 50%;
-  // color: white;
   text-align: center;
 }
 
@@ -149,7 +134,7 @@ ul {
     }
   }
 }
-
+/*Lors de l'ajout de la classe visible, afficher la description*/
 .description-cours.visible {
   display: block;
 }
@@ -163,10 +148,6 @@ ul {
     margin-top: 2rem;
     font-size: clamp(0.9rem, 2.8vw, 1.5rem);
   }
-}
-
-.cours .description-cours .wp-block-column p {
-  font-size: clamp(1rem, 3vw, 1.8rem);
 }
 
 /*Aligner la pondération avec la description des cours*/
