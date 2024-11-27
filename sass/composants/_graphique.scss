@@ -8,26 +8,24 @@
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*Pour l'adaptabilité de l'affichage des graphiques*/
 }
 
 .graphique {
   position: relative;
   animation: apparition-charte 1s ease forwards; /*Animtion des graphiques au scroll*/
   animation-timeline: view();
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .graphique .info-graphique {
   margin-top: 2rem;
-  width: 300px;
+  width: 300px; /*Ajuster la largeur pour que le texte se mette sur deux lignes*/
 }
 
 .cercle-arriere {
   box-shadow: 6px 6px 10px -1px $couleur-fonce,
-    -6px -6px 10px -1px $couleur-fonce;
+    -6px -6px 10px -1px $couleur-fonce; /*Mettre des ombres intérieures et extérieures 
+    pour révéler les contours du graphique*/
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -44,7 +42,7 @@
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
     inset -4px -4px 6px -1px $couleur-fonce, -0.5px -0.5px 0px $couleur-fonce,
     0.5px 0.5px 0px $couleur-pale, 0px 12px 10px -10px $couleur-fonce; /*Mettre des ombres intérieures et extérieures 
-    pour révéler les contours des graphiques*/
+    pour révéler les contours du graphique*/
   display: flex;
   justify-content: center;
   align-items: center;
