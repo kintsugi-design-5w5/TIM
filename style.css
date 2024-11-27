@@ -1981,17 +1981,19 @@ circle {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--noir);
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   z-index: 1000;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
-.chargement .pourcentage > .spinner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.chargement .spinner {
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   background: radial-gradient(farthest-side, var(--couleur) 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, var(--couleur));
   -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
@@ -1999,25 +2001,36 @@ circle {
   animation: spin 1s linear infinite;
 }
 
-.pourcentage {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 125px;
-  height: 125px;
-  color: var(--couleur);
-  font-size: 2rem;
-  margin-top: 1rem;
-  text-align: center;
+.invisible {
+  animation: dispparition 2s forwards;
 }
 
-.invisible {
-  display: none;
+.visible {
+  animation: apparition 2s forwards;
 }
 
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes apparition {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes dispparition {
+  from {
+    filter: blur(0);
+    opacity: 1;
+  }
+  to {
+    filter: blur(10px);
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */

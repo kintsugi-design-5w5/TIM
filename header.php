@@ -24,8 +24,8 @@
         <header>
             <nav>
                 <div class="chargement">
-                    <div>Chargement</div>
-                    <div class="pourcentage">100%<div class="spinner"></div></div>
+                    <h6>Chargement...</h6>
+                    <div class="spinner"></div>
                 </div>
                 <div class="barre-navigation">
                     <a class="logo" href="<?php echo home_url(); ?>"><img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_Logo.webp" alt="logo du TIM" /></a>
@@ -36,7 +36,7 @@
                             <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url(); ?>">Accueil</a></li>
                             <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
                             <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
-                            <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
+                            <li><a class="mon-bouton" data-icone="east" onclick="transitionToPage('<?php echo home_url('/avenir'); ?>')">Avenir</a></li>
                         </ul>
                     </div>
 
