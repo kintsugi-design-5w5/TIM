@@ -29,42 +29,7 @@
         '6' => array()
       );
 
-      // Requête WordPress pour récupérer les articles avec la catégorie 'cours'
-      $args = array(
-        'category_name' => 'cours', // Nom de la catégorie (slug exact)
-        'posts_per_page' => -1 // Récupérer tous les articles de la catégorie 'cours'
-      );
-
-      $query = new WP_Query($args);
-
-      // Si des articles sont trouvés
-      if ($query->have_posts()) {
-        while ($query->have_posts()) {
-          $query->the_post();
-
-          // Obtenir le titre de l'article
-          $title = get_the_title();
-          $description = get_the_content();
-
-          // Retirer les 7 premiers et les 6 derniers caractères
-          $clean_title = substr($title, 7, -6);
-
-          // Vérifier si le 4e caractère du titre est un chiffre
-          if (isset($title[4]) && is_numeric($title[4])) {
-            $session_num = $title[4]; // Le 4e caractère
-            if (isset($sessions[$session_num])) {
-              $sessions[$session_num][] = array(
-                'title' => $clean_title, //Ajout du titre nettoyé
-                'description' => $description, //Ajout de sa description
-                'id' => get_the_ID() // Ajout de l'ID pour chaque cours
-              );
-            }
-          }
-        }
-        wp_reset_postdata(); // Réinitialiser les données de post
-      } else {
-        echo "Aucun cours trouvé.";
-      }
+      
       ?>
     </div>
 

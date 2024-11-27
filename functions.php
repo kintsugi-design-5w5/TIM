@@ -1,4 +1,5 @@
 <?php
+//-------------- Ajout des fonctions pour WP --------------//
 function option_theme()
 {
   add_theme_support('menus');
@@ -7,6 +8,8 @@ function option_theme()
 
 add_action('after_setup_theme', 'option_theme');
 
+
+//-------------- Ajout des styles --------------//
 function enfile_css()
 {
   wp_enqueue_style(
@@ -19,6 +22,8 @@ function enfile_css()
 
 add_action('wp_enqueue_scripts', 'enfile_css');
 
+
+//-------------- Requete pour les projets populaires --------------//
 function modifie_requete_principal($query)
 {
   if ($query->is_home() && $query->is_main_query() && !is_admin()) {
@@ -29,7 +34,8 @@ function modifie_requete_principal($query)
 }
 add_action('pre_get_posts', 'modifie_requete_principal');
 
-//Permet l'import de SVG
+
+//-------------- Ajout du support svg --------------//
 function cc_mime_types($mimes)
 {
   $mimes['svg'] = 'image/svg+xml';
@@ -37,8 +43,7 @@ function cc_mime_types($mimes)
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
-
-//Permet d'ajouter des classes au li du nav
+//-------------------- Ajout de classes aux li du menu -------------------//
 function add_menu_list_item_class($classes, $item, $args)
 {
   if (property_exists($args, 'list_item_class')) {
@@ -48,7 +53,7 @@ function add_menu_list_item_class($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
 
-// Fonction pour créer le shortcode [hero]
+//-------------------- Ajout du shortcode hero -------------------//
 function custom_hero_shortcode($atts)
 {
   // Définir les attributs par défaut

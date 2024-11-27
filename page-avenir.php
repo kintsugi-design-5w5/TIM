@@ -1,8 +1,9 @@
 <?php
-    get_header();
+get_header(); // Inclut l'en-tête du site
 ?>
- <main>
-     <?php echo do_shortcode('
+<main>
+    <!-- Exécution du shortcode 'hero' avec des paramètres personnalisés -->
+    <?php echo do_shortcode('
        [hero title="Avenir"
        video_url="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Hero4.mp4"
        images="
@@ -14,38 +15,43 @@
        https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img6-scaled.webp, 
        https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Photos_Site_Web_TIM_img7-scaled.webp
        "]
-       '); ?>
-         <div class="feed-avenir">
-            <div class="lesmasks-avenir">
+    '); ?>
 
-                <a class="conteneur-mask" href="<?php echo home_url('/emplois'); ?>">
-                    <h3 class="ombre-texte">Emplois</h3>
-                    <div class="mask-avenir">
-                        <div class="images-avenir" id="img-avenir-droite"></div>
-                    </div>
-                </a>
+    <!-- Section Feed Avenir -->
+    <div class="feed-avenir">
+        <div class="lesmasks-avenir">
+        
+            <!-- Lien vers la page Emplois -->
+            <a class="conteneur-mask" href="<?php echo home_url('/emplois'); ?>">
+                <h3 class="ombre-texte">Emplois</h3>
+                <div class="mask-avenir">
+                    <div class="images-avenir" id="img-avenir-droite"></div> <!-- Image associée à Emplois -->
+                </div>
+            </a>
 
-                <a class="conteneur-mask"  href="<?php echo home_url('/universites'); ?>">
-                    <h3 class="ombre-texte">Universités</h3>
-                    <div class="mask-avenir">
-                        <div class="images-avenir" id="img-avenir-milieu"></div>
-                    </div>
-                </a>
+            <!-- Lien vers la page Universités -->
+            <a class="conteneur-mask" href="<?php echo home_url('/universites'); ?>">
+                <h3 class="ombre-texte">Universités</h3>
+                <div class="mask-avenir">
+                    <div class="images-avenir" id="img-avenir-milieu"></div> <!-- Image associée à Universités -->
+                </div>
+            </a>
 
-                <a class="conteneur-mask" href="<?php echo home_url('/stages'); ?>">
-                    <h3 class="ombre-texte">Stages</h3>
-                    <div class="mask-avenir">
-                        <div class="images-avenir" id="img-avenir-gauche"></div>
-                    </div>
-                </a>
-                
-            </div>
+            <!-- Lien vers la page Stages -->
+            <a class="conteneur-mask" href="<?php echo home_url('/stages'); ?>">
+                <h3 class="ombre-texte">Stages</h3>
+                <div class="mask-avenir">
+                    <div class="images-avenir" id="img-avenir-gauche"></div> <!-- Image associée à Stages -->
+                </div>
+            </a>
+            
         </div>
-        <!-- <div class="avenir-sections"><a href="<?php echo home_url('/emplois'); ?>"><h1>Emplois</h1></a></div>
-        <div class="avenir-sections"><a href="<?php echo home_url('/universites'); ?>"><h1>Universités</h1></a></div>
-        <div class="avenir-sections"><a href="<?php echo home_url('/stages'); ?>"><h1>Stages</h1></a></div> -->
-    </main>
-<?php get_footer();?>
+    </div>
+</main>
+
+<?php get_footer(); ?> <!-- Inclut le pied de page du site -->
+
+<!-- Chargement du script JavaScript 'cercle-avenir.js' -->
 <script src="<?php echo get_template_directory_uri() . '/js/cercle-avenir.js'; ?>"></script>
 
 </html>

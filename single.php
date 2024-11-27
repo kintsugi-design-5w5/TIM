@@ -129,37 +129,8 @@ get_header();
         <p>Aucune image disponible pour ce projet.</p>
     <?php endif; ?>
     
-
-        
       </section>
     </main>
-
-    <!-- Section popup réseaux sociaux -->
-    <!-- <div class="popup">
-      <img
-        class="btn_x"
-        src="https://s2.svgbox.net/materialui.svg?ic=close&color=fff"
-        width="32"
-        height="32"
-      />
-      <div class="contenu-popup">
-        <h1>Nom de la personne</h1>
-        <ul class="reseaux-sociaux__popup">
-          <li>
-            <a href="#"><img src="images/LogoTim.png" alt="Twitter" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/LogoTim.png" alt="Instagram" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/LogoTim.png" alt="LinkedIn" /></a>
-          </li>
-        </ul>
-      </div>
-    </div>-->
-
     <?php get_footer();?>
     <script src="<?php echo get_template_directory_uri() . '/js/single-video.js'; ?>"></script>
-
-  <!-- <script src="js/popup.js"></script> -->
 </html>

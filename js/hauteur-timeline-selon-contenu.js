@@ -16,7 +16,7 @@ function mettreAJourBarreProgression() {
 
     // Calculer la hauteur de la barre de progression en fonction du pourcentage
     // let hauteurBarreProgression = pourcentageDefilement * hauteurMaxProgression;
-    let hauteurBarreProgression = positionDefilement - positionContenuCours / 1.6;
+    let hauteurBarreProgression = positionDefilement - positionContenuCours / 1.5;
 
     // Mettre à jour la hauteur de la barre de progression
     barreProgression.style.height = `${hauteurBarreProgression}px`;

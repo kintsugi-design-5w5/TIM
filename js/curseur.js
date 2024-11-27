@@ -34,6 +34,8 @@ function mettreAJourCurseur() {
     // Sélectionne tous les éléments avec un attribut "data-icone"
     document.querySelectorAll("[data-icone]").forEach((element) => {
         element.addEventListener("mouseenter", () => {
+            // curseur.style.backgroundColor = " rgb(0, 123, 255, 0.5)";
+            curseur.classList.add("survol"); // Ajout de la classe pour l'agrandissement du curseur
             const iconeClass = element.getAttribute("data-icone"); // Récupère la classe de l'icône
             icone.classList.remove("cache"); // Affiche l'icône
             icone.innerHTML = `${iconeClass}`; // Change l'icône avec la classe récupérée
@@ -41,6 +43,7 @@ function mettreAJourCurseur() {
         });
 
         element.addEventListener("mouseleave", () => {
+            curseur.classList.remove("survol"); // Ajout de la classe pour l'agrandissement du curseur
             curseur.classList.remove("effet-survol"); // Retrait de la classe d'agrandissement
             icone.classList.add("cache"); // Cache l'icône
             icone.innerHTML = ""; // Réinitialise l'icône

@@ -17,12 +17,12 @@ get_header(); // Inclut le fichier d'en-tête du thème
        '); ?>
 
     <!-- Section de présentation avec plusieurs blocs d'information -->
-    <section class="feed presentation">
+    <section class="feed presentation ignore-grain">
         <!-- Bloc de présentation du programme TIM -->
-        <div class="presentation-tim">
-            <div class="img-projet">
+        <div class="presentation-tim ignore-grain">
+            <div class="img-projet ignore-grain">
                 <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_image1.webp"
-                    alt="Photo des locaux du TIM" />
+                    alt="Photo des locaux du TIM"/>
             </div>
             <div class="infos">
                 <p>
@@ -32,6 +32,36 @@ get_header(); // Inclut le fichier d'en-tête du thème
                     jeux vidéo et autres plateformes numériques. Le programme encourage une approche interdisciplinaire,
                     où créativité et logique se rencontrent pour répondre aux besoins d’un marché en constante
                     évolution. </p>
+            </div>
+        </div>
+    </section>
+        <!-- Section dédiée aux vidéos de projet -->
+        <section class="proj-video">
+            <video autoplay loop muted playsinline>
+                <source src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_projets_accueil_vid1.webm" type="video/webm">
+                Votre navigateur ne supporte pas les vidéos HTML5.
+            </video>
+    </section>
+    <section class="feed presentation">
+        <!-- Bloc d'information supplémentaire -->
+        <div class="presentation-info">
+            <div class="img-projet">
+                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/VieEtudiante_image1.webp"
+                    alt="Photo de la vie étudiante" />
+            </div>
+            <div class="infos">
+                <h1>Une vie étudiante <span class="fonte-alt">dynamique</span></h1>
+            </div>
+        </div>
+
+        <!-- Bloc d'information avec inversion de l'ordre des éléments pour la variété visuelle -->
+        <div class="presentation-info">
+            <div class="infos">
+                <h1>Une équipe de professeurs <span class="fonte-alt">passionnés</span></h1>
+            </div>
+            <div class="img-projet">
+                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/ProfesseursTIM_image1-scaled.jpg"
+                    alt="Photo des professeurs" />
             </div>
         </div>
 
@@ -118,29 +148,6 @@ get_header(); // Inclut le fichier d'en-tête du thème
             </div>
 
         </div>
-
-
-        <!-- Bloc d'information supplémentaire -->
-        <div class="presentation-info">
-            <div class="img-projet">
-                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/VieEtudiante_image1.webp"
-                    alt="Photo de la vie étudiante" />
-            </div>
-            <div class="infos">
-                <h1>Une vie étudiante <span class="fonte-alt">dynamique</span></h1>
-            </div>
-        </div>
-
-        <!-- Bloc d'information avec inversion de l'ordre des éléments pour la variété visuelle -->
-        <div class="presentation-info">
-            <div class="infos">
-                <h1>Une équipe de professeurs <span class="fonte-alt">passionnés</span></h1>
-            </div>
-            <div class="img-projet">
-                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/ProfesseursTIM_image1-scaled.jpg"
-                    alt="Photo des professeurs" />
-            </div>
-        </div>
     </section>
 
     <!-- Section présentant les axes de cours -->
@@ -151,95 +158,95 @@ get_header(); // Inclut le fichier d'en-tête du thème
                 <h3 class="ombre-texte">Jeux video</h3>
                 <div class="boite_cours jeu-video"> </div>
                 <div>
+<<<<<<< HEAD
                     <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>">
                         <span class="material-symbols-outlined">image</span></a>
                     <a data-icone="east" class="btn_cours cat_7" href="<?php echo home_url('/category/cours'); ?>">
                         <span class="material-symbols-outlined">list</span></a>
+=======
+                    <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>"> <h4>Projets</h4></a>
+                    <a data-icone="east" class="btn_cours cat_7"href="<?php echo home_url('/category/cours'); ?>"> <h4>Cours</h4></a>
+>>>>>>> vince
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">3D</h3>
                 <div class="boite_cours cat_4 troisd"></div>
                 <div>
+<<<<<<< HEAD
                     <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>">
                         <span class="material-symbols-outlined">image</span></a>
                     <a data-icone="east" class="btn_cours cat_7" href="<?php echo home_url('/category/cours'); ?>">
                         <span class="material-symbols-outlined">list</span></a>
+=======
+                    <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>"> <h4>Projets</h4></a>
+                    <a data-icone="east" class="btn_cours cat_7"href="<?php echo home_url('/category/cours'); ?>"> <h4>Cours</h4></a>
+>>>>>>> vince
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Web</h3>
                 <div class="boite_cours web"></div>
                 <div>
+<<<<<<< HEAD
                     <a data-icone="east" class="btn_proj cat_9" href="<?php echo home_url('/category/projets'); ?>">
                         <span class="material-symbols-outlined">image</span></a>
                     <a data-icone="east" class="btn_cours cat_9" href="<?php echo home_url('/category/cours'); ?>">
                         <span class="material-symbols-outlined">list</span></a>
+=======
+                    <a data-icone="east" class="btn_proj cat_9" href="<?php echo home_url('/category/projets'); ?>"> <h4>Projets</h4></a>
+                    <a data-icone="east" class="btn_cours cat_9"href="<?php echo home_url('/category/cours'); ?>"> <h4>Cours</h4></a>
+>>>>>>> vince
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Imagerie</h3>
                 <div class="boite_cours imagerie"></div>
                 <div>
+<<<<<<< HEAD
                     <a data-icone="east" class="btn_proj cat_6" href="<?php echo home_url('/category/projets'); ?>">
                         <span class="material-symbols-outlined">image</span></a>
                     <a data-icone="east" class="btn_cours cat_6" href="<?php echo home_url('/category/cours'); ?>">
                         <span class="material-symbols-outlined">list</span></a>
+=======
+                    <a data-icone="east" class="btn_proj cat_6" href="<?php echo home_url('/category/projets'); ?>"> <h4>Projets</h4></a>
+                    <a data-icone="east" class="btn_cours cat_6"href="<?php echo home_url('/category/cours'); ?>"> <h4>Cours</h4></a>
+>>>>>>> vince
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Vidéo</h3>
                 <div class="boite_cours video"></div>
                 <div>
+<<<<<<< HEAD
                     <a data-icone="east" class="btn_proj cat_8" href="<?php echo home_url('/category/projets'); ?>">
                         <span class="material-symbols-outlined">image</span></a>
                     <a data-icone="east" class="btn_cours cat_8" href="<?php echo home_url('/category/cours'); ?>">
                         <span class="material-symbols-outlined">list</span></a>
+=======
+                    <a data-icone="east" class="btn_proj cat_8" href="<?php echo home_url('/category/projets'); ?>"> <h4>Projets</h4></a>
+                    <a data-icone="east" class="btn_cours cat_8"href="<?php echo home_url('/category/cours'); ?>"> <h4>Cours</h4></a>
+>>>>>>> vince
                 </div>
             </div>
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Autre</h3>
                 <div class="boite_cours autre"></div>
                 <div>
+<<<<<<< HEAD
                     <a data-icone="east" class="btn_proj cat_5" href="<?php echo home_url('/category/projets'); ?>">
                         <span class="material-symbols-outlined">image</span></a>
                     <a data-icone="east" class="btn_cours cat_5" href="<?php echo home_url('/category/cours'); ?>">
                         <span class="material-symbols-outlined">list</span></a>
+=======
+                    <a data-icone="east" class="btn_proj cat_5" href="<?php echo home_url('/category/projets'); ?>"> <h4>Projets</h4></a>
+                    <a data-icone="east" class="btn_cours cat_5"href="<?php echo home_url('/category/cours'); ?>"> <h4>Cours</h4></a>
+>>>>>>> vince
                 </div>
             </div>
-
-            <!-- <div class="filtre-couleur">
-                <h3 class="ombre-texte">Jeux video</h3>
-                <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_7 jeu-video">
-                </a>
-            </div>
-            <div class="filtre-couleur">
-                <h3 class="ombre-texte">3D</h3>
-                <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_4 troisd">
-                </a>
-            </div>
-            <div class="filtre-couleur">
-                <h3 class="ombre-texte">Web</h3>
-                <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_9 web">
-                </a>
-            </div>
-            <div class="filtre-couleur">
-                <h3 class="ombre-texte">Imagerie</h3>
-                <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_6 imagerie">
-                </a>
-            </div>
-            <div class="filtre-couleur">
-                <h3 class="ombre-texte">Vidéo</h3>
-                <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_8 video">
-                </a>
-            </div>
-            <div class="filtre-couleur">
-                <h3 class="ombre-texte">Autre</h3>
-                <a data-icone="east" href="<?php echo home_url('/category/cours'); ?>" class="boite_cours cat_5 autre">
-                </a>
-            </div> -->
         </div>
     </section>
+<<<<<<< HEAD
 
     <!-- Section dédiée aux vidéos de projet -->
     <section class="proj-video">
@@ -251,6 +258,8 @@ get_header(); // Inclut le fichier d'en-tête du thème
     </section>
 
 
+=======
+>>>>>>> vince
     <!-- Section dédiée aux 3 projets populaires -->
     <?php if (have_posts()): ?>
         <?php $project_count = 1; // Compteur pour l'ID dynamique ?>
