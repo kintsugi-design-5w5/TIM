@@ -124,14 +124,6 @@ html body #grain {
   z-index: 3;
 }
 
-html body .ignore-grain {
-  z-index: 20;
-}
-
-html body img {
-  z-index: 20;
-}
-
 /*********** ICONES **************/
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 0, "GRAD" 0, "opsz" NaN;
@@ -660,17 +652,21 @@ body .feed .presentation-info img {
 }
 
 .proj-video {
+  margin-top: -100vh;
   position: relative;
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   background-color: var(--noir-fonce);
   padding: 0;
+  z-index: -1;
 }
 .proj-video video {
+  position: sticky;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   z-index: 10;
   transition: transform 0.1s ease-out;
@@ -811,10 +807,10 @@ body .feed .presentation-info img {
   }
 }
 @keyframes apparition-vid {
-  0% {
-    transform: scale(0.5);
+  40% {
+    transform: scale(0.3);
   }
-  50% {
+  70% {
     transform: scale(1);
   }
 }
@@ -1692,8 +1688,7 @@ main #hero {
 .img-stages img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .section-404 {
@@ -2133,8 +2128,7 @@ circle {
   height: 100%;
   border-radius: 50%;
   background: radial-gradient(farthest-side, var(--couleur) 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, var(--couleur));
-  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
-          mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+  mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
   animation: spin 1s linear infinite;
 }
 
