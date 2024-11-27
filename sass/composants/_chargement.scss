@@ -1,0 +1,48 @@
+.chargement{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $noir;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  .pourcentage > .spinner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    //border: 5px solid $noir;
+    //border-top-color: $couleur;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, $couleur 94%,#0000) top/9px 9px no-repeat,
+    conic-gradient(#0000 30%,$couleur);
+    mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);  
+    animation: spin 1s linear infinite;
+  } 
+}
+
+.pourcentage{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+  color: $couleur;
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.invisible{
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

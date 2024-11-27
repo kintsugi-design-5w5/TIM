@@ -33,6 +33,10 @@
         <!-- En-tête de la page avec le menu de navigation -->
         <header>
             <nav>
+                <div class="chargement">
+                    <div>Chargement</div>
+                    <div class="pourcentage">100%<div class="spinner"></div></div>
+                </div>
                 <div class="barre-navigation">
                     <!-- Logo cliquable -->
                     <a data-icone="east" class="logo" href="<?php echo home_url(); ?>">
