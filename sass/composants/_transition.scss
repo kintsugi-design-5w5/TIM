@@ -26,11 +26,12 @@
 }
 
 .invisible{
-  animation: dispparition 2s forwards;
+  animation: dispparition 1s forwards;
 }
 
 .visible{
-  animation: apparition 2s forwards;
+  animation: apparition 1s forwards;
+  pointer-events: all;
 }
 
 @keyframes spin {

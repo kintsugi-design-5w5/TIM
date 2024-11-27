@@ -17,7 +17,7 @@ function transitionToPage(href) {
 
     setTimeout(function() {
         window.location.href = href;
-    }, 2000);
+    }, 1000);
 }
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -1272,23 +1272,10 @@ main #hero {
   border: 2px solid var(--couleur-fonce);
   box-shadow: 0px 0px 50px var(--couleur-fonce);
 }
-.conteneur-mask:hover .mask-avenir {
-  z-index: 4;
-  -webkit-clip-path: circle(350% at 50% 50%);
-          clip-path: circle(350% at 50% 50%);
-}
-.conteneur-mask:hover h3 {
-  transform-origin: center;
-}
 @media screen and (max-width: 756px) {
   .conteneur-mask {
     width: 40vw;
     height: 40vw;
-  }
-  .conteneur-mask:hover .mask-avenir {
-    z-index: 4;
-    -webkit-clip-path: circle(500% at 50% 50%);
-            clip-path: circle(500% at 50% 50%);
   }
 }
 @media screen and (max-width: 430px) {
@@ -1298,11 +1285,6 @@ main #hero {
     min-width: 150px;
     min-height: 150px;
     margin: 0;
-  }
-  .conteneur-mask:hover .mask-avenir {
-    z-index: 4;
-    -webkit-clip-path: circle(1000% at 50% 50%);
-            clip-path: circle(1000% at 50% 50%);
   }
 }
 
@@ -2002,11 +1984,12 @@ circle {
 }
 
 .invisible {
-  animation: dispparition 2s forwards;
+  animation: dispparition 1s forwards;
 }
 
 .visible {
-  animation: apparition 2s forwards;
+  animation: apparition 1s forwards;
+  pointer-events: all;
 }
 
 @keyframes spin {

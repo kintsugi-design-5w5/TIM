@@ -6,6 +6,9 @@ let lesTextes = document.querySelectorAll(".conteneur-mask > h3"); // Récupère
 let lesOffsetLeft = []; // Tableau pour stocker les offsetLeft des éléments h2
 let lesOffsetTop = []; // Tableau pour stocker les offsetTop des éléments h2
 
+let hover = false; // Variable pour savoir si la souris est en survol d'un conteneur
+
+let verification; // Variable pour le setTimeout
 // Remplissage des tableaux lesOffsetLeft et lesOffsetTop
 for(let i = 0; i < lesTextes.length; i++){
     lesOffsetLeft.push(lesTextes[i].offsetLeft);
@@ -29,18 +32,31 @@ window.addEventListener("resize", function(){
  */
 for(let i = 0; i < lesConteneurMask.length; i++){
     lesConteneurMask[i].addEventListener("mouseover", function(){
-        let leMask = lesConteneurMask[i].children[0].nextElementSibling; // Récupère le masque
-        leMask.style.zIndex = 4; // Modifie le z-index du masque pour qu'il soit au-dessus des autres masques
+        hover = true; // La souris est en survol d'un conteneur
+        verification = setTimeout(function(){
+            if(hover){
+                let leMask = lesConteneurMask[i].children[0].nextElementSibling; // Récupère le masque
+                leMask.style.zIndex = 4; // Modifie le z-index du masque pour qu'il soit au-dessus des autres masques
 
-        let leTexte = lesConteneurMask[i].children[0]; // Récupère le texte
-        leTexte.style.zIndex = 5; // Modifie le z-index du texte pour qu'il soit au-dessus des autres images
-        leTexte.style.transform = "translate("+ ((window.innerWidth / 2 - leTexte.offsetLeft) - leTexte.offsetWidth / 2) +"px,"+ (window.innerHeight / 2 - leTexte.offsetTop) +"px) scale(3)"; // Déplace le texte
-        // Désactive les pointerEvents des autres conteneurs
-        for(let j = 0; j < lesConteneurMask.length; j++){
-            if(lesConteneurMask[j] != lesConteneurMask[i]){
-                lesConteneurMask[j].style.pointerEvents = "none";
+                if(window.innerWidth < 438){
+                    leMask.style.clipPath = "circle(150vh at center)"; // Modifie le clipPath du masque pour qu'il soit un cercle
+
+                }
+                else{
+                    leMask.style.clipPath = "circle(150vw at center)"; // Modifie le clipPath du masque pour qu'il soit un cercle
+                }
+                let leTexte = lesConteneurMask[i].children[0]; // Récupère le texte
+                leTexte.style.zIndex = 5; // Modifie le z-index du texte pour qu'il soit au-dessus des autres images
+                leTexte.style.transform = "translate("+ ((window.innerWidth / 2 - leTexte.offsetLeft) - leTexte.offsetWidth / 2) +"px,"+ (window.innerHeight / 2 - leTexte.offsetTop) +"px) scale(3)"; // Déplace le texte
+                // Désactive les pointerEvents des autres conteneurs
+                for(let j = 0; j < lesConteneurMask.length; j++){
+                    if(lesConteneurMask[j] != lesConteneurMask[i]){
+                        lesConteneurMask[j].style.pointerEvents = "none";
+                    }
+                }
             }
-        }
+            console.log(hover);
+        }, 500);
     });
 }
 
@@ -49,7 +65,10 @@ for(let i = 0; i < lesConteneurMask.length; i++){
  */
 for(let i = 0; i < lesConteneurMask.length; i++){
     lesConteneurMask[i].addEventListener("mouseout", function(){
+        hover = false; // La souris n'est plus en survol d'un conteneur
+        verification = clearTimeout(verification); // Arrête le setTimeout
         let leMask = lesConteneurMask[i].children[0].nextElementSibling; // Récupère le masque
+        leMask.style.clipPath = "circle(50% at center)"; // Modifie le clipPath du masque pour qu'il soit un cercle
         lesConteneurMask[i].style.pointerEvents = "none"; // Désactive les pointerEvents du conteneur
 
         let leTexte = lesConteneurMask[i].children[0]; // Récupère le texte
