@@ -23,7 +23,10 @@
         <div id="grain"></div>
         <header>
             <nav>
-                <div class="chargement">LOL</div>
+                <div class="chargement">
+                    <div>Chargement</div>
+                    <div class="pourcentage">100%<div class="spinner"></div></div>
+                </div>
                 <div class="barre-navigation">
                     <a class="logo" href="<?php echo home_url(); ?>"><img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_Logo.webp" alt="logo du TIM" /></a>
                     <input type="checkbox" name="burger-box" id="burger" />
