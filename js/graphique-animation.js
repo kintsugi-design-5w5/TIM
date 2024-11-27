@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           case "dollars":
             elementNombre.innerHTML = `${pourcentageActuel
               .toFixed(2)
-              .replace(".", ",")}$`;
+              .replace(".", ",")} $/an`;
             break;
         }
       } else {
