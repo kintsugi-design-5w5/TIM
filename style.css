@@ -1692,8 +1692,7 @@ main #hero {
 .img-stages img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .section-404 {
@@ -1768,29 +1767,21 @@ main #hero {
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-  /*Sur tablette, on met un flex-wrap pour une meileur transition vers le mobile*/
-  /*Sur mobile, présenter en colonne*/
-}
-@media screen and (min-width: 756px) and (max-width: 900px) {
-  .charte-design {
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 756px) {
-  .charte-design {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 }
 
 .graphique {
   position: relative;
   animation: apparition-charte 1s ease forwards; /*Animtion des graphiques au scroll*/
   animation-timeline: view();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .graphique .info-graphique {
-  text-align: center; /*Centrer le nombre du graphique*/
   margin-top: 2rem;
+  width: 300px;
 }
 
 .cercle-arriere {
@@ -2133,8 +2124,7 @@ circle {
   height: 100%;
   border-radius: 50%;
   background: radial-gradient(farthest-side, var(--couleur) 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, var(--couleur));
-  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
-          mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
+  mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
   animation: spin 1s linear infinite;
 }
 

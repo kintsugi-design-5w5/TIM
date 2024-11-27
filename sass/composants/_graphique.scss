@@ -8,26 +8,21 @@
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-
-  /*Sur tablette, on met un flex-wrap pour une meileur transition vers le mobile*/
-  @media screen and (min-width: 756px) and (max-width: 900px) {
-    flex-wrap: wrap;
-  }
-  /*Sur mobile, présenter en colonne*/
-  @media screen and (max-width: 756px) {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 }
 
 .graphique {
   position: relative;
   animation: apparition-charte 1s ease forwards; /*Animtion des graphiques au scroll*/
   animation-timeline: view();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .graphique .info-graphique {
-  text-align: center; /*Centrer le nombre du graphique*/
   margin-top: 2rem;
+  width: 300px;
 }
 
 .cercle-arriere {
