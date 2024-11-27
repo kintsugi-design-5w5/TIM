@@ -127,6 +127,10 @@ html body .ignore-grain {
   z-index: 20;
 }
 
+html body img {
+  z-index: 20;
+}
+
 /*********** ICONES **************/
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 0, "GRAD" 0, "opsz" NaN;
@@ -234,6 +238,7 @@ body #curseur-personnalise.noir.survol {
 /* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
@@ -1223,11 +1228,13 @@ main #hero {
   flex-direction: row;
   justify-content: space-between;
 }
+.footer-sociaux a {
+  margin: 0 15px;
+}
 
 .footer-sociaux img {
   width: 30px;
   height: 30px;
-  margin: 0 10px;
 }
 
 .footer-bloc {

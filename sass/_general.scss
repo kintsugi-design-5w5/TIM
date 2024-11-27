@@ -32,7 +32,7 @@ html body .ignore-grain {
     z-index: 20;
 }
 html body img {
-    // z-index: 20;
+    z-index: 20;
 }
 /*********** ICONES **************/
 .material-symbols-outlined {
@@ -156,6 +156,7 @@ body #curseur-personnalise.noir.survol {
 ::-webkit-scrollbar {
     // Largeur de la scrollbar
     width: 10px;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
@@ -166,6 +167,7 @@ body #curseur-personnalise.noir.survol {
 ::-webkit-scrollbar-thumb {
     // Couleur du pouce de la scrollbar
     background: $couleur;
+    //mettre un pointeur
 }
 
 ::-webkit-scrollbar-thumb:hover {

@@ -17,10 +17,10 @@ get_header(); // Inclut le fichier d'en-tête du thème
        '); ?>
 
     <!-- Section de présentation avec plusieurs blocs d'information -->
-    <section class="feed presentation">
+    <section class="feed presentation ignore-grain">
         <!-- Bloc de présentation du programme TIM -->
-        <div class="presentation-tim">
-            <div class="img-projet">
+        <div class="presentation-tim ignore-grain">
+            <div class="img-projet ignore-grain">
                 <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_image1.webp"
                     alt="Photo des locaux du TIM"/>
             </div>
