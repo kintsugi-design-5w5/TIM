@@ -32,12 +32,6 @@
 
       ?>
     </div>
-    <div class="ponderation_info">
-      <h3>Pondération des cours</h3>
-      <p>Premier chiffre : nombre d'heure de cours en classe par semaine</p>
-      <p>Deuxième chiffre : nombre d'heure de pratique en laboratoire par semaine</p>
-      <p>Troisième chiffre : nombre de travail personnel à fournir par semaine</p>
-    </div>
     <!-- Générer dynamiquement les sessions -->
     <ul id="conteneur-cours">
       <div class="timeline">

@@ -832,17 +832,6 @@ body .feed .presentation-info img {
   position: relative;
 }
 
-/*La pondération des cours*/
-.ponderation_info {
-  display: none;
-  border: 1px solid var(--couleur);
-  padding: 1rem;
-  position: absolute;
-  top: 0;
-  right: 20px;
-  line-height: 3rem;
-}
-
 /*Section des cours*/
 .conteneur-timeline {
   position: relative;
@@ -957,6 +946,8 @@ ul {
 
 .cours .description-cours {
   display: none;
+  /*L'affichage de la pondération des cours sur le deuxième texte*/
+  /*Apparition du bloc de la pondération du cours au survol*/
 }
 .cours .description-cours .wp-block-column:first-of-type p {
   margin-left: 4rem;
@@ -971,7 +962,24 @@ ul {
   margin-top: 2rem;
   font-size: clamp(0.5rem, 2vw, 1.3rem);
 }
-.cours .description-cours .wp-block-column:nth-child(2) p:hover ~ .ponderation_info {
+.cours .description-cours .wp-block-column:nth-child(2) p {
+  position: relative;
+}
+.cours .description-cours .wp-block-column:nth-child(2) p::after {
+  content: "Pondération des cours : \aPremier chiffre : nombre d'heure de cours en classe par semaine \a Deuxième chiffre : nombre d'heure de pratique en laboratoire par semaine \aTroisième chiffre : nombre de travail personnel à fournir par semaine"; /* \A : Permet un retour à la ligne*/
+  position: absolute;
+  top: 0;
+  left: 120%;
+  display: none; /* Caché par défaut */
+  background-color: var(--gris-fonce);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 45rem;
+  white-space: pre-line; /*Pour que les retours à la ligne se voient*/
+  z-index: 10;
+  pointer-events: none; /* Empêche les interactions */
+}
+.cours .description-cours .wp-block-column:nth-child(2) p:hover::after {
   display: block;
 }
 
