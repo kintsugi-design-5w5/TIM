@@ -817,6 +817,7 @@ body .feed .presentation-info img {
 /*Style page cours*/
 .body-cours {
   padding: 2rem 2rem 2rem 7rem;
+  position: relative;
 }
 @media screen and (max-width: 756px) {
   .body-cours {
@@ -941,6 +942,8 @@ ul {
 
 .cours .description-cours {
   display: none;
+  /*L'affichage de la pondération des cours sur le deuxième texte*/
+  /*Apparition du bloc de la pondération du cours au survol*/
 }
 .cours .description-cours .wp-block-column:first-of-type p {
   margin-left: 4rem;
@@ -954,6 +957,26 @@ ul {
   margin-right: 0;
   margin-top: 2rem;
   font-size: clamp(0.5rem, 2vw, 1.3rem);
+}
+.cours .description-cours .wp-block-column:nth-child(2) p {
+  position: relative;
+}
+.cours .description-cours .wp-block-column:nth-child(2) p::after {
+  content: "Pondération des cours : \aPremier chiffre : nombre d'heure de cours en classe par semaine \a Deuxième chiffre : nombre d'heure de pratique en laboratoire par semaine \aTroisième chiffre : nombre de travail personnel à fournir par semaine"; /* \A : Permet un retour à la ligne*/
+  position: absolute;
+  top: 0;
+  left: 120%;
+  display: none; /* Caché par défaut */
+  background-color: var(--gris-fonce);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 45rem;
+  white-space: pre-line; /*Pour que les retours à la ligne se voient*/
+  z-index: 10;
+  pointer-events: none; /* Empêche les interactions */
+}
+.cours .description-cours .wp-block-column:nth-child(2) p:hover::after {
+  display: block;
 }
 
 /*Lors de l'ajout de la classe visible, afficher la description*/
@@ -1782,18 +1805,7 @@ main #hero {
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-  /*Sur tablette, on met un flex-wrap pour une meileur transition vers le mobile*/
-  /*Sur mobile, présenter en colonne*/
-}
-@media screen and (min-width: 756px) and (max-width: 900px) {
-  .charte-design {
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 756px) {
-  .charte-design {
-    flex-direction: column;
-  }
+  flex-wrap: wrap; /*Pour l'adaptabilité de l'affichage des graphiques*/
 }
 
 .graphique {
@@ -1803,12 +1815,13 @@ main #hero {
 }
 
 .graphique .info-graphique {
-  text-align: center; /*Centrer le nombre du graphique*/
   margin-top: 2rem;
+  width: 300px; /*Ajuster la largeur pour que le texte se mette sur deux lignes*/
 }
 
 .cercle-arriere {
-  box-shadow: 6px 6px 10px -1px var(--couleur-fonce), -6px -6px 10px -1px var(--couleur-fonce);
+  box-shadow: 6px 6px 10px -1px var(--couleur-fonce), -6px -6px 10px -1px var(--couleur-fonce); /*Mettre des ombres intérieures et extérieures 
+pour révéler les contours du graphique*/
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -1823,7 +1836,7 @@ main #hero {
   height: 220px;
   border-radius: 50%;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px var(--couleur-fonce), -0.5px -0.5px 0px var(--couleur-fonce), 0.5px 0.5px 0px var(--couleur-pale), 0px 12px 10px -10px var(--couleur-fonce); /*Mettre des ombres intérieures et extérieures 
-pour révéler les contours des graphiques*/
+pour révéler les contours du graphique*/
   display: flex;
   justify-content: center;
   align-items: center;

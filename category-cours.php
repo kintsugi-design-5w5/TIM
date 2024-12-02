@@ -29,20 +29,18 @@
         '6' => array()
       );
 
-      
+
       ?>
     </div>
-
     <!-- Générer dynamiquement les sessions -->
     <ul id="conteneur-cours">
       <div class="timeline">
         <div class="barre-progression"></div>
       </div>
-      <!-- <div class="conteneur-timeline">
-      </div> -->
       <?php foreach ($sessions as $session_num => $cours_list): ?>
         <li class="session">
-          <h3 data-icone="keyboard_arrow_down" class="cercle grand session-btn" data-session="<?php echo $session_num; ?>">Session
+          <h3 data-icone="keyboard_arrow_down" class="cercle grand session-btn"
+            data-session="<?php echo $session_num; ?>">Session
             <?php echo $session_num; ?>
           </h3>
           <ul class="cours" id="session-<?php echo $session_num; ?>">
