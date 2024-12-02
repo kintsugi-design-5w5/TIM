@@ -34,8 +34,8 @@
         <header>
             <nav>
                 <div class="chargement">
-                    <div>Chargement</div>
-                    <div class="pourcentage">100%<div class="spinner"></div></div>
+                    <h6>Chargement...</h6>
+                    <div class="spinner"></div>
                 </div>
                 <div class="barre-navigation">
                     <!-- Logo cliquable -->
@@ -52,7 +52,7 @@
                             <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url(); ?>">Accueil</a></li>
                             <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
                             <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
-                            <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/avenir'); ?>">Avenir</a></li>
+                            <li><a class="mon-bouton" data-icone="east" onclick="transitionToPage('<?php echo home_url('/avenir'); ?>')">Avenir</a></li>
                         </ul>
                     </div>
 

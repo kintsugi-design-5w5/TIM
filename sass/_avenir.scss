@@ -125,24 +125,24 @@
     }
 
     @media screen and (max-width: 756px) {
-        &:hover {
-            .mask-avenir {
-                z-index: 4;
-                clip-path: circle(500% at 50% 50%);
-            }
-        }
+        // &:hover {
+        //     .mask-avenir {
+        //         z-index: 4;
+        //         clip-path: circle(500% at 50% 50%);
+        //     }
+        // }
         width: 40vw;
         height: 40vw;
         //margin: 0 50% 0 0;
     }
 
     @media screen and (max-width: 430px) {
-        &:hover {
-            .mask-avenir {
-                z-index: 4;
-                clip-path: circle(1000% at 50% 50%);
-            }
-        }
+        // &:hover {
+        //     .mask-avenir {
+        //         z-index: 4;
+        //         clip-path: circle(1000% at 50% 50%);
+        //     }
+        // }
         width: 50vw;
         height: 50vw;
 
