@@ -3,12 +3,6 @@ let timeline = document.querySelector(".timeline");
 let barreProgression = document.querySelector(".barre-progression");
 // Sélectionner tous les cercles à observer
 let cercles = document.querySelectorAll(".cercle");
-//Booleen pour savoir si les sections sont toutes fermées
-let sessionsFermees = true;
-
-function VerifierSessionsFermees() {
-  //Si les sessions sont toutes fermées
-}
 
 // Fonction pour mettre à jour la barre de progression en fonction du scroll
 function mettreAJourBarreProgression() {
@@ -90,8 +84,6 @@ btnsSession.forEach((bouton) => {
       // Si la session est fermée, l'afficher
       coursActifs.style.display = "block"; // Afficher la session active
     }
-    //Appeler la fonction dès l'ouverture de la page
-    // ajusterHauteurTimeline();
     mettreAJourBarreProgression();
   });
 });
