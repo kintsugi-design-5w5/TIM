@@ -152,19 +152,19 @@
     }
 }
 
-/*.conteneur-hover-mask{
+.conteneur-hover-mask {
     position: relative;
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
 
-    &:hover{
-        .mask-avenir{
+    &:hover {
+        .mask-avenir {
             z-index: 4;
             clip-path: circle(100% at 50% 50%);
         }
     }
-}*/
+}
 .avenir-sections {
     width: 100vw;
     height: 33vh;
