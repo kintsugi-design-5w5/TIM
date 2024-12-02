@@ -967,13 +967,19 @@ ul {
   top: 0;
   left: 120%;
   display: none; /* Caché par défaut */
-  background-color: var(--gris-fonce);
+  background-color: rgba(75, 75, 75, 0.9); /*Petit flou d'arrière-plan*/
   padding: 0.5rem 1rem;
   border-radius: 5px;
   width: 45rem;
   white-space: pre-line; /*Pour que les retours à la ligne se voient*/
-  z-index: 10;
-  pointer-events: none; /* Empêche les interactions */
+  line-height: 2.5rem; /*Agrandir la hauteur entre les lignes*/
+}
+@media screen and (max-width: 756px) {
+  .cours .description-cours .wp-block-column:nth-child(2) p::after {
+    width: 26rem;
+    top: 120%;
+    left: -190%;
+  }
 }
 .cours .description-cours .wp-block-column:nth-child(2) p:hover::after {
   display: block;
