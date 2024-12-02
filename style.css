@@ -1801,7 +1801,11 @@ main #hero {
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-  flex-wrap: wrap; /*Pour l'adaptabilité de l'affichage des graphiques*/
+}
+@media screen and (max-width: 1200px) {
+  .charte-design {
+    flex-wrap: wrap; /*Pour l'adaptabilité de l'affichage des graphiques*/
+  }
 }
 
 .graphique {
