@@ -38,7 +38,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
     <!-- Section dédiée aux vidéos de projet -->
     <section class="proj-video">
             <video autoplay loop muted playsinline>
-                <source src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_projets_accueil_vid1.webm" type="video/webm">
+                <source src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Accueil_video2.webm" type="video/webm">
                 Votre navigateur ne supporte pas les vidéos HTML5.
             </video>
     </section>

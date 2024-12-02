@@ -37,9 +37,6 @@ main #hero {
     border-radius: 50px;
     padding: 1em;
     transition: background-color 0.2s ease;
-    &:hover {
-        background-color: $couleur;
-    }
 }
 .texte-retour {
     padding-top: 0.5em;

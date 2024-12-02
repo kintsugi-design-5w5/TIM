@@ -121,7 +121,7 @@ html body #grain {
   right: 0;
   bottom: 0;
   pointer-events: none;
-  z-index: 3;
+  z-index: 100;
 }
 
 /*********** ICONES **************/
@@ -998,17 +998,22 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   position: relative;
   background-size: cover;
   background-position: center;
   padding: 1rem;
 }
-.thumbnail-projet h2 {
+.thumbnail-projet h2, .thumbnail-projet h4 {
   z-index: 2;
   opacity: 0;
   transition: opacity 0.3s;
   text-align: center;
+}
+.thumbnail-projet h4 {
+  margin-top: 1rem;
+  color: var(--blanc-fonce);
 }
 .thumbnail-projet::after {
   content: "";
@@ -1020,7 +1025,7 @@ ul {
   pointer-events: none;
   transition: background-color 0.3s;
 }
-.thumbnail-projet:hover h2 {
+.thumbnail-projet:hover h2, .thumbnail-projet:hover h4 {
   opacity: 1;
 }
 .thumbnail-projet:hover::after {
@@ -1085,9 +1090,6 @@ main #hero {
   border-radius: 50px;
   padding: 1em;
   transition: background-color 0.2s ease;
-}
-.btn-retour:hover {
-  background-color: var(--couleur);
 }
 
 .texte-retour {
@@ -1350,7 +1352,9 @@ main #hero {
   .lesmasks-avenir {
     flex-direction: column;
   }
-  .lesmasks-avenir a:nth-of-type(1), .lesmasks-avenir a:nth-of-type(2), .lesmasks-avenir a:nth-of-type(3) {
+  .lesmasks-avenir a:nth-of-type(1),
+  .lesmasks-avenir a:nth-of-type(2),
+  .lesmasks-avenir a:nth-of-type(3) {
     margin: 0;
   }
 }
@@ -1365,17 +1369,30 @@ main #hero {
   background-size: cover;
   background-position: center;
 }
+.images-avenir::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--couleur);
+  opacity: 1;
+  transition: opacity 0.5s;
+  mix-blend-mode: color;
+  z-index: 2;
+}
 
 #img-avenir-droite {
-  background-image: url(images/dehors.jpg);
+  background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/emploi_img2.webp);
 }
 
 #img-avenir-milieu {
-  background-image: url(images/3personnes.jpg);
+  background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/universite_img4.webp);
 }
 
 #img-avenir-gauche {
-  background-image: url(images/main.jpg);
+  background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/stage_img3.webp);
 }
 
 .feed-avenir h3 {
@@ -1416,6 +1433,9 @@ main #hero {
 }
 .conteneur-mask:hover h3 {
   transform-origin: center;
+}
+.conteneur-mask:hover .images-avenir::before {
+  opacity: 0;
 }
 @media screen and (max-width: 756px) {
   .conteneur-mask {
@@ -1464,7 +1484,6 @@ main #hero {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(images/image.png);
 }
 .avenir-sections h1 {
   text-align: center;

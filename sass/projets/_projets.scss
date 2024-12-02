@@ -18,17 +18,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     background-size: cover;
     background-position: center;
     padding: 1rem;
 
-    & h2 {
+    & h2,
+    & h4 {
         z-index: 2;
         opacity: 0;
         transition: opacity 0.3s;
         text-align: center;
+    }
+    & h4 {
+        margin-top: 1rem;
+        color: $blanc-fonce;
     }
     &::after {
         content: "";
@@ -42,7 +48,8 @@
     }
 
     &:hover {
-        & h2 {
+        & h2,
+        & h4 {
             opacity: 1;
         }
         &::after {

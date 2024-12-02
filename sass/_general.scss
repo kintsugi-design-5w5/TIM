@@ -27,7 +27,7 @@ html body #grain {
     right: 0;
     bottom: 0;
     pointer-events: none;
-    z-index: 3;
+    z-index: 100;
 }
 html body .ignore-grain {
     // z-index: 20;

@@ -107,9 +107,8 @@ get_header();
       $images = [];
       
       // Tentative de récupération des images (jusqu'à un nombre raisonnable, par exemple, 10)
-      for ($i = 1; $i <= 10; $i++) { // Ajuste le nombre selon tes besoins
-          $image = get_field('image' . $i); // Change 'image' selon le nom de ton champ
-      
+      for ($i = 1; $i <= 10; $i++) { 
+          $image = get_field('image' . $i); 
           // Si le champ est rempli, ajoute l'image au tableau
           if ($image) {
               $images[] = $image; // Ajoute l'image au tableau
@@ -120,7 +119,7 @@ get_header();
       <section class="images-projets annule-padding-cote galerie">
           <?php foreach ($images as $image): ?>
               <div class="projet-image">
-                  <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                  <img src="<?php echo esc_url($image['sizes']['large']); ?>" data-icone="visibility" alt="<?php echo esc_attr($image['alt']); ?>" />
               </div>
           <?php endforeach; ?>
 
