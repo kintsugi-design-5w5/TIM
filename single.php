@@ -23,7 +23,7 @@ get_header();
     <section class="section__projet">
       <div class="info__projet flex">
         <div class="titre__projet flex">
-          <div class="btn-retour">
+          <div data-icone="west" class="btn-retour">
             <img
               src="https://s2.svgbox.net/hero-outline.svg?ic=arrow-left&color=ebebeb"
               width="18"

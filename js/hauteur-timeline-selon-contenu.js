@@ -16,7 +16,7 @@ function mettreAJourBarreProgression() {
 
     // Calculer la hauteur de la barre de progression en fonction du pourcentage
     // let hauteurBarreProgression = pourcentageDefilement * hauteurMaxProgression;
-    let hauteurBarreProgression = positionDefilement - positionContenuCours / 1.5;
+    let hauteurBarreProgression = positionDefilement - positionContenuCours / 0.3;
 
     // Mettre à jour la hauteur de la barre de progression
     barreProgression.style.height = `${hauteurBarreProgression}px`;
@@ -36,7 +36,7 @@ function mettreAJourCercles() {
         let positionBottom = positionTop + rect.height; // Position du bas du cercle
 
         // Calculer la position à laquelle 50% de l'écran atteint le bas du cercle
-        let seuilActivation = positionBottom - hauteurFenetre / 2;
+        let seuilActivation = positionBottom - hauteurFenetre / 1.9;
 
         // Vérifier si le bas du cercle atteint 50% de l'écran
         if (window.scrollY >= seuilActivation && !cercle.classList.contains("cercle-actif")) {
