@@ -22,7 +22,7 @@ get_header(); // Inclut l'en-tête du site
         <div class="lesmasks-avenir">
         
             <!-- Lien vers la page Emplois -->
-            <a class="conteneur-mask" href="<?php echo home_url('/emplois'); ?>">
+            <a class="conteneur-mask" onclick="transitionToPage('<?php echo home_url('/Emplois'); ?>')">
                 <h3 class="ombre-texte">Emplois</h3>
                 <div class="mask-avenir">
                     <div class="images-avenir" id="img-avenir-droite"></div> <!-- Image associée à Emplois -->
@@ -30,7 +30,7 @@ get_header(); // Inclut l'en-tête du site
             </a>
 
             <!-- Lien vers la page Universités -->
-            <a class="conteneur-mask" href="<?php echo home_url('/universites'); ?>">
+            <a class="conteneur-mask" onclick="transitionToPage('<?php echo home_url('/Universites'); ?>')">
                 <h3 class="ombre-texte">Universités</h3>
                 <div class="mask-avenir">
                     <div class="images-avenir" id="img-avenir-milieu"></div> <!-- Image associée à Universités -->
@@ -38,7 +38,7 @@ get_header(); // Inclut l'en-tête du site
             </a>
 
             <!-- Lien vers la page Stages -->
-            <a class="conteneur-mask" href="<?php echo home_url('/stages'); ?>">
+            <a class="conteneur-mask" onclick="transitionToPage('<?php echo home_url('/Stages'); ?>')">
                 <h3 class="ombre-texte">Stages</h3>
                 <div class="mask-avenir">
                     <div class="images-avenir" id="img-avenir-gauche"></div> <!-- Image associée à Stages -->

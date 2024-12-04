@@ -90,8 +90,8 @@ for(let i = 0; i < lesConteneurMask.length; i++){
 /**
  * Pour chaque conteneur avec la classe "conteneur-mask", ajoute un écouteur d'événement pour le clic
  */
-for(let i = 0; i < lesConteneurMask.length; i++){
-    lesConteneurMask[i].addEventListener("click", function(){
-        window.location.href = lesConteneurMask[i].children[0].href; // Redirige vers le lien de l'image
-    });
-}
+// for(let i = 0; i < lesConteneurMask.length; i++){
+//     lesConteneurMask[i].addEventListener("click", function(){
+//         window.location.href = lesConteneurMask[i].children[0].href; // Redirige vers le lien de l'image
+//     });
+// }
