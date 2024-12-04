@@ -265,6 +265,10 @@ body .feed .presentation-info {
         & h3 {
             z-index: 3; // Ordre d'affichage
             font-size: 3.5rem; // Taille de police
+            text-align: center;
+            @media screen and (max-width: 756px) {
+                padding-bottom: 2rem;
+            }
         }
 
         & div:last-of-type {

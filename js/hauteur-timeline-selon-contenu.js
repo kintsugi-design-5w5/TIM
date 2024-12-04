@@ -35,8 +35,21 @@ function mettreAJourCercles() {
         let positionTop = rect.top + window.scrollY; // Position du top du cercle par rapport à la page
         let positionBottom = positionTop + rect.height; // Position du bas du cercle
 
-        // Calculer la position à laquelle 50% de l'écran atteint le bas du cercle
-        let seuilActivation = positionBottom - hauteurFenetre / 1.9;
+        let ratio;
+
+        let largeurFenetre = window.innerWidth;
+        if (largeurFenetre < 430) {
+            // Téléphone (petits écrans)
+            ratio = 1.42;
+        } else if (largeurFenetre < 768) {
+            // Tablette (écrans moyens)
+            ratio = 1.35;
+        } else {
+            // Ordinateur (grands écrans)
+            ratio = 1.9;
+        }
+
+        let seuilActivation = positionBottom - hauteurFenetre / ratio;
 
         // Vérifier si le bas du cercle atteint 50% de l'écran
         if (window.scrollY >= seuilActivation && !cercle.classList.contains("cercle-actif")) {

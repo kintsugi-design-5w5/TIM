@@ -6,6 +6,7 @@
 .page-avenir p,
 .page-avenir li {
     font-size: clamp(0.8rem, 2.6vw, 1.6rem);
+    margin-top: 1rem;
 }
 
 .page-avenir h1 {
@@ -20,7 +21,6 @@
 }
 
 .page-avenir li {
-    margin-top: 1rem;
 }
 
 // .section-stages {
@@ -50,9 +50,20 @@
     right: 0;
     z-index: -1;
     max-width: 40vw;
+    animation: animation-3d 1s ease-in-out;
+    animation-timeline: view();
+
     @media screen and (max-width: 756px) {
         display: none;
     }
 }
 
+@keyframes animation-3d {
+    0% {
+        transform: scale(0.8) translateX(10vw) rotate(5deg);
+    }
 
+    100% {
+        transform: scale(1) translateX(0) rotate(-5deg);
+    }
+}

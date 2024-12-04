@@ -1,64 +1,62 @@
-.chargement{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  backdrop-filter: blur(50px);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  .spinner{
-    width: 125px;
-    height: 125px;
-    //border: 5px solid $noir;
-    //border-top-color: $couleur;
-    border-radius: 50%;
-    background: radial-gradient(farthest-side, $couleur 94%,#0000) top/9px 9px no-repeat,
-    conic-gradient(#0000 30%,$couleur);
-    mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);  
-    animation: spin 1s linear infinite;
-  } 
+.chargement {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    .spinner {
+        width: 125px;
+        height: 125px;
+        //border: 5px solid $noir;
+        //border-top-color: $couleur;
+        border-radius: 50%;
+        background: radial-gradient(farthest-side, $couleur 94%, #0000) top/9px 9px no-repeat, conic-gradient(#0000 30%, $couleur);
+        mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+        animation: spin 1s linear infinite;
+    }
 }
 
-.invisible{
-  animation: dispparition 1s forwards;
+.chargement-invisible {
+    animation: dispparition 1s forwards;
 }
 
-.visible{
-  animation: apparition 1s forwards;
-  pointer-events: all;
+.chargement-visible {
+    animation: apparition 1s forwards;
+    pointer-events: all;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes apparition {
-  from {
-    filter: blur(10px);
-    opacity: 0;
-  }
-  to {
-    filter: blur(0);
-    opacity: 1;
-  }
-  
+    from {
+        filter: blur(10px);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
 }
 
 @keyframes dispparition {
-  from {
-    filter: blur(0);
-    opacity: 1;
-  }
-  to {
-    filter: blur(10px);
-    opacity: 0;
-  }
+    from {
+        filter: blur(0);
+        opacity: 1;
+    }
+    to {
+        filter: blur(10px);
+        opacity: 0;
+    }
 }

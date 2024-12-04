@@ -1,11 +1,9 @@
 .div-searchform {
     justify-content: center;
     align-items: center;
-    // width: 100%;
-    // margin: 0 12vw;
     margin-left: 12vw;
     margin-right: 12vw;
-    // height: 30vh;
+    margin-top: 5vh;
 }
 
 .recherche {
@@ -30,20 +28,15 @@
     // width: 30vw;
     transition: width 0.5s ease-in-out;
     max-width: 50vw;
-
-    // @media screen and (max-width: 756px) {
-    //     width: 50vw;
-    // }
-
-    // @media screen and (max-width: 430px) {
-    //     width: 60vw;
-    // }
 }
 
-.recherche__input:focus {
-    // width: 50vw; // Augmente la largeur de l'input au focus
+.aucun-resultat {
+    margin-top: 4rem;
 }
-
+.page-recherche .btn-retour {
+    padding: 5rem 12vw;
+    padding-bottom: 0;
+}
 .recherche__input::placeholder {
     font-family: "Josefin Sans", serif;
     color: $gris;
@@ -60,5 +53,4 @@
     background-color: transparent;
     border-style: none;
     height: 100%;
-    // width: 20%;
 }
