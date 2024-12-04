@@ -26,22 +26,7 @@
     border: none;
     outline: none;
     height: 100%;
-    width: auto;
-    // width: 30vw;
-    transition: width 0.5s ease-in-out;
-    max-width: 50vw;
-
-    // @media screen and (max-width: 756px) {
-    //     width: 50vw;
-    // }
-
-    // @media screen and (max-width: 430px) {
-    //     width: 60vw;
-    // }
-}
-
-.recherche__input:focus {
-    // width: 50vw; // Augmente la largeur de l'input au focus
+    width: 100%;
 }
 
 .recherche__input::placeholder {
@@ -60,5 +45,4 @@
     background-color: transparent;
     border-style: none;
     height: 100%;
-    // width: 20%;
 }
