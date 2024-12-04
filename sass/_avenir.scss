@@ -1,197 +1,158 @@
 .feed-avenir {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .lesmasks-avenir {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  & a:nth-of-type(2) {
+    margin: 10% 0 0 0;
+  }
+  @media screen and (max-width: 756px) {
+    flex-direction: column;
+    & a:nth-of-type(1) {
+      margin: 0% 40vw -15vh 0;
+    }
     & a:nth-of-type(2) {
-        margin: 10% 0 0 0;
+      margin: 0 0 0 40vw;
     }
-    @media screen and (max-width: 756px) {
-        flex-direction: column;
-        & a:nth-of-type(1) {
-            margin: 0% 40vw -15vh 0;
-        }
-        & a:nth-of-type(2) {
-            margin: 0 0 0 40vw;
-        }
-        & a:nth-of-type(3) {
-            margin: -15vh 40vw 0% 0;
-        }
+    & a:nth-of-type(3) {
+      margin: -15vh 40vw 0% 0;
     }
+  }
 
-    @media screen and (max-width: 430px) {
-        flex-direction: column;
-        & a:nth-of-type(1),
-        a:nth-of-type(2),
-        a:nth-of-type(3) {
-            margin: 0;
-        }
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+    & a:nth-of-type(1),
+    a:nth-of-type(2),
+    a:nth-of-type(3) {
+      margin: 0;
     }
+  }
 }
 
 .images-avenir {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
     position: absolute;
-    top: 0vh;
-    left: 0vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    // filter: grayscale(100%);
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $couleur;
-        opacity: 1;
-        transition: opacity 0.5s;
-        mix-blend-mode: color; // Mélange de couleur
-        z-index: 2;
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $couleur;
+    opacity: 1;
+    transition: opacity 0.5s;
+    mix-blend-mode: color; // Mélange de couleur
+    z-index: 2;
+  }
 }
 
 #img-avenir-droite {
-    background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/emploi_img2.webp);
+  background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/emploi_img2.webp);
 }
 #img-avenir-milieu {
-    background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/universite_img4.webp);
+  background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/universite_img4.webp);
 }
 #img-avenir-gauche {
-    background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/stage_img3.webp);
+  background-image: url(https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/stage_img3.webp);
 }
 .feed-avenir h3 {
-    position: absolute;
-    z-index: 3;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease;
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
 }
 
 .mask-avenir {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    min-width: 100px;
-    // border: solid 1rem var(--couleur);
-    // border-radius: 50%;
-    // box-shadow: 0px 0px 20px var(--couleur);
-    clip-path: circle(50% at 50% 50%);
-    transition: clip-path 0.5s ease;
-    pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 100px;
+  clip-path: circle(50% at 50% 50%);
+  transition: clip-path 0.5s ease;
+  pointer-events: none;
 }
 
 .conteneur-mask {
-    width: 30vw;
-    height: 30vw;
-    border-radius: 50%;
-    margin: 0 0 10% 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-origin: center;
-    // border: 2px solid $couleur-fonce;
-    box-shadow: 0px 0px 50px $couleur-fonce;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  margin: 0 0 10% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  box-shadow: 0px 0px 50px $couleur-fonce;
 
-    &:hover {
-        .images-avenir::before {
-            opacity: 0;
-        }
+  &:hover {
+    .images-avenir::before {
+      opacity: 0;
     }
+  }
 
-    @media screen and (max-width: 756px) {
-        // &:hover {
-        //     .mask-avenir {
-        //         z-index: 4;
-        //         clip-path: circle(500% at 50% 50%);
-        //     }
-        // }
-        width: 40vw;
-        height: 40vw;
-        //margin: 0 50% 0 0;
-    }
+  @media screen and (max-width: 756px) {
+    width: 40vw;
+    height: 40vw;
+  }
 
-    @media screen and (max-width: 430px) {
-        // &:hover {
-        //     .mask-avenir {
-        //         z-index: 4;
-        //         clip-path: circle(1000% at 50% 50%);
-        //     }
-        // }
-        width: 50vw;
-        height: 50vw;
+  @media screen and (max-width: 430px) {
+    width: 50vw;
+    height: 50vw;
 
-        min-width: 150px;
-        min-height: 150px;
-        margin: 0;
-    }
+    min-width: 150px;
+    min-height: 150px;
+    margin: 0;
+  }
 }
 
-// .conteneur-hover-mask {
-//     position: relative;
-//     width: 30vw;
-//     height: 30vw;
-//     border-radius: 50%;
-
-//     &:hover {
-//         .mask-avenir {
-//             z-index: 4;
-//             clip-path: circle(100% at 50% 50%);
-//         }
-//     }
-// }
 .avenir-sections {
-    width: 100vw;
-    height: 33vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background-clip: text;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 100vw;
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-clip: text;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-    & h1 {
-        text-align: center;
-        //transform-origin: center;
-        transition: font-size 0.5s ease;
+  & h1 {
+    text-align: center;
+    transition: font-size 0.5s ease;
+  }
+  &:hover {
+    h1 {
+      font-size: 2000vw;
     }
-    &:hover {
-        h1 {
-            // transform: scale(0.5, 0.5);
-            font-size: 2000vw;
-            //font-family: "Playfair Display", serif;
-        }
-    }
+  }
 }
 .avenir-sections h1 {
-    display: flex;
-    align-items: center;
-    //background-image: url(images/image.png);
-    // background-clip: text;
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    color: transparent;
-    font-weight: 900;
-    font-size: clamp(0.5rem, 18vw, 17vw);
-    margin: 0;
+  display: flex;
+  align-items: center;
+  color: transparent;
+  font-weight: 900;
+  font-size: clamp(0.5rem, 18vw, 17vw);
+  margin: 0;
 }
