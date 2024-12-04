@@ -81,8 +81,6 @@ btnsSession.forEach((bouton) => {
             // Si la session est fermée, l'afficher
             coursActifs.style.display = "block"; // Afficher la session active
         }
-        //Appeler la fonction dès l'ouverture de la page
-        // ajusterHauteurTimeline();
         mettreAJourBarreProgression();
     });
 });
