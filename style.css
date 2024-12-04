@@ -1738,10 +1738,9 @@ circle {
   justify-content: center;
   align-items: center;
 }
-#hero h1 {
+#hero .titre h1 {
   text-align: center; /* Centrage du texte */
   padding: 0 2rem; /* Espacement autour du texte */
-  font-size: clamp(2.5rem, 8vw, 6rem);
   z-index: 1;
 }
 #hero span {

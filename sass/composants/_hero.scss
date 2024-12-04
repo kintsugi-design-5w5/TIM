@@ -23,10 +23,9 @@
     align-items: center;
   }
 
-  h1 {
+  .titre h1 {
     text-align: center; /* Centrage du texte */
     padding: 0 2rem; /* Espacement autour du texte */
-    font-size: clamp(2.5rem, 8vw, 6rem);
     z-index: 1;
   }
 
