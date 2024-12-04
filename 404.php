@@ -12,3 +12,5 @@
 <?php 
     get_footer(); // Inclut le pied de page du thème WordPress
 ?>
+
+<script src="<?php echo get_template_directory_uri() . '/js/404.js'; ?>"></script>

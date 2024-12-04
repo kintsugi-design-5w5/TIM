@@ -39,7 +39,7 @@
                 </div>
                 <div class="barre-navigation">
                     <!-- Logo cliquable -->
-                    <a data-icone="east" class="logo" href="<?php echo home_url(); ?>">
+                    <a data-icone="east" class="logo" onclick="transitionToPage('<?php echo home_url(); ?>')">
                         <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_Logo.webp" alt="logo du TIM" />
                     </a>
 
@@ -49,9 +49,9 @@
                     <!-- Menu principal -->
                     <div class="menu-principal-container">
                         <ul>
-                            <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url(); ?>">Accueil</a></li>
-                            <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/category/cours'); ?>">Cours</a></li>
-                            <li><a class="mon-bouton" data-icone="east" href="<?php echo home_url('/category/projets'); ?>">Projets</a></li>
+                            <li><a class="mon-bouton" data-icone="east" onclick="transitionToPage('<?php echo home_url(); ?>')">Accueil</a></li>
+                            <li><a class="mon-bouton" data-icone="east" onclick="transitionToPage('<?php echo home_url('/category/cours'); ?>')">Cours</a></li>
+                            <li><a class="mon-bouton" data-icone="east" onclick="transitionToPage('<?php echo home_url('/category/projets'); ?>')">Projets</a></li>
                             <li><a class="mon-bouton" data-icone="east" onclick="transitionToPage('<?php echo home_url('/avenir'); ?>')">Avenir</a></li>
                         </ul>
                     </div>
