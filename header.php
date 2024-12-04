@@ -34,7 +34,6 @@
         <header>
             <nav>
                 <div class="chargement">
-                    <h6>Chargement...</h6>
                     <div class="spinner"></div>
                 </div>
                 <div class="barre-navigation">

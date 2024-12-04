@@ -1617,9 +1617,9 @@ main #hero {
   border: none;
   outline: none;
   height: 100%;
+  width: 100%;
   width: auto;
   transition: width 0.5s ease-in-out;
-  max-width: 50vw;
 }
 
 .aucun-resultat {
