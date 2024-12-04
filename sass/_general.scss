@@ -1,177 +1,168 @@
 /*********** STYLES GÉNÉRAUX **************/
 * {
-    // Cache le curseur natif partout
-    cursor: none;
+  // Cache le curseur natif partout
+  cursor: none;
 }
 
 html {
-    // Comportement de défilement
-    scroll-behavior: smooth;
+  // Comportement de défilement
+  scroll-behavior: smooth;
 }
 
 body {
-    // Styles généraux du corps
-    overflow-x: hidden;
-    background-color: $noir;
-    color: $blanc;
-    overflow-y: hidden;
+  // Styles généraux du corps
+  overflow-x: hidden;
+  background-color: $noir;
+  color: $blanc;
+  overflow-y: hidden;
 
-    @media screen and (max-width: 756px) {
-        overflow-x: hidden;
-    }
+  @media screen and (max-width: 756px) {
+    overflow-x: hidden;
+  }
 }
 
 html body #grain {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 100;
 }
-html body .ignore-grain {
-    // z-index: 20;
-}
-html body img {
-    // z-index: 20;
-}
+
 /*********** ICONES **************/
 .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 0, "GRAD" 0, "opsz" NaN;
-    color: $blanc;
+  font-variation-settings: "FILL" 0, "wght" 0, "GRAD" 0, "opsz" NaN;
+  color: $blanc;
 }
 
 /*********** HERO ET SECTION ET FOOTER **************/
 section {
-    // Styles pour les sections
-    //padding: 5rem 12rem;
-    padding: 5rem 12vw;
-    min-height: 100vh;
-    // min-width: 100vw;
+  padding: 5rem 12vw;
+  min-height: 100vh;
 }
 
 footer {
-    // Styles pour le footer
-    padding: 0 10rem;
+  // Styles pour le footer
+  padding: 0 10rem;
 }
 
 /*********** CURSEUR PERSONNALISÉ **************/
 .cliquable {
-    // Empêche le curseur de la main de s'afficher
-    cursor: none;
+  // Empêche le curseur de la main de s'afficher
+  cursor: none;
 }
 
 #curseur-personnalise {
-    // Styles pour le curseur personnalisé
-    backdrop-filter: blur(5px);
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: $couleur;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, background-color 0.15s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
+  // Styles pour le curseur personnalisé
+  backdrop-filter: blur(5px);
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $couleur;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease,
+    background-color 0.15s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
 }
 
 #icone-curseur {
-    // Styles pour l'icône du curseur
-    width: 50%;
-    height: auto;
-    max-width: 80%;
-    filter: brightness(0) invert(1); // Inverse la couleur de l'image si nécessaire
-    text-align: center;
+  // Styles pour l'icône du curseur
+  width: 50%;
+  height: auto;
+  max-width: 80%;
+  filter: brightness(0) invert(1); // Inverse la couleur de l'image si nécessaire
+  text-align: center;
 }
 
 .cache {
-    // Styles pour les éléments cachés
-    display: none;
+  // Styles pour les éléments cachés
+  display: none;
 }
 
 #curseur-personnalise.cache {
-    // Styles pour les éléments cachés
-    display: none;
+  // Styles pour les éléments cachés
+  display: none;
 }
 
 #curseur-personnalise.effet-survol {
-    // Styles pour le curseur au survol
-    width: 60px;
-    height: 60px;
+  // Styles pour le curseur au survol
+  width: 60px;
+  height: 60px;
 }
 
 body #curseur-personnalise.noir {
-    // Change la couleur de fond du curseur en noir
-    // background-color: $noir;
-    background-color: rgb(28, 28, 28); /* Couleur noire */
+  // Change la couleur de fond du curseur en noir ($noir)
+  background-color: rgb(28, 28, 28); /* Couleur noire */
 }
 body #curseur-personnalise.noir.survol {
-    // Change la couleur de fond du curseur en noir
-    // background-color: $noir;
-    background-color: rgb(28, 28, 28, 0.5); /* Couleur noire */
+  // Change la couleur de fond du curseur en noir ($noir)
+  background-color: rgb(28, 28, 28, 0.5); /* Couleur noire */
 }
 #curseur-personnalise.survol {
-    // Change la couleur de fond du curseur en noir
-    // background-color: $noir;
-    background-color: rgb(0, 123, 255, 0.5); /* Couleur noire */
+  // Change la couleur de fond du curseur en noir ($noir)
+  background-color: rgb(0, 123, 255, 0.5); /* Couleur noire */
 }
 
 /*********** BOUTONS **************/
 .mon-bouton {
-    padding: 0rem 4rem;
-    line-height: 100%;
-    position: relative; /* Nécessaire pour positionner l'after */
-    overflow: hidden; /* Masque tout débordement */
-    display: inline-block; /* Pour s'assurer que les dimensions sont respectées */
+  padding: 0rem 4rem;
+  line-height: 100%;
+  position: relative; /* Nécessaire pour positionner l'after */
+  overflow: hidden; /* Masque tout débordement */
+  display: inline-block; /* Pour s'assurer que les dimensions sont respectées */
 }
 
 .mon-bouton::after {
-    content: var(--after-content); /* Utilise la variable CSS pour le contenu */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10%); /* Position initiale en bas */
-    color: $noir;
-    font-family: "Playfair Display", serif;
-    transition: transform 0.3s ease; /* Transition douce */
+  content: var(--after-content); /* Utilise la variable CSS pour le contenu */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10%); /* Position initiale en bas */
+  color: $noir;
+  font-family: "Playfair Display", serif;
+  transition: transform 0.3s ease; /* Transition douce */
 }
 
 .mon-bouton .texte {
-    display: block; /* Permet au texte de prendre de la place */
-    transition: transform 0.3s ease; /* Transition pour le texte principal */
+  display: block; /* Permet au texte de prendre de la place */
+  transition: transform 0.3s ease; /* Transition pour le texte principal */
 }
 
 .mon-bouton:hover .texte {
-    transform: translateY(-100%); /* Déplace le texte vers le haut pour le masquer */
+  transform: translateY(
+    -100%
+  ); /* Déplace le texte vers le haut pour le masquer */
 }
 
 .mon-bouton:hover::after {
-    opacity: 1; /* Rendre visible au survol */
-    transform: translateX(-50%) translateY(-110%); /* Remonte le texte à sa position */
+  opacity: 1; /* Rendre visible au survol */
+  transform: translateX(-50%) translateY(-110%); /* Remonte le texte à sa position */
 }
 
 /*********** SCROLLBAR **************/
 /* Scrollbar styles */
 ::-webkit-scrollbar {
-    // Largeur de la scrollbar
-    width: 10px;
-    cursor: pointer;
+  // Largeur de la scrollbar
+  width: 10px;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
-    // Couleur du track de la scrollbar
-    background: black;
+  // Couleur du track de la scrollbar
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-    // Couleur du pouce de la scrollbar
-    background: $couleur;
-    //mettre un pointeur
+  // Couleur du pouce de la scrollbar
+  background: $couleur;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    // Couleur du pouce au survol
-    background: #555;
+  // Couleur du pouce au survol
+  background: #555;
 }

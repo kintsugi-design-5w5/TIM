@@ -1,4 +1,4 @@
-.chargement{
+.chargement {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,24 +12,23 @@
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  .spinner{
+  .spinner {
     width: 125px;
     height: 125px;
-    //border: 5px solid $noir;
-    //border-top-color: $couleur;
     border-radius: 50%;
-    background: radial-gradient(farthest-side, $couleur 94%,#0000) top/9px 9px no-repeat,
-    conic-gradient(#0000 30%,$couleur);
-    mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);  
+    background: radial-gradient(farthest-side, $couleur 94%, #0000) top/9px 9px
+        no-repeat,
+      conic-gradient(#0000 30%, $couleur);
+    mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
     animation: spin 1s linear infinite;
-  } 
+  }
 }
 
-.invisible{
+.invisible {
   animation: dispparition 1s forwards;
 }
 
-.visible{
+.visible {
   animation: apparition 1s forwards;
   pointer-events: all;
 }
@@ -49,7 +48,6 @@
     filter: blur(0);
     opacity: 1;
   }
-  
 }
 
 @keyframes dispparition {
