@@ -496,146 +496,6 @@ body .feed .presentation-info img {
   justify-content: center;
 }
 
-.axes-cours {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  height: 100vh;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.axes-cours .filtre-couleur .jeu-video {
-  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
-}
-.axes-cours .filtre-couleur .web {
-  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
-  background-position: center;
-}
-.axes-cours .filtre-couleur .troisd {
-  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
-  background-position: center;
-}
-.axes-cours .filtre-couleur .imagerie {
-  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
-}
-.axes-cours .filtre-couleur .video {
-  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
-}
-.axes-cours .filtre-couleur .autre {
-  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
-}
-.axes-cours .filtre-couleur {
-  height: 50%;
-  flex: 1 0 30%;
-  z-index: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanc);
-  filter: blur(0.8) contrast(0.8);
-}
-.axes-cours .filtre-couleur:hover::before {
-  opacity: 0;
-}
-.axes-cours .filtre-couleur:hover .boite_cours {
-  filter: grayscale(0);
-}
-.axes-cours .filtre-couleur::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--couleur);
-  opacity: 1;
-  transition: opacity 0.5s;
-  mix-blend-mode: color;
-  z-index: 2;
-}
-.axes-cours .filtre-couleur:hover div:last-of-type a {
-  background-color: hsla(0, 0%, 30%, 0.3);
-}
-.axes-cours .filtre-couleur h3 {
-  z-index: 3;
-  font-size: 3.5rem;
-  text-align: center;
-}
-@media screen and (max-width: 756px) {
-  .axes-cours .filtre-couleur h3 {
-    padding-bottom: 2rem;
-  }
-}
-.axes-cours .filtre-couleur div:last-of-type {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  width: 100%;
-}
-.axes-cours .filtre-couleur div:last-of-type a {
-  margin: 1vw;
-  flex-grow: 1;
-  line-height: 4rem;
-  background-color: rgba(0, 123, 255, 0.3);
-  transition: background-color 0.5s;
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.axes-cours .filtre-couleur div:last-of-type a:hover {
-  background-color: hsla(0, 0%, 50%, 0.5);
-}
-.axes-cours .filtre-couleur div:last-of-type a:last-of-type {
-  margin-left: 0;
-}
-@media screen and (max-width: 756px) {
-  .axes-cours .filtre-couleur div:last-of-type a {
-    width: 9vw;
-    height: 9vw;
-    margin: 3vw;
-  }
-  .axes-cours .filtre-couleur div:last-of-type a:last-of-type {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 756px) {
-  .axes-cours .filtre-couleur {
-    flex: 1 0 40%;
-    height: 30%;
-    max-width: none;
-  }
-}
-@media screen and (max-width: 430px) {
-  .axes-cours .filtre-couleur {
-    flex: 1 0 0;
-    width: 100%;
-    margin: 0;
-  }
-}
-.axes-cours .boite_cours {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: 0% 50%;
-  filter: grayscale(100%);
-  transition: filter 0.5s;
-}
-@media screen and (max-width: 430px) {
-  .axes-cours {
-    flex-direction: column;
-    gap: 2%;
-    justify-content: space-between;
-  }
-}
-
 #projet1 {
   top: 0;
 }
@@ -1989,6 +1849,246 @@ circle {
 
 .burger.active .bottom {
   stroke-dashoffset: -68px;
+}
+
+/*********** AXES **************/
+.axes {
+  padding-bottom: 12rem;
+  z-index: 1;
+}
+
+.axes-cours {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.axes-cours .filtre-couleur .jeu-video {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
+}
+.axes-cours .filtre-couleur .web {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
+  background-position: center;
+}
+.axes-cours .filtre-couleur .troisd {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
+  background-position: center;
+}
+.axes-cours .filtre-couleur .imagerie {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
+}
+.axes-cours .filtre-couleur .video {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
+}
+.axes-cours .filtre-couleur .autre {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
+}
+.axes-cours .filtre-couleur {
+  height: 50%;
+  flex: 1 0 30%;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanc);
+  filter: blur(0.8) contrast(0.8);
+  /*Dernier div de axes-cours*/
+}
+.axes-cours .filtre-couleur:hover::before {
+  opacity: 0;
+}
+.axes-cours .filtre-couleur:hover .boite_cours {
+  filter: grayscale(0);
+}
+.axes-cours .filtre-couleur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--couleur);
+  opacity: 1;
+  transition: opacity 0.5s;
+  mix-blend-mode: color;
+  z-index: 2;
+}
+.axes-cours .filtre-couleur:hover div:last-of-type a {
+  background-color: hsla(0, 0%, 30%, 0.3);
+}
+.axes-cours .filtre-couleur h3 {
+  z-index: 3;
+  font-size: 3.5rem;
+  text-align: center;
+  /*Le div de filtres dans les axes*/
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur h3 {
+    padding-bottom: 2rem;
+  }
+}
+.axes-cours .filtre-couleur h3 div {
+  background-color: var(--couleur-fond);
+  color: white;
+  height: 50%;
+  flex: 1 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/image.png");
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur h3 div {
+    flex: 1 0 40%;
+    height: 30%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .axes-cours .filtre-couleur h3 div {
+    flex: 1 0 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+.axes-cours .filtre-couleur h3 div:last-of-type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  width: 100%;
+}
+.axes-cours .filtre-couleur h3 div:last-of-type a {
+  margin: 1vw;
+  flex-grow: 1;
+  line-height: 4rem;
+  background-color: rgba(0, 123, 255, 0.3);
+  transition: background-color 0.5s;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.axes-cours .filtre-couleur h3 div:last-of-type a:hover {
+  background-color: hsla(0, 0%, 50%, 0.5);
+}
+.axes-cours .filtre-couleur h3 div:last-of-type a:last-of-type {
+  margin-left: 0;
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur h3 div:last-of-type a {
+    width: 9vw;
+    height: 9vw;
+    margin: 3vw;
+  }
+  .axes-cours .filtre-couleur h3 div:last-of-type a:last-of-type {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur h3 {
+    flex: 1 0 40%;
+    height: 30%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .axes-cours .filtre-couleur h3 {
+    flex: 1 0 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .axes-cours .filtre-couleur {
+    flex-direction: column;
+    gap: 2%;
+    justify-content: space-between;
+  }
+}
+.axes-cours .filtre-couleur div:last-of-type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  width: 100%;
+}
+.axes-cours .filtre-couleur div:last-of-type a {
+  margin: 1vw;
+  flex-grow: 1;
+  line-height: 4rem;
+  background-color: rgba(0, 123, 255, 0.3);
+  transition: background-color 0.5s;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.axes-cours .filtre-couleur div:last-of-type a:hover {
+  background-color: hsla(0, 0%, 50%, 0.5);
+}
+.axes-cours .filtre-couleur div:last-of-type a:last-of-type {
+  margin-left: 0;
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur div:last-of-type a {
+    width: 9vw;
+    height: 9vw;
+    margin: 3vw;
+  }
+  .axes-cours .filtre-couleur div:last-of-type a:last-of-type {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur {
+    flex: 1 0 40%;
+    height: 30%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .axes-cours .filtre-couleur {
+    flex: 1 0 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+.axes-cours .axes-cours div {
+  position: relative;
+  z-index: 10;
+}
+.axes-cours .axes-cours div:hover {
+  filter: grayscale(0%);
+  background-color: red;
+}
+.axes-cours .boite_cours {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 0% 50%;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+@media screen and (max-width: 430px) {
+  .axes-cours {
+    flex-direction: column;
+    gap: 2%;
+    justify-content: space-between;
+  }
 }
 
 .chargement {

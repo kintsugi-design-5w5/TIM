@@ -1,527 +1,381 @@
 /*********** FEED **************/
 .feed {
-    // Conteneur principal du feed
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    width: 100vw;
-    background-color: $noir;
-    z-index: -2;
+  // Conteneur principal du feed
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100vw;
+  background-color: $noir;
+  z-index: -2;
 }
 
 .feed img {
-    // Image à l'intérieur du feed
-    width: 100%;
-    height: 100%;
+  // Image à l'intérieur du feed
+  width: 100%;
+  height: 100%;
 }
 
 /*********** PRESENTATION **************/
 .presentation {
-    // Première section du feed
-    flex-direction: column;
-    z-index: 1;
+  // Première section du feed
+  flex-direction: column;
+  z-index: 1;
 }
 
 .presentation-tim {
-    // Informations sur le TIM
-    display: flex;
-    gap: 2rem;
-    max-width: 100%;
+  // Informations sur le TIM
+  display: flex;
+  gap: 2rem;
+  max-width: 100%;
 
-    @media screen and (max-width: 756px) {
-        flex-direction: column; // Colonnes sur petits écrans
-    }
+  @media screen and (max-width: 756px) {
+    flex-direction: column; // Colonnes sur petits écrans
+  }
 }
 
 body .feed .presentation-info {
-    // Conteneur pour 2 images et textes
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    height: 100%;
-    text-align: right;
-    margin: 5rem 0;
+  // Conteneur pour 2 images et textes
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  margin: 5rem 0;
 
-    & img {
-        // width: 100%;
-        // height: auto;
-        @media screen and (max-width: 756px) {
-            width: auto;
-            height: 120%;
-        }
-        width: 120%;
-        height: auto;
-    }
+  & img {
+    // width: 100%;
+    // height: auto;
     @media screen and (max-width: 756px) {
-        flex-direction: column-reverse; // Colonnes sur petits écrans
-        align-items: center;
-        justify-content: flex-end;
-        margin: 0;
+      width: auto;
+      height: 120%;
     }
+    width: 120%;
+    height: auto;
+  }
+  @media screen and (max-width: 756px) {
+    flex-direction: column-reverse; // Colonnes sur petits écrans
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+  }
 }
 
 .presentation-info:first-of-type .img-projet {
-    animation: apparition-droite 1s ease forwards; // Animation de l'image
-    animation-timeline: view();
+  animation: apparition-droite 1s ease forwards; // Animation de l'image
+  animation-timeline: view();
 }
 
 .presentation-charte {
-    height: auto;
+  height: auto;
 }
 
 .presentation-info + .presentation-info {
-    // Deuxième image et texte
-    & img {
-        @media screen and (max-width: 756px) {
-            width: 120%;
-            height: auto;
-        }
-        width: auto;
-        height: 120%;
-        margin-top: 20%;
-    }
-    & .infos h1 {
-        text-align: left; // Alignement à gauche
-        @media screen and (max-width: 756px) {
-            text-align: center; // Centrer le titre sur petits écrans
-        }
-    }
-    & .infos {
-        align-items: flex-start; // Alignement du texte
-    }
-    & .img-projet {
-        animation: apparition-gauche 1s ease forwards; // Animation de l'image
-        animation-timeline: view();
-    }
-
+  // Deuxième image et texte
+  & img {
     @media screen and (max-width: 756px) {
-        flex-direction: column; // Colonnes sur petits écrans
+      width: 120%;
+      height: auto;
     }
+    width: auto;
+    height: 120%;
+    margin-top: 20%;
+  }
+  & .infos h1 {
+    text-align: left; // Alignement à gauche
+    @media screen and (max-width: 756px) {
+      text-align: center; // Centrer le titre sur petits écrans
+    }
+  }
+  & .infos {
+    align-items: flex-start; // Alignement du texte
+  }
+  & .img-projet {
+    animation: apparition-gauche 1s ease forwards; // Animation de l'image
+    animation-timeline: view();
+  }
+
+  @media screen and (max-width: 756px) {
+    flex-direction: column; // Colonnes sur petits écrans
+  }
 }
 
 .feed .infos {
-    // Conteneur pour le texte du feed
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 100%;
-    width: 70%;
-    flex-grow: 1;
-    font-size: clamp(1rem, 4vw, 5rem); // Taille de police responsive
+  // Conteneur pour le texte du feed
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+  width: 70%;
+  flex-grow: 1;
+  font-size: clamp(1rem, 4vw, 5rem); // Taille de police responsive
 
-    @media screen and (max-width: 756px) {
-        width: 100%;
-    }
+  @media screen and (max-width: 756px) {
+    width: 100%;
+  }
 }
 
 .presentation-info .infos h1 {
-    // Titre du feed
-    margin: 0;
-    text-align: right;
-    width: 100%;
+  // Titre du feed
+  margin: 0;
+  text-align: right;
+  width: 100%;
 
-    @media screen and (max-width: 756px) {
-        text-align: center; // Centrer le titre sur petits écrans
-    }
+  @media screen and (max-width: 756px) {
+    text-align: center; // Centrer le titre sur petits écrans
+  }
 }
 
 /*********** AXES **************/
 .axes {
-    padding-bottom: 12rem; // Espacement en bas
-    z-index: 1;
-    flex-direction: column; // Colonnes
-    justify-content: flex-start;
-    & h1 {
-        text-align: center; // Centrer le titre
-        margin: 0;
-    }
+  padding-bottom: 12rem; // Espacement en bas
+  z-index: 1;
+  flex-direction: column; // Colonnes
+  justify-content: flex-start;
+  & h1 {
+    text-align: center; // Centrer le titre
+    margin: 0;
+  }
 }
 
 .feed .img-projet {
-    width: 100%;
+  width: 100%;
+  height: 50vh;
+  z-index: -1;
+  // Image du projet avec animation
+  animation: apparition-gauche 1s ease forwards;
+  animation-timeline: view();
+  // background-size: cover;
+  overflow: hidden;
+
+  img {
+    display: block;
+    // width: 100%;
+    // height: 100%;
+    height: 100%;
+    width: auto;
+    // animation: effet-images 1s ease forwards;
+    // animation-timeline: view();
+    // transform: scale(5);
+    // object-fit: cover; /* Garde les proportions sans déformation */
+    // object-position: 50% 20%;
+  }
+
+  @media screen and (max-width: 756px) {
     height: 50vh;
-    z-index: -1;
-    // Image du projet avec animation
-    animation: apparition-gauche 1s ease forwards;
-    animation-timeline: view();
-    // background-size: cover;
-    overflow: hidden;
-
-    img {
-        display: block;
-        // width: 100%;
-        // height: 100%;
-        height: 100%;
-        width: auto;
-        // animation: effet-images 1s ease forwards;
-        // animation-timeline: view();
-        // transform: scale(5);
-        // object-fit: cover; /* Garde les proportions sans déformation */
-        // object-position: 50% 20%;
-    }
-
-    @media screen and (max-width: 756px) {
-        height: 50vh;
-    }
+  }
 }
 
 .feed .charte-rond {
-    // Charte graphique sous forme de rond
-    height: 30vw;
-    width: 30vw;
-    min-width: 300px;
-    min-height: 300px;
-    border-radius: 50%; // Arrondir les coins
-    background-color: $couleur;
-    margin: 1rem 0;
-    animation: apparition-charte 1s ease forwards; // Animation d'apparition
-    animation-timeline: view();
+  // Charte graphique sous forme de rond
+  height: 30vw;
+  width: 30vw;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 50%; // Arrondir les coins
+  background-color: $couleur;
+  margin: 1rem 0;
+  animation: apparition-charte 1s ease forwards; // Animation d'apparition
+  animation-timeline: view();
 }
 
 .charte-rond,
 .img-projet {
-    // Alignement des images
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.axes-cours {
-    // Conteneur pour les axes
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    height: 100vh;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-    & .filtre-couleur .jeu-video {
-        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
-    }
-
-    & .filtre-couleur .web {
-        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
-        background-position: center;
-    }
-
-    & .filtre-couleur .troisd {
-        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
-        background-position: center;
-    }
-
-    & .filtre-couleur .imagerie {
-        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
-    }
-
-    & .filtre-couleur .video {
-        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
-    }
-
-    & .filtre-couleur .autre {
-        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
-    }
-
-    & .filtre-couleur {
-        height: 50%;
-        flex: 1 0 30%; // Flexibilité des divs
-        z-index: 1; // Ordre d'affichage
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $blanc;
-        filter: blur(0.8) contrast(0.8);
-
-        &:hover::before {
-            // Effet de couleur sur hover
-            opacity: 0;
-        }
-        &:hover .boite_cours {
-            filter: grayscale(0); // Effet de couleur sur hover
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: $couleur;
-            opacity: 1;
-            transition: opacity 0.5s;
-            mix-blend-mode: color; // Mélange de couleur
-            z-index: 2;
-        }
-        &:hover div:last-of-type a {
-            background-color: hsla(0, 0%, 30%, 0.3);
-        }
-        & h3 {
-            z-index: 3; // Ordre d'affichage
-            font-size: 3.5rem; // Taille de police
-            text-align: center;
-            @media screen and (max-width: 756px) {
-                padding-bottom: 2rem;
-            }
-        }
-
-        & div:last-of-type {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 3;
-            width: 100%;
-            & a {
-                // width: 4vw;
-                // height: 4vw;
-                margin: 1vw;
-                flex-grow: 1;
-                line-height: 4rem;
-                // background-color: hsla(0, 0%, 30%, 0.3);
-                background-color: rgb(0, 123, 255, 0.3);
-                transition: background-color 0.5s;
-                backdrop-filter: blur(10px);
-                // border-radius: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                &:hover {
-                    background-color: hsla(0, 0%, 50%, 0.5);
-                }
-                &:last-of-type {
-                    margin-left: 0;
-                }
-
-                @media screen and (max-width: 756px) {
-                    width: 9vw;
-                    height: 9vw;
-                    margin: 3vw;
-                    &:last-of-type {
-                        margin-left: 0;
-                    }
-                }
-            }
-        }
-        @media screen and (max-width: 756px) {
-            flex: 1 0 40%; // Ajustement pour petits écrans
-            height: 30%;
-            max-width: none;
-        }
-
-        @media screen and (max-width: 430px) {
-            flex: 1 0 0; // Flexibilité totale sur très petits écrans
-            width: 100%;
-            margin: 0; // Supprimer les marges
-        }
-    }
-    & .boite_cours {
-        // Styles pour les divs à l'intérieur des axes
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: 0% 50%;
-        filter: grayscale(100%); // Effet de gris
-        transition: filter 0.5s; // Transition pour hover
-        // position: relative; // Position relative pour le z-index
-    }
-
-    @media screen and (max-width: 430px) {
-        flex-direction: column; // Orientation verticale sur très petits écrans
-        gap: 2%; // Espacement entre les divs
-        justify-content: space-between; // Espacement uniforme
-    }
+  // Alignement des images
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #projet1 {
-    top: 0; // Position du paint
+  top: 0; // Position du paint
 }
 
 #projet2 {
-    top: -100vh; // Position du paint
+  top: -100vh; // Position du paint
 }
 
 #projet3 {
-    top: -200vh; // Position du paint
+  top: -200vh; // Position du paint
 }
 
 .proj-video {
-    margin-top: -100vh;
-    position: relative;
-    height: 200vh; // Hauteur suffisante pour permettre le scroll
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    background-color: $noir-fonce;
-    padding: 0;
-    z-index: -1;
+  margin-top: -100vh;
+  position: relative;
+  height: 200vh; // Hauteur suffisante pour permettre le scroll
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: $noir-fonce;
+  padding: 0;
+  z-index: -1;
 
-    video {
-        // transform: scale(0.5); // Taille initiale de la vidéo à 50%
-        position: sticky;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        z-index: 10;
-        transition: transform 0.1s ease-out;
-        animation: apparition-vid 1s forwards;
-        animation-timeline: view(block 0% 0%);
-    }
+  video {
+    // transform: scale(0.5); // Taille initiale de la vidéo à 50%
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 10;
+    transition: transform 0.1s ease-out;
+    animation: apparition-vid 1s forwards;
+    animation-timeline: view(block 0% 0%);
+  }
 }
 
 .feed-projet {
-    // Section projet du feed
-    width: 100vw;
-    height: 100vh;
-    position: sticky; // Reste visible lors du défilement
-    top: 0; // Position du haut
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    contain: paint; // Contenu peint
+  // Section projet du feed
+  width: 100vw;
+  height: 100vh;
+  position: sticky; // Reste visible lors du défilement
+  top: 0; // Position du haut
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  contain: paint; // Contenu peint
 }
 
 .degrade-projets::after {
-    // Effet de dégradé sur le projet
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, $noir-fonce, rgba(0, 0, 0, 0) 100%); // Dégradé sombre
-    pointer-events: none; // Permet de cliquer à travers l'after
+  // Effet de dégradé sur le projet
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    $noir-fonce,
+    rgba(0, 0, 0, 0) 100%
+  ); // Dégradé sombre
+  pointer-events: none; // Permet de cliquer à travers l'after
 }
 
 .projet-paint {
-    // Peinture pour le projet
-    height: 300vh; // Hauteur de la peinture
-    position: absolute;
-    z-index: 20; // Ordre d'affichage
-    left: 0;
-    right: 0;
+  // Peinture pour le projet
+  height: 300vh; // Hauteur de la peinture
+  position: absolute;
+  z-index: 20; // Ordre d'affichage
+  left: 0;
+  right: 0;
 }
 
 .info-projet {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  & > .titre-projet {
+    flex: 1;
+    text-align: center;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-
-    & > .titre-projet {
-        flex: 1;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @media screen and (max-width: 756px) {
-            text-align: left;
-            justify-content: flex-start;
-            align-items: flex-end;
-            width: 20rem;
-        }
-
-        &:last-of-type {
-            @media screen and (max-width: 756px) {
-                align-items: flex-start;
-            }
-        }
-    }
 
     @media screen and (max-width: 756px) {
-        flex-direction: column;
+      text-align: left;
+      justify-content: flex-start;
+      align-items: flex-end;
+      width: 20rem;
     }
+
+    &:last-of-type {
+      @media screen and (max-width: 756px) {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  @media screen and (max-width: 756px) {
+    flex-direction: column;
+  }
 }
 
 /*********** IMAGE PARALLAX **************/
 .info-projet .img-parralax {
-    flex: 1;
-    width: 25rem;
-    height: 25rem;
-    background-color: $noir;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  flex: 1;
+  width: 25rem;
+  height: 25rem;
+  background-color: $noir;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    @media screen and (max-width: 756px) {
-        flex: 3;
-    }
+  @media screen and (max-width: 756px) {
+    flex: 3;
+  }
 }
 /*********** ANIMATIONS **************/
 @keyframes apparition-gauche {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes apparition-droite {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @keyframes effet-images {
-    0% {
-        transform: scale(5) rotate(5deg);
-        // width: 150%;
-    }
-    50% {
-        transform: scale(1) rotate(0deg);
-        // width: 120%;
-    }
+  0% {
+    transform: scale(5) rotate(5deg);
+    // width: 150%;
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+    // width: 120%;
+  }
 }
 
 @keyframes ligne-burger {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes apparition-charte {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    40% {
-        opacity: 1;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 @keyframes apparition-vid {
-    40% {
-        transform: scale(0.3);
-    }
-    70% {
-        transform: scale(1);
-    }
+  40% {
+    transform: scale(0.3);
+  }
+  70% {
+    transform: scale(1);
+  }
 }
