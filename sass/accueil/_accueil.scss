@@ -202,8 +202,16 @@ body .feed .presentation-info {
     flex-wrap: wrap;
     gap: 2rem;
 
+    & .filtre-couleur .jeu-video.lazy{
+        background-image: none;
+    }
+
     & .filtre-couleur .jeu-video {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
+    }
+
+    & .filtre-couleur .web.lazy {
+        background-image: none;
     }
 
     & .filtre-couleur .web {
@@ -211,17 +219,33 @@ body .feed .presentation-info {
         background-position: center;
     }
 
+    & .filtre-couleur .troisd.lazy {
+        background-image: none;
+    }
+
     & .filtre-couleur .troisd {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
         background-position: center;
+    }
+
+    & .filtre-couleur .imagerie.lazy {
+        background-image: none;
     }
 
     & .filtre-couleur .imagerie {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
     }
 
+    & .filtre-couleur .video.lazy {
+        background-image: none;
+    }
+
     & .filtre-couleur .video {
         background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
+    }
+
+    & .filtre-couleur .autre.lazy {
+        background-image: none;
     }
 
     & .filtre-couleur .autre {
