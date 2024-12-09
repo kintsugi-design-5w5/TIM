@@ -48,7 +48,10 @@ body .feed .presentation-info {
     margin: 5rem 0;
 
     &:first-of-type {
-        flex-direction: column-reverse;
+        flex-direction: row-reverse;
+        @media screen and (max-width: 756px) {
+            flex-direction: column-reverse; // Colonnes sur petits écrans
+        }
     }
     & img {
         // width: 100%;
@@ -210,7 +213,7 @@ body .feed .presentation-info {
 .proj-video {
     margin-top: -100vh;
     position: relative;
-    height: 200vh; // Hauteur suffisante pour permettre le scroll
+    height: 300vh; // Hauteur suffisante pour permettre le scroll
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -228,7 +231,8 @@ body .feed .presentation-info {
         z-index: 10;
         transition: transform 0.1s ease-out;
         animation: apparition-vid 1s forwards;
-        animation-timeline: view(block 0% 0%);
+        animation-timeline: view(block 0% -100%);
+        border-radius: 10px;
     }
 }
 
@@ -371,10 +375,10 @@ body .feed .presentation-info {
     }
 }
 @keyframes apparition-vid {
-    40% {
+    45% {
         transform: scale(0.3);
     }
-    70% {
-        transform: scale(1);
+    85% {
+        transform: scale(1.05);
     }
 }

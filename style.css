@@ -360,7 +360,12 @@ body .feed .presentation-info {
   margin: 5rem 0;
 }
 body .feed .presentation-info:first-of-type {
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 756px) {
+  body .feed .presentation-info:first-of-type {
+    flex-direction: column-reverse;
+  }
 }
 body .feed .presentation-info img {
   width: 120%;
@@ -514,7 +519,7 @@ body .feed .presentation-info img {
 .proj-video {
   margin-top: -100vh;
   position: relative;
-  height: 200vh;
+  height: 300vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -531,7 +536,8 @@ body .feed .presentation-info img {
   z-index: 10;
   transition: transform 0.1s ease-out;
   animation: apparition-vid 1s forwards;
-  animation-timeline: view(block 0% 0%);
+  animation-timeline: view(block 0% -100%);
+  border-radius: 10px;
 }
 
 .feed-projet {
@@ -667,11 +673,11 @@ body .feed .presentation-info img {
   }
 }
 @keyframes apparition-vid {
-  40% {
+  45% {
     transform: scale(0.3);
   }
-  70% {
-    transform: scale(1);
+  85% {
+    transform: scale(1.05);
   }
 }
 /*Style page cours*/
