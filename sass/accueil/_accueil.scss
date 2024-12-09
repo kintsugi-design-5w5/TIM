@@ -47,6 +47,9 @@ body .feed .presentation-info {
     text-align: right;
     margin: 5rem 0;
 
+    &:first-of-type {
+        flex-direction: column-reverse;
+    }
     & img {
         // width: 100%;
         // height: auto;
@@ -58,7 +61,7 @@ body .feed .presentation-info {
         height: auto;
     }
     @media screen and (max-width: 756px) {
-        flex-direction: column-reverse; // Colonnes sur petits écrans
+        flex-direction: column; // Colonnes sur petits écrans
         align-items: center;
         justify-content: flex-end;
         margin: 0;
@@ -264,7 +267,7 @@ body .feed .presentation-info {
         }
         & h3 {
             z-index: 3; // Ordre d'affichage
-            font-size: 3.5rem; // Taille de police
+            font-size: 2.7rem; // Taille de police
             text-align: center;
             @media screen and (max-width: 756px) {
                 padding-bottom: 2rem;

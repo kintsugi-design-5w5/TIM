@@ -368,6 +368,9 @@ body .feed .presentation-info {
   text-align: right;
   margin: 5rem 0;
 }
+body .feed .presentation-info:first-of-type {
+  flex-direction: column-reverse;
+}
 body .feed .presentation-info img {
   width: 120%;
   height: auto;
@@ -380,7 +383,7 @@ body .feed .presentation-info img {
 }
 @media screen and (max-width: 756px) {
   body .feed .presentation-info {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     margin: 0;
@@ -569,7 +572,7 @@ body .feed .presentation-info img {
 }
 .axes-cours .filtre-couleur h3 {
   z-index: 3;
-  font-size: 3.5rem;
+  font-size: 2.7rem;
   text-align: center;
 }
 @media screen and (max-width: 756px) {
@@ -1820,7 +1823,7 @@ circle {
 }
 @media screen and (max-width: 756px) {
   #hero .hero-images {
-    transform: scale(0.4) translateX(-50%);
+    transform: scale(0.53) translateX(-50%);
   }
 }
 

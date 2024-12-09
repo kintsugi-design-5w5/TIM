@@ -24,7 +24,7 @@ document.addEventListener("scroll", function () {
 
         // Applique la position en décalage pour créer l'effet de parallaxe
         if (window.innerWidth < 768) {
-            image.style.transform = `translateY(${-offset}px) scale(0.4) translateX(-50%)`;
+            image.style.transform = `translateY(${-offset}px) scale(0.53) translateX(-50%)`;
         } else {
             image.style.transform = `translateY(${-offset}px)`;
         }
