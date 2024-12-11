@@ -24,16 +24,13 @@ Deux plugins ont été développés pour accompagner le site : un carrousel réi
 
 Ainsi, avec un style minimaliste mais percutant, le site réinvente les sites web de programmes traditionnels et promet une expérience utilisateur mémorable.
 
-### Description du site :
+### Avancement du sprint :
 
-Avancement du sprint - Beaucoup de travail a été réalisé lors du sprint 3. L'ensemble des pages a été terminé, le système de ligne du temps des cours a été retravaillé et complété, ainsi que l'effet des pages Avenir. Les deux plugins ont été programmés et stylisés, et l'adaptabilité a été largement améliorée. De nombreux nouveaux éléments et effets ont été ajoutés à l'accueil, comme l'animation des images, la vidéo et les boutons menant vers les sections. Enfin, l'importation des médias a été commencée et complétée.
+Finition du site. On a réglé une tonne de petits problèmes, beaucoup aéliorer l'aspect sur mobile, et ajouté quelques fonctions pour améliorer le chargement de la page, comme le lazy loading.
 
 ### Tâches non terminées :
 
--   Stylisation des pages avenir
--   Bug de js (exécute les plugin partout)
--   Adaptabilité des graphiques
--   Effets JS dans l'accueil
+-   Aucune
 
 ### Objectifs du projet :
 
