@@ -1,7 +1,16 @@
 <?php
 get_header();
 ?>
-<main>
+<main class="page-recherche">
+    <div data-icone="west" class="btn-retour">
+        <img
+          src="https://s2.svgbox.net/hero-outline.svg?ic=arrow-left&color=ebebeb"
+          width="18"
+          height="18"
+        />
+        <a href="<?php echo esc_url( wp_get_referer() ); ?>" class="texte-retour">Retour</a>
+    </div>
+
     <div class="div-searchform flex petite-marge-hauteur">
         <?php get_search_form(); ?>
     </div>
@@ -12,7 +21,7 @@ get_header();
     <?php
     // Fonction pour afficher "Aucun résultat trouvé"
     function no_result() {
-        echo '<p>Aucun article trouvé.</p>';
+        echo '<p class="texte-centre aucun-resultat">Aucun article trouvé.</p>';
     }
 
     // Requête pour récupérer les posts de la catégorie "Projets" correspondant à la recherche

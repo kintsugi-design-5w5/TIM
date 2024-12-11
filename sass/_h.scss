@@ -16,14 +16,6 @@ h4 {
   font-size: clamp(1.25rem, 2.5vw, 2.5rem);
 }
 
-h5 {
-  font-size: clamp(1rem, 2vw, 2rem);
-}
-
-h6 {
-  font-size: clamp(0.875rem, 1.75vw, 1.75rem);
-}
-
 p {
   font-size: clamp(1rem, 3vw, 1.8rem);
 }
@@ -40,13 +32,12 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 p,
 a,
 li {
   // Couleur et police générale pour plusieurs éléments
   color: $blanc;
   font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
   font-weight: 400;
 }

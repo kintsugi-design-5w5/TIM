@@ -1,179 +1,212 @@
 /*Style page cours*/
 .body-cours {
-  padding: 2rem 2rem 2rem 7rem;
-  position: relative;
-  @media screen and (max-width: 756px) {
-    padding: 2rem 2rem 2rem 4rem;
-  }
-  & ul {
+    padding: 2rem 2rem 2rem 8rem;
     position: relative;
-  }
+    @media screen and (max-width: 756px) {
+        padding: 2rem 2rem 2rem 4rem;
+    }
+    & ul {
+        position: relative;
+    }
+
+    & h3 {
+        animation: apparition 0.5s forwards;
+    }
 }
 
 /*Section des cours*/
 
 .conteneur-timeline {
-  position: relative;
+    position: relative;
 }
 
 .timeline {
-  position: absolute;
-  width: 7px;
-  height: 98.5%;
-  min-height: 530px;
-  margin: 0 auto;
-  background-color: $gris-fonce;
-  @media screen and (max-width: 756px) {
-    min-height: 450px;
-  }
+    position: absolute;
+    width: 7px;
+    // height: 98.5%;
+    height: 98.99%;
+    min-height: 530px;
+    margin: 0 auto;
+    background-color: $gris-fonce;
+    @media screen and (max-width: 756px) {
+        min-height: 450px;
+    }
 }
 
 /*Barre de progression pour la timeline des cours*/
 .barre-progression {
-  width: 100%;
-  height: 0%; /*Changement de la hauteur au scroll en JavaScript*/
-  background-color: $couleur;
-  transition: height 0.25s ease;
-  max-height: 100%;
+    width: 100%;
+    height: 0%; /*Changement de la hauteur au scroll en JavaScript*/
+    background-color: $couleur;
+    transition: height 0.25s ease;
+    max-height: 100%;
 }
 
 ul {
-  list-style: none;
-  padding-left: 0; /*Enlever la marge par défaut à gauche*/
+    list-style: none;
+    padding-left: 0; /*Enlever la marge par défaut à gauche*/
 }
 
 .cours {
-  display: none; /*les cours par défaut ne s'affichent pas*/
-  & > * {
+    display: none; /*les cours par défaut ne s'affichent pas*/
+    & > * {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+
+        @media screen and (max-width: 756px) {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.session {
+    position: relative;
+    z-index: 1;
+}
+
+.cercle {
+    text-align: start; /*Mettre le texte aligné à gauche*/
+    line-height: 2rem;
+    margin-left: 2rem;
+
+    @media screen and (max-width: 756px) {
+        margin-left: 2rem;
+    }
+}
+
+.cercle::before {
+    position: absolute;
+    transition: background-color 0.5s ease;
+    left: -2.58rem;
+}
+
+.session .cercle.cercle-actif::before {
+    background-color: $couleur;
+}
+
+.cercle.grand {
+    color: $couleur;
+    font-weight: bold;
+    margin-top: 7rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
 
     @media screen and (max-width: 756px) {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
-  }
 }
-
-.session {
-  position: relative;
-  z-index: 1;
-}
-
-.cercle {
-  text-align: start; /*Mettre le texte aligné à gauche*/
-  line-height: 2rem;
-  margin-left: 2rem;
-
-  @media screen and (max-width: 756px) {
-    margin-left: 2rem;
-  }
-}
-
-.cercle::before {
-  position: absolute;
-  transition: background-color 0.5s ease;
-  left: -0.58rem;
-}
-
-.session .cercle.cercle-actif::before {
-  background-color: $couleur;
-}
-
-.cercle.grand {
-  color: $couleur;
-  font-weight: bold;
-  margin-top: 7rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-
-  @media screen and (max-width: 756px) {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-}
-
 .cercle.grand::before {
-  /*Placer un cercle avant les h1 des sessions*/
-  content: "";
-  display: inline-block;
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  background-color: $gris-fonce;
-  border-radius: 50%;
-  text-align: center;
+    /*Placer un cercle avant les h1 des sessions*/
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    background-color: $gris-fonce;
+    border-radius: 50%;
+    text-align: center;
 }
 
 .cercle.petit::before {
-  /*Placer un cercle avant les h5 des cours*/
-  content: "";
-  display: inline-block;
-  margin-right: 12.5px;
-  margin-left: 2.5px;
-  width: 20px;
-  height: 20px;
-  background-color: $gris-fonce;
-  border-radius: 50%;
-  text-align: center;
+    /*Placer un cercle avant les h5 des cours*/
+    content: "";
+    display: inline-block;
+    margin-right: 12.5px;
+    margin-left: 2.5px;
+    width: 20px;
+    height: 20px;
+    background-color: $gris-fonce;
+    border-radius: 50%;
+    text-align: center;
 }
 
 .cours .description-cours {
-  display: none;
+    display: none;
+    animation: apparition 0.5s forwards;
 
-  & .wp-block-column:first-of-type p {
-    margin-left: 4rem;
-  }
-  & .wp-block-column {
-    flex-grow: 0;
-    flex-basis: auto;
-    & p {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 2rem;
-      font-size: clamp(0.5rem, 2vw, 1.3rem);
+    & .wp-block-column:first-of-type p {
+        margin-left: 4rem;
     }
-  }
-  & .wp-block-column:nth-child(2) p {
-    position: relative;
-  }
-  /*L'affichage de la pondération des cours sur le deuxième texte*/
-  & .wp-block-column:nth-child(2) p::after {
-    content: "Pondération des cours : \A Premier chiffre : nombre d'heure de cours en classe par semaine \A Deuxième chiffre : nombre d'heure de pratique en laboratoire par semaine \A Troisième chiffre : nombre de travail personnel à fournir par semaine"; /* \A : Permet un retour à la ligne*/
-    position: absolute;
-    top: 0;
-    left: 120%;
-    display: none; /* Caché par défaut */
-    background-color: $gris-fonce;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    width: 45rem;
-    white-space: pre-line; /*Pour que les retours à la ligne se voient*/
-    z-index: 10;
-    pointer-events: none; /* Empêche les interactions */
-  }
-  /*Apparition du bloc de la pondération du cours au survol*/
-  & .wp-block-column:nth-child(2) p:hover::after {
-    display: block;
-  }
+    & .wp-block-column {
+        flex-grow: 0;
+        flex-basis: auto;
+        & p {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 2rem;
+            font-size: clamp(0.5rem, 2vw, 1.3rem);
+        }
+    }
+    & .wp-block-column:nth-child(2) p {
+        position: relative;
+    }
+    /*L'affichage de la pondération des cours sur le deuxième texte*/
+    & .wp-block-column:nth-child(2) p::after {
+        content: "Pondération des cours : \A Premier chiffre : nombre d'heure de cours en classe par semaine \A Deuxième chiffre : nombre d'heure de pratique en laboratoire par semaine \A Troisième chiffre : nombre de travail personnel à fournir par semaine"; /* \A : Permet un retour à la ligne*/
+        position: absolute;
+        top: 0;
+        left: 120%;
+        display: none; /* Caché par défaut */
+        background-color: hwb(0 29% 71% / 0.9); /*Petit flou d'arrière-plan*/
+        backdrop-filter: blur(5px); /*Flou d'arrière-plan*/
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        width: 45rem;
+        white-space: pre-line; /*Pour que les retours à la ligne se voient*/
+        line-height: 2.5rem; /*Agrandir la hauteur entre les lignes*/
+
+        @media screen and (max-width: 756px) {
+            width: 26rem;
+            top: 120%;
+            left: -190%;
+        }
+    }
+    /*Apparition du bloc de la pondération du cours au survol*/
+    & .wp-block-column:nth-child(2) p:hover::after {
+        display: block;
+    }
 }
 /*Lors de l'ajout de la classe visible, afficher la description*/
 .description-cours.visible {
-  display: block;
+    display: block;
 }
 
 .description-cours p {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
 
-  &:last-of-type {
-    margin-top: 2rem;
-    font-size: clamp(0.9rem, 2.8vw, 1.5rem);
-  }
+    &:last-of-type {
+        margin-top: 2rem;
+        font-size: clamp(0.9rem, 2.8vw, 1.5rem);
+    }
 }
 
 /*Aligner la pondération avec la description des cours*/
 .cours .description-cours .wp-block-column:first-of-type p {
-  margin-left: 2rem;
+    margin-left: 2rem;
+}
+
+@keyframes apparition {
+    from {
+        filter: blur(10px);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dispparition {
+    from {
+        filter: blur(0);
+        opacity: 1;
+    }
+    to {
+        filter: blur(10px);
+        opacity: 0;
+    }
 }

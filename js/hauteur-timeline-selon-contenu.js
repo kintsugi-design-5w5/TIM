@@ -16,7 +16,7 @@ function mettreAJourBarreProgression() {
 
     // Calculer la hauteur de la barre de progression en fonction du pourcentage
     // let hauteurBarreProgression = pourcentageDefilement * hauteurMaxProgression;
-    let hauteurBarreProgression = positionDefilement - positionContenuCours / 1.5;
+    let hauteurBarreProgression = positionDefilement - positionContenuCours / 0.3;
 
     // Mettre à jour la hauteur de la barre de progression
     barreProgression.style.height = `${hauteurBarreProgression}px`;
@@ -35,8 +35,21 @@ function mettreAJourCercles() {
         let positionTop = rect.top + window.scrollY; // Position du top du cercle par rapport à la page
         let positionBottom = positionTop + rect.height; // Position du bas du cercle
 
-        // Calculer la position à laquelle 50% de l'écran atteint le bas du cercle
-        let seuilActivation = positionBottom - hauteurFenetre / 2;
+        let ratio;
+
+        let largeurFenetre = window.innerWidth;
+        if (largeurFenetre < 430) {
+            // Téléphone (petits écrans)
+            ratio = 1.42;
+        } else if (largeurFenetre < 768) {
+            // Tablette (écrans moyens)
+            ratio = 1.35;
+        } else {
+            // Ordinateur (grands écrans)
+            ratio = 1.9;
+        }
+
+        let seuilActivation = positionBottom - hauteurFenetre / ratio;
 
         // Vérifier si le bas du cercle atteint 50% de l'écran
         if (window.scrollY >= seuilActivation && !cercle.classList.contains("cercle-actif")) {
@@ -81,8 +94,6 @@ btnsSession.forEach((bouton) => {
             // Si la session est fermée, l'afficher
             coursActifs.style.display = "block"; // Afficher la session active
         }
-        //Appeler la fonction dès l'ouverture de la page
-        // ajusterHauteurTimeline();
         mettreAJourBarreProgression();
     });
 });
