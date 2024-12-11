@@ -137,7 +137,8 @@ footer {
 }
 
 #curseur-personnalise {
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position: fixed;
   width: 20px;
   height: 20px;
@@ -504,6 +505,159 @@ body .feed .presentation-info img {
   justify-content: center;
 }
 
+.axes-cours {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.axes-cours .filtre-couleur .jeu-video.lazy {
+  background-image: none;
+}
+.axes-cours .filtre-couleur .jeu-video {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
+}
+.axes-cours .filtre-couleur .web.lazy {
+  background-image: none;
+}
+.axes-cours .filtre-couleur .web {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
+  background-position: center;
+}
+.axes-cours .filtre-couleur .troisd.lazy {
+  background-image: none;
+}
+.axes-cours .filtre-couleur .troisd {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
+  background-position: center;
+}
+.axes-cours .filtre-couleur .imagerie.lazy {
+  background-image: none;
+}
+.axes-cours .filtre-couleur .imagerie {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
+}
+.axes-cours .filtre-couleur .video.lazy {
+  background-image: none;
+}
+.axes-cours .filtre-couleur .video {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
+}
+.axes-cours .filtre-couleur .autre.lazy {
+  background-image: none;
+}
+.axes-cours .filtre-couleur .autre {
+  background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
+}
+.axes-cours .filtre-couleur {
+  height: 50%;
+  flex: 1 0 30%;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanc);
+  filter: blur(0.8) contrast(0.8);
+}
+.axes-cours .filtre-couleur:hover::before {
+  opacity: 0;
+}
+.axes-cours .filtre-couleur:hover .boite_cours {
+  filter: grayscale(0);
+}
+.axes-cours .filtre-couleur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--couleur);
+  opacity: 1;
+  transition: opacity 0.5s;
+  mix-blend-mode: color;
+  z-index: 2;
+}
+.axes-cours .filtre-couleur:hover div:last-of-type a {
+  background-color: hsla(0, 0%, 30%, 0.3);
+}
+.axes-cours .filtre-couleur h3 {
+  z-index: 3;
+  font-size: 3.5rem;
+}
+.axes-cours .filtre-couleur div:last-of-type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  width: 100%;
+}
+.axes-cours .filtre-couleur div:last-of-type a {
+  margin: 1vw;
+  flex-grow: 1;
+  line-height: 4rem;
+  background-color: rgba(0, 123, 255, 0.3);
+  transition: background-color 0.5s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.axes-cours .filtre-couleur div:last-of-type a:hover {
+  background-color: hsla(0, 0%, 50%, 0.5);
+}
+.axes-cours .filtre-couleur div:last-of-type a:last-of-type {
+  margin-left: 0;
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur div:last-of-type a {
+    width: 9vw;
+    height: 9vw;
+    margin: 3vw;
+  }
+  .axes-cours .filtre-couleur div:last-of-type a:last-of-type {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 756px) {
+  .axes-cours .filtre-couleur {
+    flex: 1 0 40%;
+    height: 30%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .axes-cours .filtre-couleur {
+    flex: 1 0 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+.axes-cours .boite_cours {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 0% 50%;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+@media screen and (max-width: 430px) {
+  .axes-cours {
+    flex-direction: column;
+    gap: 2%;
+    justify-content: space-between;
+  }
+}
+
 #projet1 {
   top: 0;
 }
@@ -532,7 +686,8 @@ body .feed .presentation-info img {
   top: 0;
   width: 100%;
   height: 100vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: 10;
   transition: transform 0.1s ease-out;
   animation: apparition-vid 1s forwards;
@@ -838,7 +993,8 @@ ul {
   left: 120%;
   display: none; /* Caché par défaut */
   background-color: hwb(0 29% 71%/0.9); /*Petit flou d'arrière-plan*/
-  backdrop-filter: blur(5px); /*Flou d'arrière-plan*/
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px); /*Flou d'arrière-plan*/
   padding: 0.5rem 1rem;
   border-radius: 5px;
   width: 45rem;
@@ -981,7 +1137,8 @@ main #hero {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Pour s'assurer que la vidéo couvre toute la zone sans déformation */
+  -o-object-fit: cover;
+     object-fit: cover; /* Pour s'assurer que la vidéo couvre toute la zone sans déformation */
   z-index: -1; /* Pour placer la vidéo en arrière-plan */
 }
 
@@ -1006,6 +1163,7 @@ main #hero {
 
 .btn-retour {
   height: 5vh;
+  width: -moz-fit-content;
   width: fit-content;
   text-align: left;
   font-size: 1.2rem;
@@ -1093,7 +1251,8 @@ main #hero {
 .projet-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Les projets 1, 4, 7, 10... prennent toute la largeur */
@@ -1307,6 +1466,9 @@ main #hero {
   background-size: cover;
   background-position: center;
 }
+.images-avenir.lazy {
+  background-image: none;
+}
 .images-avenir::before {
   content: "";
   position: absolute;
@@ -1384,8 +1546,11 @@ main #hero {
   width: 100%;
   height: 100%;
   min-width: 100px;
-  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  transition: -webkit-clip-path 0.5s ease;
   transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
   pointer-events: none;
 }
 @media screen and (max-width: 756px) {
@@ -1430,7 +1595,8 @@ main #hero {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1548,6 +1714,11 @@ main #hero {
 .page-recherche .btn-retour {
   padding: 5rem 12vw;
   padding-bottom: 0;
+}
+
+.recherche__input::-moz-placeholder {
+  font-family: "Josefin Sans", serif;
+  color: var(--gris);
 }
 
 .recherche__input::placeholder {
@@ -1678,7 +1849,8 @@ circle {
 }
 #hero .hero-images {
   width: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -1843,8 +2015,11 @@ circle {
   left: 0;
   pointer-events: none;
   z-index: 5;
-  backdrop-filter: blur(0px) brightness(100%);
+  -webkit-backdrop-filter: blur(0px) brightness(100%);
+          backdrop-filter: blur(0px) brightness(100%);
+  transition: -webkit-backdrop-filter 0.7s ease;
   transition: backdrop-filter 0.7s ease;
+  transition: backdrop-filter 0.7s ease, -webkit-backdrop-filter 0.7s ease;
 }
 
 #burger {
@@ -1862,7 +2037,8 @@ circle {
 #burger:checked ~ .flou {
   /* Effet de flou lors de l'ouverture du menu */
   pointer-events: all;
-  backdrop-filter: blur(5px) brightness(50%);
+  -webkit-backdrop-filter: blur(5px) brightness(50%);
+          backdrop-filter: blur(5px) brightness(50%);
 }
 
 .logo {
@@ -1878,7 +2054,6 @@ circle {
   transition: transform 400ms;
   -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 @media screen and (max-width: 756px) {
@@ -2041,7 +2216,8 @@ circle {
   line-height: 4rem;
   background-color: rgba(0, 123, 255, 0.3);
   transition: background-color 0.5s;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2099,7 +2275,8 @@ circle {
   line-height: 4rem;
   background-color: rgba(0, 123, 255, 0.3);
   transition: background-color 0.5s;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2165,7 +2342,8 @@ circle {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   background-color: var(--noir);
   z-index: 1000;
   display: flex;
@@ -2177,10 +2355,17 @@ circle {
 .chargement .spinner {
   width: 125px;
   height: 125px;
-  border-radius: 50%;
-  background: radial-gradient(farthest-side, var(--couleur) 94%, rgba(0, 0, 0, 0)) top/9px 9px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, var(--couleur));
-  mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 9px), #000 0);
-  animation: spin 1s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+.chargement .spinner .barre-anim {
+  flex-grow: 1;
+  height: 20%;
+  background: linear-gradient(180deg, var(--couleur) 0%, transparent 80%, transparent 100%);
+  border-radius: 10px;
+  animation: animation-barre 1s linear infinite;
 }
 
 .chargement-invisible {
@@ -2195,6 +2380,17 @@ circle {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes animation-barre {
+  from {
+    height: 20%;
+  }
+  50% {
+    height: 100%;
+  }
+  to {
+    height: 20%;
   }
 }
 @keyframes apparition {

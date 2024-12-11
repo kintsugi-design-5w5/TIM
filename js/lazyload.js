@@ -10,5 +10,5 @@ const observeur = new IntersectionObserver((entries, observeur) => {
     });
 });
 
-const lazyImages = document.querySelectorAll('.lazy'); // Sélectionne toutes les images avec l'attribut data-src
+let lazyImages = document.querySelectorAll('.lazy'); // Sélectionne toutes les images avec l'attribut data-src
 lazyImages.forEach(img => observeur.observe(img)); // Pour chaque image, observer l'entrée

@@ -34,7 +34,13 @@
         <header>
             <nav>
                 <div class="chargement">
-                    <div class="spinner"></div>
+                    <div class="spinner">
+                        <div class="barre-anim"></div>
+                        <div class="barre-anim"></div>
+                        <div class="barre-anim"></div>
+                        <div class="barre-anim"></div>
+                        <div class="barre-anim"></div>
+                    </div>
                 </div>
                 <div class="barre-navigation">
                     <!-- Logo cliquable -->
