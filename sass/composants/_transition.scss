@@ -4,8 +4,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent;
     backdrop-filter: blur(50px);
+    background-color: $noir;
     z-index: 1000;
     display: flex;
     flex-direction: column-reverse;
@@ -39,10 +39,12 @@
 
 @keyframes apparition {
     from {
+        background-color: transparent;
         filter: blur(10px);
         opacity: 0;
     }
     to {
+        background-color: $noir;
         filter: blur(0);
         opacity: 1;
     }
@@ -50,10 +52,12 @@
 
 @keyframes dispparition {
     from {
+        background-color: $noir;
         filter: blur(0);
         opacity: 1;
     }
     to {
+        background-color: transparent;
         filter: blur(10px);
         opacity: 0;
     }
