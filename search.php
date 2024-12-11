@@ -42,9 +42,11 @@ get_header();
     ?>
 
     <section class="feed projets-apercus">
+
         <div class="colonne-proj colonne-1">
             <?php
             $counter = 0; // Compteur pour les projets
+            $categories_cibles = ['Autre', '3D', 'Imagerie', 'Video', 'Jeu', 'Web']; // Catégories autorisées
 
             if ($query->have_posts()) {
                 while ($query->have_posts()) {
@@ -52,12 +54,26 @@ get_header();
                     $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large'); // Récupérer l'URL de la miniature
                     $project_link = get_permalink(); // Récupérer le lien du projet
                     $project_title = get_the_title(); // Récupérer le titre du projet
-
-                    // Afficher uniquement les projets impairs dans la première colonne
-                    if ($counter % 2 == 0) { // Projets impairs
+                    $categories = get_the_category(); // Récupérer les catégories du projet
+                    $nomCategorie = '';
+        
+                    // Vérifier si des catégories existent et si elles font partie des catégories cibles
+                    if (!empty($categories)) {
+                        foreach ($categories as $category) {
+                            if (in_array($category->name, $categories_cibles)) {
+                                $nomCategorie = esc_html($category->name);
+                                break; // On arrête après avoir trouvé une catégorie correspondante
+                            }
+                        }
+                    }
+        
+                    // Si une catégorie correspondante a été trouvée
+                    if (!empty($nomCategorie) && $counter % 2 == 0) { // Projets impairs
                         ?>
-                        <a data-icone="visibility" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
-                            <h2><?php echo esc_html($project_title); ?></h2>
+                        <a data-icone="visibility" href="<?php echo esc_url($project_link); ?>" class="thumbnail-projet">
+                            <div style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');"> </div>
+                            <h2 class="titre-projet"><?php echo esc_html($project_title); ?></h2>
+                            <h4 class="cours-projet"><?php echo $nomCategorie; ?></h4>
                         </a>
                         <?php
                     }
