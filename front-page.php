@@ -21,7 +21,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
         <!-- Bloc de présentation du programme TIM -->
         <div class="presentation-tim ignore-grain">
             <div class="img-projet ignore-grain">
-                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_image1.webp"
+                <img loading="lazy" src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/TIM_image1.webp"
                     alt="Photo des locaux du TIM" />
             </div>
             <div class="infos">
@@ -46,7 +46,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
         <!-- Bloc d'information supplémentaire -->
         <div class="presentation-info">
             <div class="img-projet">
-                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/VieEtudiante_image1.webp"
+                <img loading="lazy" src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/VieEtudiante_image1.webp"
                     alt="Photo de la vie étudiante" />
             </div>
             <div class="infos">
@@ -60,7 +60,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
                 <h1>Une équipe de professeurs <span class="fonte-alt">passionnés</span></h1>
             </div>
             <div class="img-projet">
-                <img src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/ProfesseursTIM_image1-scaled.jpg"
+                <img loading="lazy" src="https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/ProfesseursTIM_image1-scaled.jpg"
                     alt="Photo des professeurs" />
             </div>
         </div>
@@ -156,7 +156,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
         <div class="axes-cours">
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Jeux video</h3>
-                <div class="boite_cours jeu-video"> </div>
+                <div class="boite_cours jeu-video lazy"> </div>
                 <div>
                     <a data-icone="east" class="btn_proj cat_7" href="<?php echo home_url('/category/projets'); ?>"> <h4>Projets</h4></a>
                     <a data-icone="east" class="btn_cours cat_7"href="<?php echo home_url('/category/cours'); ?>"> <h4>Cours</h4></a>

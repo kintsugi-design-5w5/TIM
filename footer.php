@@ -84,5 +84,7 @@
 <script src="<?php echo get_template_directory_uri() . '/js/graphique-animation.js'; ?>"></script>
 <!-- Script pour la gestion du chargement de page -->
 <script src="<?php echo get_template_directory_uri() . '/js/transition.js'; ?>"></script>
+<!-- Script pour la gestion du chargement des images -->
+<script src="<?php echo get_template_directory_uri() . '/js/lazyload.js'; ?>"></script>
 
 <?php wp_footer(); ?> <!-- Hook WordPress pour injecter les scripts supplémentaires nécessaires -->

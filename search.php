@@ -101,8 +101,10 @@ get_header();
                     // Afficher uniquement les projets pairs dans la deuxième colonne
                     if ($counter % 2 == 1) { // Projets pairs
                         ?>
-                        <a data-icone="visibility" href="<?php echo esc_url($project_link); ?>" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');" class="thumbnail-projet">
-                            <h2><?php echo esc_html($project_title); ?></h2>
+                      <a data-icone="visibility" href="<?php echo esc_url($project_link); ?>" class="thumbnail-projet">
+                            <div style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');"> </div>
+                            <h2 class="titre-projet"><?php echo esc_html($project_title); ?></h2>
+                            <h4 class="cours-projet"><?php echo $nomCategorie; ?></h4>
                         </a>
                         <?php
                     }

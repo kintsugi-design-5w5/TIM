@@ -119,7 +119,7 @@ get_header();
       <section class="images-projets annule-padding-cote galerie">
           <?php foreach ($images as $image): ?>
               <div class="projet-image">
-                  <img src="<?php echo esc_url($image['sizes']['large']); ?>" data-icone="visibility" alt="<?php echo esc_attr($image['alt']); ?>" />
+                  <img src="<?php echo esc_url($image['sizes']['large']); ?>" data-icone="visibility" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy" />
               </div>
           <?php endforeach; ?>
 

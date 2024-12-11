@@ -56,6 +56,10 @@
         left: auto;
     }
 
+    &.lazy {
+        background-image: none;
+    }
+
     &::before {
         content: "";
         position: absolute;

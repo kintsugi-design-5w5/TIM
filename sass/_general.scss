@@ -54,21 +54,20 @@ footer {
 }
 
 #curseur-personnalise {
-  // Styles pour le curseur personnalisé
-  backdrop-filter: blur(5px);
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: $couleur;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease,
-    background-color 0.15s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-50%, -50%);
+    // Styles pour le curseur personnalisé
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $couleur;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, background-color 0.15s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
 }
 
 #icone-curseur {

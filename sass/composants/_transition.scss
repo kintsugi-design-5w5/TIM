@@ -15,10 +15,23 @@
     .spinner {
         width: 125px;
         height: 125px;
-        border-radius: 50%;
-        background: radial-gradient(farthest-side, $couleur 94%, #0000) top/9px 9px no-repeat, conic-gradient(#0000 30%, $couleur);
-        mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
-        animation: spin 1s linear infinite;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1em;
+        // border-radius: 50%;
+        // background: radial-gradient(farthest-side, $couleur 94%, #0000) top/9px 9px no-repeat, conic-gradient(#0000 30%, $couleur);
+        // mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+        // animation: spin 1s linear infinite;
+        
+        .barre-anim{
+            flex-grow: 1;
+            height: 20%;
+            background: linear-gradient(180deg, $couleur 0%, transparent 80%,  transparent 100%);
+            //background-color: linear-gradient(0deg, $couleur 0%, #0000 100%);
+            border-radius: 10px;
+            animation: animation-barre 1s linear infinite;
+        }
     }
 }
 
@@ -34,6 +47,18 @@
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes animation-barre{
+    from{
+        height: 20%;
+    }
+    50%{
+        height: 100%;
+    }
+    to{
+        height: 20%;
     }
 }
 

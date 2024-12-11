@@ -1,4 +1,9 @@
 let chargement = document.querySelector(".chargement");
+let lesBarresTransition = document.querySelectorAll(".barre-anim");
+
+for (let i = 0; i < lesBarresTransition.length; i++) {
+    lesBarresTransition[i].style.animationDelay = i * 0.1 + "s";
+}
 
 function transitionToPage(href) {
     chargement.classList.remove("chargement-invisible");
