@@ -152,7 +152,7 @@ get_header(); // Inclut le fichier d'en-tête du thème
 
     <!-- Section présentant les axes de cours -->
     <section class="feed axes">
-        <h1>Spécifications</h1>
+        <h1>Domaine d'étude</h1>
         <div class="axes-cours">
             <div class="filtre-couleur">
                 <h3 class="ombre-texte">Jeux video</h3>

@@ -147,6 +147,10 @@ body .feed .presentation-info {
         text-align: center; // Centrer le titre
         margin: 0;
     }
+
+    @media screen and (max-width: 756px) {
+        flex-wrap: nowrap;
+    }
 }
 
 .feed .img-projet {
@@ -377,6 +381,10 @@ body .feed .presentation-info {
 @keyframes apparition-vid {
     45% {
         transform: scale(0.3);
+    }
+
+    60% {
+        transform: scale(0.6);
     }
     85% {
         transform: scale(1.05);

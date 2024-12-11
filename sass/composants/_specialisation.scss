@@ -1,241 +1,247 @@
 /*********** AXES **************/
 .axes {
-  padding-bottom: 12rem; // Espacement en bas
-  z-index: 1;
+    padding-bottom: 12rem; // Espacement en bas
+    z-index: 1;
 }
 .axes-cours {
-  // Conteneur pour les axes
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  height: 100vh;
-  flex-wrap: wrap;
-  gap: 2rem;
-
-  & .filtre-couleur .jeu-video {
-    background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
-  }
-
-  & .filtre-couleur .web {
-    background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
-    background-position: center;
-  }
-
-  & .filtre-couleur .troisd {
-    background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
-    background-position: center;
-  }
-
-  & .filtre-couleur .imagerie {
-    background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
-  }
-
-  & .filtre-couleur .video {
-    background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
-  }
-
-  & .filtre-couleur .autre {
-    background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
-  }
-
-  & .filtre-couleur {
-    height: 50%;
-    flex: 1 0 30%; // Flexibilité des divs
-    z-index: 1; // Ordre d'affichage
-    position: relative;
+    // Conteneur pour les axes
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $blanc;
-    filter: blur(0.8) contrast(0.8);
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 140vh;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @media screen and (max-width: 756px) {
+        flex-wrap: nowrap;
+    }
 
-    &:hover::before {
-      // Effet de couleur sur hover
-      opacity: 0;
+    & .filtre-couleur .jeu-video {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/JeuxVideo_image1.webp");
     }
-    &:hover .boite_cours {
-      filter: grayscale(0); // Effet de couleur sur hover
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $couleur;
-      opacity: 1;
-      transition: opacity 0.5s;
-      mix-blend-mode: color; // Mélange de couleur
-      z-index: 2;
-    }
-    &:hover div:last-of-type a {
-      background-color: hsla(0, 0%, 30%, 0.3);
-    }
-    & h3 {
-      z-index: 3; // Ordre d'affichage
-      font-size: 3.5rem; // Taille de police
-      text-align: center;
-      @media screen and (max-width: 756px) {
-        padding-bottom: 2rem;
-      }
 
-      & div {
-        // Styles pour les divs à l'intérieur des axes
-        background-color: var(--couleur-fond);
-        color: white;
+    & .filtre-couleur .web {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/web_image1.webp");
+        background-position: center;
+    }
+
+    & .filtre-couleur .troisd {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/3d_image1-scaled.webp");
+        background-position: center;
+    }
+
+    & .filtre-couleur .imagerie {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Imagerie_image1.webp");
+    }
+
+    & .filtre-couleur .video {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/video_image1-scaled.webp");
+    }
+
+    & .filtre-couleur .autre {
+        background-image: url("https://gftnth00.mywhc.ca/tim43/wp-content/uploads/2024/11/Autre_image1.webp");
+    }
+
+    & .filtre-couleur {
         height: 50%;
         flex: 1 0 30%; // Flexibilité des divs
+        z-index: 1; // Ordre d'affichage
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url("images/image.png");
-        filter: grayscale(100%); // Effet de gris
-        transition: filter 0.5s; // Transition pour hover
+        color: $blanc;
+        filter: blur(0.8) contrast(0.8);
 
-        @media screen and (max-width: 756px) {
-          flex: 1 0 40%; // Ajustement pour petits écrans
-          height: 30%;
-          max-width: none;
+        &:hover::before {
+            // Effet de couleur sur hover
+            opacity: 0;
+        }
+        &:hover .boite_cours {
+            filter: grayscale(0); // Effet de couleur sur hover
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $couleur;
+            opacity: 1;
+            transition: opacity 0.5s;
+            mix-blend-mode: color; // Mélange de couleur
+            z-index: 2;
+        }
+        &:hover div:last-of-type a {
+            background-color: hsla(0, 0%, 30%, 0.3);
+        }
+        & h3 {
+            z-index: 3; // Ordre d'affichage
+            font-size: 3.5rem; // Taille de police
+            text-align: center;
+
+            @media screen and (max-width: 756px) {
+                margin-top: 2rem;
+                font-size: 2.5rem; // Taille de police
+                padding-bottom: 2rem;
+            }
+
+            & div {
+                // Styles pour les divs à l'intérieur des axes
+                background-color: var(--couleur-fond);
+                color: white;
+                height: 50%;
+                flex: 1 0 30%; // Flexibilité des divs
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: url("images/image.png");
+                filter: grayscale(100%); // Effet de gris
+                transition: filter 0.5s; // Transition pour hover
+
+                @media screen and (max-width: 756px) {
+                    flex: 1 0 40%; // Ajustement pour petits écrans
+                    height: 30%;
+                    max-width: none;
+                }
+
+                @media screen and (max-width: 430px) {
+                    flex: 1 0 0; // Flexibilité totale sur très petits écrans
+                    width: 100%;
+                    margin: 0; // Supprimer les marges
+                }
+            }
+            /*Le div de filtres dans les axes*/
+            & div:last-of-type {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 3;
+                width: 100%;
+                & a {
+                    margin: 1vw;
+                    flex-grow: 1;
+                    line-height: 4rem;
+                    background-color: rgb(0, 123, 255, 0.3);
+                    transition: background-color 0.5s;
+                    backdrop-filter: blur(10px);
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover {
+                        background-color: hsla(0, 0%, 50%, 0.5);
+                    }
+                    &:last-of-type {
+                        margin-left: 0;
+                    }
+
+                    @media screen and (max-width: 756px) {
+                        width: 9vw;
+                        height: 9vw;
+                        margin: 3vw;
+                        &:last-of-type {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 756px) {
+                flex: 1 0 40%; // Ajustement pour petits écrans
+                height: 30%;
+                max-width: none;
+            }
+
+            @media screen and (max-width: 430px) {
+                flex: 1 0 0; // Flexibilité totale sur très petits écrans
+                width: 100%;
+                // margin: 0; // Supprimer les marges
+            }
         }
 
         @media screen and (max-width: 430px) {
-          flex: 1 0 0; // Flexibilité totale sur très petits écrans
-          width: 100%;
-          margin: 0; // Supprimer les marges
+            flex-direction: column; // Orientation verticale sur très petits écrans
+            gap: 2%; // Espacement entre les divs
+            justify-content: space-between; // Espacement uniforme
         }
-      }
-      /*Le div de filtres dans les axes*/
-      & div:last-of-type {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 3;
-        width: 100%;
-        & a {
-          margin: 1vw;
-          flex-grow: 1;
-          line-height: 4rem;
-          background-color: rgb(0, 123, 255, 0.3);
-          transition: background-color 0.5s;
-          backdrop-filter: blur(10px);
+        /*Dernier div de axes-cours*/
+        & div:last-of-type {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            width: 100%;
+            & a {
+                margin: 1vw;
+                flex-grow: 1;
+                line-height: 4rem;
+                background-color: rgb(0, 123, 255, 0.3);
+                transition: background-color 0.5s;
+                backdrop-filter: blur(10px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    background-color: hsla(0, 0%, 50%, 0.5);
+                }
+                &:last-of-type {
+                    margin-left: 0;
+                }
 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          &:hover {
-            background-color: hsla(0, 0%, 50%, 0.5);
-          }
-          &:last-of-type {
-            margin-left: 0;
-          }
-
-          @media screen and (max-width: 756px) {
-            width: 9vw;
-            height: 9vw;
-            margin: 3vw;
-            &:last-of-type {
-              margin-left: 0;
+                @media screen and (max-width: 756px) {
+                    width: 9vw;
+                    height: 9vw;
+                    margin: 3vw;
+                    &:last-of-type {
+                        margin-left: 0;
+                    }
+                }
             }
-          }
         }
-      }
-      @media screen and (max-width: 756px) {
-        flex: 1 0 40%; // Ajustement pour petits écrans
-        height: 30%;
-        max-width: none;
-      }
-
-      @media screen and (max-width: 430px) {
-        flex: 1 0 0; // Flexibilité totale sur très petits écrans
-        width: 100%;
-        margin: 0; // Supprimer les marges
-      }
-    }
-
-    @media screen and (max-width: 430px) {
-      flex-direction: column; // Orientation verticale sur très petits écrans
-      gap: 2%; // Espacement entre les divs
-      justify-content: space-between; // Espacement uniforme
-    }
-    /*Dernier div de axes-cours*/
-    & div:last-of-type {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 3;
-      width: 100%;
-      & a {
-        margin: 1vw;
-        flex-grow: 1;
-        line-height: 4rem;
-        background-color: rgb(0, 123, 255, 0.3);
-        transition: background-color 0.5s;
-        backdrop-filter: blur(10px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-          background-color: hsla(0, 0%, 50%, 0.5);
-        }
-        &:last-of-type {
-          margin-left: 0;
-        }
-
         @media screen and (max-width: 756px) {
-          width: 9vw;
-          height: 9vw;
-          margin: 3vw;
-          &:last-of-type {
-            margin-left: 0;
-          }
+            flex: 1 0 40%; // Ajustement pour petits écrans
+            height: 30%;
+            max-width: none;
         }
-      }
+
+        @media screen and (max-width: 430px) {
+            flex: 1 0 0; // Flexibilité totale sur très petits écrans
+            width: 100%;
+            margin: 0; // Supprimer les marges
+        }
     }
-    @media screen and (max-width: 756px) {
-      flex: 1 0 40%; // Ajustement pour petits écrans
-      height: 30%;
-      max-width: none;
+
+    .axes-cours div {
+        position: relative; // Position relative pour le z-index
+        z-index: 10; // Ordre d'affichage
+    }
+
+    .axes-cours div:hover {
+        filter: grayscale(0%); // Effet au survol
+        background-color: red; // Changer la couleur de fond
+    }
+
+    & .boite_cours {
+        // Styles pour les divs à l'intérieur des axes
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 0% 50%;
+        filter: grayscale(100%); // Effet de gris
+        transition: filter 0.5s; // Transition pour hover
     }
 
     @media screen and (max-width: 430px) {
-      flex: 1 0 0; // Flexibilité totale sur très petits écrans
-      width: 100%;
-      margin: 0; // Supprimer les marges
+        flex-direction: column; // Orientation verticale sur très petits écrans
+        gap: 2%; // Espacement entre les divs
+        justify-content: space-between; // Espacement uniforme
     }
-  }
-
-  .axes-cours div {
-    position: relative; // Position relative pour le z-index
-    z-index: 10; // Ordre d'affichage
-  }
-
-  .axes-cours div:hover {
-    filter: grayscale(0%); // Effet au survol
-    background-color: red; // Changer la couleur de fond
-  }
-
-  & .boite_cours {
-    // Styles pour les divs à l'intérieur des axes
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: 0% 50%;
-    filter: grayscale(100%); // Effet de gris
-    transition: filter 0.5s; // Transition pour hover
-  }
-
-  @media screen and (max-width: 430px) {
-    flex-direction: column; // Orientation verticale sur très petits écrans
-    gap: 2%; // Espacement entre les divs
-    justify-content: space-between; // Espacement uniforme
-  }
 }

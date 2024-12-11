@@ -6,19 +6,18 @@
 
 .colonne-proj {
     width: 50%;
+    @media screen and (max-width: 756px) {
+        width: 100%;
+    }
 }
 .colonne-proj:nth-of-type(2) {
     margin-top: 35vh;
 }
 .thumbnail-projet {
-    // height: 60vh;
     width: 100%;
     display: flex;
-    // justify-content: center;
-    // align-items: center;
     flex-direction: column;
     position: relative;
-    // padding: 1rem;
 
     &:hover {
         & > div::after {
@@ -34,9 +33,12 @@
         background-size: cover;
         background-position: center;
         width: 100%;
-        // height: 100%;
         height: 70vh;
         overflow: hidden;
+        @media screen and (max-width: 756px) {
+            height: 20rem;
+        }
+
         &::after {
             @media screen and (min-width: 756px) {
                 content: "";
@@ -53,6 +55,9 @@
     & .titre-projet,
     & .cours-projet {
         opacity: 0.6;
+        @media screen and (max-width: 756px) {
+            opacity: 1;
+        }
     }
     & .titre-projet {
         margin-top: 1rem;
