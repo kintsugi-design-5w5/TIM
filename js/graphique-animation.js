@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let elementNombre = graphique.querySelector(".nombre-pourcentage");
     let format = graphique.getAttribute("data-format");
     let pourcentageActuel = 0;
-    let dureeAnimation = 8000;
+    let dureeAnimation = 4000;
     let offsetCible = 810 - (810 * pourcentageCible) / 100;
+
+    if (graphique.dataset.anime === "true") return;
 
     // Applique la transition sur le dashoffset du cercle
     cercle.style.transition = `stroke-dashoffset ${dureeAnimation}ms linear`;
@@ -39,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } else {
         clearInterval(intervalle);
-        anime = true;
+        graphique.dataset.anime = "true"; // Marque comme animé
       }
     }, intervalleIncrémentation);
   }
