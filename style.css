@@ -828,7 +828,7 @@ ul {
   top: 0;
   left: 120%;
   display: none; /* Caché par défaut */
-  background-color: hwb(0 29% 71%/0.9); /*Petit flou d'arrière-plan*/
+  background-color: hsla(0, 0%, 29%, 0.9); /*Petit flou d'arrière-plan*/
   backdrop-filter: blur(5px); /*Flou d'arrière-plan*/
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -838,13 +838,14 @@ ul {
 }
 @media screen and (max-width: 756px) {
   .cours .description-cours .wp-block-column:nth-child(2) p::after {
-    width: 26rem;
+    width: 20rem;
     top: 120%;
-    left: -190%;
+    left: -180%;
   }
 }
 .cours .description-cours .wp-block-column:nth-child(2) p:hover::after {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*Lors de l'ajout de la classe visible, afficher la description*/
