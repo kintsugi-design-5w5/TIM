@@ -1,75 +1,78 @@
 /*Les textes sont tous alignés au centre pour toute la section des chartes graphiques*/
 .presentation-charte {
-  text-align: center;
+    text-align: center;
 }
 /*Les 4 graphiques sont placés en ligne ou en colonne selon desktop ou mobile*/
 .charte-design {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
 
-  @media screen and (max-width: 1200px) {
-    flex-wrap: wrap; /*Pour l'adaptabilité de l'affichage des graphiques*/
-  }
+    @media screen and (max-width: 1200px) {
+        flex-wrap: wrap; /*Pour l'adaptabilité de l'affichage des graphiques*/
+    }
+
+    @media screen and (max-width: 756px) {
+        scale: 0.7;
+        margin: -12rem 0 -17rem 0;
+    }
 }
 
 .graphique {
-  position: relative;
-  animation: apparition-charte 1s ease forwards; /*Animtion des graphiques au scroll*/
-  animation-timeline: view();
+    position: relative;
+    animation: apparition-charte 1s ease forwards; /*Animtion des graphiques au scroll*/
+    animation-timeline: view();
 }
 
 .graphique .info-graphique {
-  margin-top: 2rem;
-  width: 300px; /*Ajuster la largeur pour que le texte se mette sur deux lignes*/
+    margin-top: 2rem;
+    width: 300px; /*Ajuster la largeur pour que le texte se mette sur deux lignes*/
 }
 
 .cercle-arriere {
-  box-shadow: 6px 6px 10px -1px $couleur-fonce,
-    -6px -6px 10px -1px $couleur-fonce; /*Mettre des ombres intérieures et extérieures 
+    box-shadow: 6px 6px 10px -1px $couleur-fonce, -6px -6px 10px -1px $couleur-fonce; /*Mettre des ombres intérieures et extérieures 
     pour révéler les contours du graphique*/
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid $couleur;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $couleur;
 }
 
 .cercle-avant {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px $couleur-fonce, -0.5px -0.5px 0px $couleur-fonce,
-    0.5px 0.5px 0px $couleur-pale, 0px 12px 10px -10px $couleur-fonce; /*Mettre des ombres intérieures et extérieures 
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px $couleur-fonce, -0.5px -0.5px 0px $couleur-fonce,
+        0.5px 0.5px 0px $couleur-pale, 0px 12px 10px -10px $couleur-fonce; /*Mettre des ombres intérieures et extérieures 
     pour révéler les contours du graphique*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nombre-pourcentage {
-  font-weight: 600;
-  color: $couleur;
+    font-weight: 600;
+    color: $couleur;
 }
 
 /*Les styles du svg pour l'animation avec Javascript*/
 .svg-charte-progression {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(-90deg);
-  width: 300px;
-  height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 300px;
+    height: 300px;
 }
 
 circle {
-  fill: none;
-  stroke: url(#CouleurGradient); /*Couleur de dégradé du svg*/
-  stroke-width: 40px; /*L'épaisseur*/
-  stroke-dasharray: 810; /*Le nombre de divisions pour avoir le cercle complet*/
-  stroke-dashoffset: 810; /*Au début, le svg n'est pas visible*/
+    fill: none;
+    stroke: url(#CouleurGradient); /*Couleur de dégradé du svg*/
+    stroke-width: 40px; /*L'épaisseur*/
+    stroke-dasharray: 810; /*Le nombre de divisions pour avoir le cercle complet*/
+    stroke-dashoffset: 810; /*Au début, le svg n'est pas visible*/
 }

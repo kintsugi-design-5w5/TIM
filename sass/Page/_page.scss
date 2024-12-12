@@ -3,8 +3,8 @@
     align-items: center;
 }
 
-.page-avenir p,
-.page-avenir li {
+.page-avenir .wp-block-columns p,
+.page-avenir .wp-block-columns li {
     font-size: clamp(0.8rem, 2.6vw, 1.6rem);
     margin-top: 1rem;
 }

@@ -23,16 +23,18 @@ get_header();
     <section class="section__projet">
       <div class="info__projet flex">
         <div class="titre__projet flex">
-          <div data-icone="west" class="btn-retour">
+
+          <a href="<?php echo esc_url( wp_get_referer() ); ?>" data-icone="west" class="btn-retour">
             <img
               src="https://s2.svgbox.net/hero-outline.svg?ic=arrow-left&color=ebebeb"
               width="18"
               height="18"
             />
-            <a href="<?php echo esc_url( wp_get_referer() ); ?>" class="texte-retour">Retour</a>
-          </div>
+            <p class="texte-retour">Retour</p>
+          </a>
+
           <h1 class="annule-marge"><?php the_title(); ?></h1>
-          <?php echo '<h5 class="auteur_info">' . esc_html(get_field('auteurs')) . '</h5>';?>
+          <?php echo '<h4 class="auteur_info">' . esc_html(get_field('auteurs')) . '</h4>';?>
         </div>
         <div class="description__projet flex">
           <div class="entete-description__projet flex">
