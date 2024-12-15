@@ -182,11 +182,6 @@ ul {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0.5rem;
-
-    &:last-of-type {
-        margin-top: 2rem;
-        font-size: clamp(0.9rem, 2.8vw, 1.5rem);
-    }
 }
 
 /*Aligner la pondération avec la description des cours*/

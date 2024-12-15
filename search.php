@@ -8,7 +8,7 @@ get_header();
           width="18"
           height="18"
         />
-        <a href="<?php echo esc_url( wp_get_referer() ); ?>" class="texte-retour">Retour</a>
+        <a onclick="transitionToPage('<?php echo home_url('/category/projets'); ?>')" class="texte-retour">Retour</a>
     </div>
 
     <div class="div-searchform flex petite-marge-hauteur">

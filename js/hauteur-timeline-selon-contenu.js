@@ -38,12 +38,9 @@ function mettreAJourCercles() {
         let ratio;
 
         let largeurFenetre = window.innerWidth;
-        if (largeurFenetre < 430) {
-            // Téléphone (petits écrans)
-            ratio = 1.42;
-        } else if (largeurFenetre < 768) {
+        if (largeurFenetre < 768) {
             // Tablette (écrans moyens)
-            ratio = 1.35;
+            ratio = 1.65;
         } else {
             // Ordinateur (grands écrans)
             ratio = 1.9;
